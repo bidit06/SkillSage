@@ -1,0 +1,19 @@
+[project]
+name = "skillsage"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "argon2-cffi>=25.1.0",
+    "fastapi[all,standard]>=0.123.1",
+    "google-genai>=1.52.0",
+    "google-generativeai>=0.8.5",
+    "jinja2>=3.1.6",
+    "motor>=3.7.1",
+    "passlib[bcrypt]>=1.7.4",
+    "pillow>=12.0.0",
+    "pymongo[srv]>=4.15.4",
+    "python-multipart>=0.0.20",
+    "uvicorn[standard]>=0.38.0",
+]
