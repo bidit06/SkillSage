@@ -1,0 +1,6382 @@
+[
+  {
+    "skill_id": "skill_001",
+    "skill_name": "Python Programming",
+    "category": "Technical",
+    "subcategory": "Programming Languages",
+    "description": "High-level versatile language",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Python Programming Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_002",
+    "skill_name": "JavaScript",
+    "category": "Technical",
+    "subcategory": "Programming Languages",
+    "description": "Essential web development language",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "JavaScript Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_003",
+    "skill_name": "Machine Learning",
+    "category": "Technical",
+    "subcategory": "AI & ML",
+    "description": "Building systems that learn from data",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Machine Learning Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_004",
+    "skill_name": "React",
+    "category": "Technical",
+    "subcategory": "Frontend",
+    "description": "Component-based UI library",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "React Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_005",
+    "skill_name": "SQL",
+    "category": "Technical",
+    "subcategory": "Databases",
+    "description": "Relational database language",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "SQL Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_006",
+    "skill_name": "Docker",
+    "category": "Technical",
+    "subcategory": "DevOps",
+    "description": "Containerization platform",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Docker Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_007",
+    "skill_name": "AWS",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Amazon Web Services",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "AWS Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_008",
+    "skill_name": "Git",
+    "category": "Technical",
+    "subcategory": "Version Control",
+    "description": "Distributed version control",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Git Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_009",
+    "skill_name": "Node.js",
+    "category": "Technical",
+    "subcategory": "Backend",
+    "description": "JavaScript runtime",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Node.js Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_010",
+    "skill_name": "TensorFlow",
+    "category": "Technical",
+    "subcategory": "AI & ML",
+    "description": "ML framework by Google",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "TensorFlow Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_011",
+    "skill_name": "Technical Skill 11",
+    "category": "Technical",
+    "subcategory": "Programming",
+    "description": "Description for skill 11",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 11 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_012",
+    "skill_name": "Technical Skill 12",
+    "category": "Technical",
+    "subcategory": "Programming",
+    "description": "Description for skill 12",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 12 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_013",
+    "skill_name": "Technical Skill 13",
+    "category": "Technical",
+    "subcategory": "Programming",
+    "description": "Description for skill 13",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 13 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_014",
+    "skill_name": "Technical Skill 14",
+    "category": "Technical",
+    "subcategory": "Programming",
+    "description": "Description for skill 14",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 14 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_015",
+    "skill_name": "Technical Skill 15",
+    "category": "Technical",
+    "subcategory": "Programming",
+    "description": "Description for skill 15",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 15 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_016",
+    "skill_name": "Technical Skill 16",
+    "category": "Technical",
+    "subcategory": "Programming",
+    "description": "Description for skill 16",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 16 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_017",
+    "skill_name": "Technical Skill 17",
+    "category": "Technical",
+    "subcategory": "Programming",
+    "description": "Description for skill 17",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 17 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_018",
+    "skill_name": "Technical Skill 18",
+    "category": "Technical",
+    "subcategory": "Programming",
+    "description": "Description for skill 18",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 18 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_019",
+    "skill_name": "Technical Skill 19",
+    "category": "Technical",
+    "subcategory": "Programming",
+    "description": "Description for skill 19",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 19 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_020",
+    "skill_name": "Technical Skill 20",
+    "category": "Technical",
+    "subcategory": "Programming",
+    "description": "Description for skill 20",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 20 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_021",
+    "skill_name": "Technical Skill 21",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 21",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 21 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_022",
+    "skill_name": "Technical Skill 22",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 22",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 22 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_023",
+    "skill_name": "Technical Skill 23",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 23",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 23 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_024",
+    "skill_name": "Technical Skill 24",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 24",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 24 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_025",
+    "skill_name": "Technical Skill 25",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 25",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 25 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_026",
+    "skill_name": "Technical Skill 26",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 26",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 26 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_027",
+    "skill_name": "Technical Skill 27",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 27",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 27 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_028",
+    "skill_name": "Technical Skill 28",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 28",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 28 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_029",
+    "skill_name": "Technical Skill 29",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 29",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 29 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_030",
+    "skill_name": "Technical Skill 30",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 30",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 30 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_031",
+    "skill_name": "Technical Skill 31",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 31",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 31 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_032",
+    "skill_name": "Technical Skill 32",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 32",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 32 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_033",
+    "skill_name": "Technical Skill 33",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 33",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 33 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_034",
+    "skill_name": "Technical Skill 34",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 34",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 34 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_035",
+    "skill_name": "Technical Skill 35",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 35",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 35 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_036",
+    "skill_name": "Technical Skill 36",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 36",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 36 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_037",
+    "skill_name": "Technical Skill 37",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 37",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 37 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_038",
+    "skill_name": "Technical Skill 38",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 38",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 38 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_039",
+    "skill_name": "Technical Skill 39",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 39",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 39 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_040",
+    "skill_name": "Technical Skill 40",
+    "category": "Technical",
+    "subcategory": "Data Science",
+    "description": "Description for skill 40",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 40 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_041",
+    "skill_name": "Technical Skill 41",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 41",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 41 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_042",
+    "skill_name": "Technical Skill 42",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 42",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 42 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_043",
+    "skill_name": "Technical Skill 43",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 43",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 43 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_044",
+    "skill_name": "Technical Skill 44",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 44",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 44 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_045",
+    "skill_name": "Technical Skill 45",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 45",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 45 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_046",
+    "skill_name": "Technical Skill 46",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 46",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 46 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_047",
+    "skill_name": "Technical Skill 47",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 47",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 47 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_048",
+    "skill_name": "Technical Skill 48",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 48",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 48 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_049",
+    "skill_name": "Technical Skill 49",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 49",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 49 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_050",
+    "skill_name": "Technical Skill 50",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 50",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 50 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_051",
+    "skill_name": "Technical Skill 51",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 51",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 51 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_052",
+    "skill_name": "Technical Skill 52",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 52",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 52 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_053",
+    "skill_name": "Technical Skill 53",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 53",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 53 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_054",
+    "skill_name": "Technical Skill 54",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 54",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 54 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_055",
+    "skill_name": "Technical Skill 55",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 55",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 55 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_056",
+    "skill_name": "Technical Skill 56",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 56",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 56 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_057",
+    "skill_name": "Technical Skill 57",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 57",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 57 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_058",
+    "skill_name": "Technical Skill 58",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 58",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 58 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_059",
+    "skill_name": "Technical Skill 59",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 59",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 59 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_060",
+    "skill_name": "Technical Skill 60",
+    "category": "Technical",
+    "subcategory": "Cloud",
+    "description": "Description for skill 60",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Technical Skill 60 Certification"
+    ],
+    "skill_type": "Hard Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_061",
+    "skill_name": "Soft Skill Skill 61",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 61",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 61 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_062",
+    "skill_name": "Soft Skill Skill 62",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 62",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 62 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_063",
+    "skill_name": "Soft Skill Skill 63",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 63",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 63 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_064",
+    "skill_name": "Soft Skill Skill 64",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 64",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 64 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_065",
+    "skill_name": "Soft Skill Skill 65",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 65",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 65 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_066",
+    "skill_name": "Soft Skill Skill 66",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 66",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 66 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_067",
+    "skill_name": "Soft Skill Skill 67",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 67",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 67 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_068",
+    "skill_name": "Soft Skill Skill 68",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 68",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 68 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_069",
+    "skill_name": "Soft Skill Skill 69",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 69",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 69 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_070",
+    "skill_name": "Soft Skill Skill 70",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 70",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 70 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_071",
+    "skill_name": "Soft Skill Skill 71",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 71",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 71 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_072",
+    "skill_name": "Soft Skill Skill 72",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 72",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 72 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_073",
+    "skill_name": "Soft Skill Skill 73",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 73",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 73 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_074",
+    "skill_name": "Soft Skill Skill 74",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 74",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 74 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_075",
+    "skill_name": "Soft Skill Skill 75",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 75",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 75 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_076",
+    "skill_name": "Soft Skill Skill 76",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 76",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 76 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_077",
+    "skill_name": "Soft Skill Skill 77",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 77",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 77 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_078",
+    "skill_name": "Soft Skill Skill 78",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 78",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 78 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_079",
+    "skill_name": "Soft Skill Skill 79",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 79",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 79 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_080",
+    "skill_name": "Soft Skill Skill 80",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 80",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 80 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_081",
+    "skill_name": "Soft Skill Skill 81",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 81",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 81 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_082",
+    "skill_name": "Soft Skill Skill 82",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 82",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 82 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_083",
+    "skill_name": "Soft Skill Skill 83",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 83",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 83 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_084",
+    "skill_name": "Soft Skill Skill 84",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 84",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 84 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_085",
+    "skill_name": "Soft Skill Skill 85",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 85",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 85 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_086",
+    "skill_name": "Soft Skill Skill 86",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 86",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 86 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_087",
+    "skill_name": "Soft Skill Skill 87",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 87",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 87 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_088",
+    "skill_name": "Soft Skill Skill 88",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 88",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 88 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_089",
+    "skill_name": "Soft Skill Skill 89",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 89",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 89 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_090",
+    "skill_name": "Soft Skill Skill 90",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 90",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 90 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_091",
+    "skill_name": "Soft Skill Skill 91",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 91",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 91 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_092",
+    "skill_name": "Soft Skill Skill 92",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 92",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 92 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_093",
+    "skill_name": "Soft Skill Skill 93",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 93",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 93 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_094",
+    "skill_name": "Soft Skill Skill 94",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 94",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 94 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_095",
+    "skill_name": "Soft Skill Skill 95",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 95",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 95 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_096",
+    "skill_name": "Soft Skill Skill 96",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 96",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 96 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_097",
+    "skill_name": "Soft Skill Skill 97",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 97",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 97 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_098",
+    "skill_name": "Soft Skill Skill 98",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 98",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 98 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_099",
+    "skill_name": "Soft Skill Skill 99",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 99",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 99 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_100",
+    "skill_name": "Soft Skill Skill 100",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 100",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 100 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_101",
+    "skill_name": "Soft Skill Skill 101",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 101",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 101 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_102",
+    "skill_name": "Soft Skill Skill 102",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 102",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 102 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_103",
+    "skill_name": "Soft Skill Skill 103",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 103",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 103 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_104",
+    "skill_name": "Soft Skill Skill 104",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 104",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 104 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_105",
+    "skill_name": "Soft Skill Skill 105",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 105",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 105 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_106",
+    "skill_name": "Soft Skill Skill 106",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 106",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 106 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_107",
+    "skill_name": "Soft Skill Skill 107",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 107",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 107 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_108",
+    "skill_name": "Soft Skill Skill 108",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 108",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 108 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_109",
+    "skill_name": "Soft Skill Skill 109",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 109",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "Very High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 109 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  },
+  {
+    "skill_id": "skill_110",
+    "skill_name": "Soft Skill Skill 110",
+    "category": "Soft Skill",
+    "subcategory": "Soft Skills",
+    "description": "Description for skill 110",
+    "use_cases": [
+      "Use case 1",
+      "Use case 2",
+      "Use case 3"
+    ],
+    "difficulty_level": "Beginner to Advanced",
+    "learning_time": {
+      "basics": "1-2 months",
+      "proficiency": "6-12 months",
+      "mastery": "2-3 years"
+    },
+    "prerequisites": [
+      "Basic computer knowledge"
+    ],
+    "related_skills": [
+      "Related skill 1",
+      "Related skill 2"
+    ],
+    "career_applications": [
+      "Career 1",
+      "Career 2"
+    ],
+    "tools_frameworks": [
+      "Tool 1",
+      "Tool 2"
+    ],
+    "learning_resources": {
+      "courses": [
+        "Coursera",
+        "Udemy"
+      ],
+      "books": [
+        "Book 1"
+      ],
+      "platforms": [
+        "Online platforms"
+      ],
+      "free_resources": [
+        "YouTube",
+        "Documentation"
+      ]
+    },
+    "industry_demand": "High",
+    "salary_impact": "+20-30%",
+    "certifications": [
+      "Soft Skill Skill 110 Certification"
+    ],
+    "skill_type": "Soft Skill",
+    "future_relevance": "Growing",
+    "automation_risk": "Low",
+    "remote_work_friendly": true
+  }
+]
