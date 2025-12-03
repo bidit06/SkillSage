@@ -119,7 +119,3 @@ class CareerAdvisorRAG:
             return response.text
         except Exception as e:
             return f"I encountered an error generating the response: {str(e)}"
-
-    # ... (Keep the rest of the ingestion logic/gap analysis functions if needed) ...
-    # You can copy the 'ingest_careers_from_json', 'get_career_recommendations', 
-    # and 'analyze_skill_gap' methods from the previous code here.
