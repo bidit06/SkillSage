@@ -1,0 +1,4144 @@
+[
+  {
+    "skill_name": "Python",
+    "category": "Programming Languages",
+    "description": "High-level, versatile programming language with extensive libraries",
+    "use_cases": [
+      "Web development",
+      "Data science",
+      "Automation",
+      "AI/ML"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "3-6 months",
+    "related_skills": [
+      "Django",
+      "Flask",
+      "NumPy",
+      "Pandas"
+    ],
+    "careers_using_this": [
+      "Data Scientist",
+      "Backend Developer",
+      "ML Engineer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "JavaScript",
+    "category": "Programming Languages",
+    "description": "Dynamic programming language for web interactivity",
+    "use_cases": [
+      "Frontend development",
+      "Backend with Node.js",
+      "Mobile apps"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "React",
+      "Node.js",
+      "TypeScript"
+    ],
+    "careers_using_this": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Java",
+    "category": "Programming Languages",
+    "description": "Object-oriented language for enterprise applications",
+    "use_cases": [
+      "Enterprise software",
+      "Android development",
+      "Backend systems"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Spring Boot",
+      "Maven",
+      "Hibernate"
+    ],
+    "careers_using_this": [
+      "Java Developer",
+      "Android Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "TypeScript",
+    "category": "Programming Languages",
+    "description": "Typed superset of JavaScript for large-scale applications",
+    "use_cases": [
+      "Large web apps",
+      "Type-safe development"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "JavaScript",
+      "Angular",
+      "React"
+    ],
+    "careers_using_this": [
+      "Frontend Developer",
+      "Full Stack Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Rust",
+    "category": "Programming Languages",
+    "description": "Systems programming language focused on safety and performance",
+    "use_cases": [
+      "System programming",
+      "Game engines",
+      "Blockchain"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "C++",
+      "WebAssembly"
+    ],
+    "careers_using_this": [
+      "Systems Engineer",
+      "Blockchain Developer"
+    ],
+    "industry_demand": "Medium"
+  },
+  {
+    "skill_name": "Go",
+    "category": "Programming Languages",
+    "description": "Concurrent programming language by Google for scalable systems",
+    "use_cases": [
+      "Microservices",
+      "Cloud infrastructure",
+      "CLI tools"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-4 months",
+    "related_skills": [
+      "Docker",
+      "Kubernetes"
+    ],
+    "careers_using_this": [
+      "Backend Engineer",
+      "DevOps Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "C++",
+    "category": "Programming Languages",
+    "description": "High-performance language for system and game development",
+    "use_cases": [
+      "Game development",
+      "System software",
+      "Performance-critical apps"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "C",
+      "Unreal Engine"
+    ],
+    "careers_using_this": [
+      "Game Developer",
+      "Embedded Systems Engineer"
+    ],
+    "industry_demand": "Medium"
+  },
+  {
+    "skill_name": "Ruby",
+    "category": "Programming Languages",
+    "description": "Dynamic language known for elegant syntax and Rails framework",
+    "use_cases": [
+      "Web development",
+      "Scripting",
+      "Prototyping"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "Rails",
+      "Sinatra"
+    ],
+    "careers_using_this": [
+      "Ruby Developer",
+      "Full Stack Developer"
+    ],
+    "industry_demand": "Medium"
+  },
+  {
+    "skill_name": "Swift",
+    "category": "Programming Languages",
+    "description": "Apple's modern language for iOS and macOS development",
+    "use_cases": [
+      "iOS apps",
+      "macOS apps",
+      "Apple ecosystem"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-5 months",
+    "related_skills": [
+      "SwiftUI",
+      "Objective-C"
+    ],
+    "careers_using_this": [
+      "iOS Developer",
+      "Mobile Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Kotlin",
+    "category": "Programming Languages",
+    "description": "Modern JVM language preferred for Android development",
+    "use_cases": [
+      "Android apps",
+      "Server-side",
+      "Cross-platform"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "Java",
+      "Android SDK"
+    ],
+    "careers_using_this": [
+      "Android Developer",
+      "Backend Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "React",
+    "category": "Web Development",
+    "description": "Component-based JavaScript library for building user interfaces",
+    "use_cases": [
+      "Single-page apps",
+      "Dynamic UIs",
+      "Mobile apps with React Native"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "JavaScript",
+      "Redux",
+      "Next.js"
+    ],
+    "careers_using_this": [
+      "Frontend Developer",
+      "Full Stack Developer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Angular",
+    "category": "Web Development",
+    "description": "Full-featured TypeScript framework by Google",
+    "use_cases": [
+      "Enterprise web apps",
+      "Progressive web apps"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-4 months",
+    "related_skills": [
+      "TypeScript",
+      "RxJS"
+    ],
+    "careers_using_this": [
+      "Frontend Developer",
+      "Full Stack Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Vue.js",
+    "category": "Web Development",
+    "description": "Progressive JavaScript framework for building UIs",
+    "use_cases": [
+      "Web interfaces",
+      "Single-page apps"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "JavaScript",
+      "Nuxt.js"
+    ],
+    "careers_using_this": [
+      "Frontend Developer",
+      "Full Stack Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Node.js",
+    "category": "Web Development",
+    "description": "JavaScript runtime for server-side development",
+    "use_cases": [
+      "Backend APIs",
+      "Real-time apps",
+      "Microservices"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "Express.js",
+      "JavaScript"
+    ],
+    "careers_using_this": [
+      "Backend Developer",
+      "Full Stack Developer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Django",
+    "category": "Web Development",
+    "description": "High-level Python web framework with batteries included",
+    "use_cases": [
+      "Web applications",
+      "RESTful APIs",
+      "Content management"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Python",
+      "PostgreSQL"
+    ],
+    "careers_using_this": [
+      "Backend Developer",
+      "Full Stack Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Flask",
+    "category": "Web Development",
+    "description": "Lightweight Python web framework for microservices",
+    "use_cases": [
+      "APIs",
+      "Microservices",
+      "Small web apps"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "Python",
+      "SQLAlchemy"
+    ],
+    "careers_using_this": [
+      "Backend Developer",
+      "API Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Spring Boot",
+    "category": "Web Development",
+    "description": "Java framework for building production-ready applications",
+    "use_cases": [
+      "Enterprise apps",
+      "Microservices",
+      "RESTful services"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-5 months",
+    "related_skills": [
+      "Java",
+      "Hibernate"
+    ],
+    "careers_using_this": [
+      "Java Developer",
+      "Backend Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "FastAPI",
+    "category": "Web Development",
+    "description": "Modern Python framework for building high-performance APIs",
+    "use_cases": [
+      "REST APIs",
+      "Async operations",
+      "ML model serving"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "Python",
+      "Pydantic"
+    ],
+    "careers_using_this": [
+      "Backend Developer",
+      "API Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Next.js",
+    "category": "Web Development",
+    "description": "React framework for server-side rendering and static sites",
+    "use_cases": [
+      "SEO-optimized sites",
+      "Full-stack React apps"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "React",
+      "Vercel"
+    ],
+    "careers_using_this": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Express.js",
+    "category": "Web Development",
+    "description": "Minimal Node.js web framework for APIs and web apps",
+    "use_cases": [
+      "RESTful APIs",
+      "Web servers",
+      "Middleware"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "Node.js",
+      "MongoDB"
+    ],
+    "careers_using_this": [
+      "Backend Developer",
+      "Full Stack Developer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Machine Learning",
+    "category": "Data Science & ML",
+    "description": "Building systems that learn from data without explicit programming",
+    "use_cases": [
+      "Predictive modeling",
+      "Pattern recognition",
+      "Recommendation systems"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "Python",
+      "TensorFlow",
+      "Scikit-learn"
+    ],
+    "careers_using_this": [
+      "ML Engineer",
+      "Data Scientist"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Deep Learning",
+    "category": "Data Science & ML",
+    "description": "Neural networks with multiple layers for complex patterns",
+    "use_cases": [
+      "Computer vision",
+      "NLP",
+      "Speech recognition"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "8-12 months",
+    "related_skills": [
+      "TensorFlow",
+      "PyTorch",
+      "Neural Networks"
+    ],
+    "careers_using_this": [
+      "AI Researcher",
+      "ML Engineer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Natural Language Processing",
+    "category": "Data Science & ML",
+    "description": "Teaching machines to understand and generate human language",
+    "use_cases": [
+      "Chatbots",
+      "Sentiment analysis",
+      "Translation"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "6-10 months",
+    "related_skills": [
+      "BERT",
+      "spaCy",
+      "Transformers"
+    ],
+    "careers_using_this": [
+      "NLP Engineer",
+      "AI Researcher"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Computer Vision",
+    "category": "Data Science & ML",
+    "description": "Enabling computers to interpret and analyze visual information",
+    "use_cases": [
+      "Object detection",
+      "Face recognition",
+      "Medical imaging"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "6-10 months",
+    "related_skills": [
+      "OpenCV",
+      "YOLO",
+      "CNNs"
+    ],
+    "careers_using_this": [
+      "Computer Vision Engineer",
+      "AI Researcher"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Data Analysis",
+    "category": "Data Science & ML",
+    "description": "Examining datasets to draw conclusions and insights",
+    "use_cases": [
+      "Business intelligence",
+      "Trend analysis",
+      "Reporting"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-5 months",
+    "related_skills": [
+      "Pandas",
+      "Excel",
+      "SQL"
+    ],
+    "careers_using_this": [
+      "Data Analyst",
+      "Business Analyst"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Statistical Modeling",
+    "category": "Data Science & ML",
+    "description": "Using mathematical models to represent real-world phenomena",
+    "use_cases": [
+      "Hypothesis testing",
+      "Forecasting",
+      "Risk analysis"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "6-8 months",
+    "related_skills": [
+      "R",
+      "Python",
+      "SPSS"
+    ],
+    "careers_using_this": [
+      "Data Scientist",
+      "Statistician"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "TensorFlow",
+    "category": "Data Science & ML",
+    "description": "Open-source ML framework by Google for deep learning",
+    "use_cases": [
+      "Neural networks",
+      "Production ML models"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Keras",
+      "Python",
+      "Deep Learning"
+    ],
+    "careers_using_this": [
+      "ML Engineer",
+      "AI Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "PyTorch",
+    "category": "Data Science & ML",
+    "description": "Research-focused deep learning framework with dynamic graphs",
+    "use_cases": [
+      "Research models",
+      "Computer vision",
+      "NLP"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Python",
+      "NumPy"
+    ],
+    "careers_using_this": [
+      "ML Researcher",
+      "AI Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Pandas",
+    "category": "Data Science & ML",
+    "description": "Python library for data manipulation and analysis",
+    "use_cases": [
+      "Data cleaning",
+      "Data transformation",
+      "Analysis"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "NumPy",
+      "Python"
+    ],
+    "careers_using_this": [
+      "Data Analyst",
+      "Data Scientist"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Scikit-learn",
+    "category": "Data Science & ML",
+    "description": "Python library for classical machine learning algorithms",
+    "use_cases": [
+      "Classification",
+      "Regression",
+      "Clustering"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Python",
+      "NumPy"
+    ],
+    "careers_using_this": [
+      "Data Scientist",
+      "ML Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Docker",
+    "category": "Cloud & DevOps",
+    "description": "Containerization platform for packaging applications",
+    "use_cases": [
+      "Microservices",
+      "CI/CD",
+      "Development environments"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Kubernetes",
+      "Linux"
+    ],
+    "careers_using_this": [
+      "DevOps Engineer",
+      "Backend Developer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Kubernetes",
+    "category": "Cloud & DevOps",
+    "description": "Container orchestration system for automating deployment",
+    "use_cases": [
+      "Container management",
+      "Auto-scaling",
+      "Cloud-native apps"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Docker",
+      "Helm"
+    ],
+    "careers_using_this": [
+      "DevOps Engineer",
+      "Cloud Architect"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "AWS",
+    "category": "Cloud & DevOps",
+    "description": "Amazon's comprehensive cloud computing platform",
+    "use_cases": [
+      "Cloud hosting",
+      "Serverless",
+      "Storage solutions"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "EC2",
+      "S3",
+      "Lambda"
+    ],
+    "careers_using_this": [
+      "Cloud Engineer",
+      "Solutions Architect"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Azure",
+    "category": "Cloud & DevOps",
+    "description": "Microsoft's cloud computing service for various solutions",
+    "use_cases": [
+      "Enterprise cloud",
+      "Azure Functions",
+      "DevOps"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Azure DevOps",
+      "C#"
+    ],
+    "careers_using_this": [
+      "Cloud Engineer",
+      "Azure Architect"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Google Cloud Platform",
+    "category": "Cloud & DevOps",
+    "description": "Google's suite of cloud computing services",
+    "use_cases": [
+      "BigQuery analytics",
+      "Cloud functions",
+      "ML services"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Kubernetes",
+      "BigQuery"
+    ],
+    "careers_using_this": [
+      "Cloud Engineer",
+      "Data Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "CI/CD",
+    "category": "Cloud & DevOps",
+    "description": "Continuous Integration and Deployment practices",
+    "use_cases": [
+      "Automated testing",
+      "Deployment pipelines",
+      "Release automation"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Jenkins",
+      "GitLab CI",
+      "GitHub Actions"
+    ],
+    "careers_using_this": [
+      "DevOps Engineer",
+      "Software Engineer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Terraform",
+    "category": "Cloud & DevOps",
+    "description": "Infrastructure as Code tool for provisioning resources",
+    "use_cases": [
+      "Cloud infrastructure",
+      "Multi-cloud deployment"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "AWS",
+      "Azure"
+    ],
+    "careers_using_this": [
+      "DevOps Engineer",
+      "Infrastructure Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Jenkins",
+    "category": "Cloud & DevOps",
+    "description": "Open-source automation server for CI/CD pipelines",
+    "use_cases": [
+      "Build automation",
+      "Testing automation",
+      "Deployment"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "1-3 months",
+    "related_skills": [
+      "CI/CD",
+      "Docker"
+    ],
+    "careers_using_this": [
+      "DevOps Engineer",
+      "Build Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Ansible",
+    "category": "Cloud & DevOps",
+    "description": "Automation tool for configuration management",
+    "use_cases": [
+      "Server configuration",
+      "Deployment automation"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Python",
+      "YAML"
+    ],
+    "careers_using_this": [
+      "DevOps Engineer",
+      "Systems Administrator"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Prometheus",
+    "category": "Cloud & DevOps",
+    "description": "Monitoring system and time-series database",
+    "use_cases": [
+      "Metrics collection",
+      "Alerting",
+      "Performance monitoring"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Grafana",
+      "Kubernetes"
+    ],
+    "careers_using_this": [
+      "DevOps Engineer",
+      "SRE"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "SQL",
+    "category": "Databases",
+    "description": "Standard language for managing relational databases",
+    "use_cases": [
+      "Data querying",
+      "Database design",
+      "Reporting"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "PostgreSQL",
+      "MySQL"
+    ],
+    "careers_using_this": [
+      "Data Analyst",
+      "Backend Developer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "PostgreSQL",
+    "category": "Databases",
+    "description": "Advanced open-source relational database system",
+    "use_cases": [
+      "Web applications",
+      "Data warehousing"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "SQL",
+      "Python"
+    ],
+    "careers_using_this": [
+      "Database Administrator",
+      "Backend Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "MongoDB",
+    "category": "Databases",
+    "description": "NoSQL document database for flexible data models",
+    "use_cases": [
+      "Content management",
+      "Real-time analytics",
+      "IoT"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Node.js",
+      "Express.js"
+    ],
+    "careers_using_this": [
+      "Backend Developer",
+      "Full Stack Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Redis",
+    "category": "Databases",
+    "description": "In-memory data structure store for caching",
+    "use_cases": [
+      "Caching",
+      "Session management",
+      "Real-time analytics"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "Python",
+      "Node.js"
+    ],
+    "careers_using_this": [
+      "Backend Developer",
+      "Systems Architect"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "MySQL",
+    "category": "Databases",
+    "description": "Popular open-source relational database management system",
+    "use_cases": [
+      "Web applications",
+      "E-commerce platforms"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "SQL",
+      "PHP"
+    ],
+    "careers_using_this": [
+      "Backend Developer",
+      "Database Administrator"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Elasticsearch",
+    "category": "Databases",
+    "description": "Distributed search and analytics engine",
+    "use_cases": [
+      "Full-text search",
+      "Log analytics",
+      "Application monitoring"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "3-5 months",
+    "related_skills": [
+      "Kibana",
+      "Logstash"
+    ],
+    "careers_using_this": [
+      "Search Engineer",
+      "Data Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Cassandra",
+    "category": "Databases",
+    "description": "Distributed NoSQL database for high availability",
+    "use_cases": [
+      "Time-series data",
+      "High-volume writes",
+      "Distributed systems"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Java",
+      "CQL"
+    ],
+    "careers_using_this": [
+      "Database Engineer",
+      "Backend Developer"
+    ],
+    "industry_demand": "Medium"
+  },
+  {
+    "skill_name": "Neo4j",
+    "category": "Databases",
+    "description": "Graph database for connected data relationships",
+    "use_cases": [
+      "Social networks",
+      "Fraud detection",
+      "Recommendation engines"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "Cypher",
+      "Graph Theory"
+    ],
+    "careers_using_this": [
+      "Data Engineer",
+      "Backend Developer"
+    ],
+    "industry_demand": "Medium"
+  },
+  {
+    "skill_name": "Oracle Database",
+    "category": "Databases",
+    "description": "Enterprise-grade relational database system",
+    "use_cases": [
+      "Enterprise applications",
+      "Financial systems"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "5-8 months",
+    "related_skills": [
+      "PL/SQL",
+      "SQL"
+    ],
+    "careers_using_this": [
+      "Database Administrator",
+      "Enterprise Architect"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Firebase",
+    "category": "Databases",
+    "description": "Google's real-time NoSQL database for mobile/web apps",
+    "use_cases": [
+      "Mobile backends",
+      "Real-time sync",
+      "Authentication"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "JavaScript",
+      "Android"
+    ],
+    "careers_using_this": [
+      "Mobile Developer",
+      "Full Stack Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Android Development",
+    "category": "Mobile Development",
+    "description": "Building applications for Android operating system",
+    "use_cases": [
+      "Mobile apps",
+      "Tablet apps",
+      "Wearable apps"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Kotlin",
+      "Java",
+      "Android Studio"
+    ],
+    "careers_using_this": [
+      "Android Developer",
+      "Mobile Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "iOS Development",
+    "category": "Mobile Development",
+    "description": "Creating applications for Apple's iOS platform",
+    "use_cases": [
+      "iPhone apps",
+      "iPad apps",
+      "Apple Watch apps"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Swift",
+      "Xcode",
+      "SwiftUI"
+    ],
+    "careers_using_this": [
+      "iOS Developer",
+      "Mobile Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "React Native",
+    "category": "Mobile Development",
+    "description": "Cross-platform mobile framework using React",
+    "use_cases": [
+      "iOS and Android apps",
+      "Hybrid mobile apps"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-4 months",
+    "related_skills": [
+      "React",
+      "JavaScript"
+    ],
+    "careers_using_this": [
+      "Mobile Developer",
+      "Full Stack Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Flutter",
+    "category": "Mobile Development",
+    "description": "Google's UI toolkit for cross-platform development",
+    "use_cases": [
+      "Cross-platform apps",
+      "Beautiful UIs"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-4 months",
+    "related_skills": [
+      "Dart",
+      "Material Design"
+    ],
+    "careers_using_this": [
+      "Mobile Developer",
+      "Flutter Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "SwiftUI",
+    "category": "Mobile Development",
+    "description": "Apple's declarative framework for building UIs",
+    "use_cases": [
+      "iOS UI development",
+      "macOS apps"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Swift",
+      "Xcode"
+    ],
+    "careers_using_this": [
+      "iOS Developer",
+      "UI Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Ethical Hacking",
+    "category": "Cybersecurity",
+    "description": "Authorized penetration testing to find security vulnerabilities",
+    "use_cases": [
+      "Security audits",
+      "Vulnerability assessment"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "8-12 months",
+    "related_skills": [
+      "Penetration Testing",
+      "Networking"
+    ],
+    "careers_using_this": [
+      "Security Analyst",
+      "Penetration Tester"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Penetration Testing",
+    "category": "Cybersecurity",
+    "description": "Simulating cyber attacks to identify security weaknesses",
+    "use_cases": [
+      "Security testing",
+      "Risk assessment"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "6-10 months",
+    "related_skills": [
+      "Kali Linux",
+      "Metasploit"
+    ],
+    "careers_using_this": [
+      "Penetration Tester",
+      "Security Consultant"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Cryptography",
+    "category": "Cybersecurity",
+    "description": "Techniques for secure communication and data protection",
+    "use_cases": [
+      "Data encryption",
+      "Secure communications"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "6-8 months",
+    "related_skills": [
+      "Mathematics",
+      "Security"
+    ],
+    "careers_using_this": [
+      "Security Engineer",
+      "Cryptographer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Network Security",
+    "category": "Cybersecurity",
+    "description": "Protecting network infrastructure from threats",
+    "use_cases": [
+      "Firewall configuration",
+      "Intrusion detection"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "5-8 months",
+    "related_skills": [
+      "Networking",
+      "Firewalls"
+    ],
+    "careers_using_this": [
+      "Network Security Engineer",
+      "Security Analyst"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Security Operations",
+    "category": "Cybersecurity",
+    "description": "Monitoring and responding to security incidents",
+    "use_cases": [
+      "Incident response",
+      "Threat monitoring"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "SIEM",
+      "Security Protocols"
+    ],
+    "careers_using_this": [
+      "SOC Analyst",
+      "Security Engineer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "UI/UX Design",
+    "category": "Design & UX",
+    "description": "Creating user-centered interfaces and experiences",
+    "use_cases": [
+      "Web design",
+      "App design",
+      "User research"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Figma",
+      "Adobe XD",
+      "User Research"
+    ],
+    "careers_using_this": [
+      "UX Designer",
+      "Product Designer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Figma",
+    "category": "Design & UX",
+    "description": "Collaborative interface design and prototyping tool",
+    "use_cases": [
+      "UI mockups",
+      "Prototyping",
+      "Design systems"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "UI/UX Design",
+      "Design Systems"
+    ],
+    "careers_using_this": [
+      "UI Designer",
+      "Product Designer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Adobe Photoshop",
+    "category": "Design & UX",
+    "description": "Industry-standard image editing and graphic design software",
+    "use_cases": [
+      "Photo editing",
+      "Digital art",
+      "Web graphics"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-5 months",
+    "related_skills": [
+      "Adobe Illustrator",
+      "Graphic Design"
+    ],
+    "careers_using_this": [
+      "Graphic Designer",
+      "Digital Artist"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Adobe Illustrator",
+    "category": "Design & UX",
+    "description": "Vector graphics editor for logos and illustrations",
+    "use_cases": [
+      "Logo design",
+      "Vector art",
+      "Branding"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-5 months",
+    "related_skills": [
+      "Adobe Photoshop",
+      "Graphic Design"
+    ],
+    "careers_using_this": [
+      "Graphic Designer",
+      "Illustrator"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "User Research",
+    "category": "Design & UX",
+    "description": "Understanding user needs through research methods",
+    "use_cases": [
+      "Usability testing",
+      "User interviews",
+      "Surveys"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-4 months",
+    "related_skills": [
+      "UI/UX Design",
+      "Data Analysis"
+    ],
+    "careers_using_this": [
+      "UX Researcher",
+      "Product Manager"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Wireframing",
+    "category": "Design & UX",
+    "description": "Creating low-fidelity layouts for interfaces",
+    "use_cases": [
+      "Early-stage design",
+      "Concept validation"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "Prototyping",
+      "UI Design"
+    ],
+    "careers_using_this": [
+      "UX Designer",
+      "Product Designer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Prototyping",
+    "category": "Design & UX",
+    "description": "Building interactive mockups of products",
+    "use_cases": [
+      "User testing",
+      "Stakeholder presentations"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Figma",
+      "Adobe XD"
+    ],
+    "careers_using_this": [
+      "UX Designer",
+      "Product Designer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Apache Spark",
+    "category": "Data Engineering",
+    "description": "Distributed computing system for big data processing",
+    "use_cases": [
+      "Big data analytics",
+      "ETL pipelines",
+      "Stream processing"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Python",
+      "Scala",
+      "Hadoop"
+    ],
+    "careers_using_this": [
+      "Data Engineer",
+      "Big Data Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Apache Kafka",
+    "category": "Data Engineering",
+    "description": "Distributed streaming platform for real-time data",
+    "use_cases": [
+      "Event streaming",
+      "Real-time analytics",
+      "Log aggregation"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "3-5 months",
+    "related_skills": [
+      "Java",
+      "Distributed Systems"
+    ],
+    "careers_using_this": [
+      "Data Engineer",
+      "Backend Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Airflow",
+    "category": "Data Engineering",
+    "description": "Platform for programmatically authoring and scheduling workflows",
+    "use_cases": [
+      "Data pipelines",
+      "ETL orchestration",
+      "Workflow automation"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Python",
+      "SQL"
+    ],
+    "careers_using_this": [
+      "Data Engineer",
+      "ML Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "ETL Development",
+    "category": "Data Engineering",
+    "description": "Extract, Transform, Load processes for data integration",
+    "use_cases": [
+      "Data warehousing",
+      "Data migration",
+      "Business intelligence"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-4 months",
+    "related_skills": [
+      "SQL",
+      "Python"
+    ],
+    "careers_using_this": [
+      "Data Engineer",
+      "BI Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Data Warehousing",
+    "category": "Data Engineering",
+    "description": "Centralized repositories for storing integrated data",
+    "use_cases": [
+      "Business intelligence",
+      "Reporting",
+      "Analytics"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "5-7 months",
+    "related_skills": [
+      "SQL",
+      "Snowflake",
+      "Redshift"
+    ],
+    "careers_using_this": [
+      "Data Warehouse Engineer",
+      "BI Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Blockchain Development",
+    "category": "Emerging Tech",
+    "description": "Building decentralized applications and smart contracts",
+    "use_cases": [
+      "Cryptocurrency",
+      "Smart contracts",
+      "DApps"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "6-10 months",
+    "related_skills": [
+      "Solidity",
+      "Web3.js",
+      "Ethereum"
+    ],
+    "careers_using_this": [
+      "Blockchain Developer",
+      "Smart Contract Developer"
+    ],
+    "industry_demand": "Medium"
+  },
+  {
+    "skill_name": "IoT Development",
+    "category": "Emerging Tech",
+    "description": "Creating solutions for Internet of Things devices",
+    "use_cases": [
+      "Smart home",
+      "Industrial IoT",
+      "Wearables"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "5-8 months",
+    "related_skills": [
+      "Embedded Systems",
+      "Sensors",
+      "MQTT"
+    ],
+    "careers_using_this": [
+      "IoT Engineer",
+      "Embedded Systems Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Augmented Reality",
+    "category": "Emerging Tech",
+    "description": "Overlaying digital content on the real world",
+    "use_cases": [
+      "AR apps",
+      "Virtual try-ons",
+      "Training simulations"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "6-9 months",
+    "related_skills": [
+      "Unity",
+      "ARKit",
+      "ARCore"
+    ],
+    "careers_using_this": [
+      "AR Developer",
+      "XR Engineer"
+    ],
+    "industry_demand": "Medium"
+  },
+  {
+    "skill_name": "Virtual Reality",
+    "category": "Emerging Tech",
+    "description": "Creating immersive 3D environments and experiences",
+    "use_cases": [
+      "VR games",
+      "Training simulations",
+      "Virtual tours"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "6-9 months",
+    "related_skills": [
+      "Unity",
+      "Unreal Engine",
+      "3D Modeling"
+    ],
+    "careers_using_this": [
+      "VR Developer",
+      "Game Developer"
+    ],
+    "industry_demand": "Medium"
+  },
+  {
+    "skill_name": "Quantum Computing",
+    "category": "Emerging Tech",
+    "description": "Computing using quantum-mechanical phenomena",
+    "use_cases": [
+      "Cryptography",
+      "Optimization problems",
+      "Drug discovery"
+    ],
+    "difficulty_level": "Expert",
+    "learning_time": "12+ months",
+    "related_skills": [
+      "Physics",
+      "Advanced Mathematics"
+    ],
+    "careers_using_this": [
+      "Quantum Scientist",
+      "Research Scientist"
+    ],
+    "industry_demand": "Low"
+  },
+  {
+    "skill_name": "Public Speaking",
+    "category": "Soft Skills - Communication",
+    "description": "Delivering effective presentations to audiences",
+    "use_cases": [
+      "Conferences",
+      "Team meetings",
+      "Client presentations"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "Presentation Skills",
+      "Storytelling"
+    ],
+    "careers_using_this": [
+      "Manager",
+      "Sales Professional",
+      "Team Lead"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Technical Writing",
+    "category": "Soft Skills - Communication",
+    "description": "Creating clear documentation for technical concepts",
+    "use_cases": [
+      "Documentation",
+      "API docs",
+      "User manuals"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-6 months",
+    "related_skills": [
+      "Communication",
+      "Technical Knowledge"
+    ],
+    "careers_using_this": [
+      "Technical Writer",
+      "Developer Advocate"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Active Listening",
+    "category": "Soft Skills - Communication",
+    "description": "Fully concentrating and understanding spoken messages",
+    "use_cases": [
+      "Team collaboration",
+      "Client meetings",
+      "Mentoring"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "3-6 months",
+    "related_skills": [
+      "Empathy",
+      "Communication"
+    ],
+    "careers_using_this": [
+      "Manager",
+      "HR Professional",
+      "Consultant"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Business Communication",
+    "category": "Soft Skills - Communication",
+    "description": "Professional communication in corporate settings",
+    "use_cases": [
+      "Email correspondence",
+      "Reports",
+      "Presentations"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "Writing",
+      "Professionalism"
+    ],
+    "careers_using_this": [
+      "Business Analyst",
+      "Manager",
+      "Consultant"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Cross-Cultural Communication",
+    "category": "Soft Skills - Communication",
+    "description": "Effective communication across different cultures",
+    "use_cases": [
+      "Global teams",
+      "International business"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "Empathy",
+      "Cultural Awareness"
+    ],
+    "careers_using_this": [
+      "International Manager",
+      "Consultant"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Team Leadership",
+    "category": "Soft Skills - Leadership",
+    "description": "Guiding and motivating teams toward goals",
+    "use_cases": [
+      "Project management",
+      "Team coordination"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "12+ months",
+    "related_skills": [
+      "Communication",
+      "Decision Making"
+    ],
+    "careers_using_this": [
+      "Team Lead",
+      "Manager",
+      "Director"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Strategic Thinking",
+    "category": "Soft Skills - Leadership",
+    "description": "Long-term planning and visioning for organizations",
+    "use_cases": [
+      "Business strategy",
+      "Product roadmaps"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "2+ years",
+    "related_skills": [
+      "Critical Thinking",
+      "Decision Making"
+    ],
+    "careers_using_this": [
+      "Executive",
+      "Product Manager",
+      "Strategy Consultant"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Mentoring",
+    "category": "Soft Skills - Leadership",
+    "description": "Guiding others in their professional development",
+    "use_cases": [
+      "Junior developer training",
+      "Career coaching"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "12+ months",
+    "related_skills": [
+      "Teaching",
+      "Empathy"
+    ],
+    "careers_using_this": [
+      "Senior Engineer",
+      "Manager",
+      "Coach"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Conflict Resolution",
+    "category": "Soft Skills - Leadership",
+    "description": "Mediating and resolving disputes effectively",
+    "use_cases": [
+      "Team conflicts",
+      "Client disagreements"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "Emotional Intelligence",
+      "Negotiation"
+    ],
+    "careers_using_this": [
+      "Manager",
+      "HR Professional",
+      "Team Lead"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Decision Making",
+    "category": "Soft Skills - Leadership",
+    "description": "Choosing optimal courses of action under uncertainty",
+    "use_cases": [
+      "Strategic decisions",
+      "Problem solving"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "12+ months",
+    "related_skills": [
+      "Critical Thinking",
+      "Risk Assessment"
+    ],
+    "careers_using_this": [
+      "Manager",
+      "Consultant",
+      "Executive"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Delegation",
+    "category": "Soft Skills - Leadership",
+    "description": "Assigning tasks effectively to team members",
+    "use_cases": [
+      "Project management",
+      "Team coordination"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "Trust Building",
+      "Team Leadership"
+    ],
+    "careers_using_this": [
+      "Manager",
+      "Team Lead",
+      "Project Manager"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Critical Thinking",
+    "category": "Soft Skills - Problem Solving",
+    "description": "Analyzing situations objectively to form judgments",
+    "use_cases": [
+      "Problem analysis",
+      "Decision support"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "12+ months",
+    "related_skills": [
+      "Logic",
+      "Analysis"
+    ],
+    "careers_using_this": [
+      "Analyst",
+      "Consultant",
+      "Researcher"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Analytical Skills",
+    "category": "Soft Skills - Problem Solving",
+    "description": "Breaking down complex problems into components",
+    "use_cases": [
+      "Data analysis",
+      "Troubleshooting"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "Critical Thinking",
+      "Problem Solving"
+    ],
+    "careers_using_this": [
+      "Data Analyst",
+      "Business Analyst"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Creative Problem Solving",
+    "category": "Soft Skills - Problem Solving",
+    "description": "Finding innovative solutions to challenges",
+    "use_cases": [
+      "Product innovation",
+      "Process improvement"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "12+ months",
+    "related_skills": [
+      "Creativity",
+      "Design Thinking"
+    ],
+    "careers_using_this": [
+      "Product Manager",
+      "Designer",
+      "Innovator"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Root Cause Analysis",
+    "category": "Soft Skills - Problem Solving",
+    "description": "Identifying underlying causes of problems",
+    "use_cases": [
+      "Bug fixing",
+      "Process improvement"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "6-9 months",
+    "related_skills": [
+      "Analytical Skills",
+      "Systems Thinking"
+    ],
+    "careers_using_this": [
+      "Quality Analyst",
+      "Engineer",
+      "Consultant"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Troubleshooting",
+    "category": "Soft Skills - Problem Solving",
+    "description": "Systematically diagnosing and fixing issues",
+    "use_cases": [
+      "Technical support",
+      "System debugging"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "Logical Thinking",
+      "Technical Skills"
+    ],
+    "careers_using_this": [
+      "IT Support",
+      "Engineer",
+      "Developer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Teamwork",
+    "category": "Soft Skills - Collaboration",
+    "description": "Working effectively with others toward common goals",
+    "use_cases": [
+      "Cross-functional projects",
+      "Team deliverables"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "3-6 months",
+    "related_skills": [
+      "Communication",
+      "Cooperation"
+    ],
+    "careers_using_this": [
+      "Any team role",
+      "Project Member"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Agile Methodology",
+    "category": "Soft Skills - Collaboration",
+    "description": "Iterative development approach with flexible planning",
+    "use_cases": [
+      "Software development",
+      "Project management"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-6 months",
+    "related_skills": [
+      "Scrum",
+      "Kanban"
+    ],
+    "careers_using_this": [
+      "Scrum Master",
+      "Developer",
+      "Product Owner"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Scrum",
+    "category": "Soft Skills - Collaboration",
+    "description": "Framework for managing work in sprints",
+    "use_cases": [
+      "Agile projects",
+      "Sprint planning"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "Agile",
+      "Project Management"
+    ],
+    "careers_using_this": [
+      "Scrum Master",
+      "Product Owner",
+      "Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Stakeholder Management",
+    "category": "Soft Skills - Collaboration",
+    "description": "Managing expectations and relationships with stakeholders",
+    "use_cases": [
+      "Project delivery",
+      "Client relations"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "Communication",
+      "Negotiation"
+    ],
+    "careers_using_this": [
+      "Project Manager",
+      "Product Manager"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Networking",
+    "category": "Soft Skills - Collaboration",
+    "description": "Building professional relationships and connections",
+    "use_cases": [
+      "Career development",
+      "Business partnerships"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "Ongoing",
+    "related_skills": [
+      "Communication",
+      "Social Skills"
+    ],
+    "careers_using_this": [
+      "Sales",
+      "Business Development",
+      "Consultant"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Time Management",
+    "category": "Soft Skills - Personal Development",
+    "description": "Efficiently organizing and prioritizing tasks",
+    "use_cases": [
+      "Project deadlines",
+      "Work-life balance"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "3-6 months",
+    "related_skills": [
+      "Prioritization",
+      "Planning"
+    ],
+    "careers_using_this": [
+      "Any role",
+      "Freelancer",
+      "Manager"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Adaptability",
+    "category": "Soft Skills - Personal Development",
+    "description": "Adjusting to new conditions and changes effectively",
+    "use_cases": [
+      "Organizational changes",
+      "New technologies"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "Ongoing",
+    "related_skills": [
+      "Learning Agility",
+      "Flexibility"
+    ],
+    "careers_using_this": [
+      "Any role",
+      "Change Manager"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Emotional Intelligence",
+    "category": "Soft Skills - Personal Development",
+    "description": "Understanding and managing emotions in self and others",
+    "use_cases": [
+      "Team dynamics",
+      "Leadership"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "12+ months",
+    "related_skills": [
+      "Empathy",
+      "Self-Awareness"
+    ],
+    "careers_using_this": [
+      "Manager",
+      "HR",
+      "Team Lead"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Self-Motivation",
+    "category": "Soft Skills - Personal Development",
+    "description": "Driving yourself to achieve goals without external pressure",
+    "use_cases": [
+      "Independent work",
+      "Goal achievement"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "Ongoing",
+    "related_skills": [
+      "Discipline",
+      "Goal Setting"
+    ],
+    "careers_using_this": [
+      "Freelancer",
+      "Entrepreneur",
+      "Remote Worker"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Continuous Learning",
+    "category": "Soft Skills - Personal Development",
+    "description": "Commitment to ongoing skill and knowledge development",
+    "use_cases": [
+      "Career growth",
+      "Staying current"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "Ongoing",
+    "related_skills": [
+      "Curiosity",
+      "Growth Mindset"
+    ],
+    "careers_using_this": [
+      "Any role",
+      "Researcher",
+      "Developer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Stress Management",
+    "category": "Soft Skills - Personal Development",
+    "description": "Maintaining productivity under pressure",
+    "use_cases": [
+      "Tight deadlines",
+      "High-pressure roles"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "Mindfulness",
+      "Work-Life Balance"
+    ],
+    "careers_using_this": [
+      "Any role",
+      "Manager",
+      "Healthcare Worker"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Project Management",
+    "category": "Soft Skills - Business Acumen",
+    "description": "Planning, executing, and closing projects successfully",
+    "use_cases": [
+      "Software projects",
+      "Business initiatives"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "Planning",
+      "Risk Management"
+    ],
+    "careers_using_this": [
+      "Project Manager",
+      "Program Manager"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Negotiation",
+    "category": "Soft Skills - Business Acumen",
+    "description": "Reaching mutually beneficial agreements",
+    "use_cases": [
+      "Contracts",
+      "Salary discussions",
+      "Vendor deals"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "Communication",
+      "Persuasion"
+    ],
+    "careers_using_this": [
+      "Sales",
+      "Business Development",
+      "Manager"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Business Analysis",
+    "category": "Soft Skills - Business Acumen",
+    "description": "Identifying business needs and solutions",
+    "use_cases": [
+      "Requirements gathering",
+      "Process improvement"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "6-9 months",
+    "related_skills": [
+      "Analytical Skills",
+      "Communication"
+    ],
+    "careers_using_this": [
+      "Business Analyst",
+      "Product Manager"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Financial Literacy",
+    "category": "Soft Skills - Business Acumen",
+    "description": "Understanding financial principles and statements",
+    "use_cases": [
+      "Budget planning",
+      "Investment decisions"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "Accounting",
+      "Economics"
+    ],
+    "careers_using_this": [
+      "Finance Professional",
+      "Manager",
+      "Entrepreneur"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Risk Management",
+    "category": "Soft Skills - Business Acumen",
+    "description": "Identifying and mitigating potential risks",
+    "use_cases": [
+      "Project planning",
+      "Business strategy"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "12+ months",
+    "related_skills": [
+      "Analysis",
+      "Planning"
+    ],
+    "careers_using_this": [
+      "Risk Analyst",
+      "Project Manager",
+      "Consultant"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Customer Service",
+    "category": "Soft Skills - Business Acumen",
+    "description": "Providing excellent support and satisfaction to customers",
+    "use_cases": [
+      "Client support",
+      "Product assistance"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "Communication",
+      "Problem Solving"
+    ],
+    "careers_using_this": [
+      "Support Specialist",
+      "Account Manager"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "GraphQL",
+    "category": "Web Development",
+    "description": "Query language for APIs with flexible data fetching",
+    "use_cases": [
+      "API development",
+      "Frontend data fetching",
+      "Mobile backends"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "REST APIs",
+      "JavaScript",
+      "Node.js"
+    ],
+    "careers_using_this": [
+      "Backend Developer",
+      "Full Stack Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "WebSockets",
+    "category": "Web Development",
+    "description": "Protocol for real-time bidirectional communication",
+    "use_cases": [
+      "Chat applications",
+      "Live notifications",
+      "Gaming"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "JavaScript",
+      "Node.js"
+    ],
+    "careers_using_this": [
+      "Full Stack Developer",
+      "Backend Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Microservices Architecture",
+    "category": "Cloud & DevOps",
+    "description": "Designing applications as independent, loosely-coupled services",
+    "use_cases": [
+      "Scalable applications",
+      "Cloud-native apps"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "6-9 months",
+    "related_skills": [
+      "Docker",
+      "Kubernetes",
+      "API Design"
+    ],
+    "careers_using_this": [
+      "Software Architect",
+      "Backend Engineer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Git",
+    "category": "Development Tools",
+    "description": "Distributed version control system for source code management",
+    "use_cases": [
+      "Code versioning",
+      "Collaboration",
+      "Code review"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "GitHub",
+      "GitLab"
+    ],
+    "careers_using_this": [
+      "Software Developer",
+      "DevOps Engineer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "REST API Design",
+    "category": "Web Development",
+    "description": "Creating standardized web service interfaces",
+    "use_cases": [
+      "Backend services",
+      "Integration",
+      "Mobile backends"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "HTTP",
+      "JSON",
+      "OpenAPI"
+    ],
+    "careers_using_this": [
+      "Backend Developer",
+      "API Engineer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "category": "Data Science & ML",
+    "description": "Python library for numerical computing with arrays",
+    "use_cases": [
+      "Scientific computing",
+      "Data manipulation",
+      "Matrix operations"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "Python",
+      "Pandas"
+    ],
+    "careers_using_this": [
+      "Data Scientist",
+      "ML Engineer"
+    ],
+    "industry_demand": "Very High",
+    "skill_name": "NumPy"
+  },
+  {
+    "skill_name": "Selenium",
+    "category": "Testing & QA",
+    "description": "Automated testing framework for web applications",
+    "use_cases": [
+      "UI testing",
+      "Browser automation",
+      "Regression testing"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Python",
+      "Java",
+      "Testing"
+    ],
+    "careers_using_this": [
+      "QA Engineer",
+      "Test Automation Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "JUnit",
+    "category": "Testing & QA",
+    "description": "Unit testing framework for Java applications",
+    "use_cases": [
+      "Unit testing",
+      "TDD",
+      "CI/CD"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "Java",
+      "Testing"
+    ],
+    "careers_using_this": [
+      "Java Developer",
+      "QA Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Linux/Unix",
+    "category": "Operating Systems",
+    "description": "Working with Linux/Unix command line and systems",
+    "use_cases": [
+      "Server administration",
+      "DevOps",
+      "Development"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Bash",
+      "Shell Scripting"
+    ],
+    "careers_using_this": [
+      "DevOps Engineer",
+      "System Administrator"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Bash Scripting",
+    "category": "Scripting & Automation",
+    "description": "Writing shell scripts for automation tasks",
+    "use_cases": [
+      "Task automation",
+      "System administration"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Linux",
+      "Python"
+    ],
+    "careers_using_this": [
+      "DevOps Engineer",
+      "SRE"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "PowerShell",
+    "category": "Scripting & Automation",
+    "description": "Windows automation and configuration management",
+    "use_cases": [
+      "Windows automation",
+      "System administration"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "Windows Server",
+      ".NET"
+    ],
+    "careers_using_this": [
+      "Windows Administrator",
+      "DevOps Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Selenium",
+    "category": "Testing & QA",
+    "description": "Browser automation and web testing tool",
+    "use_cases": [
+      "Automated testing",
+      "Web scraping"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Python",
+      "Java"
+    ],
+    "careers_using_this": [
+      "Test Engineer",
+      "QA Analyst"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "API Testing",
+    "category": "Testing & QA",
+    "description": "Testing RESTful and SOAP APIs for functionality",
+    "use_cases": [
+      "Backend testing",
+      "Integration testing"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Postman",
+      "REST APIs"
+    ],
+    "careers_using_this": [
+      "QA Engineer",
+      "Test Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Performance Testing",
+    "category": "Testing & QA",
+    "description": "Assessing system performance under load",
+    "use_cases": [
+      "Load testing",
+      "Stress testing"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "3-5 months",
+    "related_skills": [
+      "JMeter",
+      "LoadRunner"
+    ],
+    "careers_using_this": [
+      "Performance Engineer",
+      "QA Lead"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Selenium WebDriver",
+    "category": "Testing & QA",
+    "description": "Programmatic control of web browsers for testing",
+    "use_cases": [
+      "Automated UI testing",
+      "E2E testing"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Selenium",
+      "Java",
+      "Python"
+    ],
+    "careers_using_this": [
+      "Automation Engineer",
+      "QA Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Postman",
+    "category": "Development Tools",
+    "description": "API development and testing platform",
+    "use_cases": [
+      "API testing",
+      "API documentation"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1 month",
+    "related_skills": [
+      "REST APIs",
+      "HTTP"
+    ],
+    "careers_using_this": [
+      "Backend Developer",
+      "QA Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Swagger/OpenAPI",
+    "category": "Development Tools",
+    "description": "API documentation and design specification",
+    "use_cases": [
+      "API documentation",
+      "API design"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "REST APIs",
+      "YAML"
+    ],
+    "careers_using_this": [
+      "API Developer",
+      "Technical Writer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Jira",
+    "category": "Project Management Tools",
+    "description": "Issue tracking and project management software",
+    "use_cases": [
+      "Agile project management",
+      "Bug tracking"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1 month",
+    "related_skills": [
+      "Agile",
+      "Scrum"
+    ],
+    "careers_using_this": [
+      "Project Manager",
+      "Developer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Confluence",
+    "category": "Collaboration Tools",
+    "description": "Team collaboration and documentation platform",
+    "use_cases": [
+      "Documentation",
+      "Knowledge sharing"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1 month",
+    "related_skills": [
+      "Technical Writing",
+      "Collaboration"
+    ],
+    "careers_using_this": [
+      "Product Manager",
+      "Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Tableau",
+    "category": "Data Visualization",
+    "description": "Business intelligence and data visualization platform",
+    "use_cases": [
+      "Data dashboards",
+      "Business reporting"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "SQL",
+      "Data Analysis"
+    ],
+    "careers_using_this": [
+      "Data Analyst",
+      "BI Developer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Power BI",
+    "category": "Data Visualization",
+    "description": "Microsoft's business analytics and visualization tool",
+    "use_cases": [
+      "Business intelligence",
+      "Interactive reports"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "SQL",
+      "DAX"
+    ],
+    "careers_using_this": [
+      "BI Analyst",
+      "Data Analyst"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Matplotlib",
+    "category": "Data Visualization",
+    "description": "Python library for creating static and interactive plots",
+    "use_cases": [
+      "Data visualization",
+      "Scientific plotting"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "Python",
+      "NumPy"
+    ],
+    "careers_using_this": [
+      "Data Scientist",
+      "Analyst"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Seaborn",
+    "category": "Data Visualization",
+    "description": "Statistical data visualization library built on Matplotlib",
+    "use_cases": [
+      "Statistical plots",
+      "Data exploration"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1 month",
+    "related_skills": [
+      "Matplotlib",
+      "Pandas"
+    ],
+    "careers_using_this": [
+      "Data Scientist",
+      "Data Analyst"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "D3.js",
+    "category": "Data Visualization",
+    "description": "JavaScript library for dynamic data visualizations",
+    "use_cases": [
+      "Interactive charts",
+      "Web dashboards"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "JavaScript",
+      "SVG"
+    ],
+    "careers_using_this": [
+      "Data Visualization Engineer",
+      "Frontend Developer"
+    ],
+    "industry_demand": "Medium"
+  },
+  {
+    "skill_name": "Grafana",
+    "category": "Monitoring & Observability",
+    "description": "Multi-platform analytics and monitoring solution",
+    "use_cases": [
+      "Metric visualization",
+      "System monitoring"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "Prometheus",
+      "DevOps"
+    ],
+    "careers_using_this": [
+      "DevOps Engineer",
+      "SRE"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "ELK Stack",
+    "category": "Monitoring & Observability",
+    "description": "Elasticsearch, Logstash, Kibana for log management",
+    "use_cases": [
+      "Log analysis",
+      "System monitoring"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "3-5 months",
+    "related_skills": [
+      "Elasticsearch",
+      "DevOps"
+    ],
+    "careers_using_this": [
+      "DevOps Engineer",
+      "Site Reliability Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Splunk",
+    "category": "Monitoring & Observability",
+    "description": "Platform for searching and analyzing machine data",
+    "use_cases": [
+      "Log management",
+      "Security monitoring"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "Data Analysis",
+      "Security"
+    ],
+    "careers_using_this": [
+      "Security Analyst",
+      "DevOps Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Datadog",
+    "category": "Monitoring & Observability",
+    "description": "Cloud monitoring and analytics platform",
+    "use_cases": [
+      "Application monitoring",
+      "Infrastructure monitoring"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "DevOps",
+      "Cloud"
+    ],
+    "careers_using_this": [
+      "DevOps Engineer",
+      "SRE"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "CAD Design",
+    "category": "Engineering & Design",
+    "description": "Computer-aided design software for technical drawings",
+    "use_cases": [
+      "Mechanical design",
+      "Architecture",
+      "Product design"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "3D Modeling",
+      "Engineering"
+    ],
+    "careers_using_this": [
+      "Mechanical Engineer",
+      "Product Designer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "3D Modeling",
+    "category": "Design & Animation",
+    "description": "Creating three-dimensional digital representations",
+    "use_cases": [
+      "Game assets",
+      "Animation",
+      "Product visualization"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "5-8 months",
+    "related_skills": [
+      "Blender",
+      "Maya"
+    ],
+    "careers_using_this": [
+      "3D Artist",
+      "Game Designer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Unity",
+    "category": "Game Development",
+    "description": "Cross-platform game engine for 2D and 3D games",
+    "use_cases": [
+      "Game development",
+      "VR/AR apps"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "6-9 months",
+    "related_skills": [
+      "C#",
+      "3D Modeling"
+    ],
+    "careers_using_this": [
+      "Game Developer",
+      "AR/VR Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Unreal Engine",
+    "category": "Game Development",
+    "description": "High-fidelity game engine by Epic Games",
+    "use_cases": [
+      "AAA games",
+      "Architectural visualization"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "C++",
+      "3D Modeling"
+    ],
+    "careers_using_this": [
+      "Game Developer",
+      "Technical Artist"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Blender",
+    "category": "3D Graphics",
+    "description": "Open-source 3D creation suite",
+    "use_cases": [
+      "3D modeling",
+      "Animation",
+      "VFX"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "5-8 months",
+    "related_skills": [
+      "3D Modeling",
+      "Animation"
+    ],
+    "careers_using_this": [
+      "3D Artist",
+      "Animator"
+    ],
+    "industry_demand": "Medium"
+  },
+  {
+    "skill_name": "After Effects",
+    "category": "Motion Graphics",
+    "description": "Industry-standard motion graphics and visual effects software",
+    "use_cases": [
+      "Motion graphics",
+      "Video effects",
+      "Compositing"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Adobe Premiere",
+      "Animation"
+    ],
+    "careers_using_this": [
+      "Motion Designer",
+      "Video Editor"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Premiere Pro",
+    "category": "Video Production",
+    "description": "Professional video editing software by Adobe",
+    "use_cases": [
+      "Video editing",
+      "Post-production"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-5 months",
+    "related_skills": [
+      "After Effects",
+      "Media Production"
+    ],
+    "careers_using_this": [
+      "Video Editor",
+      "Content Creator"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Excel Advanced",
+    "category": "Business Tools",
+    "description": "Advanced spreadsheet analysis including VBA and macros",
+    "use_cases": [
+      "Financial modeling",
+      "Data analysis",
+      "Automation"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "VBA",
+      "Data Analysis"
+    ],
+    "careers_using_this": [
+      "Financial Analyst",
+      "Business Analyst"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Salesforce",
+    "category": "CRM",
+    "description": "Cloud-based customer relationship management platform",
+    "use_cases": [
+      "Sales management",
+      "Customer service",
+      "Marketing automation"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-5 months",
+    "related_skills": [
+      "CRM",
+      "Business Process"
+    ],
+    "careers_using_this": [
+      "Salesforce Admin",
+      "CRM Consultant"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "SAP",
+    "category": "Enterprise Software",
+    "description": "Enterprise resource planning software suite",
+    "use_cases": [
+      "Enterprise resource management",
+      "Supply chain"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "ERP",
+      "Business Process"
+    ],
+    "careers_using_this": [
+      "SAP Consultant",
+      "ERP Specialist"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Solidity",
+    "category": "Blockchain Development",
+    "description": "Programming language for Ethereum smart contracts",
+    "use_cases": [
+      "Smart contracts",
+      "DeFi applications"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "5-8 months",
+    "related_skills": [
+      "Blockchain",
+      "JavaScript"
+    ],
+    "careers_using_this": [
+      "Blockchain Developer",
+      "Smart Contract Developer"
+    ],
+    "industry_demand": "Medium"
+  },
+  {
+    "skill_name": "R Programming",
+    "category": "Data Science & ML",
+    "description": "Statistical programming language for data analysis",
+    "use_cases": [
+      "Statistical analysis",
+      "Data visualization",
+      "Research"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-5 months",
+    "related_skills": [
+      "Statistics",
+      "Data Analysis"
+    ],
+    "careers_using_this": [
+      "Data Scientist",
+      "Statistician"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "MATLAB",
+    "category": "Scientific Computing",
+    "description": "Numerical computing environment and programming language",
+    "use_cases": [
+      "Engineering simulations",
+      "Signal processing",
+      "Research"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "5-8 months",
+    "related_skills": [
+      "Mathematics",
+      "Engineering"
+    ],
+    "careers_using_this": [
+      "Research Engineer",
+      "Data Scientist"
+    ],
+    "industry_demand": "Medium"
+  },
+  {
+    "skill_name": "Hadoop",
+    "category": "Big Data",
+    "description": "Framework for distributed storage and processing of big data",
+    "use_cases": [
+      "Big data processing",
+      "Data lakes"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Java",
+      "Spark"
+    ],
+    "careers_using_this": [
+      "Big Data Engineer",
+      "Data Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Snowflake",
+    "category": "Data Warehousing",
+    "description": "Cloud-based data warehousing platform",
+    "use_cases": [
+      "Data warehousing",
+      "Analytics"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "SQL",
+      "Cloud"
+    ],
+    "careers_using_this": [
+      "Data Engineer",
+      "BI Developer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Databricks",
+    "category": "Big Data",
+    "description": "Unified analytics platform built on Apache Spark",
+    "use_cases": [
+      "Data engineering",
+      "ML workflows"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "3-5 months",
+    "related_skills": [
+      "Spark",
+      "Python"
+    ],
+    "careers_using_this": [
+      "Data Engineer",
+      "ML Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "dbt",
+    "category": "Data Engineering",
+    "description": "Data build tool for analytics transformations",
+    "use_cases": [
+      "Data transformation",
+      "Analytics engineering"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "SQL",
+      "Git"
+    ],
+    "careers_using_this": [
+      "Analytics Engineer",
+      "Data Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Looker",
+    "category": "Business Intelligence",
+    "description": "Business intelligence and data visualization platform",
+    "use_cases": [
+      "Data exploration",
+      "Business dashboards"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "SQL",
+      "LookML"
+    ],
+    "careers_using_this": [
+      "BI Analyst",
+      "Data Analyst"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Google Analytics",
+    "category": "Web Analytics",
+    "description": "Web analytics service for tracking website traffic",
+    "use_cases": [
+      "Website analytics",
+      "User behavior tracking"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "Digital Marketing",
+      "Data Analysis"
+    ],
+    "careers_using_this": [
+      "Digital Marketer",
+      "Data Analyst"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "SEO",
+    "category": "Digital Marketing",
+    "description": "Search engine optimization for improving web visibility",
+    "use_cases": [
+      "Website optimization",
+      "Content strategy"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Content Marketing",
+      "Analytics"
+    ],
+    "careers_using_this": [
+      "SEO Specialist",
+      "Digital Marketer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Content Marketing",
+    "category": "Digital Marketing",
+    "description": "Creating valuable content to attract and engage audiences",
+    "use_cases": [
+      "Blog writing",
+      "Social media",
+      "Brand awareness"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-6 months",
+    "related_skills": [
+      "Copywriting",
+      "SEO"
+    ],
+    "careers_using_this": [
+      "Content Marketer",
+      "Marketing Manager"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Social Media Marketing",
+    "category": "Digital Marketing",
+    "description": "Promoting brands on social media platforms",
+    "use_cases": [
+      "Brand building",
+      "Customer engagement"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "Content Creation",
+      "Analytics"
+    ],
+    "careers_using_this": [
+      "Social Media Manager",
+      "Digital Marketer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Email Marketing",
+    "category": "Digital Marketing",
+    "description": "Direct marketing via email to promote products/services",
+    "use_cases": [
+      "Campaign management",
+      "Lead nurturing"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Copywriting",
+      "Marketing Automation"
+    ],
+    "careers_using_this": [
+      "Email Marketer",
+      "Marketing Specialist"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Copywriting",
+    "category": "Marketing & Sales",
+    "description": "Writing persuasive content for marketing and sales",
+    "use_cases": [
+      "Ad copy",
+      "Landing pages",
+      "Sales emails"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-6 months",
+    "related_skills": [
+      "Marketing",
+      "Communication"
+    ],
+    "careers_using_this": [
+      "Copywriter",
+      "Content Marketer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Brand Strategy",
+    "category": "Marketing & Branding",
+    "description": "Developing long-term plans for brand development",
+    "use_cases": [
+      "Brand positioning",
+      "Market differentiation"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "12+ months",
+    "related_skills": [
+      "Marketing",
+      "Strategic Thinking"
+    ],
+    "careers_using_this": [
+      "Brand Manager",
+      "Marketing Director"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Product Management",
+    "category": "Product Development",
+    "description": "Overseeing product lifecycle from concept to launch",
+    "use_cases": [
+      "Product strategy",
+      "Feature prioritization"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "12+ months",
+    "related_skills": [
+      "Agile",
+      "User Research"
+    ],
+    "careers_using_this": [
+      "Product Manager",
+      "Product Owner"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Sales Strategy",
+    "category": "Sales",
+    "description": "Planning and executing approaches to drive revenue",
+    "use_cases": [
+      "Lead generation",
+      "Sales funnel optimization"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "Negotiation",
+      "CRM"
+    ],
+    "careers_using_this": [
+      "Sales Manager",
+      "Business Development"
+    ],
+    "demand": "High"
+  },
+  {
+    "skill_name": "B2B Sales",
+    "category": "Sales",
+    "description": "Business-to-business sales techniques and relationships",
+    "use_cases": [
+      "Enterprise sales",
+      "Solution selling"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "6-12 months",
+    "related_skills": [
+      "Negotiation",
+      "Relationship Building"
+    ],
+    "careers_using_this": [
+      "Account Executive",
+      "Sales Representative"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Presentation Skills",
+    "category": "Soft Skills - Communication",
+    "description": "Creating and delivering effective presentations",
+    "use_cases": [
+      "Pitches",
+      "Training",
+      "Stakeholder updates"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-6 months",
+    "related_skills": [
+      "Public Speaking",
+      "PowerPoint"
+    ],
+    "careers_using_this": [
+      "Consultant",
+      "Manager",
+      "Sales"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Data Storytelling",
+    "category": "Data Communication",
+    "description": "Presenting data insights through compelling narratives",
+    "use_cases": [
+      "Business presentations",
+      "Data reports"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Data Visualization",
+      "Communication"
+    ],
+    "careers_using_this": [
+      "Data Analyst",
+      "Business Analyst"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Design Thinking",
+    "category": "Innovation & Strategy",
+    "description": "Human-centered approach to innovation and problem-solving",
+    "use_cases": [
+      "Product innovation",
+      "Service design",
+      "Problem solving"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Creative Problem Solving",
+      "User Research"
+    ],
+    "careers_using_this": [
+      "Product Designer",
+      "Innovation Consultant"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Change Management",
+    "category": "Organizational Management",
+    "description": "Managing organizational transitions and transformations",
+    "use_cases": [
+      "Digital transformation",
+      "Process changes"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "12+ months",
+    "related_skills": [
+      "Leadership",
+      "Communication"
+    ],
+    "careers_using_this": [
+      "Change Manager",
+      "Consultant"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Supply Chain Management",
+    "category": "Operations",
+    "description": "Managing flow of goods and services from origin to consumption",
+    "use_cases": [
+      "Logistics",
+      "Inventory management"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "12+ months",
+    "related_skills": [
+      "Operations",
+      "Analytics"
+    ],
+    "careers_using_this": [
+      "Supply Chain Manager",
+      "Operations Manager"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Quality Assurance",
+    "category": "Testing & QA",
+    "description": "Ensuring products meet quality standards",
+    "use_cases": [
+      "Software testing",
+      "Process improvement"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Testing",
+      "Process Management"
+    ],
+    "careers_using_this": [
+      "QA Engineer",
+      "Quality Manager"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "UX Research",
+    "category": "User Experience",
+    "description": "Researching user behaviors, needs, and motivations",
+    "use_cases": [
+      "User testing",
+      "Personas",
+      "Journey mapping"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "User Research",
+      "Data Analysis"
+    ],
+    "careers_using_this": [
+      "UX Researcher",
+      "Product Designer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Information Architecture",
+    "category": "UX & Design",
+    "description": "Structuring and organizing information effectively",
+    "use_cases": [
+      "Website structure",
+      "Navigation design"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-5 months",
+    "related_skills": [
+      "UX Design",
+      "Wireframing"
+    ],
+    "careers_using_this": [
+      "UX Designer",
+      "Information Architect"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Accessibility Design",
+    "category": "UX & Design",
+    "description": "Designing inclusive experiences for all users",
+    "use_cases": [
+      "WCAG compliance",
+      "Inclusive design"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-5 months",
+    "related_skills": [
+      "UI/UX Design",
+      "Web Development"
+    ],
+    "careers_using_this": [
+      "UX Designer",
+      "Frontend Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Responsive Design",
+    "category": "Web Design",
+    "description": "Creating designs that adapt to different screen sizes",
+    "use_cases": [
+      "Mobile-first design",
+      "Cross-device experiences"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "CSS",
+      "HTML"
+    ],
+    "careers_using_this": [
+      "Frontend Developer",
+      "Web Designer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "CSS",
+    "category": "Web Development",
+    "description": "Styling web pages with cascading style sheets",
+    "use_cases": [
+      "Web styling",
+      "Responsive design"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "HTML",
+      "JavaScript"
+    ],
+    "careers_using_this": [
+      "Frontend Developer",
+      "Web Designer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "HTML",
+    "category": "Web Development",
+    "description": "Markup language for structuring web content",
+    "use_cases": [
+      "Web pages",
+      "Email templates"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "CSS",
+      "JavaScript"
+    ],
+    "careers_using_this": [
+      "Frontend Developer",
+      "Web Developer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Tailwind CSS",
+    "category": "Web Development",
+    "description": "Utility-first CSS framework for rapid UI development",
+    "use_cases": [
+      "Modern web apps",
+      "Rapid prototyping"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "CSS",
+      "HTML"
+    ],
+    "careers_using_this": [
+      "Frontend Developer",
+      "Full Stack Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Bootstrap",
+    "category": "Web Development",
+    "description": "Popular CSS framework for responsive websites",
+    "use_cases": [
+      "Responsive websites",
+      "UI components"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "CSS",
+      "HTML"
+    ],
+    "careers_using_this": [
+      "Frontend Developer",
+      "Web Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Redux",
+    "category": "Web Development",
+    "description": "State management library for JavaScript applications",
+    "use_cases": [
+      "Complex state management",
+      "React apps"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "React",
+      "JavaScript"
+    ],
+    "careers_using_this": [
+      "Frontend Developer",
+      "React Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Webpack",
+    "category": "Build Tools",
+    "description": "Module bundler for JavaScript applications",
+    "use_cases": [
+      "Asset bundling",
+      "Build optimization"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "JavaScript",
+      "Node.js"
+    ],
+    "careers_using_this": [
+      "Frontend Developer",
+      "Build Engineer"
+    ],
+    "industry_demand": "Medium"
+  },
+  {
+    "skill_name": "Vite",
+    "category": "Build Tools",
+    "description": "Fast build tool and development server",
+    "use_cases": [
+      "Frontend tooling",
+      "Fast development"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1 month",
+    "related_skills": [
+      "JavaScript",
+      "Vue"
+    ],
+    "careers_using_this": [
+      "Frontend Developer",
+      "Full Stack Developer"
+    ],
+    "industry_demand": "Medium"
+  },
+  {
+    "skill_name": "OAuth",
+    "category": "Security & Authentication",
+    "description": "Open standard for access delegation and authentication",
+    "use_cases": [
+      "Third-party login",
+      "API authorization"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Security",
+      "Backend Development"
+    ],
+    "careers_using_this": [
+      "Backend Developer",
+      "Security Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "JWT",
+    "category": "Security & Authentication",
+    "description": "JSON Web Tokens for secure information exchange",
+    "use_cases": [
+      "Authentication",
+      "Authorization"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "Security",
+      "Backend Development"
+    ],
+    "careers_using_this": [
+      "Backend Developer",
+      "Security Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "WebAssembly",
+    "category": "Web Development",
+    "description": "Binary instruction format for fast web execution",
+    "use_cases": [
+      "High-performance web apps",
+      "Gaming"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "5-8 months",
+    "related_skills": [
+      "C++",
+      "Rust"
+    ],
+    "careers_using_this": [
+      "Performance Engineer",
+      "Web Developer"
+    ],
+    "industry_demand": "Medium"
+  },
+  {
+    "skill_name": "PWA Development",
+    "category": "Web Development",
+    "description": "Building progressive web apps with native-like features",
+    "use_cases": [
+      "Offline-capable web apps",
+      "Push notifications"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-4 months",
+    "related_skills": [
+      "JavaScript",
+      "Service Workers"
+    ],
+    "careers_using_this": [
+      "Frontend Developer",
+      "Full Stack Developer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "WebRTC",
+    "category": "Web Development",
+    "description": "Real-time communication protocol for web browsers",
+    "use_cases": [
+      "Video conferencing",
+      "P2P communication"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "JavaScript",
+      "Networking"
+    ],
+    "careers_using_this": [
+      "WebRTC Engineer",
+      "Full Stack Developer"
+    ],
+    "industry_demand": "Medium"
+  },
+  {
+    "skill_name": "OpenCV",
+    "category": "Computer Vision",
+    "description": "Library for computer vision and image processing",
+    "use_cases": [
+      "Image processing",
+      "Object detection"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "5-8 months",
+    "related_skills": [
+      "Python",
+      "Computer Vision"
+    ],
+    "careers_using_this": [
+      "Computer Vision Engineer",
+      "ML Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "YOLO",
+    "category": "Computer Vision",
+    "description": "Real-time object detection system",
+    "use_cases": [
+      "Object detection",
+      "Video analysis"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Deep Learning",
+      "OpenCV"
+    ],
+    "careers_using_this": [
+      "Computer Vision Engineer",
+      "AI Researcher"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Hugging Face Transformers",
+    "category": "Natural Language Processing",
+    "description": "Library for state-of-the-art NLP models",
+    "use_cases": [
+      "Text generation",
+      "Sentiment analysis"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Python",
+      "Deep Learning"
+    ],
+    "careers_using_this": [
+      "NLP Engineer",
+      "ML Engineer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "spaCy",
+    "category": "Natural Language Processing",
+    "description": "Industrial-strength NLP library",
+    "use_cases": [
+      "Named entity recognition",
+      "Text processing"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-4 months",
+    "related_skills": [
+      "Python",
+      "NLP"
+    ],
+    "careers_using_this": [
+      "NLP Engineer",
+      "Data Scientist"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "BERT",
+    "category": "Natural Language Processing",
+    "description": "Bidirectional encoder representations from transformers",
+    "use_cases": [
+      "Language understanding",
+      "Question answering"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "5-8 months",
+    "related_skills": [
+      "Transformers",
+      "Deep Learning"
+    ],
+    "careers_using_this": [
+      "NLP Engineer",
+      "AI Researcher"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "LangChain",
+    "category": "AI & ML",
+    "description": "Framework for developing LLM applications",
+    "use_cases": [
+      "Chatbots",
+      "Document QA",
+      "Agents"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "2-3 months",
+    "related_skills": [
+      "Python",
+      "LLMs"
+    ],
+    "careers_using_this": [
+      "AI Engineer",
+      "ML Engineer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Prompt Engineering",
+    "category": "AI & ML",
+    "description": "Crafting effective prompts for large language models",
+    "use_cases": [
+      "LLM optimization",
+      "AI applications"
+    ],
+    "difficulty_level": "Beginner",
+    "learning_time": "1-2 months",
+    "related_skills": [
+      "LLMs",
+      "NLP"
+    ],
+    "careers_using_this": [
+      "AI Engineer",
+      "ML Engineer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "MLOps",
+    "category": "AI & ML",
+    "description": "Practices for deploying and maintaining ML models in production",
+    "use_cases": [
+      "Model deployment",
+      "ML pipelines"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "6-9 months",
+    "related_skills": [
+      "DevOps",
+      "Machine Learning"
+    ],
+    "careers_using_this": [
+      "MLOps Engineer",
+      "ML Engineer"
+    ],
+    "industry_demand": "Very High"
+  },
+  {
+    "skill_name": "Feature Engineering",
+    "category": "Data Science & ML",
+    "description": "Creating relevant features from raw data for ML models",
+    "use_cases": [
+      "Model improvement",
+      "Data preparation"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "4-6 months",
+    "related_skills": [
+      "Data Analysis",
+      "ML"
+    ],
+    "careers_using_this": [
+      "Data Scientist",
+      "ML Engineer"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "A/B Testing",
+    "category": "Data Analysis",
+    "description": "Comparing two versions to determine which performs better",
+    "use_cases": [
+      "Product optimization",
+      "Marketing campaigns"
+    ],
+    "difficulty_level": "Intermediate",
+    "learning_time": "3-4 months",
+    "related_skills": [
+      "Statistics",
+      "Data Analysis"
+    ],
+    "careers_using_this": [
+      "Product Manager",
+      "Data Analyst"
+    ],
+    "industry_demand": "High"
+  },
+  {
+    "skill_name": "Reinforcement Learning",
+    "category": "AI & ML",
+    "description": "Training agents through rewards and penalties",
+    "use_cases": [
+      "Game AI",
+      "Robotics",
+      "Autonomous systems"
+    ],
+    "difficulty_level": "Expert",
+    "learning_time": "8-12 months",
+    "related_skills": [
+      "Deep Learning",
+      "Python"
+    ],
+    "careers_using_this": [
+      "AI Researcher",
+      "ML Scientist"
+    ],
+    "industry_demand": "Medium"
+  },
+  {
+    "skill_name": "Time Series Analysis",
+    "category": "Data Science & ML",
+    "description": "Analyzing data points indexed in time order",
+    "use_cases": [
+      "Forecasting",
+      "Trend analysis",
+      "Financial modeling"
+    ],
+    "difficulty_level": "Advanced",
+    "learning_time": "5-7 months",
+    "related_skills": [
+      "Statistics",
+      "Python"
+    ],
+    "careers_using_this": [
+      "Data Scientist",
+      "Quantitative Analyst"
+    ],
+    "industry_demand": "High"
+  }
+]
