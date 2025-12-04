@@ -91,6 +91,8 @@ class UserProfileUpdate(BaseModel):
     currently_learning: Optional[str] = None
     dreams: Optional[str] = None
 
+class ChatUpdate(BaseModel):
+    title: str
 # ==========================================
 #               PAGE ROUTES
 # ==========================================
@@ -141,6 +143,8 @@ async def register(user: UserCreate):
     }
     await users_collection.insert_one(user_doc)
     return {"message": "User created successfully"}
+
+
 
 @app.post("/token")
 async def login(response: Response, form_data: OAuth2PasswordRequestForm = Depends()):
@@ -225,6 +229,26 @@ async def get_chat_history(chat_id: str, request: Request):
     
     return chat
 
+@app.delete("/api/chats/{chat_id}")
+async def delete_chat(chat_id: str, user: dict = Depends(get_current_user)):
+    # Verify the chat belongs to the user
+    result = await chats_collection.delete_one({"_id": chat_id, "user_email": user["email"]})
+    
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Chat not found or not authorized")
+    
+    return {"message": "Chat deleted successfully"}
+# --- NEW: RENAME CHAT ENDPOINT ---
+@app.put("/api/chats/{chat_id}")
+async def rename_chat(chat_id: str, data: ChatUpdate, user: dict = Depends(get_current_user)):
+    result = await chats_collection.update_one(
+        {"_id": chat_id, "user_email": user["email"]},
+        {"$set": {"title": data.title}}
+    )
+    if result.matched_count == 0:
+        raise HTTPException(status_code=404, detail="Chat not found")
+    return {"message": "Chat renamed"}
+
 @app.post("/chat")
 async def chat_endpoint(
     request: Request,
@@ -241,7 +265,7 @@ async def chat_endpoint(
         await chats_collection.insert_one({
             "_id": chat_id,
             "user_email": user["email"],
-            "title": user_message[:30] + "...",
+            "title": user_message,
             "created_at": datetime.utcnow(),
             "messages": []
         })
