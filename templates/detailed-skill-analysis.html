@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Skill Analysis - Career Advisor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); min-height: 100vh; padding-bottom: 40px; animation: gradientShift 15s ease infinite; background-size: 200% 200%; }
+        @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
+        /* Header */
+        .header { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(204, 49, 61, 0.15); position: sticky; top: 0; z-index: 100; }
+        .header-content { max-width: 1400px; margin: 0 auto; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: 800; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; cursor: pointer; }
+        .back-btn { padding: 8px 20px; border: 2px solid #CC313D; color: #CC313D; border-radius: 20px; cursor: pointer; font-weight: 700; background: transparent; transition: all 0.3s; }
+        .back-btn:hover { background: #CC313D; color: white; }
+
+        /* Main Container */
+        .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+        
+        /* Section Styles */
+        .section { background: rgba(255, 255, 255, 0.95); padding: 30px; border-radius: 16px; margin-bottom: 25px; box-shadow: 0 8px 32px rgba(204, 49, 61, 0.15); border: 2px solid rgba(247, 197, 204, 0.3); }
+        .section-title { font-size: 22px; color: #CC313D; margin-bottom: 25px; font-weight: 800; display: flex; align-items: center; gap: 10px; }
+        .section-title i { font-size: 24px; }
+        
+        .page-title { font-size: 28px; color: white; margin-bottom: 25px; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+
+        /* Career Goals Cards */
+        .goals-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .goal-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 5px solid #ccc; transition: transform 0.2s; }
+        .goal-card:hover { transform: translateY(-3px); }
+        
+        /* Dynamic Border Colors */
+        .goal-card.match-high { border-left-color: #2ecc71; }
+        .goal-card.match-medium { border-left-color: #f1c40f; }
+        .goal-card.match-low { border-left-color: #e74c3c; }
+
+        .goal-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px; }
+        .goal-name { font-size: 18px; font-weight: 700; color: #333; }
+        .match-badge { padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: 700; color: white; }
+        
+        .match-high .match-badge { background: #2ecc71; }
+        .match-medium .match-badge { background: #f1c40f; color: #333; }
+        .match-low .match-badge { background: #e74c3c; }
+
+        .progress-container { margin-top: 15px; }
+        .progress-label { display: flex; justify-content: space-between; font-size: 12px; color: #666; margin-bottom: 5px; font-weight: 600; }
+        .progress-track { height: 8px; background: #eee; border-radius: 4px; overflow: hidden; }
+        .progress-fill { height: 100%; border-radius: 4px; transition: width 1s ease; }
+        .match-high .progress-fill { background: #2ecc71; }
+        .match-medium .progress-fill { background: #f1c40f; }
+        .match-low .progress-fill { background: #e74c3c; }
+
+        /* Missing Skills Tables */
+        .missing-group { margin-bottom: 30px; }
+        .group-header { font-size: 16px; font-weight: 700; color: #555; margin-bottom: 10px; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+        .skills-table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; }
+        .skills-table th { background: #f8f9fa; color: #666; font-size: 12px; text-transform: uppercase; padding: 12px 15px; text-align: left; font-weight: 700; }
+        .skills-table td { padding: 12px 15px; border-bottom: 1px solid #eee; font-size: 14px; color: #333; }
+        .skills-table tr:last-child td { border-bottom: none; }
+        
+        .priority-badge { padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+        .priority-High { background: #ffebee; color: #c62828; }
+        .priority-Medium { background: #fff3e0; color: #ef6c00; }
+        .priority-Low { background: #e8f5e9; color: #2e7d32; }
+
+        /* Skills Inventory Chips */
+        .skill-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+        .skill-chip { padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .chip-have { background: linear-gradient(135deg, #cc313d 0%, #f7c5cc 100%); color: white; }
+        .chip-learning { background: white; border: 1px solid #cc313d; color: #cc313d; }
+
+        /* Custom Form */
+        .add-skill-form { background: #f9f9f9; padding: 25px; border-radius: 12px; border: 1px dashed #ccc; }
+        .form-row { display: grid; grid-template-columns: 2fr 2fr 1fr 1fr auto; gap: 15px; align-items: end; }
+        .form-group label { display: block; font-size: 12px; font-weight: 700; color: #666; margin-bottom: 5px; }
+        .form-input, .form-select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; outline: none; font-family: 'Montserrat', sans-serif; font-size: 13px; }
+        .form-input:focus, .form-select:focus { border-color: #CC313D; box-shadow: 0 0 0 2px rgba(204, 49, 61, 0.1); }
+        .add-btn { padding: 10px 20px; background: #333; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; height: 42px; transition: background 0.2s; }
+        .add-btn:hover { background: #000; }
+
+        /* Action Footer */
+        .action-footer { display: flex; justify-content: flex-end; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.05); }
+        .save-btn { padding: 12px 30px; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); color: white; border: none; border-radius: 30px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 15px rgba(204, 49, 61, 0.3); transition: transform 0.2s; }
+        .save-btn:hover { transform: translateY(-2px); }
+
+        .empty-state { text-align: center; color: #888; padding: 20px; font-size: 14px; font-style: italic; }
+
+        @media (max-width: 900px) { .form-row { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo" onclick="window.location.href='/dashboard'">Career Advisor</h1>
+            <button class="back-btn" onclick="window.location.href='/dashboard'">← Back to Dashboard</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="page-title"><span id="userName">User</span>'s Readiness Assessment</h1>
+
+        <!-- 1. CAREER GOALS OVERVIEW -->
+        <div class="section">
+            <div class="section-title"><i class="ri-dashboard-3-line"></i> Career Goals Overview</div>
+            <div class="goals-grid" id="goalsGrid">
+                <!-- Populated via JS -->
+                <div class="empty-state">Loading analysis...</div>
+            </div>
+        </div>
+
+        <!-- 2. MISSING SKILLS BREAKDOWN -->
+        <div class="section">
+            <div class="section-title"><i class="ri-list-check-2"></i> Missing Skills Breakdown</div>
+            <p style="font-size:13px; color:#666; margin-bottom:20px;">
+                Prioritized list of skills you need to acquire for each of your goals.
+            </p>
+            <div id="missingSkillsContent">
+                <!-- Populated via JS -->
+            </div>
+
+            <!-- Custom Add Form -->
+            <div class="add-skill-form">
+                <h4 style="margin-bottom:15px; color:#333; font-weight:700;">+ Add Custom Missing Skill</h4>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Skill Name</label>
+                        <input type="text" class="form-input" id="newSkillName" placeholder="e.g. Kubernetes">
+                    </div>
+                    <div class="form-group">
+                        <label>Relates To (Goal)</label>
+                        <select class="form-select" id="newSkillGoal">
+                            <option value="">Select Goal...</option>
+                            <!-- Populated via JS -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Priority</label>
+                        <select class="form-select" id="newSkillPriority">
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Est. Time (Weeks)</label>
+                        <input type="number" class="form-input" id="newSkillTime" placeholder="4">
+                    </div>
+                    <button class="add-btn" onclick="addManualSkill()">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. SKILLS INVENTORY -->
+        <div class="section">
+            <div class="section-title"><i class="ri-stack-line"></i> Skills Inventory</div>
+            
+            <div style="margin-bottom: 25px;">
+                <h4 style="font-size:14px; color:#555; margin-bottom:10px; font-weight:700;">Acquired Skills</h4>
+                <div class="skill-chips" id="acquiredSkillsList"></div>
+            </div>
+
+            <div>
+                <h4 style="font-size:14px; color:#555; margin-bottom:10px; font-weight:700;">Currently Learning</h4>
+                <div class="skill-chips" id="learningSkillsList"></div>
+            </div>
+        </div>
+
+        <div class="action-footer">
+            <button class="save-btn" onclick="saveData()">💾 Save Analysis Plan</button>
+        </div>
+    </div>
+
+    <script>
+        let analysisData = {};
+        let customMissingSkills = [];
+
+        window.addEventListener('load', loadAnalysis);
+
+        async function loadAnalysis() {
+            try {
+                const response = await fetch('/api/detailed-analysis');
+                if (response.status === 401) { window.location.href = '/auth'; return; }
+                
+                const data = await response.json();
+                analysisData = data;
+                
+                document.getElementById('userName').textContent = data.user_name;
+                
+                renderGoalsOverview(data.goals_summary);
+                renderMissingSkills(data.missing_skills);
+                renderSkillsInventory(data.skills_have, data.currently_learning);
+                populateGoalDropdown(data.career_goals);
+
+            } catch (e) {
+                console.error("Error loading analysis:", e);
+            }
+        }
+
+        // --- 1. RENDER GOALS OVERVIEW ---
+        function renderGoalsOverview(goals) {
+            const container = document.getElementById('goalsGrid');
+            if (!goals || goals.length === 0) {
+                container.innerHTML = `<div class="empty-state">No career goals set. Go to Profile to add one!</div>`;
+                return;
+            }
+
+            container.innerHTML = goals.map(g => {
+                // Determine readiness level
+                let level = 'low';
+                if (g.match_percent >= 70) level = 'high';
+                else if (g.match_percent >= 40) level = 'medium';
+
+                return `
+                <div class="goal-card match-${level}">
+                    <div class="goal-header">
+                        <div class="goal-name">${g.goal}</div>
+                        <div class="match-badge">${g.match_percent}% Match</div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Readiness</span>
+                            <span>${g.skills_had} of ${g.total_skills} skills acquired</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: ${g.match_percent}%"></div>
+                        </div>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        // --- 2. RENDER MISSING SKILLS (Grouped) ---
+        function renderMissingSkills(skills) {
+            const container = document.getElementById('missingSkillsContent');
+            if (!skills || skills.length === 0) {
+                container.innerHTML = `<div class="empty-state">Great job! No obvious skill gaps found based on current data.</div>`;
+                return;
+            }
+
+            // Group by Goal
+            const grouped = skills.reduce((acc, skill) => {
+                const g = skill.for_goal || "General";
+                if (!acc[g]) acc[g] = [];
+                acc[g].push(skill);
+                return acc;
+            }, {});
+
+            let html = '';
+            for (const [goal, items] of Object.entries(grouped)) {
+                html += `
+                <div class="missing-group">
+                    <div class="group-header">${goal}</div>
+                    <table class="skills-table">
+                        <thead>
+                            <tr>
+                                <th style="width:40%">Skill Name</th>
+                                <th style="width:30%">Priority</th>
+                                <th style="width:30%">Est. Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${items.map(item => `
+                                <tr>
+                                    <td>${item.name}</td>
+                                    <td><span class="priority-badge priority-${item.priority}">${item.priority}</span></td>
+                                    <td>${item.time_estimate}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+                `;
+            }
+            container.innerHTML = html;
+        }
+
+        // --- 3. RENDER INVENTORY ---
+        function renderSkillsInventory(have, learning) {
+            const haveContainer = document.getElementById('acquiredSkillsList');
+            const learnContainer = document.getElementById('learningSkillsList');
+
+            haveContainer.innerHTML = have.length 
+                ? have.map(s => `<span class="skill-chip chip-have">✓ ${s}</span>`).join('') 
+                : `<span style="font-size:13px; color:#999;">No skills added yet</span>`;
+
+            learnContainer.innerHTML = learning.length 
+                ? learning.map(s => `<span class="skill-chip chip-learning">⚡ ${s}</span>`).join('') 
+                : `<span style="font-size:13px; color:#999;">Not learning anything currently</span>`;
+        }
+
+        // --- 4. POPULATE DROPDOWN ---
+        function populateGoalDropdown(goals) {
+            const select = document.getElementById('newSkillGoal');
+            // Clear existing options except first
+            while (select.options.length > 1) select.remove(1);
+            
+            if (goals) {
+                goals.forEach(g => {
+                    const opt = document.createElement('option');
+                    opt.value = g;
+                    opt.text = g;
+                    select.add(opt);
+                });
+            }
+        }
+
+        // --- 5. INTERACTION: Add Custom Skill ---
+        function addManualSkill() {
+            const name = document.getElementById('newSkillName').value.trim();
+            const goal = document.getElementById('newSkillGoal').value;
+            const priority = document.getElementById('newSkillPriority').value;
+            const timeVal = document.getElementById('newSkillTime').value;
+            
+            if (!name || !goal) {
+                alert("Please enter a skill name and select a related goal.");
+                return;
+            }
+
+            const newSkill = {
+                name: name,
+                for_goal: goal,
+                priority: priority,
+                time_estimate: (timeVal ? timeVal + ' weeks' : '2-4 weeks')
+            };
+
+            // Add to local data structures
+            customMissingSkills.push(newSkill);
+            analysisData.missing_skills.push(newSkill);
+
+            // Re-render
+            renderMissingSkills(analysisData.missing_skills);
+
+            // Clear Form
+            document.getElementById('newSkillName').value = '';
+            document.getElementById('newSkillTime').value = '';
+        }
+
+        // --- 6. SAVE TO DB ---
+        async function saveData() {
+            const btn = document.querySelector('.save-btn');
+            const originalText = btn.innerText;
+            btn.innerText = "Saving...";
+
+            try {
+                // We only need to save the user ratings (if we had them) and custom added skills
+                // Since this version focuses on readiness, we mainly save the custom gap items
+                const response = await fetch('/api/save-analysis', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        skill_ratings: analysisData.skill_ratings || {},
+                        custom_missing_skills: customMissingSkills
+                    })
+                });
+
+                if (response.ok) {
+                    btn.innerText = "✅ Saved Successfully!";
+                    setTimeout(() => btn.innerText = originalText, 2000);
+                } else {
+                    alert("Error saving data");
+                    btn.innerText = originalText;
+                }
+            } catch (e) {
+                console.error(e);
+                btn.innerText = "Error";
+            }
+        }
+    </script>
+</body>
+</html>

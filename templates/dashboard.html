@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Advisor Dashboard</title>
-    <link href="[https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap](https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap)" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* ... (Keep your complete existing styles from dashboard.html) ... */
+        /* ... (Same styles) ... */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); min-height: 100vh; padding-bottom: 40px; animation: gradientShift 15s ease infinite; background-size: 200% 200%; }
         @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
@@ -43,7 +43,24 @@
         .widget-title::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 40px; height: 3px; background: linear-gradient(90deg, #CC313D, #F7C5CC); border-radius: 2px; animation: expandLine 2s ease-in-out infinite; }
         @keyframes expandLine { 0%, 100% { width: 40px; } 50% { width: 60px; } }
         
-        /* Career Score Widget */
+        /* Recommendations Widget */
+        .recommendations { grid-column: 7 / 13; }
+        .career-list { display: flex; flex-direction: column; gap: 18px; position: relative; z-index: 1; }
+        .career-item { display: flex; justify-content: space-between; align-items: center; padding: 16px; background: linear-gradient(135deg, rgba(247, 197, 204, 0.2) 0%, rgba(247, 197, 204, 0.05) 100%); border-radius: 12px; transition: all 0.3s ease; border: 1px solid rgba(204, 49, 61, 0.1); animation: slideInRight 0.6s ease forwards; opacity: 0; }
+        .career-item:nth-child(1) { animation-delay: 0.3s; }
+        .career-item:nth-child(2) { animation-delay: 0.4s; }
+        .career-item:nth-child(3) { animation-delay: 0.5s; }
+        @keyframes slideInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+        .career-item:hover { background: linear-gradient(135deg, rgba(247, 197, 204, 0.4) 0%, rgba(247, 197, 204, 0.15) 100%); transform: translateX(8px); border-color: #CC313D; }
+        .career-info h3 { font-size: 17px; color: #CC313D; margin-bottom: 6px; font-weight: 700; }
+        .match-reason { font-size: 12px; color: #666; font-weight: 500; } 
+        /* New Style for Matching Skills Text */
+        .match-skills-text { font-size: 11px; color: #cc313d; font-weight: 600; margin-top: 4px; display: block; }
+
+        .match-score { text-align: right; min-width: 110px; }
+        .score-number { font-size: 20px; font-weight: 800; color: #CC313D; display: block; margin-bottom: 8px; }
+        
+        /* Other Widgets (Skills Gap, Progress, etc) */
         .career-score { grid-column: 1 / 7; }
         .score-content { display: flex; gap: 35px; align-items: center; position: relative; z-index: 1; }
         .gauge-chart { position: relative; width: 210px; flex-shrink: 0; animation: float 3s ease-in-out infinite; }
@@ -55,30 +72,14 @@
         @keyframes countUp { from { opacity: 0; transform: translateX(-50%) scale(0.5); } to { opacity: 1; transform: translateX(-50%) scale(1); } }
         .score-breakdown { flex: 1; display: flex; flex-direction: column; gap: 16px; }
         .breakdown-item span { display: block; font-size: 14px; font-weight: 600; color: #333; margin-bottom: 8px; }
-        
-        /* Recommendations Widget */
-        .recommendations { grid-column: 7 / 13; }
-        .career-list { display: flex; flex-direction: column; gap: 18px; position: relative; z-index: 1; }
-        .career-item { display: flex; justify-content: space-between; align-items: center; padding: 16px; background: linear-gradient(135deg, rgba(247, 197, 204, 0.2) 0%, rgba(247, 197, 204, 0.05) 100%); border-radius: 12px; transition: all 0.3s ease; border: 1px solid rgba(204, 49, 61, 0.1); animation: slideInRight 0.6s ease forwards; opacity: 0; }
-        .career-item:nth-child(1) { animation-delay: 0.3s; }
-        .career-item:nth-child(2) { animation-delay: 0.4s; }
-        .career-item:nth-child(3) { animation-delay: 0.5s; }
-        @keyframes slideInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
-        .career-item:hover { background: linear-gradient(135deg, rgba(247, 197, 204, 0.4) 0%, rgba(247, 197, 204, 0.15) 100%); transform: translateX(8px); border-color: #CC313D; }
-        .career-info h3 { font-size: 17px; color: #CC313D; margin-bottom: 6px; font-weight: 700; }
-        .match-reason { font-size: 13px; color: #666; font-weight: 500; }
-        .match-score { text-align: right; min-width: 110px; }
-        .score-number { font-size: 20px; font-weight: 800; color: #CC313D; display: block; margin-bottom: 8px; }
-        
-        /* Progress Bars */
+
         .progress-bar { height: 10px; background: rgba(247, 197, 204, 0.3); border-radius: 20px; overflow: hidden; position: relative; }
         .progress-bar::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent); animation: shimmer 2s infinite; }
         @keyframes shimmer { to { left: 100%; } }
         .progress-bar.large { height: 12px; }
         .progress-fill { height: 100%; background: linear-gradient(90deg, #CC313D 0%, #F7C5CC 100%); border-radius: 20px; transition: width 1s cubic-bezier(0.65, 0, 0.35, 1); box-shadow: 0 2px 8px rgba(204, 49, 61, 0.3); animation: progressGlow 2s ease-in-out infinite; }
         @keyframes progressGlow { 0%, 100% { box-shadow: 0 2px 8px rgba(204, 49, 61, 0.3); } 50% { box-shadow: 0 2px 15px rgba(204, 49, 61, 0.5); } }
-        
-        /* Skills Gap Widget */
+
         .skills-gap { grid-column: 1 / 13; }
         .skills-content { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-bottom: 24px; position: relative; z-index: 1; }
         .skills-subtitle { font-size: 15px; font-weight: 700; color: #CC313D; margin-bottom: 16px; }
@@ -88,32 +89,27 @@
         .skill-tag:nth-child(2) { animation-delay: 0.6s; }
         .skill-tag:nth-child(3) { animation-delay: 0.7s; }
         .skill-tag:nth-child(4) { animation-delay: 0.8s; }
-        .skill-tag:nth-child(5) { animation-delay: 0.9s; }
-        .skill-tag:nth-child(6) { animation-delay: 1s; }
         @keyframes popIn { to { opacity: 1; transform: scale(1); } }
         .skill-tag:hover { transform: scale(1.1) rotate(2deg); }
         .skill-tag.mastered { background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); color: white; }
-        .skill-tag.developing { background: linear-gradient(135deg, #F7C5CC 0%, #CC313D 100%); color: white; }
-        .skill-tag.needed { background: rgba(247, 197, 204, 0.3); color: #CC313D; border: 2px solid #CC313D; }
+        .skill-tag.learning { background: rgba(247, 197, 204, 0.3); color: #CC313D; border: 2px solid #CC313D; }
+        
         .btn-primary { padding: 12px 28px; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); color: white; border: none; border-radius: 30px; cursor: pointer; font-size: 15px; font-weight: 700; font-family: 'Montserrat', sans-serif; transition: all 0.4s ease; box-shadow: 0 4px 15px rgba(204, 49, 61, 0.3); position: relative; z-index: 1; overflow: hidden; }
         .btn-primary::before { content: ''; position: absolute; top: 50%; left: 50%; width: 0; height: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.3); transform: translate(-50%, -50%); transition: width 0.6s, height 0.6s; }
         .btn-primary:hover::before { width: 300px; height: 300px; }
         .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(204, 49, 61, 0.4); }
-        
-        /* Learning Progress Widget */
+
         .learning-progress { grid-column: 1 / 5; }
         .progress-items { display: flex; flex-direction: column; gap: 24px; position: relative; z-index: 1; }
         .progress-header { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 15px; font-weight: 700; color: #333; }
         .progress-percent { color: #CC313D; font-weight: 800; }
         .time-estimate { font-size: 12px; color: #999; margin-top: 8px; font-weight: 500; }
         
-        /* Activity Feed Widget */
         .activity-feed { grid-column: 5 / 9; }
         .activity-list { display: flex; flex-direction: column; gap: 18px; position: relative; z-index: 1; }
-        .activity-item { display: flex; gap: 14px; align-items: flex-start; padding: 12px; border-radius: 10px; transition: all 0.3s ease; animation: fadeIn 0.8s ease forwards; opacity: 0; }
+        .activity-item { display: flex; gap: 14px; align-items: flex-start; padding: 12px; border-radius: 10px; transition: all 0.3s ease; animation: fadeIn 0.8s ease forwards; opacity: 0; cursor: pointer; }
         .activity-item:nth-child(1) { animation-delay: 0.6s; }
         .activity-item:nth-child(2) { animation-delay: 0.7s; }
-        .activity-item:nth-child(3) { animation-delay: 0.8s; }
         @keyframes fadeIn { to { opacity: 1; } }
         .activity-item:hover { background: rgba(247, 197, 204, 0.2); transform: translateX(8px); }
         .activity-icon { font-size: 26px; flex-shrink: 0; animation: bounce 1s ease infinite; }
@@ -121,8 +117,7 @@
         .activity-details { flex: 1; }
         .activity-text { font-size: 14px; font-weight: 600; color: #333; margin-bottom: 6px; }
         .activity-time { font-size: 12px; color: #999; font-weight: 500; }
-        
-        /* Talk to Orion Widget */
+
         .talk-to-orion { grid-column: 9 / 13; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); color: white; cursor: pointer; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 220px; border: none; }
         .talk-to-orion::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%); animation: rotateOrion 15s linear infinite; }
         @keyframes rotateOrion { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
@@ -136,7 +131,6 @@
         .orion-arrow { font-size: 28px; font-weight: bold; z-index: 1; animation: slideArrow 1.5s ease-in-out infinite; }
         @keyframes slideArrow { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(10px); } }
         
-        /* Responsive Design */
         @media (max-width: 1024px) {
             .career-score, .recommendations, .skills-gap, .learning-progress, .activity-feed, .talk-to-orion { grid-column: 1 / 13; }
             .skills-content { grid-template-columns: 1fr; }
@@ -150,7 +144,7 @@
             <div class="header-right">
                 <span class="user-name">Welcome, User</span>
                 <div class="profile-icon" id="profileIcon">
-                    <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" viewBox="0 0 24 24">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                     </svg>
                 </div>
@@ -159,7 +153,7 @@
     </header>
 
     <div class="dashboard-container">
-        <!-- (Your widgets here - keeping existing HTML) -->
+        <!-- (Other Widgets) -->
         <div class="widget career-score">
             <h2 class="widget-title">Career Readiness Score</h2>
             <div class="score-content">
@@ -180,12 +174,8 @@
 
         <div class="widget recommendations">
             <h2 class="widget-title">Top Career Matches</h2>
-            <div class="career-list">
-                <div class="career-item">
-                    <div class="career-info"><h3>Data Scientist</h3><p class="match-reason">Python, ML, Statistics</p></div>
-                    <div class="match-score"><span class="score-number">85%</span><div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div></div>
-                </div>
-                <!-- ... other items ... -->
+            <div class="career-list" id="recommendationList">
+                <div style="padding:10px; color:#666;">Analyzing your profile...</div>
             </div>
         </div>
 
@@ -194,20 +184,18 @@
             <div class="skills-content">
                 <div class="skills-column">
                     <h3 class="skills-subtitle">Skills You Have</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag mastered">Python</span>
-                    </div>
+                    <div class="skill-tags" id="skillsHaveContainer"></div>
                 </div>
                 <div class="skills-column">
-                    <h3 class="skills-subtitle">Skills to Learn</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag needed">Deep Learning</span>
-                    </div>
+                    <h3 class="skills-subtitle">Currently Learning Skills</h3>
+                    <div class="skill-tags" id="skillsLearningContainer"></div>
                 </div>
             </div>
-            <button class="btn-primary">View Detailed Analysis</button>
+            <!-- UPDATED BUTTON LINK (REMOVED .html) -->
+            <button class="btn-primary" onclick="window.location.href='/detailed-skill-analysis'">View Detailed Analysis</button>
         </div>
 
+        <!-- (Other Widgets...) -->
         <div class="widget learning-progress">
             <h2 class="widget-title">Learning Progress</h2>
             <div class="progress-items">
@@ -221,12 +209,9 @@
 
         <div class="widget activity-feed">
             <h2 class="widget-title">Recent Activity</h2>
-            <div class="activity-list">
-                <!-- Activity items populated via JS -->
-            </div>
+            <div class="activity-list"></div>
         </div>
 
-        <!-- CLICKABLE ORION BOX -->
         <div class="widget talk-to-orion" id="talkToOrion">
             <div class="orion-icon">🤖</div>
             <h2 class="widget-title">Talk to Orion</h2>
@@ -256,72 +241,64 @@
         async function loadDashboard() {
             try {
                 const response = await fetch('/api/dashboard-data');
-                if (response.status === 401) {
-                    window.location.href = '/auth'; // Redirect to AUTH page
-                    return;
-                }
-
+                if (response.status === 401) { window.location.href = '/auth'; return; }
                 if (response.ok) {
                     const data = await response.json();
-                    const nameEl = document.querySelector('.user-name');
-                    if (nameEl) nameEl.textContent = `Welcome, ${data.name}`;
-
-                    const skillsLists = document.querySelectorAll('.skill-tags');
-                    const skillsHaveContainer = skillsLists[0]; 
                     
-                    if (skillsHaveContainer) {
-                        skillsHaveContainer.innerHTML = '';
-                        if (data.skills && data.skills.length > 0) {
-                            data.skills.forEach(skill => {
-                                const span = document.createElement('span');
-                                span.className = 'skill-tag mastered'; 
-                                span.textContent = skill;
-                                skillsHaveContainer.appendChild(span);
-                            });
-                        } else {
-                            skillsHaveContainer.innerHTML = '<span style="font-size:13px; color:#666;">No skills added yet. Update profile!</span>';
-                        }
+                    document.querySelector('.user-name').textContent = `Welcome, ${data.name}`;
+
+                    // Populate Skills
+                    const skillsHave = document.getElementById('skillsHaveContainer');
+                    skillsHave.innerHTML = data.skills.map(s => `<span class="skill-tag mastered">${s}</span>`).join('') || '<span style="color:#666;font-size:13px;">No skills added</span>';
+
+                    const skillsLearning = document.getElementById('skillsLearningContainer');
+                    skillsLearning.innerHTML = data.currently_learning.map(s => `<span class="skill-tag learning">${s}</span>`).join('') || '<span style="color:#666;font-size:13px;">Not learning anything</span>';
+
+                    // Populate Activity
+                    const activityList = document.querySelector('.activity-list');
+                    if (data.recent_activity.length > 0) {
+                        activityList.innerHTML = data.recent_activity.map(a => `
+                            <div class="activity-item" onclick="window.location.href='/chat?id=${a.id}'">
+                                <div class="activity-icon">💬</div>
+                                <div class="activity-details">
+                                    <p class="activity-text">Chat: ${a.title}</p>
+                                    <span class="activity-time">${timeAgo(a.timestamp)}</span>
+                                </div>
+                            </div>
+                        `).join('');
+                    } else {
+                        activityList.innerHTML = '<div style="padding:10px; color:#666;">No recent activity.</div>';
                     }
 
-                    const activityList = document.querySelector('.activity-list');
-                    if (activityList) {
-                        activityList.innerHTML = '';
-                        if (data.recent_activity && data.recent_activity.length > 0) {
-                            data.recent_activity.forEach(activity => {
-                                const div = document.createElement('div');
-                                div.className = 'activity-item';
-                                div.innerHTML = `
-                                    <div class="activity-icon">💬</div>
-                                    <div class="activity-details">
-                                        <p class="activity-text">Chat: ${activity.title}</p>
-                                        <span class="activity-time">${timeAgo(activity.timestamp)}</span>
+                    // Populate Recommendations
+                    const recList = document.getElementById('recommendationList');
+                    if (data.recommendations.length > 0) {
+                        recList.innerHTML = data.recommendations.map(rec => `
+                            <div class="career-item">
+                                <div class="career-info">
+                                    <h3>${rec.title}</h3>
+                                    <p class="match-reason">${rec.industry || 'Tech'}</p>
+                                    <!-- NEW: Matching Skills Text -->
+                                    <span class="match-skills-text">Matches: ${rec.matching_skills_text}</span>
+                                </div>
+                                <div class="match-score">
+                                    <span class="score-number">${rec.match_score}%</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: ${rec.match_score}%"></div>
                                     </div>
-                                `;
-                                activityList.appendChild(div);
-                            });
-                        } else {
-                            activityList.innerHTML = '<div style="padding:10px; color:#666;">No recent activity. Start chatting!</div>';
-                        }
+                                </div>
+                            </div>
+                        `).join('');
+                    } else {
+                        recList.innerHTML = '<div style="padding:10px; color:#666;">Add skills to get matches!</div>';
                     }
                 }
-            } catch (error) {
-                console.error("Error loading dashboard:", error);
-            }
+            } catch (error) { console.error("Error loading dashboard:", error); }
         }
 
-        window.addEventListener('load', () => {
-            loadDashboard();
-            animateGauges();
-        });
-
-        // NAVIGATION LOGIC
-        document.getElementById('profileIcon').addEventListener('click', function() {
-            window.location.href = '/profile'; // GO TO PROFILE ROUTE
-        });
-
-        document.getElementById('talkToOrion').addEventListener('click', function() {
-            window.location.href = '/chat'; // GO TO CHAT ROUTE
-        });
+        window.addEventListener('load', () => { loadDashboard(); animateGauges(); });
+        document.getElementById('profileIcon').addEventListener('click', () => window.location.href = '/profile');
+        document.getElementById('talkToOrion').addEventListener('click', () => window.location.href = '/chat');
 
         function animateGauges() {
             const gaugeFill = document.querySelector('.gauge-fill');
@@ -330,9 +307,7 @@
                 const maxDashArray = 251.2;
                 const dashOffset = maxDashArray - (maxDashArray * scoreValue / 100);
                 gaugeFill.style.strokeDashoffset = maxDashArray;
-                setTimeout(() => {
-                    gaugeFill.style.strokeDashoffset = dashOffset;
-                }, 500);
+                setTimeout(() => { gaugeFill.style.strokeDashoffset = dashOffset; }, 500);
             }
         }
     </script>
