@@ -6,10 +6,11 @@
     <title>Career Advisor Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* ... (Same styles) ... */
+        /* ... (Core Styles) ... */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); min-height: 100vh; padding-bottom: 40px; animation: gradientShift 15s ease infinite; background-size: 200% 200%; }
         @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        
         /* Header */
         .header { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(204, 49, 61, 0.15); position: sticky; top: 0; z-index: 100; animation: slideDown 0.6s ease; }
         @keyframes slideDown { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
@@ -24,7 +25,7 @@
         .profile-icon:hover { transform: rotate(360deg) scale(1.1); box-shadow: 0 6px 25px rgba(204, 49, 61, 0.5); }
         .profile-icon svg { width: 24px; height: 24px; fill: white; z-index: 1; }
         
-        /* Dashboard Container */
+        /* Dashboard Container - Grid Setup */
         .dashboard-container { max-width: 1400px; margin: 30px auto; padding: 0 24px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
         
         /* Widget Base Styles */
@@ -32,63 +33,50 @@
         .widget::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(247, 197, 204, 0.1) 0%, transparent 70%); animation: rotate 20s linear infinite; }
         @keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
-        .widget:nth-child(1) { animation-delay: 0.1s; transform: translateY(30px); }
-        .widget:nth-child(2) { animation-delay: 0.2s; transform: translateY(30px); }
-        .widget:nth-child(3) { animation-delay: 0.3s; transform: translateY(30px); }
-        .widget:nth-child(4) { animation-delay: 0.4s; transform: translateY(30px); }
-        .widget:nth-child(5) { animation-delay: 0.5s; transform: translateY(30px); }
-        .widget:nth-child(6) { animation-delay: 0.6s; transform: translateY(30px); }
         .widget:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 15px 45px rgba(204, 49, 61, 0.25); border-color: #CC313D; }
         .widget-title { font-size: 20px; font-weight: 700; color: #CC313D; margin-bottom: 24px; position: relative; z-index: 1; letter-spacing: -0.5px; }
         .widget-title::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 40px; height: 3px; background: linear-gradient(90deg, #CC313D, #F7C5CC); border-radius: 2px; animation: expandLine 2s ease-in-out infinite; }
         @keyframes expandLine { 0%, 100% { width: 40px; } 50% { width: 60px; } }
         
-        /* Recommendations Widget */
-        .recommendations { grid-column: 7 / 13; }
-        .career-list { display: flex; flex-direction: column; gap: 18px; position: relative; z-index: 1; }
-        .career-item { display: flex; justify-content: space-between; align-items: center; padding: 16px; background: linear-gradient(135deg, rgba(247, 197, 204, 0.2) 0%, rgba(247, 197, 204, 0.05) 100%); border-radius: 12px; transition: all 0.3s ease; border: 1px solid rgba(204, 49, 61, 0.1); animation: slideInRight 0.6s ease forwards; opacity: 0; }
-        .career-item:nth-child(1) { animation-delay: 0.3s; }
-        .career-item:nth-child(2) { animation-delay: 0.4s; }
-        .career-item:nth-child(3) { animation-delay: 0.5s; }
-        @keyframes slideInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
-        .career-item:hover { background: linear-gradient(135deg, rgba(247, 197, 204, 0.4) 0%, rgba(247, 197, 204, 0.15) 100%); transform: translateX(8px); border-color: #CC313D; }
-        .career-info h3 { font-size: 17px; color: #CC313D; margin-bottom: 6px; font-weight: 700; }
-        .match-reason { font-size: 12px; color: #666; font-weight: 500; } 
-        /* New Style for Matching Skills Text */
-        .match-skills-text { font-size: 11px; color: #cc313d; font-weight: 600; margin-top: 4px; display: block; }
+        /* --- LAYOUT UPDATES --- */
 
-        .match-score { text-align: right; min-width: 110px; }
-        .score-number { font-size: 20px; font-weight: 800; color: #CC313D; display: block; margin-bottom: 8px; }
-        
-        /* Other Widgets (Skills Gap, Progress, etc) */
-        .career-score { grid-column: 1 / 7; }
-        .score-content { display: flex; gap: 35px; align-items: center; position: relative; z-index: 1; }
-        .gauge-chart { position: relative; width: 210px; flex-shrink: 0; animation: float 3s ease-in-out infinite; }
-        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
-        .gauge { width: 100%; height: auto; filter: drop-shadow(0 4px 10px rgba(204, 49, 61, 0.2)); }
-        .gauge-fill { stroke-linecap: round; transition: stroke-dashoffset 1.5s cubic-bezier(0.65, 0, 0.35, 1); animation: gaugePulse 3s ease-in-out infinite; }
-        @keyframes gaugePulse { 0%, 100% { stroke-width: 20; } 50% { stroke-width: 22; } }
-        .score-value { position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); font-size: 36px; font-weight: 800; color: #CC313D; animation: countUp 2s ease; }
-        @keyframes countUp { from { opacity: 0; transform: translateX(-50%) scale(0.5); } to { opacity: 1; transform: translateX(-50%) scale(1); } }
-        .score-breakdown { flex: 1; display: flex; flex-direction: column; gap: 16px; }
-        .breakdown-item span { display: block; font-size: 14px; font-weight: 600; color: #333; margin-bottom: 8px; }
+        /* 1. Activity Feed - Top Left (Half Width) */
+        .activity-feed { grid-column: 1 / 7; min-height: 300px; }
+        .activity-list { display: flex; flex-direction: column; gap: 18px; position: relative; z-index: 1; }
+        .activity-item { display: flex; gap: 14px; align-items: flex-start; padding: 12px; border-radius: 10px; transition: all 0.3s ease; animation: fadeIn 0.8s ease forwards; opacity: 0; cursor: pointer; }
+        .activity-item:nth-child(1) { animation-delay: 0.1s; }
+        .activity-item:nth-child(2) { animation-delay: 0.2s; }
+        @keyframes fadeIn { to { opacity: 1; } }
+        .activity-item:hover { background: rgba(247, 197, 204, 0.2); transform: translateX(8px); }
+        .activity-icon { font-size: 26px; flex-shrink: 0; animation: bounce 1s ease infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+        .activity-details { flex: 1; }
+        .activity-text { font-size: 14px; font-weight: 600; color: #333; margin-bottom: 6px; }
+        .activity-time { font-size: 12px; color: #999; font-weight: 500; }
 
-        .progress-bar { height: 10px; background: rgba(247, 197, 204, 0.3); border-radius: 20px; overflow: hidden; position: relative; }
-        .progress-bar::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent); animation: shimmer 2s infinite; }
-        @keyframes shimmer { to { left: 100%; } }
-        .progress-bar.large { height: 12px; }
-        .progress-fill { height: 100%; background: linear-gradient(90deg, #CC313D 0%, #F7C5CC 100%); border-radius: 20px; transition: width 1s cubic-bezier(0.65, 0, 0.35, 1); box-shadow: 0 2px 8px rgba(204, 49, 61, 0.3); animation: progressGlow 2s ease-in-out infinite; }
-        @keyframes progressGlow { 0%, 100% { box-shadow: 0 2px 8px rgba(204, 49, 61, 0.3); } 50% { box-shadow: 0 2px 15px rgba(204, 49, 61, 0.5); } }
+        /* 2. Talk to Orion - Top Right (Half Width) */
+        .talk-to-orion { grid-column: 7 / 13; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); color: white; cursor: pointer; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 300px; border: none; }
+        .talk-to-orion::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%); animation: rotateOrion 15s linear infinite; }
+        @keyframes rotateOrion { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .talk-to-orion:hover { transform: translateY(-10px) scale(1.03); box-shadow: 0 20px 50px rgba(204, 49, 61, 0.5); }
+        .orion-icon { font-size: 64px; margin-bottom: 20px; animation: bounceOrion 2s infinite, rotateOrionIcon 3s ease-in-out infinite; z-index: 1; }
+        @keyframes bounceOrion { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-15px) scale(1.1); } }
+        @keyframes rotateOrionIcon { 0%, 100% { transform: rotate(-10deg); } 50% { transform: rotate(10deg); } }
+        .talk-to-orion .widget-title { color: white; margin-bottom: 15px; font-size: 28px; z-index: 1; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
+        .talk-to-orion .widget-title::after { display: none; }
+        .orion-description { font-size: 16px; opacity: 0.95; margin-bottom: 20px; font-weight: 500; z-index: 1; }
+        .orion-arrow { font-size: 32px; font-weight: bold; z-index: 1; animation: slideArrow 1.5s ease-in-out infinite; }
+        @keyframes slideArrow { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(10px); } }
 
-        .skills-gap { grid-column: 1 / 13; }
+        /* 3. Skills Gap Analysis - Bottom (Full Width) */
+        .skills-gap { grid-column: 1 / 13; min-height: 350px; }
         .skills-content { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-bottom: 24px; position: relative; z-index: 1; }
         .skills-subtitle { font-size: 15px; font-weight: 700; color: #CC313D; margin-bottom: 16px; }
         .skill-tags { display: flex; flex-wrap: wrap; gap: 10px; }
         .skill-tag { padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: 600; transition: all 0.3s ease; cursor: default; animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards; opacity: 0; transform: scale(0); }
-        .skill-tag:nth-child(1) { animation-delay: 0.5s; }
-        .skill-tag:nth-child(2) { animation-delay: 0.6s; }
-        .skill-tag:nth-child(3) { animation-delay: 0.7s; }
-        .skill-tag:nth-child(4) { animation-delay: 0.8s; }
+        .skill-tag:nth-child(1) { animation-delay: 0.3s; }
+        .skill-tag:nth-child(2) { animation-delay: 0.4s; }
+        .skill-tag:nth-child(3) { animation-delay: 0.5s; }
         @keyframes popIn { to { opacity: 1; transform: scale(1); } }
         .skill-tag:hover { transform: scale(1.1) rotate(2deg); }
         .skill-tag.mastered { background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); color: white; }
@@ -99,40 +87,9 @@
         .btn-primary:hover::before { width: 300px; height: 300px; }
         .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(204, 49, 61, 0.4); }
 
-        .learning-progress { grid-column: 1 / 5; }
-        .progress-items { display: flex; flex-direction: column; gap: 24px; position: relative; z-index: 1; }
-        .progress-header { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 15px; font-weight: 700; color: #333; }
-        .progress-percent { color: #CC313D; font-weight: 800; }
-        .time-estimate { font-size: 12px; color: #999; margin-top: 8px; font-weight: 500; }
-        
-        .activity-feed { grid-column: 5 / 9; }
-        .activity-list { display: flex; flex-direction: column; gap: 18px; position: relative; z-index: 1; }
-        .activity-item { display: flex; gap: 14px; align-items: flex-start; padding: 12px; border-radius: 10px; transition: all 0.3s ease; animation: fadeIn 0.8s ease forwards; opacity: 0; cursor: pointer; }
-        .activity-item:nth-child(1) { animation-delay: 0.6s; }
-        .activity-item:nth-child(2) { animation-delay: 0.7s; }
-        @keyframes fadeIn { to { opacity: 1; } }
-        .activity-item:hover { background: rgba(247, 197, 204, 0.2); transform: translateX(8px); }
-        .activity-icon { font-size: 26px; flex-shrink: 0; animation: bounce 1s ease infinite; }
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
-        .activity-details { flex: 1; }
-        .activity-text { font-size: 14px; font-weight: 600; color: #333; margin-bottom: 6px; }
-        .activity-time { font-size: 12px; color: #999; font-weight: 500; }
-
-        .talk-to-orion { grid-column: 9 / 13; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); color: white; cursor: pointer; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 220px; border: none; }
-        .talk-to-orion::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%); animation: rotateOrion 15s linear infinite; }
-        @keyframes rotateOrion { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        .talk-to-orion:hover { transform: translateY(-10px) scale(1.03); box-shadow: 0 20px 50px rgba(204, 49, 61, 0.5); }
-        .orion-icon { font-size: 56px; margin-bottom: 16px; animation: bounceOrion 2s infinite, rotateOrionIcon 3s ease-in-out infinite; z-index: 1; }
-        @keyframes bounceOrion { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-15px) scale(1.1); } }
-        @keyframes rotateOrionIcon { 0%, 100% { transform: rotate(-10deg); } 50% { transform: rotate(10deg); } }
-        .talk-to-orion .widget-title { color: white; margin-bottom: 10px; font-size: 24px; z-index: 1; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
-        .talk-to-orion .widget-title::after { display: none; }
-        .orion-description { font-size: 15px; opacity: 0.95; margin-bottom: 16px; font-weight: 500; z-index: 1; }
-        .orion-arrow { font-size: 28px; font-weight: bold; z-index: 1; animation: slideArrow 1.5s ease-in-out infinite; }
-        @keyframes slideArrow { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(10px); } }
-        
+        /* Responsive Design */
         @media (max-width: 1024px) {
-            .career-score, .recommendations, .skills-gap, .learning-progress, .activity-feed, .talk-to-orion { grid-column: 1 / 13; }
+            .activity-feed, .talk-to-orion, .skills-gap { grid-column: 1 / 13; }
             .skills-content { grid-template-columns: 1fr; }
         }
     </style>
@@ -153,32 +110,21 @@
     </header>
 
     <div class="dashboard-container">
-        <!-- (Other Widgets) -->
-        <div class="widget career-score">
-            <h2 class="widget-title">Career Readiness Score</h2>
-            <div class="score-content">
-                <div class="gauge-chart">
-                    <svg viewBox="0 0 200 120" class="gauge">
-                        <path class="gauge-bg" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#F7C5CC" stroke-width="20"/>
-                        <path class="gauge-fill" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#CC313D" stroke-width="20" stroke-dasharray="251.2" stroke-dashoffset="75.36"/>
-                    </svg>
-                    <div class="score-value">72%</div>
-                </div>
-                <div class="score-breakdown">
-                    <div class="breakdown-item"><span>Technical Skills</span><div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div></div>
-                    <div class="breakdown-item"><span>Soft Skills</span><div class="progress-bar"><div class="progress-fill" style="width: 65%"></div></div></div>
-                    <div class="breakdown-item"><span>Experience</span><div class="progress-bar"><div class="progress-fill" style="width: 70%"></div></div></div>
-                </div>
-            </div>
+        
+        <!-- SECTION 1: Recent Activity & Talk to Orion -->
+        <div class="widget activity-feed">
+            <h2 class="widget-title">Recent Activity</h2>
+            <div class="activity-list"></div>
         </div>
 
-        <div class="widget recommendations">
-            <h2 class="widget-title">Top Career Matches</h2>
-            <div class="career-list" id="recommendationList">
-                <div style="padding:10px; color:#666;">Analyzing your profile...</div>
-            </div>
+        <div class="widget talk-to-orion" id="talkToOrion">
+            <div class="orion-icon">🤖</div>
+            <h2 class="widget-title">Talk to Orion</h2>
+            <p class="orion-description">Get personalized career guidance & chat now</p>
+            <div class="orion-arrow">→</div>
         </div>
 
+        <!-- SECTION 2: Skills Gap Analysis -->
         <div class="widget skills-gap">
             <h2 class="widget-title">Skills Gap Analysis</h2>
             <div class="skills-content">
@@ -191,33 +137,10 @@
                     <div class="skill-tags" id="skillsLearningContainer"></div>
                 </div>
             </div>
-            <!-- UPDATED BUTTON LINK (REMOVED .html) -->
+            <!-- REDIRECT -->
             <button class="btn-primary" onclick="window.location.href='/detailed-skill-analysis'">View Detailed Analysis</button>
         </div>
 
-        <!-- (Other Widgets...) -->
-        <div class="widget learning-progress">
-            <h2 class="widget-title">Learning Progress</h2>
-            <div class="progress-items">
-                <div class="progress-item">
-                    <div class="progress-header"><span>Python Advanced</span><span class="progress-percent">75%</span></div>
-                    <div class="progress-bar large"><div class="progress-fill" style="width: 75%"></div></div>
-                    <p class="time-estimate">2 weeks remaining</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="widget activity-feed">
-            <h2 class="widget-title">Recent Activity</h2>
-            <div class="activity-list"></div>
-        </div>
-
-        <div class="widget talk-to-orion" id="talkToOrion">
-            <div class="orion-icon">🤖</div>
-            <h2 class="widget-title">Talk to Orion</h2>
-            <p class="orion-description">Get personalized career guidance</p>
-            <div class="orion-arrow">→</div>
-        </div>
     </div>
 
     <script>
@@ -269,47 +192,13 @@
                     } else {
                         activityList.innerHTML = '<div style="padding:10px; color:#666;">No recent activity.</div>';
                     }
-
-                    // Populate Recommendations
-                    const recList = document.getElementById('recommendationList');
-                    if (data.recommendations.length > 0) {
-                        recList.innerHTML = data.recommendations.map(rec => `
-                            <div class="career-item">
-                                <div class="career-info">
-                                    <h3>${rec.title}</h3>
-                                    <p class="match-reason">${rec.industry || 'Tech'}</p>
-                                    <!-- NEW: Matching Skills Text -->
-                                    <span class="match-skills-text">Matches: ${rec.matching_skills_text}</span>
-                                </div>
-                                <div class="match-score">
-                                    <span class="score-number">${rec.match_score}%</span>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" style="width: ${rec.match_score}%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        `).join('');
-                    } else {
-                        recList.innerHTML = '<div style="padding:10px; color:#666;">Add skills to get matches!</div>';
-                    }
                 }
             } catch (error) { console.error("Error loading dashboard:", error); }
         }
 
-        window.addEventListener('load', () => { loadDashboard(); animateGauges(); });
+        window.addEventListener('load', () => { loadDashboard(); });
         document.getElementById('profileIcon').addEventListener('click', () => window.location.href = '/profile');
         document.getElementById('talkToOrion').addEventListener('click', () => window.location.href = '/chat');
-
-        function animateGauges() {
-            const gaugeFill = document.querySelector('.gauge-fill');
-            if (gaugeFill) {
-                const scoreValue = 72; 
-                const maxDashArray = 251.2;
-                const dashOffset = maxDashArray - (maxDashArray * scoreValue / 100);
-                gaugeFill.style.strokeDashoffset = maxDashArray;
-                setTimeout(() => { gaugeFill.style.strokeDashoffset = dashOffset; }, 500);
-            }
-        }
     </script>
 </body>
 </html>

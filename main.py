@@ -17,18 +17,16 @@ from pydantic import BaseModel
 from PIL import Image
 import google.generativeai as genai
 
-# --- CONFIGURATION ---
 load_dotenv()
 app = FastAPI()
 
 BASE_DIR = Path(__file__).resolve().parent
 TEMPLATE_DIR = BASE_DIR / "templates"
 templates = Jinja2Templates(directory=str(TEMPLATE_DIR))
-print(TEMPLATE_DIR)
+
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 direct_model = genai.GenerativeModel('gemini-2.0-flash')
 
-# --- RAG INITIALIZATION ---
 rag_advisor = None
 try:
     from rag_pipeline import CareerAdvisorRAG
@@ -38,7 +36,6 @@ try:
 except Exception as e:
     print(f"⚠️ RAG Init Failed: {e}")
 
-# --- DATABASE ---
 MONGO_URL = os.getenv("MONGO_URL", "mongodb://localhost:27017")
 client = AsyncIOMotorClient(MONGO_URL)
 db = client.skillsage_db
@@ -47,21 +44,15 @@ chats_collection = db.chats
 
 pwd_context = CryptContext(schemes=["argon2"], deprecated="auto")
 
-# --- AUTH HELPER FUNCTIONS ---
 def get_password_hash(password): return pwd_context.hash(password)
 def verify_password(plain, hashed): return pwd_context.verify(plain, hashed)
 
 async def get_current_user(request: Request):
     token = request.cookies.get("access_token")
-    if not token:
-        auth_header = request.headers.get("Authorization")
-        if auth_header and auth_header.startswith("Bearer "):
-            token = auth_header.split(" ")[1]
     if not token: return None
     user = await users_collection.find_one({"email": token})
     return user
 
-# --- PYDANTIC MODELS ---
 class UserCreate(BaseModel):
     name: str
     email: str
@@ -82,164 +73,143 @@ class AnalysisSaveRequest(BaseModel):
     skill_ratings: Dict[str, int]
     custom_missing_skills: List[Dict[str, Any]]
 
-# ==========================================
-#               PAGE ROUTES
-# ==========================================
+# --- ROUTES ---
 
 @app.get("/", response_class=HTMLResponse)
-async def home_page(request: Request):
-    return templates.TemplateResponse("home.html", {"request": request})
+async def home_page(request: Request): return templates.TemplateResponse("home.html", {"request": request})
 
 @app.get("/auth", response_class=HTMLResponse)
-async def auth_page(request: Request):
-    return templates.TemplateResponse("auth.html", {"request": request})
+async def auth_page(request: Request): return templates.TemplateResponse("auth.html", {"request": request})
 
 @app.get("/dashboard", response_class=HTMLResponse)
 async def dashboard_page(request: Request):
-    user = await get_current_user(request)
-    if not user: return RedirectResponse(url="/auth")
+    if not await get_current_user(request): return RedirectResponse("/auth")
     return templates.TemplateResponse("dashboard.html", {"request": request})
 
 @app.get("/profile", response_class=HTMLResponse)
 async def profile_page(request: Request):
-    user = await get_current_user(request)
-    if not user: return RedirectResponse(url="/auth")
+    if not await get_current_user(request): return RedirectResponse("/auth")
     return templates.TemplateResponse("profile.html", {"request": request})
-
-@app.get("/chat", response_class=HTMLResponse)
-async def chat_interface(request: Request):
-    user = await get_current_user(request)
-    if not user: return RedirectResponse(url="/auth")
-    return templates.TemplateResponse("index.html", {"request": request})
 
 @app.get("/detailed-skill-analysis", response_class=HTMLResponse)
 async def detailed_analysis_page(request: Request):
-    user = await get_current_user(request)
-    if not user: return RedirectResponse(url="/auth")
+    if not await get_current_user(request): return RedirectResponse("/auth")
     return templates.TemplateResponse("detailed-skill-analysis.html", {"request": request})
-
-# ==========================================
-#               API ROUTES
-# ==========================================
 
 @app.post("/register")
 async def register(user: UserCreate):
-    existing_user = await users_collection.find_one({"email": user.email})
-    if existing_user: raise HTTPException(status_code=400, detail="Email already registered")
-    user_doc = {
-        "name": user.name,
-        "email": user.email,
+    if await users_collection.find_one({"email": user.email}):
+        raise HTTPException(400, "Email exists")
+    await users_collection.insert_one({
+        "name": user.name, "email": user.email, 
         "hashed_password": get_password_hash(user.password),
-        "skills": [],
-        "currently_learning": [],
-        "career_goal": [],
-        "qualifications": [], 
-        "skill_ratings": {},
-        "custom_missing_skills": []
-    }
-    await users_collection.insert_one(user_doc)
-    return {"message": "User created successfully"}
+        "skills": [], "career_goal": [], "qualifications": [], 
+        "skill_ratings": {}, "custom_missing_skills": []
+    })
+    return {"message": "User created"}
 
 @app.post("/token")
 async def login(response: Response, form_data: OAuth2PasswordRequestForm = Depends()):
     user = await users_collection.find_one({"email": form_data.username})
     if not user or not verify_password(form_data.password, user["hashed_password"]):
-        raise HTTPException(status_code=400, detail="Incorrect username or password")
-    response.set_cookie(key="access_token", value=user["email"], httponly=False, max_age=3600)
+        raise HTTPException(400, "Invalid credentials")
+    response.set_cookie(key="access_token", value=user["email"], httponly=False)
     return {"access_token": user["email"], "token_type": "bearer"}
 
 @app.get("/api/dashboard-data")
 async def get_dashboard_data(request: Request):
     user = await get_current_user(request)
-    if not user: raise HTTPException(status_code=401, detail="Not authenticated")
+    if not user: raise HTTPException(401)
     
+    # Recent activity
     cursor = chats_collection.find({"user_email": user["email"]}).sort("updated_at", -1).limit(3)
-    recent = []
-    async for chat in cursor:
-        updated = chat.get("updated_at", datetime.utcnow())
-        recent.append({
-            "type": "chat",
-            "id": str(chat["_id"]),
-            "title": chat.get("title", "Conversation"),
-            "timestamp": updated.isoformat()
-        })
+    recent = [{"id": str(c["_id"]), "title": c.get("title", "Chat"), "timestamp": c.get("updated_at")} async for c in cursor]
 
-    recommendations = []
+    # Recommendations
+    recs = []
     if rag_advisor:
-        try:
-            recommendations = rag_advisor.get_career_recommendations(user["email"], n_results=3)
-        except Exception as e:
-            print(f"Rec Engine Error: {e}")
-
+        try: recs = rag_advisor.get_career_recommendations(user["email"], 3)
+        except: pass
+    
     return {
         "name": user.get("name"),
         "skills": user.get("skills", []),
         "currently_learning": user.get("currently_learning", []),
         "recent_activity": recent,
-        "recommendations": recommendations 
+        "recommendations": recs
     }
 
 @app.get("/api/profile")
 async def get_profile_data(request: Request):
     user = await get_current_user(request)
-    if not user: raise HTTPException(status_code=401, detail="Not authenticated")
-    def ensure_list(val): return val if isinstance(val, list) else ([val] if val else [])
+    if not user: raise HTTPException(401)
+    
+    def as_list(x): return x if isinstance(x, list) else ([x] if x else [])
     
     return {
-        "name": user.get("name", ""),
-        "email": user.get("email", ""),
-        "location": user.get("location", ""),
-        "employment_status": user.get("employment_status", ""),
-        "current_activity": user.get("current_activity", ""),
-        "career_goal": ensure_list(user.get("career_goal")), 
-        "qualifications": ensure_list(user.get("qualifications")), 
-        "skills": ensure_list(user.get("skills")),
-        "currently_learning": ensure_list(user.get("currently_learning")),
-        "dreams": user.get("dreams", "")
+        "name": user.get("name"), "email": user.get("email"),
+        "location": user.get("location"), "employment_status": user.get("employment_status"),
+        "current_activity": user.get("current_activity"), "dreams": user.get("dreams"),
+        "career_goal": as_list(user.get("career_goal")),
+        "qualifications": as_list(user.get("qualifications")),
+        "skills": as_list(user.get("skills")),
+        "currently_learning": as_list(user.get("currently_learning"))
     }
 
 @app.put("/api/profile")
 async def update_profile(data: UserProfileUpdate, request: Request):
     user = await get_current_user(request)
-    if not user: raise HTTPException(status_code=401, detail="Not authenticated")
+    if not user: raise HTTPException(401)
+    
     update_data = {k: v for k, v in data.dict().items() if v is not None}
+    
+    # SYNC SKILL RATINGS
+    if "skills" in update_data:
+        current_ratings = user.get("skill_ratings", {})
+        new_skills_set = set(update_data["skills"])
+        # Only keep ratings for skills that still exist in the new list
+        clean_ratings = {k: v for k, v in current_ratings.items() if k in new_skills_set}
+        update_data["skill_ratings"] = clean_ratings
+    
     await users_collection.update_one({"email": user["email"]}, {"$set": update_data})
-    return {"message": "Profile updated"}
+    return {"message": "Updated"}
 
 @app.get("/api/detailed-analysis")
 async def get_detailed_analysis(request: Request):
     user = await get_current_user(request)
-    if not user: raise HTTPException(status_code=401, detail="Not authenticated")
+    if not user: raise HTTPException(401)
+    if not rag_advisor: return {"error": "AI not ready"}
     
-    if rag_advisor:
-        try:
-            analysis = rag_advisor.get_detailed_gap_analysis(user["email"])
-            # Merge stored custom gaps
-            if user.get("custom_missing_skills"):
-                analysis["missing_skills"].extend(user.get("custom_missing_skills", []))
-            return analysis
-        except Exception as e:
-            raise HTTPException(status_code=500, detail=str(e))
-    return {"error": "Advisor not initialized"}
+    analysis = rag_advisor.get_detailed_gap_analysis(user["email"])
+    if user.get("custom_missing_skills"):
+        analysis["missing_skills"].extend(user["custom_missing_skills"])
+    return analysis
 
 @app.post("/api/save-analysis")
-async def save_detailed_analysis(data: AnalysisSaveRequest, request: Request):
+async def save_analysis(data: AnalysisSaveRequest, request: Request):
     user = await get_current_user(request)
-    if not user: raise HTTPException(status_code=401, detail="Not authenticated")
+    if not user: raise HTTPException(401)
     
-    # We update mainly the custom_missing_skills list
     await users_collection.update_one(
         {"email": user["email"]},
-        {
-            "$set": {
-                "skill_ratings": data.skill_ratings,
-                "custom_missing_skills": data.custom_missing_skills
-            }
-        }
+        {"$set": {
+            "skill_ratings": data.skill_ratings,
+            "custom_missing_skills": data.custom_missing_skills
+        }}
     )
-    return {"message": "Analysis saved successfully"}
+    return {"message": "Saved"}
 
 # ... (Chat APIs as before)
+@app.get("/chat", response_class=HTMLResponse)
+async def chat_page(request: Request):
+    # 1. Check Authentication
+    if not await get_current_user(request): 
+        return RedirectResponse("/auth")
+    
+    # 2. Render the chat template (ensure you have a chat.html file)
+    return templates.TemplateResponse("index.html", {"request": request})
+
+
 @app.get("/api/chats")
 async def get_chats(request: Request):
     user = await get_current_user(request)

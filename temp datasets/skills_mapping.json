@@ -1,0 +1,1202 @@
+[
+  {
+    "mapping_id": "MAP-001",
+    "career_goal_name": "Data Scientist",
+    "skill_name": "Python",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-002",
+    "career_goal_name": "Data Scientist",
+    "skill_name": "SQL",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-003",
+    "career_goal_name": "Data Scientist",
+    "skill_name": "Machine Learning",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-004",
+    "career_goal_name": "Data Scientist",
+    "skill_name": "Data Analysis",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-005",
+    "career_goal_name": "Data Scientist",
+    "skill_name": "Communication",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-006",
+    "career_goal_name": "Frontend Developer",
+    "skill_name": "JavaScript",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-007",
+    "career_goal_name": "Frontend Developer",
+    "skill_name": "React.js",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-008",
+    "career_goal_name": "Frontend Developer",
+    "skill_name": "HTML5",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-009",
+    "career_goal_name": "Frontend Developer",
+    "skill_name": "CSS3",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-010",
+    "career_goal_name": "Frontend Developer",
+    "skill_name": "Figma",
+    "required_level": 6
+  },
+  {
+    "mapping_id": "MAP-011",
+    "career_goal_name": "Backend Developer",
+    "skill_name": "Java",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-012",
+    "career_goal_name": "Backend Developer",
+    "skill_name": "SQL",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-013",
+    "career_goal_name": "Backend Developer",
+    "skill_name": "API Testing",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-014",
+    "career_goal_name": "Backend Developer",
+    "skill_name": "Node.js",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-015",
+    "career_goal_name": "Backend Developer",
+    "skill_name": "Docker",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-016",
+    "career_goal_name": "DevOps Engineer",
+    "skill_name": "Docker",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-017",
+    "career_goal_name": "DevOps Engineer",
+    "skill_name": "Kubernetes",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-018",
+    "career_goal_name": "DevOps Engineer",
+    "skill_name": "Jenkins",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-019",
+    "career_goal_name": "DevOps Engineer",
+    "skill_name": "Linux",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-020",
+    "career_goal_name": "DevOps Engineer",
+    "skill_name": "AWS (Amazon Web Services)",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-021",
+    "career_goal_name": "Machine Learning Engineer",
+    "skill_name": "Python",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-022",
+    "career_goal_name": "Machine Learning Engineer",
+    "skill_name": "TensorFlow",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-023",
+    "career_goal_name": "Machine Learning Engineer",
+    "skill_name": "Deep Learning",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-024",
+    "career_goal_name": "Machine Learning Engineer",
+    "skill_name": "SQL",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-025",
+    "career_goal_name": "Machine Learning Engineer",
+    "skill_name": "Git",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-026",
+    "career_goal_name": "UI/UX Designer",
+    "skill_name": "Figma",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-027",
+    "career_goal_name": "UI/UX Designer",
+    "skill_name": "Adobe Photoshop",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-028",
+    "career_goal_name": "UI/UX Designer",
+    "skill_name": "Adobe Illustrator",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-029",
+    "career_goal_name": "UI/UX Designer",
+    "skill_name": "Empathy",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-030",
+    "career_goal_name": "UI/UX Designer",
+    "skill_name": "Creativity",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-031",
+    "career_goal_name": "Project Manager",
+    "skill_name": "Project Management",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-032",
+    "career_goal_name": "Project Manager",
+    "skill_name": "Agile Methodology",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-033",
+    "career_goal_name": "Project Manager",
+    "skill_name": "Communication",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-034",
+    "career_goal_name": "Project Manager",
+    "skill_name": "Jira",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-035",
+    "career_goal_name": "Project Manager",
+    "skill_name": "Risk Management",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-036",
+    "career_goal_name": "Cloud Architect",
+    "skill_name": "AWS (Amazon Web Services)",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-037",
+    "career_goal_name": "Cloud Architect",
+    "skill_name": "Microsoft Azure",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-038",
+    "career_goal_name": "Cloud Architect",
+    "skill_name": "Terraform",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-039",
+    "career_goal_name": "Cloud Architect",
+    "skill_name": "Linux",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-040",
+    "career_goal_name": "Cloud Architect",
+    "skill_name": "Docker",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-041",
+    "career_goal_name": "Cloud Architect",
+    "skill_name": "Strategic Thinking",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-042",
+    "career_goal_name": "Cloud Architect",
+    "skill_name": "Communication",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-043",
+    "career_goal_name": "Cybersecurity Analyst",
+    "skill_name": "Cybersecurity",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-044",
+    "career_goal_name": "Cybersecurity Analyst",
+    "skill_name": "Linux",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-045",
+    "career_goal_name": "Cybersecurity Analyst",
+    "skill_name": "Networking",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-046",
+    "career_goal_name": "Cybersecurity Analyst",
+    "skill_name": "Python",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-047",
+    "career_goal_name": "Cybersecurity Analyst",
+    "skill_name": "Metasploit",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-048",
+    "career_goal_name": "Cybersecurity Analyst",
+    "skill_name": "Problem Solving",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-049",
+    "career_goal_name": "Cybersecurity Analyst",
+    "skill_name": "Burp Suite",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-050",
+    "career_goal_name": "Full Stack Developer",
+    "skill_name": "JavaScript",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-051",
+    "career_goal_name": "Full Stack Developer",
+    "skill_name": "React.js",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-052",
+    "career_goal_name": "Full Stack Developer",
+    "skill_name": "Node.js",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-053",
+    "career_goal_name": "Full Stack Developer",
+    "skill_name": "SQL",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-054",
+    "career_goal_name": "Full Stack Developer",
+    "skill_name": "HTML5",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-055",
+    "career_goal_name": "Full Stack Developer",
+    "skill_name": "Git",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-056",
+    "career_goal_name": "Full Stack Developer",
+    "skill_name": "Adaptability",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-057",
+    "career_goal_name": "Business Analyst",
+    "skill_name": "Data Analysis",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-058",
+    "career_goal_name": "Business Analyst",
+    "skill_name": "SQL",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-059",
+    "career_goal_name": "Business Analyst",
+    "skill_name": "Tableau",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-060",
+    "career_goal_name": "Business Analyst",
+    "skill_name": "Microsoft Excel",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-061",
+    "career_goal_name": "Business Analyst",
+    "skill_name": "Communication",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-062",
+    "career_goal_name": "Business Analyst",
+    "skill_name": "Problem Solving",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-063",
+    "career_goal_name": "Business Analyst",
+    "skill_name": "Critical Thinking",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-064",
+    "career_goal_name": "Android Developer",
+    "skill_name": "Kotlin",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-065",
+    "career_goal_name": "Android Developer",
+    "skill_name": "Java",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-066",
+    "career_goal_name": "Android Developer",
+    "skill_name": "Git",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-067",
+    "career_goal_name": "Android Developer",
+    "skill_name": "API Testing",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-068",
+    "career_goal_name": "Android Developer",
+    "skill_name": "Firebase",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-069",
+    "career_goal_name": "Android Developer",
+    "skill_name": "Problem Solving",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-070",
+    "career_goal_name": "Android Developer",
+    "skill_name": "Unit Testing",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-071",
+    "career_goal_name": "iOS Developer",
+    "skill_name": "Swift",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-072",
+    "career_goal_name": "iOS Developer",
+    "skill_name": "Objective-C",
+    "required_level": 6
+  },
+  {
+    "mapping_id": "MAP-073",
+    "career_goal_name": "iOS Developer",
+    "skill_name": "Git",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-074",
+    "career_goal_name": "iOS Developer",
+    "skill_name": "Xcode",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-075",
+    "career_goal_name": "iOS Developer",
+    "skill_name": "Unit Testing",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-076",
+    "career_goal_name": "iOS Developer",
+    "skill_name": "Communication",
+    "required_level": 6
+  },
+  {
+    "mapping_id": "MAP-077",
+    "career_goal_name": "iOS Developer",
+    "skill_name": "Design Patterns",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-078",
+    "career_goal_name": "QA Automation Engineer",
+    "skill_name": "Selenium",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-079",
+    "career_goal_name": "QA Automation Engineer",
+    "skill_name": "Java",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-080",
+    "career_goal_name": "QA Automation Engineer",
+    "skill_name": "Python",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-081",
+    "career_goal_name": "QA Automation Engineer",
+    "skill_name": "Jenkins",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-082",
+    "career_goal_name": "QA Automation Engineer",
+    "skill_name": "SQL",
+    "required_level": 6
+  },
+  {
+    "mapping_id": "MAP-083",
+    "career_goal_name": "QA Automation Engineer",
+    "skill_name": "API Testing",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-084",
+    "career_goal_name": "QA Automation Engineer",
+    "skill_name": "Git",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-085",
+    "career_goal_name": "Blockchain Developer",
+    "skill_name": "Blockchain",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-086",
+    "career_goal_name": "Blockchain Developer",
+    "skill_name": "Solidity",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-087",
+    "career_goal_name": "Blockchain Developer",
+    "skill_name": "JavaScript",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-088",
+    "career_goal_name": "Blockchain Developer",
+    "skill_name": "Cryptography",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-089",
+    "career_goal_name": "Blockchain Developer",
+    "skill_name": "Go (Golang)",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-090",
+    "career_goal_name": "Blockchain Developer",
+    "skill_name": "Problem Solving",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-091",
+    "career_goal_name": "Blockchain Developer",
+    "skill_name": "Rust",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-092",
+    "career_goal_name": "Game Developer",
+    "skill_name": "C#",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-093",
+    "career_goal_name": "Game Developer",
+    "skill_name": "C++",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-094",
+    "career_goal_name": "Game Developer",
+    "skill_name": "Unity",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-095",
+    "career_goal_name": "Game Developer",
+    "skill_name": "Creativity",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-096",
+    "career_goal_name": "Game Developer",
+    "skill_name": "Teamwork",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-097",
+    "career_goal_name": "Game Developer",
+    "skill_name": "Mathematics",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-098",
+    "career_goal_name": "Game Developer",
+    "skill_name": "Problem Solving",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-099",
+    "career_goal_name": "Network Engineer",
+    "skill_name": "Networking",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-100",
+    "career_goal_name": "Network Engineer",
+    "skill_name": "TCP/IP",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-101",
+    "career_goal_name": "Network Engineer",
+    "skill_name": "Wireshark",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-102",
+    "career_goal_name": "Network Engineer",
+    "skill_name": "Linux",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-103",
+    "career_goal_name": "Network Engineer",
+    "skill_name": "Python",
+    "required_level": 6
+  },
+  {
+    "mapping_id": "MAP-104",
+    "career_goal_name": "Network Engineer",
+    "skill_name": "Problem Solving",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-105",
+    "career_goal_name": "Network Engineer",
+    "skill_name": "Communication",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-106",
+    "career_goal_name": "Data Engineer",
+    "skill_name": "SQL",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-107",
+    "career_goal_name": "Data Engineer",
+    "skill_name": "Python",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-108",
+    "career_goal_name": "Data Engineer",
+    "skill_name": "Apache Spark",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-109",
+    "career_goal_name": "Data Engineer",
+    "skill_name": "Hadoop",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-110",
+    "career_goal_name": "Data Engineer",
+    "skill_name": "AWS (Amazon Web Services)",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-111",
+    "career_goal_name": "Data Engineer",
+    "skill_name": "Apache Kafka",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-112",
+    "career_goal_name": "Data Engineer",
+    "skill_name": "Scala",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-113",
+    "career_goal_name": "Digital Marketer",
+    "skill_name": "SEO",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-114",
+    "career_goal_name": "Digital Marketer",
+    "skill_name": "Google Analytics",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-115",
+    "career_goal_name": "Digital Marketer",
+    "skill_name": "Content Marketing",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-116",
+    "career_goal_name": "Digital Marketer",
+    "skill_name": "Communication",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-117",
+    "career_goal_name": "Digital Marketer",
+    "skill_name": "Data Analysis",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-118",
+    "career_goal_name": "Digital Marketer",
+    "skill_name": "Creativity",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-119",
+    "career_goal_name": "Digital Marketer",
+    "skill_name": "Social Media Management",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-120",
+    "career_goal_name": "Software Sales Representative",
+    "skill_name": "Communication",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-121",
+    "career_goal_name": "Software Sales Representative",
+    "skill_name": "Negotiation",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-122",
+    "career_goal_name": "Software Sales Representative",
+    "skill_name": "Active Listening",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-123",
+    "career_goal_name": "Software Sales Representative",
+    "skill_name": "Emotional Intelligence",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-124",
+    "career_goal_name": "Software Sales Representative",
+    "skill_name": "CRM Software",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-125",
+    "career_goal_name": "Software Sales Representative",
+    "skill_name": "Resilience",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-126",
+    "career_goal_name": "Software Sales Representative",
+    "skill_name": "Presentation Skills",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-127",
+    "career_goal_name": "Technical Writer",
+    "skill_name": "Communication",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-128",
+    "career_goal_name": "Technical Writer",
+    "skill_name": "Markdown",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-129",
+    "career_goal_name": "Technical Writer",
+    "skill_name": "Active Listening",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-130",
+    "career_goal_name": "Technical Writer",
+    "skill_name": "Research",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-131",
+    "career_goal_name": "Technical Writer",
+    "skill_name": "HTML5",
+    "required_level": 6
+  },
+  {
+    "mapping_id": "MAP-132",
+    "career_goal_name": "Technical Writer",
+    "skill_name": "Git",
+    "required_level": 5
+  },
+  {
+    "mapping_id": "MAP-133",
+    "career_goal_name": "Technical Writer",
+    "skill_name": "Attention to Detail",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-134",
+    "career_goal_name": "Product Owner",
+    "skill_name": "Agile Methodology",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-135",
+    "career_goal_name": "Product Owner",
+    "skill_name": "Scrum",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-136",
+    "career_goal_name": "Product Owner",
+    "skill_name": "Jira",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-137",
+    "career_goal_name": "Product Owner",
+    "skill_name": "Communication",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-138",
+    "career_goal_name": "Product Owner",
+    "skill_name": "Strategic Thinking",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-139",
+    "career_goal_name": "Product Owner",
+    "skill_name": "Decision Making",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-140",
+    "career_goal_name": "Product Owner",
+    "skill_name": "Stakeholder Management",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-141",
+    "career_goal_name": "Site Reliability Engineer",
+    "skill_name": "Linux",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-142",
+    "career_goal_name": "Site Reliability Engineer",
+    "skill_name": "Python",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-143",
+    "career_goal_name": "Site Reliability Engineer",
+    "skill_name": "Docker",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-144",
+    "career_goal_name": "Site Reliability Engineer",
+    "skill_name": "Kubernetes",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-145",
+    "career_goal_name": "Site Reliability Engineer",
+    "skill_name": "Prometheus",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-146",
+    "career_goal_name": "Site Reliability Engineer",
+    "skill_name": "Grafana",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-147",
+    "career_goal_name": "Site Reliability Engineer",
+    "skill_name": "Problem Solving",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-148",
+    "career_goal_name": "Database Administrator",
+    "skill_name": "SQL",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-149",
+    "career_goal_name": "Database Administrator",
+    "skill_name": "PostgreSQL",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-150",
+    "career_goal_name": "Database Administrator",
+    "skill_name": "Linux",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-151",
+    "career_goal_name": "Database Administrator",
+    "skill_name": "Backup & Recovery",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-152",
+    "career_goal_name": "Database Administrator",
+    "skill_name": "Shell Scripting",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-153",
+    "career_goal_name": "Marketing Analyst",
+    "skill_name": "Data Analysis",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-154",
+    "career_goal_name": "Marketing Analyst",
+    "skill_name": "Microsoft Excel",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-155",
+    "career_goal_name": "Marketing Analyst",
+    "skill_name": "Google Analytics",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-156",
+    "career_goal_name": "Marketing Analyst",
+    "skill_name": "Tableau",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-157",
+    "career_goal_name": "Marketing Analyst",
+    "skill_name": "SQL",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-158",
+    "career_goal_name": "Marketing Analyst",
+    "skill_name": "Communication",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-159",
+    "career_goal_name": "Graphic Designer",
+    "skill_name": "Adobe Photoshop",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-160",
+    "career_goal_name": "Graphic Designer",
+    "skill_name": "Adobe Illustrator",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-161",
+    "career_goal_name": "Graphic Designer",
+    "skill_name": "Creativity",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-162",
+    "career_goal_name": "Graphic Designer",
+    "skill_name": "Communication",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-163",
+    "career_goal_name": "Graphic Designer",
+    "skill_name": "Time Management",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-164",
+    "career_goal_name": "IT Support Specialist",
+    "skill_name": "Troubleshooting",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-165",
+    "career_goal_name": "IT Support Specialist",
+    "skill_name": "Communication",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-166",
+    "career_goal_name": "IT Support Specialist",
+    "skill_name": "Windows OS",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-167",
+    "career_goal_name": "IT Support Specialist",
+    "skill_name": "Active Directory",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-168",
+    "career_goal_name": "IT Support Specialist",
+    "skill_name": "Networking Basics",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-169",
+    "career_goal_name": "Systems Administrator",
+    "skill_name": "Linux",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-170",
+    "career_goal_name": "Systems Administrator",
+    "skill_name": "Windows Server",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-171",
+    "career_goal_name": "Systems Administrator",
+    "skill_name": "Networking",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-172",
+    "career_goal_name": "Systems Administrator",
+    "skill_name": "Bash/Shell Scripting",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-173",
+    "career_goal_name": "Systems Administrator",
+    "skill_name": "Problem Solving",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-174",
+    "career_goal_name": "Embedded Systems Engineer",
+    "skill_name": "C",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-175",
+    "career_goal_name": "Embedded Systems Engineer",
+    "skill_name": "C++",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-176",
+    "career_goal_name": "Embedded Systems Engineer",
+    "skill_name": "Linux",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-177",
+    "career_goal_name": "Embedded Systems Engineer",
+    "skill_name": "Microcontrollers",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-178",
+    "career_goal_name": "Embedded Systems Engineer",
+    "skill_name": "Debugging",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-179",
+    "career_goal_name": "AI Research Scientist",
+    "skill_name": "Python",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-180",
+    "career_goal_name": "AI Research Scientist",
+    "skill_name": "Deep Learning",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-181",
+    "career_goal_name": "AI Research Scientist",
+    "skill_name": "Mathematics",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-182",
+    "career_goal_name": "AI Research Scientist",
+    "skill_name": "TensorFlow",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-183",
+    "career_goal_name": "AI Research Scientist",
+    "skill_name": "PyTorch",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-184",
+    "career_goal_name": "AI Research Scientist",
+    "skill_name": "Research",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-185",
+    "career_goal_name": "Scrum Master",
+    "skill_name": "Scrum",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-186",
+    "career_goal_name": "Scrum Master",
+    "skill_name": "Agile Methodology",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-187",
+    "career_goal_name": "Scrum Master",
+    "skill_name": "Communication",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-188",
+    "career_goal_name": "Scrum Master",
+    "skill_name": "Conflict Resolution",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-189",
+    "career_goal_name": "Scrum Master",
+    "skill_name": "Jira",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-190",
+    "career_goal_name": "DevSecOps Engineer",
+    "skill_name": "DevOps",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-191",
+    "career_goal_name": "DevSecOps Engineer",
+    "skill_name": "Cybersecurity",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-192",
+    "career_goal_name": "DevSecOps Engineer",
+    "skill_name": "CI/CD",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-193",
+    "career_goal_name": "DevSecOps Engineer",
+    "skill_name": "Cloud Security",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-194",
+    "career_goal_name": "DevSecOps Engineer",
+    "skill_name": "Python",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-195",
+    "career_goal_name": "Salesforce Developer",
+    "skill_name": "Apex",
+    "required_level": 10
+  },
+  {
+    "mapping_id": "MAP-196",
+    "career_goal_name": "Salesforce Developer",
+    "skill_name": "Java",
+    "required_level": 7
+  },
+  {
+    "mapping_id": "MAP-197",
+    "career_goal_name": "Salesforce Developer",
+    "skill_name": "CRM",
+    "required_level": 9
+  },
+  {
+    "mapping_id": "MAP-198",
+    "career_goal_name": "Salesforce Developer",
+    "skill_name": "JavaScript",
+    "required_level": 8
+  },
+  {
+    "mapping_id": "MAP-199",
+    "career_goal_name": "Salesforce Developer",
+    "skill_name": "SQL",
+    "required_level": 6
+  },
+  {
+    "mapping_id": "MAP-200",
+    "career_goal_name": "Robotics Engineer",
+    "skill_name": "C++",
+    "required_level": 10
+  }
+]
