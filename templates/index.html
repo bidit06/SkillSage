@@ -53,19 +53,20 @@
         .chat-list-label { font-size: 12px; color: var(--secondary-text); padding: 0 10px; margin-bottom: 10px; }
         #chat-history { flex-grow: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
         
-        .chat-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 15px; border-radius: 50px; cursor: pointer; color: var(--text-color); font-size: 14px; position: relative; }
+        .chat-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 15px; border-radius: 50px; cursor: pointer; color: var(--text-color); font-size: 14px; position: relative; text-decoration: none; }
         .chat-item:hover, .chat-item.active { background-color: var(--hover-bg); }
         .chat-item.active { font-weight: 600; }
         .chat-title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px; pointer-events: none; }
         
         .chat-options-btn { background: none; border: none; color: var(--secondary-text); cursor: pointer; padding: 4px; border-radius: 50%; display: none; align-items: center; justify-content: center; }
         .chat-item:hover .chat-options-btn { display: flex; }
-        
+        .chat-options-btn:hover { background-color: var(--border-color); color: var(--text-color); }
+
         /* Dropdown */
-        .dropdown-menu { position: absolute; right: 10px; top: 35px; background: var(--sidebar-bg); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 100; display: none; flex-direction: column; min-width: 120px; overflow: hidden; }
+        .dropdown-menu { position: absolute; right: 10px; top: 35px; background-color: var(--sidebar-bg); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 100; display: none; flex-direction: column; min-width: 120px; overflow: hidden; }
         .dropdown-menu.show { display: flex; }
-        .dropdown-item { padding: 10px 15px; cursor: pointer; font-size: 13px; display: flex; align-items: center; gap: 8px; }
-        .dropdown-item:hover { background: var(--hover-bg); }
+        .dropdown-item { padding: 10px 15px; cursor: pointer; font-size: 13px; display: flex; align-items: center; gap: 8px; color: var(--text-color); }
+        .dropdown-item:hover { background-color: var(--hover-bg); }
         .dropdown-item.delete { color: #ff8b8b; }
 
         /* Main Content */
@@ -73,25 +74,8 @@
         header { padding: 20px; display: flex; justify-content: space-between; align-items: center; color: var(--secondary-text); }
         .theme-toggle-btn { background: none; border: none; color: var(--secondary-text); cursor: pointer; padding: 8px; border-radius: 50%; }
         
-        /* Back Button Style */
-        .back-btn {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            padding: 8px 16px;
-            background-color: var(--hover-bg);
-            color: var(--text-color);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: background 0.2s;
-        }
-        .back-btn:hover {
-            background-color: var(--border-color);
-        }
+        .back-dashboard-btn { display: flex; align-items: center; gap: 8px; padding: 8px 16px; background-color: var(--hover-bg); color: var(--text-color); text-decoration: none; border-radius: 20px; font-size: 14px; font-weight: 500; transition: background 0.2s; margin-left: 15px; }
+        .back-dashboard-btn:hover { background-color: var(--border-color); }
 
         #chat-container { flex-grow: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 20px; }
         .welcome-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; text-align: center; }
@@ -110,7 +94,6 @@
         .attachment-preview { display: flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.1); padding: 8px 12px; border-radius: 8px; font-size: 13px; border: 1px solid var(--border-color); }
         .attachment-preview img { width: 30px; height: 30px; object-fit: cover; border-radius: 4px; }
         
-        /* Input Area */
         #input-container { padding: 20px; display: flex; justify-content: center; background-color: var(--bg-color); }
         #input-wrapper { width: 100%; max-width: 800px; display: flex; flex-direction: column; gap: 10px; }
         #file-preview-area { display: none; flex-wrap: wrap; gap: 10px; padding: 0 10px; }
@@ -121,6 +104,15 @@
         #message-input { flex-grow: 1; background: transparent; border: none; color: var(--text-color); font-size: 16px; outline: none; padding: 10px 0; }
         .icon-btn { background: none; border: none; cursor: pointer; color: var(--secondary-text); padding: 8px; border-radius: 50%; display: flex; }
         .icon-btn:hover { background-color: rgba(128,128,128,0.1); color: var(--text-color); }
+
+        /* Rename Modal */
+        #rename-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 2000; }
+        .modal-content { background: var(--sidebar-bg); padding: 20px; border-radius: 12px; width: 300px; display: flex; flex-direction: column; gap: 15px; color: var(--text-color); border: 1px solid var(--border-color); }
+        .modal-input { padding: 10px; background: var(--bg-color); border: 1px solid var(--secondary-text); color: var(--text-color); border-radius: 6px; outline: none; }
+        .modal-actions { display: flex; justify-content: flex-end; gap: 10px; }
+        .btn { padding: 8px 16px; border-radius: 4px; cursor: pointer; border: none; font-size: 14px; }
+        .btn-cancel { background: transparent; color: var(--accent-color); }
+        .btn-confirm { background: var(--accent-color); color: white; font-weight: 500; }
     </style>
 </head>
 
@@ -137,20 +129,19 @@
 
     <main id="main-content">
         <header>
-            <div style="display: flex; align-items: center; gap: 15px;">
+            <div style="display:flex; align-items:center;">
                 <div style="font-weight: 500; font-size: 18px;">Gemini Clone</div>
-                <!-- Added Back to Dashboard Button -->
-                <a href="/dashboard" class="back-btn">
+                <a href="/dashboard" class="back-dashboard-btn">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                     Back to Dashboard
                 </a>
             </div>
+
             <div class="header-actions">
                 <button class="theme-toggle-btn" onclick="toggleTheme()">
                     <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
                 </button>
-                <!-- Profile Icon with Link -->
-                <div class="user-icon" onclick="window.location.href='/profile'" style="width: 32px; height: 32px; border-radius: 50%; overflow: hidden; cursor: pointer;" title="Go to Profile">
+                <div class="user-icon" onclick="window.location.href='/profile'" style="width: 32px; height: 32px; border-radius: 50%; overflow: hidden; cursor: pointer; margin-left:10px;" title="Go to Profile">
                     <svg viewBox="0 0 24 24" fill="#ccc" width="32" height="32"><circle cx="12" cy="12" r="12"/></svg>
                 </div>
             </div>
@@ -172,9 +163,7 @@
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
                     </button>
                     <input type="file" id="file-upload" style="display: none;" onchange="handleFileUpload(event)">
-                    
                     <input type="text" id="message-input" placeholder="Enter a prompt here" autocomplete="off">
-                    
                     <button id="send-btn" class="icon-btn" onclick="handleSendMessage()">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
                     </button>
@@ -183,27 +172,41 @@
         </div>
     </main>
 
-    <script>
-        // --- GLOBAL STATE ---
-        let chats = []; // Stores the list of chats
-        let currentChatId = null; // Currently active chat ID
-        let currentFile = null; // Currently selected file
+    <!-- Rename Modal -->
+    <div id="rename-modal">
+        <div class="modal-content">
+            <h3>Rename Chat</h3>
+            <input type="text" id="rename-input" class="modal-input" placeholder="New Chat Name">
+            <div class="modal-actions">
+                <button class="btn btn-cancel" onclick="closeRenameModal()">Cancel</button>
+                <button class="btn btn-confirm" onclick="confirmRename()">Rename</button>
+            </div>
+        </div>
+    </div>
 
-        // --- INITIALIZATION ---
+    <script>
+        let chats = []; 
+        let currentChatId = null; 
+        let currentFile = null;
+        let chatToRenameId = null;
+
         document.addEventListener('DOMContentLoaded', () => {
             loadSidebar(); 
-
-            // FIX: Add Enter Key Listener
             const inputField = document.getElementById('message-input');
             inputField.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') {
-                    e.preventDefault(); // Stop newline
+                    e.preventDefault(); 
                     handleSendMessage();
+                }
+            });
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.chat-item')) {
+                    closeAllDropdowns();
                 }
             });
         });
 
-        // --- SIDEBAR & CHAT MANAGEMENT ---
         async function loadSidebar() {
             const token = localStorage.getItem('token');
             if (!token) return;
@@ -214,16 +217,15 @@
                 });
 
                 if (response.ok) {
-                    // FIX: Removed 'const' so we update the GLOBAL 'chats' variable
                     chats = await response.json(); 
-                    renderSidebarHTML(); // Call the renderer
+                    renderSidebar(); 
                 }
             } catch (error) {
                 console.error("Failed to load sidebar:", error);
             }
         }
 
-        function renderSidebarHTML() {
+        function renderSidebar() {
             const container = document.getElementById('chat-history');
             container.innerHTML = '';
 
@@ -231,34 +233,118 @@
                 const isActive = chat.id === currentChatId ? 'active' : '';
                 const div = document.createElement('div');
                 div.className = `chat-item ${isActive}`;
-                div.onclick = () => loadChat(chat.id);
+                
+                // Click on chat item loads the chat
+                div.onclick = (e) => {
+                    if (!e.target.closest('.chat-options-btn') && !e.target.closest('.dropdown-menu')) {
+                        loadChat(chat.id);
+                    }
+                };
                 
                 div.innerHTML = `
-                    <div style="display:flex; align-items:center;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 10px;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    <div style="display:flex; align-items:center; overflow:hidden;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 10px; flex-shrink:0;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                         <span class="chat-title">${chat.title}</span>
+                    </div>
+                    <button class="chat-options-btn" onclick="toggleMenu('${chat.id}', event)">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="2"/><circle cx="12" cy="5" r="2"/><circle cx="12" cy="19" r="2"/></svg>
+                    </button>
+                    <div class="dropdown-menu" id="menu-${chat.id}">
+                        <div class="dropdown-item" onclick="openRenameModal('${chat.id}')">Rename</div>
+                        <div class="dropdown-item delete" onclick="deleteChat('${chat.id}')">Delete</div>
                     </div>
                 `;
                 container.appendChild(div);
             });
         }
 
-        // --- NEW CHAT LOGIC ---
-        function startNewChat() {
-            currentChatId = null; // Reset ID
-            document.getElementById('messages-list').innerHTML = ''; // Clear Screen
-            document.getElementById('welcome-message').style.display = 'flex'; // Show Welcome
-            
-            // Un-highlight sidebar items
-            document.querySelectorAll('.chat-item').forEach(el => el.classList.remove('active'));
+        function toggleMenu(chatId, event) {
+            event.stopPropagation(); // Prevent triggering loadChat
+            closeAllDropdowns();
+            const menu = document.getElementById(`menu-${chatId}`);
+            menu.style.display = 'flex';
         }
 
-        // --- LOAD OLD CHAT ---
+        function closeAllDropdowns() {
+            document.querySelectorAll('.dropdown-menu').forEach(el => el.style.display = 'none');
+        }
+
+        // --- NEW: DELETE CHAT ---
+        async function deleteChat(id) {
+            if(!confirm("Are you sure you want to delete this chat?")) return;
+            
+            try {
+                const token = localStorage.getItem('token');
+                const response = await fetch(`/api/chats/${id}`, {
+                    method: 'DELETE',
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+
+                if(response.ok) {
+                    // Remove from local array
+                    chats = chats.filter(c => c.id !== id);
+                    // If we deleted the current chat, reset view
+                    if(currentChatId === id) startNewChat();
+                    // Re-render sidebar
+                    renderSidebar();
+                } else {
+                    console.error("Delete failed");
+                }
+            } catch(e) { console.error(e); }
+        }
+
+        // --- RENAME LOGIC ---
+        function openRenameModal(id) {
+            chatToRenameId = id;
+            const chat = chats.find(c => c.id === id);
+            document.getElementById('rename-input').value = chat.title;
+            document.getElementById('rename-modal').style.display = 'flex';
+            document.getElementById('rename-input').focus();
+            closeAllDropdowns();
+        }
+
+        function closeRenameModal() {
+            document.getElementById('rename-modal').style.display = 'none';
+            chatToRenameId = null;
+        }
+
+        async function confirmRename() {
+            if (!chatToRenameId) return;
+            const newName = document.getElementById('rename-input').value.trim();
+            if (newName) {
+                try {
+                    const token = localStorage.getItem('token');
+                    const response = await fetch(`/api/chats/${chatToRenameId}`, {
+                        method: 'PUT',
+                        headers: { 
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${token}` 
+                        },
+                        body: JSON.stringify({ title: newName })
+                    });
+
+                    if(response.ok) {
+                        const chat = chats.find(c => c.id === chatToRenameId);
+                        chat.title = newName;
+                        renderSidebar();
+                    }
+                } catch(e) { console.error(e); }
+            }
+            closeRenameModal();
+        }
+
+        function startNewChat() {
+            currentChatId = null; 
+            document.getElementById('messages-list').innerHTML = ''; 
+            document.getElementById('welcome-message').style.display = 'flex'; 
+            renderSidebar();
+        }
+
         async function loadChat(id) {
             currentChatId = id;
             document.getElementById('messages-list').innerHTML = '';
             document.getElementById('welcome-message').style.display = 'none';
-            renderSidebarHTML(); // Refresh active class
+            renderSidebar(); 
 
             const token = localStorage.getItem('token');
             try {
@@ -268,7 +354,6 @@
 
                 if (response.ok) {
                     const chatData = await response.json();
-                    // Render all history
                     if (chatData.messages) {
                         chatData.messages.forEach(msg => renderMessage(msg));
                     }
@@ -278,29 +363,25 @@
             }
         }
 
-        // --- MESSAGING LOGIC ---
         async function handleSendMessage() {
             const input = document.getElementById('message-input');
             const text = input.value.trim();
-            const activeChatId = currentChatId; // Remember which chat we are in
+            const activeChatId = currentChatId; 
 
             if (!text && !currentFile) return;
 
-            // 1. Show User Message
             const newMessage = { text: text, sender: 'user', attachment: currentFile };
             renderMessage(newMessage);
 
             document.getElementById('welcome-message').style.display = 'none';
 
-            // Capture data for sending
             const fileToSend = currentFile ? currentFile.fileObject : null;
-            input.value = ''; // Clear input
-            clearFile();      // Clear file
+            input.value = ''; 
+            clearFile();      
 
-            // 2. Prepare Form Data
             const formData = new FormData();
             formData.append("user_message", text);
-            formData.append("chat_id", currentChatId || ""); // Send NULL if new chat
+            formData.append("chat_id", currentChatId || ""); 
             if (fileToSend) formData.append("user_upload", fileToSend);
 
             try {
@@ -313,21 +394,14 @@
 
                 if (response.ok) {
                     const data = await response.json();
-
-                    // If we just created a new chat, update the ID
                     if (!currentChatId || currentChatId !== data.chat_id) {
                         currentChatId = data.chat_id;
-                        loadSidebar(); // Refresh sidebar to show new chat title
+                        loadSidebar(); 
                     }
-
-                    // 3. Show AI Response
                     const aiMsg = { text: data.ai_response, sender: 'ai' };
-                    
-                    // Only render if we haven't switched chats while waiting
                     if (currentChatId === data.chat_id) {
                         renderMessage(aiMsg);
                     }
-
                 } else {
                     console.error("Server Error");
                 }
@@ -341,7 +415,6 @@
             const wrapper = document.createElement('div');
             wrapper.className = `message-wrapper ${msg.sender}`;
 
-            // Icon
             const icon = document.createElement('div');
             icon.className = `message-icon ${msg.sender === 'user' ? 'user-icon' : 'ai-icon'}`;
             icon.innerHTML = msg.sender === 'ai' 
@@ -351,29 +424,23 @@
             const content = document.createElement('div');
             content.className = 'message-content';
 
-            // Attachment
             if (msg.attachment || msg.file_name) {
                 const attachDiv = document.createElement('div');
                 attachDiv.className = 'attachment-preview';
                 let iconHtml = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path></svg>`;
-                
-                // If local preview exists
                 if (msg.attachment && msg.attachment.url) {
                     if (msg.attachment.type.startsWith('image/')) iconHtml = `<img src="${msg.attachment.url}">`;
                 }
-
                 attachDiv.innerHTML = `${iconHtml}<span>${msg.attachment ? msg.attachment.name : (msg.file_name || 'File')}</span>`;
                 content.appendChild(attachDiv);
             }
 
-            // Text
             if (msg.text) {
                 const textDiv = document.createElement('div');
                 textDiv.innerText = msg.text;
                 content.appendChild(textDiv);
             }
 
-            // Order: AI (Icon -> Content), User (Content -> Icon)
             if (msg.sender === 'ai') {
                 wrapper.appendChild(icon);
                 wrapper.appendChild(content);
@@ -386,18 +453,15 @@
             document.getElementById('chat-container').scrollTop = document.getElementById('chat-container').scrollHeight;
         }
 
-        // --- FILE HANDLING ---
         function handleFileUpload(event) {
             const file = event.target.files[0];
             if (!file) return;
-
             currentFile = {
                 fileObject: file, 
                 name: file.name,
                 type: file.type,
                 url: URL.createObjectURL(file)
             };
-
             const area = document.getElementById('file-preview-area');
             area.style.display = 'flex';
             area.innerHTML = `<div class="preview-chip"><span>${file.name}</span><span style="cursor:pointer;margin-left:5px;" onclick="clearFile()">×</span></div>`;

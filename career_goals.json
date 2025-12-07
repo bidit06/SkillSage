@@ -1,0 +1,4207 @@
+[
+  {
+    "career_goal_id": "CG-001",
+    "career_goal_name": "Data Scientist",
+    "description": "Experts who utilize analytical, statistical, and programming skills to collect, analyze, and interpret large datasets to derive actionable insights for business decision-making.",
+    "career_category": "Data Science & Analytics",
+    "difficulty_level": "High",
+    "demand_level": "Very High",
+    "salary_range": {
+      "india": "₹8,00,000 - ₹25,00,000",
+      "us": "$100,000 - $160,000"
+    },
+    "tools_and_technologies": [
+      "Python",
+      "R",
+      "SQL",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "TensorFlow",
+      "PyTorch",
+      "Jupyter Notebooks",
+      "Tableau",
+      "Power BI",
+      "Apache Spark",
+      "Hadoop",
+      "Excel",
+      "SAS",
+      "Matplotlib",
+      "Seaborn"
+    ],
+    "related_job_titles": [
+      "Senior Data Scientist",
+      "Lead Data Scientist",
+      "Applied Scientist",
+      "Decision Scientist"
+    ],
+    "keywords_for_articles": [
+      "data science roadmap",
+      "predictive modeling",
+      "statistical analysis",
+      "machine learning basics",
+      "data visualization"
+    ]
+  },
+  {
+    "career_goal_id": "CG-002",
+    "career_goal_name": "Machine Learning Engineer",
+    "description": "Engineers focusing on designing, building, and deploying self-running software that can automate predictive models and leverage artificial intelligence.",
+    "career_category": "Artificial Intelligence",
+    "difficulty_level": "High",
+    "demand_level": "Very High",
+    "salary_range": {
+      "india": "₹10,00,000 - ₹30,00,000",
+      "us": "$120,000 - $180,000"
+    },
+    "tools_and_technologies": [
+      "Python",
+      "C++",
+      "TensorFlow",
+      "PyTorch",
+      "Keras",
+      "Scikit-learn",
+      "Docker",
+      "Kubernetes",
+      "AWS SageMaker",
+      "Google Cloud AI",
+      "Azure ML",
+      "OpenCV",
+      "NLTK",
+      "Spacy",
+      "Git",
+      "Apache Kafka",
+      "Redis"
+    ],
+    "related_job_titles": [
+      "ML Engineer",
+      "AI Engineer",
+      "Deep Learning Engineer",
+      "Algorithm Engineer"
+    ],
+    "keywords_for_articles": [
+      "machine learning algorithms",
+      "model deployment",
+      "neural networks",
+      "supervised learning",
+      "unsupervised learning"
+    ]
+  },
+  {
+    "career_goal_id": "CG-003",
+    "career_goal_name": "Data Engineer",
+    "description": "Professionals responsible for finding trends in datasets and developing algorithms to help make raw data more useful to the enterprise.",
+    "career_category": "Data Engineering",
+    "difficulty_level": "Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹7,00,000 - ₹22,00,000",
+      "us": "$110,000 - $155,000"
+    },
+    "tools_and_technologies": [
+      "SQL",
+      "Python",
+      "Java",
+      "Scala",
+      "Apache Hadoop",
+      "Apache Spark",
+      "Apache Kafka",
+      "Airflow",
+      "AWS Redshift",
+      "Google BigQuery",
+      "Snowflake",
+      "PostgreSQL",
+      "MongoDB",
+      "Cassandra",
+      "Docker",
+      "Kubernetes",
+      "Shell Scripting"
+    ],
+    "related_job_titles": [
+      "Big Data Engineer",
+      "ETL Developer",
+      "Data Warehouse Engineer",
+      "Database Engineer"
+    ],
+    "keywords_for_articles": [
+      "ETL pipelines",
+      "data warehousing",
+      "big data processing",
+      "database design",
+      "cloud data engineering"
+    ]
+  },
+  {
+    "career_goal_id": "CG-004",
+    "career_goal_name": "Data Analyst",
+    "description": "Analysts who interpret data and turn it into information which can offer ways to improve a business, thus affecting business decisions.",
+    "career_category": "Data Science & Analytics",
+    "difficulty_level": "Beginner-Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹4,00,000 - ₹12,00,000",
+      "us": "$65,000 - $95,000"
+    },
+    "tools_and_technologies": [
+      "Excel",
+      "SQL",
+      "Python",
+      "R",
+      "Tableau",
+      "Power BI",
+      "Google Analytics",
+      "Looker",
+      "SAS",
+      "SPSS",
+      "QlikView",
+      "Jupyter",
+      "Pandas",
+      "NumPy",
+      "Microsoft Access",
+      "VBA"
+    ],
+    "related_job_titles": [
+      "Junior Data Analyst",
+      "Business Analyst",
+      "Marketing Analyst",
+      "Operations Analyst"
+    ],
+    "keywords_for_articles": [
+      "data analysis skills",
+      "dashboard creation",
+      "business reporting",
+      "exploratory data analysis",
+      "SQL for analysis"
+    ]
+  },
+  {
+    "career_goal_id": "CG-005",
+    "career_goal_name": "Business Intelligence Analyst",
+    "description": "Specialists who analyze complex data sets to identify business and market trends, helping companies make smart financial and operational decisions.",
+    "career_category": "Business Intelligence",
+    "difficulty_level": "Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹18,00,000",
+      "us": "$80,000 - $115,000"
+    },
+    "tools_and_technologies": [
+      "Power BI",
+      "Tableau",
+      "SQL",
+      "Excel",
+      "Looker",
+      "QlikSense",
+      "MicroStrategy",
+      "SAP BusinessObjects",
+      "Python",
+      "R",
+      "Domo",
+      "Sisense",
+      "Google Data Studio",
+      "Azure Synapse",
+      "Snowflake",
+      "Redshift"
+    ],
+    "related_job_titles": [
+      "BI Developer",
+      "BI Consultant",
+      "Reporting Analyst",
+      "Data Visualization Specialist"
+    ],
+    "keywords_for_articles": [
+      "business intelligence tools",
+      "data storytelling",
+      "KPI tracking",
+      "dashboard design",
+      "market trend analysis"
+    ]
+  },
+  {
+    "career_goal_id": "CG-006",
+    "career_goal_name": "AI Research Scientist",
+    "description": "Researchers who investigate new approaches to artificial intelligence and machine learning, typically focusing on advancing the state-of-the-art.",
+    "career_category": "Artificial Intelligence",
+    "difficulty_level": "Very High",
+    "demand_level": "Moderate-High",
+    "salary_range": {
+      "india": "₹15,00,000 - ₹45,00,000",
+      "us": "$150,000 - $250,000"
+    },
+    "tools_and_technologies": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "JAX",
+      "C++",
+      "CUDA",
+      "LaTeX",
+      "ArXiv",
+      "Hugging Face",
+      "Keras",
+      "Matlab",
+      "Git",
+      "Linux",
+      "Docker",
+      "Ray",
+      "Weights & Biases",
+      "OpenAI Gym"
+    ],
+    "related_job_titles": [
+      "Research Scientist",
+      "Principal AI Scientist",
+      "Deep Learning Researcher",
+      "Algorithm Scientist"
+    ],
+    "keywords_for_articles": [
+      "AI research papers",
+      "neural architecture search",
+      "reinforcement learning",
+      "generative AI",
+      "advanced mathematics"
+    ]
+  },
+  {
+    "career_goal_id": "CG-007",
+    "career_goal_name": "Natural Language Processing Engineer",
+    "description": "Engineers specialized in the interaction between computers and human language, working on tasks like translation, sentiment analysis, and chatbots.",
+    "career_category": "Artificial Intelligence",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹12,00,000 - ₹35,00,000",
+      "us": "$130,000 - $190,000"
+    },
+    "tools_and_technologies": [
+      "Python",
+      "NLTK",
+      "Spacy",
+      "Gensim",
+      "Hugging Face Transformers",
+      "BERT",
+      "GPT",
+      "TensorFlow",
+      "PyTorch",
+      "LangChain",
+      "OpenAI API",
+      "Pinecone",
+      "Elasticsearch",
+      "Regex",
+      "Flask",
+      "FastAPI"
+    ],
+    "related_job_titles": [
+      "NLP Scientist",
+      "Computational Linguist",
+      "Language Engineer",
+      "Chatbot Developer"
+    ],
+    "keywords_for_articles": [
+      "NLP techniques",
+      "text classification",
+      "large language models",
+      "tokenization",
+      "sentiment analysis"
+    ]
+  },
+  {
+    "career_goal_id": "CG-008",
+    "career_goal_name": "Computer Vision Engineer",
+    "description": "Professionals who develop algorithms and systems that enable computers to interpret and make decisions based on visual data from the world.",
+    "career_category": "Artificial Intelligence",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹10,00,000 - ₹32,00,000",
+      "us": "$125,000 - $185,000"
+    },
+    "tools_and_technologies": [
+      "Python",
+      "C++",
+      "OpenCV",
+      "TensorFlow",
+      "PyTorch",
+      "Keras",
+      "YOLO",
+      "R-CNN",
+      "CUDA",
+      "MATLAB",
+      "PCL (Point Cloud Library)",
+      "SimpleCV",
+      "OpenGL",
+      "Unity",
+      "Unreal Engine",
+      "Docker",
+      "Git"
+    ],
+    "related_job_titles": [
+      "Vision Scientist",
+      "Image Processing Engineer",
+      "AR/VR Engineer",
+      "Perception Engineer"
+    ],
+    "keywords_for_articles": [
+      "object detection",
+      "image segmentation",
+      "facial recognition",
+      "autonomous driving",
+      "visual slam"
+    ]
+  },
+  {
+    "career_goal_id": "CG-009",
+    "career_goal_name": "Big Data Architect",
+    "description": "Architects who plan, design, and manage large-scale data processing systems and data governance strategies for an organization.",
+    "career_category": "Data Engineering",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹20,00,000 - ₹50,00,000",
+      "us": "$140,000 - $210,000"
+    },
+    "tools_and_technologies": [
+      "Hadoop",
+      "Spark",
+      "Kafka",
+      "Hive",
+      "Pig",
+      "NoSQL",
+      "MongoDB",
+      "Cassandra",
+      "HBase",
+      "AWS EMR",
+      "Azure HDInsight",
+      "Google Dataproc",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Python",
+      "Java"
+    ],
+    "related_job_titles": [
+      "Solutions Architect",
+      "Data Infrastructure Engineer",
+      "Enterprise Data Architect",
+      "Cloud Data Architect"
+    ],
+    "keywords_for_articles": [
+      "big data architecture",
+      "distributed systems",
+      "data governance",
+      "cloud infrastructure",
+      "scalability"
+    ]
+  },
+  {
+    "career_goal_id": "CG-010",
+    "career_goal_name": "Database Administrator",
+    "description": "Specialists responsible for the performance, integrity, and security of a database, ensuring data remains consistent across the database.",
+    "career_category": "Database Management",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹15,00,000",
+      "us": "$85,000 - $125,000"
+    },
+    "tools_and_technologies": [
+      "Oracle DB",
+      "MySQL",
+      "Microsoft SQL Server",
+      "PostgreSQL",
+      "MongoDB",
+      "IBM Db2",
+      "Redis",
+      "Elasticsearch",
+      "Linux",
+      "Shell Scripting",
+      "Backup/Recovery Tools",
+      "SQL",
+      "PL/SQL",
+      "T-SQL",
+      "AWS RDS",
+      "Azure SQL"
+    ],
+    "related_job_titles": [
+      "DBA",
+      "Database Manager",
+      "Database Reliability Engineer",
+      "SQL Developer"
+    ],
+    "keywords_for_articles": [
+      "database optimization",
+      "SQL performance tuning",
+      "data security",
+      "backup strategies",
+      "relational databases"
+    ]
+  },
+  {
+    "career_goal_id": "CG-011",
+    "career_goal_name": "MLOps Engineer",
+    "description": "Engineers who combine Machine Learning, DevOps, and Data Engineering to deploy, maintain, and monitor ML models in production efficiently.",
+    "career_category": "Artificial Intelligence",
+    "difficulty_level": "High",
+    "demand_level": "Very High",
+    "salary_range": {
+      "india": "₹12,00,000 - ₹35,00,000",
+      "us": "$130,000 - $190,000"
+    },
+    "tools_and_technologies": [
+      "Kubeflow",
+      "MLflow",
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "GitLab CI/CD",
+      "AWS SageMaker",
+      "Azure ML",
+      "Google Vertex AI",
+      "Terraform",
+      "Prometheus",
+      "Grafana",
+      "Python",
+      "Bash",
+      "Airflow",
+      "DVC"
+    ],
+    "related_job_titles": [
+      "Machine Learning Operations Engineer",
+      "AI Infrastructure Engineer",
+      "DevOps Engineer for AI"
+    ],
+    "keywords_for_articles": [
+      "ML pipeline",
+      "model monitoring",
+      "CI/CD for ML",
+      "model versioning",
+      "automated retraining"
+    ]
+  },
+  {
+    "career_goal_id": "CG-012",
+    "career_goal_name": "Quantitative Analyst",
+    "description": "Professionals who use mathematical and statistical methods to solve financial and risk management problems.",
+    "career_category": "Finance & Analytics",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹15,00,000 - ₹40,00,000",
+      "us": "$140,000 - $220,000"
+    },
+    "tools_and_technologies": [
+      "Python",
+      "R",
+      "C++",
+      "MATLAB",
+      "SQL",
+      "Excel VBA",
+      "SAS",
+      "Bloomberg Terminal",
+      "Stata",
+      "NumPy",
+      "Pandas",
+      "SciPy",
+      "Monte Carlo Simulation",
+      "Time Series Analysis",
+      "Java",
+      "Machine Learning"
+    ],
+    "related_job_titles": [
+      "Quant",
+      "Financial Engineer",
+      "Risk Analyst",
+      "Algorithmic Trader"
+    ],
+    "keywords_for_articles": [
+      "quantitative finance",
+      "algorithmic trading",
+      "risk modeling",
+      "stochastic calculus",
+      "financial derivatives"
+    ]
+  },
+  {
+    "career_goal_id": "CG-013",
+    "career_goal_name": "Statistician",
+    "description": "Experts who collect, analyze, and interpret data to identify trends and relationships which are used to inform decision-making in various fields.",
+    "career_category": "Data Science & Analytics",
+    "difficulty_level": "Intermediate-High",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹18,00,000",
+      "us": "$75,000 - $120,000"
+    },
+    "tools_and_technologies": [
+      "R",
+      "SAS",
+      "SPSS",
+      "Python",
+      "Stata",
+      "Minitab",
+      "Excel",
+      "SQL",
+      "Tableau",
+      "Matlab",
+      "LaTeX",
+      "Power BI",
+      "GraphPad Prism",
+      "JMP",
+      "Statistica",
+      "Git"
+    ],
+    "related_job_titles": [
+      "Statistical Analyst",
+      "Biostatistician",
+      "Data Analyst",
+      "Research Statistician"
+    ],
+    "keywords_for_articles": [
+      "statistical methods",
+      "hypothesis testing",
+      "experimental design",
+      "probability theory",
+      "regression analysis"
+    ]
+  },
+  {
+    "career_goal_id": "CG-014",
+    "career_goal_name": "AI Ethicist",
+    "description": "Specialists who ensure that artificial intelligence systems are developed and used in a responsible, fair, and transparent manner.",
+    "career_category": "Artificial Intelligence",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Rising",
+    "salary_range": {
+      "india": "₹10,00,000 - ₹25,00,000",
+      "us": "$90,000 - $150,000"
+    },
+    "tools_and_technologies": [
+      "Python",
+      "IBM AI Fairness 360",
+      "Google What-If Tool",
+      "Fairlearn",
+      "Aequitas",
+      "Jupyter",
+      "SQL",
+      "Audit Tools",
+      "Legal Frameworks",
+      "GDPR Compliance Tools",
+      "Bias Detection Tools",
+      "Explainable AI (XAI) Libraries",
+      "LIME",
+      "SHAP"
+    ],
+    "related_job_titles": [
+      "Responsible AI Specialist",
+      "AI Policy Researcher",
+      "Tech Ethics Officer",
+      "Data Privacy Officer"
+    ],
+    "keywords_for_articles": [
+      "AI bias",
+      "algorithmic fairness",
+      "ethical AI",
+      "tech policy",
+      "explainable AI"
+    ]
+  },
+  {
+    "career_goal_id": "CG-015",
+    "career_goal_name": "Marketing Data Analyst",
+    "description": "Analysts who focus on analyzing marketing metrics to improve campaign performance, customer acquisition, and ROI.",
+    "career_category": "Marketing & Analytics",
+    "difficulty_level": "Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹14,00,000",
+      "us": "$70,000 - $105,000"
+    },
+    "tools_and_technologies": [
+      "Google Analytics 4",
+      "Google Ads",
+      "Facebook Ads Manager",
+      "SQL",
+      "Excel",
+      "Tableau",
+      "Power BI",
+      "Python",
+      "R",
+      "HubSpot",
+      "Salesforce",
+      "SEMrush",
+      "Ahrefs",
+      "Mixpanel",
+      "Segment",
+      "Looker"
+    ],
+    "related_job_titles": [
+      "Digital Marketing Analyst",
+      "Growth Analyst",
+      "Marketing Scientist",
+      "Customer Insights Analyst"
+    ],
+    "keywords_for_articles": [
+      "marketing ROI",
+      "customer segmentation",
+      "A/B testing",
+      "funnel analysis",
+      "attribution modeling"
+    ]
+  },
+  {
+    "career_goal_id": "CG-016",
+    "career_goal_name": "Prompt Engineer",
+    "description": "Specialists who design and refine inputs (prompts) for Large Language Models to generate optimal outputs for various applications.",
+    "career_category": "Artificial Intelligence",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Very High",
+    "salary_range": {
+      "india": "₹8,00,000 - ₹20,00,000",
+      "us": "$100,000 - $180,000"
+    },
+    "tools_and_technologies": [
+      "ChatGPT",
+      "Claude",
+      "Midjourney",
+      "Stable Diffusion",
+      "Python",
+      "LangChain",
+      "OpenAI API",
+      "Playground",
+      "Git",
+      "JSON",
+      "Markdown",
+      "Excel",
+      "Regex",
+      "Hugging Face",
+      "AutoGPT"
+    ],
+    "related_job_titles": [
+      "AI Interaction Designer",
+      "Generative AI Specialist",
+      "LLM Specialist"
+    ],
+    "keywords_for_articles": [
+      "prompt engineering guide",
+      "generative AI art",
+      "LLM optimization",
+      "chain of thought prompting",
+      "AI workflow automation"
+    ]
+  },
+  {
+    "career_goal_id": "CG-017",
+    "career_goal_name": "Deep Learning Engineer",
+    "description": "A specialized subset of ML engineers who focus specifically on deep neural networks and complex algorithms inspired by the human brain.",
+    "career_category": "Artificial Intelligence",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹12,00,000 - ₹35,00,000",
+      "us": "$135,000 - $200,000"
+    },
+    "tools_and_technologies": [
+      "TensorFlow",
+      "PyTorch",
+      "Keras",
+      "Caffe",
+      "Theano",
+      "CUDA",
+      "CuDNN",
+      "Python",
+      "C++",
+      "Jupyter",
+      "Docker",
+      "AWS Deep Learning AMIs",
+      "Google Colab",
+      "OpenCV",
+      "NVIDIA TensorRT",
+      "ONNX"
+    ],
+    "related_job_titles": [
+      "Neural Network Engineer",
+      "AI Researcher",
+      "Computer Vision Engineer"
+    ],
+    "keywords_for_articles": [
+      "deep neural networks",
+      "CNN",
+      "RNN",
+      "transformers",
+      "backpropagation"
+    ]
+  },
+  {
+    "career_goal_id": "CG-018",
+    "career_goal_name": "Robotics Engineer",
+    "description": "Engineers who design, build, and maintain robots and robotic systems, often integrating hardware with software and AI.",
+    "career_category": "Robotics & Engineering",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹18,00,000",
+      "us": "$95,000 - $150,000"
+    },
+    "tools_and_technologies": [
+      "ROS (Robot Operating System)",
+      "C++",
+      "Python",
+      "MATLAB",
+      "Simulink",
+      "Gazebo",
+      "Arduino",
+      "Raspberry Pi",
+      "CAD Tools",
+      "SolidWorks",
+      "AutoCAD",
+      "OpenCV",
+      "PCL",
+      "Linux",
+      "PLC Programming"
+    ],
+    "related_job_titles": [
+      "Robotics Software Engineer",
+      "Automation Engineer",
+      "Mechatronics Engineer",
+      "Control Systems Engineer"
+    ],
+    "keywords_for_articles": [
+      "robotics programming",
+      "autonomous systems",
+      "kinematics",
+      "sensors and actuators",
+      "path planning"
+    ]
+  },
+  {
+    "career_goal_id": "CG-019",
+    "career_goal_name": "Healthcare Data Analyst",
+    "description": "Analysts who interpret complex healthcare data to improve patient outcomes, operational efficiency, and reduce costs within medical organizations.",
+    "career_category": "Healthcare Analytics",
+    "difficulty_level": "Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹15,00,000",
+      "us": "$70,000 - $110,000"
+    },
+    "tools_and_technologies": [
+      "SQL",
+      "Excel",
+      "SAS",
+      "R",
+      "Python",
+      "Tableau",
+      "Power BI",
+      "EHR Systems (Epic, Cerner)",
+      "HL7",
+      "FHIR",
+      "SPSS",
+      "Stata",
+      "QlikView",
+      "Healthcare Claims Data",
+      "HIPAA Compliance Tools"
+    ],
+    "related_job_titles": [
+      "Health Informatics Specialist",
+      "Clinical Data Analyst",
+      "Public Health Analyst"
+    ],
+    "keywords_for_articles": [
+      "health informatics",
+      "clinical data management",
+      "healthcare KPIs",
+      "epidemiology",
+      "patient data privacy"
+    ]
+  },
+  {
+    "career_goal_id": "CG-020",
+    "career_goal_name": "Financial Data Analyst",
+    "description": "Professionals who examine financial data to identify trends, forecast future financial scenarios, and assist in investment decisions.",
+    "career_category": "Finance & Analytics",
+    "difficulty_level": "Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹16,00,000",
+      "us": "$75,000 - $115,000"
+    },
+    "tools_and_technologies": [
+      "Excel",
+      "VBA",
+      "SQL",
+      "Python",
+      "Bloomberg Terminal",
+      "Tableau",
+      "SAP",
+      "Oracle Financials",
+      "QuickBooks",
+      "Power BI",
+      "R",
+      "SAS",
+      "FactSet",
+      "Morningstar Direct",
+      "Hyperion"
+    ],
+    "related_job_titles": [
+      "Investment Analyst",
+      "Financial Planner",
+      "Equity Research Analyst",
+      "Credit Analyst"
+    ],
+    "keywords_for_articles": [
+      "financial modeling",
+      "investment analysis",
+      "market forecasting",
+      "economic trends",
+      "corporate finance"
+    ]
+  },
+  {
+    "career_goal_id": "CG-021",
+    "career_goal_name": "Frontend Developer",
+    "description": "Developers who specialize in building the user interface and user experience of websites and web applications using client-side technologies.",
+    "career_category": "Software Development",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Very High",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹20,00,000",
+      "us": "$75,000 - $130,000"
+    },
+    "tools_and_technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "TypeScript",
+      "React.js",
+      "Angular",
+      "Vue.js",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Sass/SCSS",
+      "Webpack",
+      "Vite",
+      "Git",
+      "GitHub",
+      "Redux",
+      "Jest",
+      "Figma",
+      "VS Code",
+      "npm/yarn",
+      "Next.js"
+    ],
+    "related_job_titles": [
+      "UI Engineer",
+      "Frontend Engineer",
+      "Web Developer",
+      "Client-Side Developer"
+    ],
+    "keywords_for_articles": [
+      "responsive design",
+      "DOM manipulation",
+      "state management",
+      "web accessibility",
+      "CSS frameworks"
+    ]
+  },
+  {
+    "career_goal_id": "CG-022",
+    "career_goal_name": "Backend Developer",
+    "description": "Engineers who build and maintain the mechanisms that process data and perform actions on websites, focusing on databases, scripting, and architecture.",
+    "career_category": "Software Development",
+    "difficulty_level": "High",
+    "demand_level": "Very High",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹24,00,000",
+      "us": "$90,000 - $150,000"
+    },
+    "tools_and_technologies": [
+      "Node.js",
+      "Python",
+      "Java",
+      "Go",
+      "Ruby",
+      "PHP",
+      "Express.js",
+      "Django",
+      "Spring Boot",
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Redis",
+      "Docker",
+      "Kubernetes",
+      "AWS Lambda",
+      "Nginx",
+      "GraphQL",
+      "REST APIs",
+      "Git"
+    ],
+    "related_job_titles": [
+      "Backend Engineer",
+      "API Developer",
+      "Server-Side Engineer",
+      "Java Developer"
+    ],
+    "keywords_for_articles": [
+      "API design",
+      "server architecture",
+      "database management",
+      "microservices",
+      "authentication"
+    ]
+  },
+  {
+    "career_goal_id": "CG-023",
+    "career_goal_name": "Full Stack Developer",
+    "description": "Versatile developers comfortable working with both back-end and front-end technologies, capable of building complete web applications.",
+    "career_category": "Software Development",
+    "difficulty_level": "High",
+    "demand_level": "Very High",
+    "salary_range": {
+      "india": "₹8,00,000 - ₹28,00,000",
+      "us": "$100,000 - $160,000"
+    },
+    "tools_and_technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "SQL",
+      "Python",
+      "Django",
+      "Git",
+      "Docker",
+      "AWS",
+      "Heroku",
+      "Next.js",
+      "TypeScript",
+      "GraphQL",
+      "Jest",
+      "CI/CD Pipelines",
+      "Linux"
+    ],
+    "related_job_titles": [
+      "MERN Stack Developer",
+      "MEAN Stack Developer",
+      "Software Engineer",
+      "Web Engineer"
+    ],
+    "keywords_for_articles": [
+      "full stack roadmap",
+      "MERN stack",
+      "system design",
+      "web development projects",
+      "deployment strategies"
+    ]
+  },
+  {
+    "career_goal_id": "CG-024",
+    "career_goal_name": "DevOps Engineer",
+    "description": "Professionals who bridge the gap between software development and IT operations to shorten the systems development life cycle.",
+    "career_category": "Cloud & Infrastructure",
+    "difficulty_level": "High",
+    "demand_level": "Very High",
+    "salary_range": {
+      "india": "₹10,00,000 - ₹30,00,000",
+      "us": "$115,000 - $170,000"
+    },
+    "tools_and_technologies": [
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "GitLab CI",
+      "Ansible",
+      "Terraform",
+      "AWS",
+      "Azure",
+      "Google Cloud Platform",
+      "Linux",
+      "Bash Scripting",
+      "Python",
+      "Prometheus",
+      "Grafana",
+      "Nagios",
+      "Git",
+      "Maven",
+      "Gradle"
+    ],
+    "related_job_titles": [
+      "DevOps Architect",
+      "Cloud Operations Engineer",
+      "Build and Release Engineer",
+      "Infrastructure Engineer"
+    ],
+    "keywords_for_articles": [
+      "CI/CD pipelines",
+      "infrastructure as code",
+      "containerization",
+      "cloud automation",
+      "monitoring tools"
+    ]
+  },
+  {
+    "career_goal_id": "CG-025",
+    "career_goal_name": "Cybersecurity Analyst",
+    "description": "Security experts who plan and carry out security measures to protect an organization's computer networks and systems.",
+    "career_category": "Cybersecurity",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹18,00,000",
+      "us": "$85,000 - $130,000"
+    },
+    "tools_and_technologies": [
+      "Wireshark",
+      "Nmap",
+      "Metasploit",
+      "Splunk",
+      "Snort",
+      "Nessus",
+      "Burp Suite",
+      "Kali Linux",
+      "Python",
+      "SIEM Tools",
+      "Firewalls",
+      "IDS/IPS",
+      "TCP/IP",
+      "Active Directory",
+      "Endpoint Protection",
+      "VPNs"
+    ],
+    "related_job_titles": [
+      "Information Security Analyst",
+      "SOC Analyst",
+      "Security Consultant",
+      "Network Security Analyst"
+    ],
+    "keywords_for_articles": [
+      "network security",
+      "threat detection",
+      "incident response",
+      "vulnerability assessment",
+      "security protocols"
+    ]
+  },
+  {
+    "career_goal_id": "CG-026",
+    "career_goal_name": "Cloud Architect",
+    "description": "Senior professionals responsible for overseeing a company's cloud computing strategy, including cloud adoption plans, application design, and management.",
+    "career_category": "Cloud & Infrastructure",
+    "difficulty_level": "Very High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹20,00,000 - ₹50,00,000",
+      "us": "$130,000 - $200,000"
+    },
+    "tools_and_technologies": [
+      "AWS",
+      "Microsoft Azure",
+      "Google Cloud Platform",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Ansible",
+      "Linux",
+      "Python",
+      "Bash",
+      "SQL",
+      "NoSQL",
+      "Load Balancers",
+      "CDN",
+      "Virtualization (VMware)",
+      "Networking",
+      "IAM"
+    ],
+    "related_job_titles": [
+      "Solutions Architect",
+      "Enterprise Cloud Architect",
+      "AWS Architect",
+      "Azure Architect"
+    ],
+    "keywords_for_articles": [
+      "cloud migration",
+      "serverless architecture",
+      "cost optimization",
+      "disaster recovery",
+      "hybrid cloud"
+    ]
+  },
+  {
+    "career_goal_id": "CG-027",
+    "career_goal_name": "Android Developer",
+    "description": "Software developers who specialize in designing and building applications for the Android operating system.",
+    "career_category": "Mobile Development",
+    "difficulty_level": "Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹20,00,000",
+      "us": "$90,000 - $145,000"
+    },
+    "tools_and_technologies": [
+      "Java",
+      "Kotlin",
+      "Android Studio",
+      "XML",
+      "Jetpack Compose",
+      "Retrofit",
+      "Dagger/Hilt",
+      "Glide",
+      "Room Database",
+      "Firebase",
+      "Git",
+      "Gradle",
+      "Material Design",
+      "Coroutines",
+      "MVVM Architecture",
+      "JUnit"
+    ],
+    "related_job_titles": [
+      "Mobile App Developer",
+      "Android Engineer",
+      "App Developer",
+      "Mobile Architect"
+    ],
+    "keywords_for_articles": [
+      "mobile app lifecycle",
+      "Kotlin programming",
+      "Android UI design",
+      "Google Play Store deployment",
+      "mobile performance"
+    ]
+  },
+  {
+    "career_goal_id": "CG-028",
+    "career_goal_name": "iOS Developer",
+    "description": "Developers specialized in building applications for Apple devices, including iPhones, iPads, and Apple Watches.",
+    "career_category": "Mobile Development",
+    "difficulty_level": "Intermediate-High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹22,00,000",
+      "us": "$100,000 - $160,000"
+    },
+    "tools_and_technologies": [
+      "Swift",
+      "Objective-C",
+      "Xcode",
+      "UIKit",
+      "SwiftUI",
+      "Cocoa Touch",
+      "Core Data",
+      "Grand Central Dispatch",
+      "XCTest",
+      "Git",
+      "Fastlane",
+      "Firebase",
+      "REST APIs",
+      "Combine",
+      "Human Interface Guidelines",
+      "TestFlight"
+    ],
+    "related_job_titles": [
+      "iOS Engineer",
+      "Mobile Engineer",
+      "Apple Platforms Developer",
+      "iPhone Developer"
+    ],
+    "keywords_for_articles": [
+      "Swift programming",
+      "iOS app architecture",
+      "App Store submission",
+      "mobile UI/UX",
+      "memory management"
+    ]
+  },
+  {
+    "career_goal_id": "CG-029",
+    "career_goal_name": "Software Architect",
+    "description": "High-level experts who make high-level design choices and dictate technical standards, including software coding standards, tools, and platforms.",
+    "career_category": "Software Development",
+    "difficulty_level": "Very High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹25,00,000 - ₹60,00,000",
+      "us": "$140,000 - $220,000"
+    },
+    "tools_and_technologies": [
+      "UML",
+      "Java",
+      "C#",
+      "Python",
+      "Microservices",
+      "Design Patterns",
+      "AWS/Azure",
+      "Docker",
+      "Kubernetes",
+      "SQL",
+      "NoSQL",
+      "Kafka",
+      "REST",
+      "gRPC",
+      "Enterprise Architect",
+      "Visio",
+      "Lucidchart"
+    ],
+    "related_job_titles": [
+      "Technical Architect",
+      "Principal Software Engineer",
+      "Systems Architect",
+      "Engineering Manager"
+    ],
+    "keywords_for_articles": [
+      "software design patterns",
+      "scalability",
+      "system integration",
+      "tech debt management",
+      "enterprise solutions"
+    ]
+  },
+  {
+    "career_goal_id": "CG-030",
+    "career_goal_name": "QA Automation Engineer",
+    "description": "Engineers who design and write computer programs to run tests on software automatically, ensuring quality and stability.",
+    "career_category": "Quality Assurance",
+    "difficulty_level": "Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹18,00,000",
+      "us": "$80,000 - $130,000"
+    },
+    "tools_and_technologies": [
+      "Selenium WebDriver",
+      "Appium",
+      "Python",
+      "Java",
+      "TestNG",
+      "JUnit",
+      "Cucumber",
+      "Jenkins",
+      "Postman",
+      "RestAssured",
+      "Jira",
+      "Git",
+      "Docker",
+      "Cypress",
+      "Playwright",
+      "SQL"
+    ],
+    "related_job_titles": [
+      "SDET (Software Development Engineer in Test)",
+      "Test Automation Architect",
+      "QA Engineer"
+    ],
+    "keywords_for_articles": [
+      "test automation frameworks",
+      "continuous testing",
+      "Selenium tutorial",
+      "API testing",
+      "bug tracking"
+    ]
+  },
+  {
+    "career_goal_id": "CG-031",
+    "career_goal_name": "Penetration Tester",
+    "description": "Ethical hackers who simulate cyberattacks on computer systems, networks, and applications to identify security vulnerabilities.",
+    "career_category": "Cybersecurity",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹8,00,000 - ₹25,00,000",
+      "us": "$95,000 - $150,000"
+    },
+    "tools_and_technologies": [
+      "Burp Suite",
+      "Metasploit",
+      "Nmap",
+      "Wireshark",
+      "Kali Linux",
+      "John the Ripper",
+      "Hydra",
+      "SQLMap",
+      "Aircrack-ng",
+      "Python",
+      "Bash",
+      "Powershell",
+      "OWASP ZAP",
+      "Hashcat",
+      "Nessus",
+      "Dirbuster"
+    ],
+    "related_job_titles": [
+      "Ethical Hacker",
+      "Red Team Member",
+      "Security Assessment Specialist",
+      "Vulnerability Tester"
+    ],
+    "keywords_for_articles": [
+      "ethical hacking",
+      "web application security",
+      "exploit development",
+      "social engineering",
+      "network penetration"
+    ]
+  },
+  {
+    "career_goal_id": "CG-032",
+    "career_goal_name": "Site Reliability Engineer (SRE)",
+    "description": "Engineers who treat operations as if it’s a software problem, ensuring large-scale systems are reliable, scalable, and efficient.",
+    "career_category": "Cloud & Infrastructure",
+    "difficulty_level": "Very High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹15,00,000 - ₹40,00,000",
+      "us": "$130,000 - $200,000"
+    },
+    "tools_and_technologies": [
+      "Go",
+      "Python",
+      "Linux",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Ansible",
+      "Prometheus",
+      "Grafana",
+      "ELK Stack",
+      "AWS/GCP/Azure",
+      "PagerDuty",
+      "Git",
+      "Jenkins",
+      "Datadog",
+      "Splunk",
+      "Chaos Monkey"
+    ],
+    "related_job_titles": [
+      "Systems Reliability Engineer",
+      "Production Engineer",
+      "DevOps Engineer",
+      "Infrastructure Engineer"
+    ],
+    "keywords_for_articles": [
+      "reliability engineering",
+      "SLO vs SLA",
+      "incident management",
+      "monitoring and alerting",
+      "capacity planning"
+    ]
+  },
+  {
+    "career_goal_id": "CG-033",
+    "career_goal_name": "UI/UX Designer",
+    "description": "Designers who focus on the visual layout (UI) and the user's journey and experience (UX) within a digital product.",
+    "career_category": "Design & Product",
+    "difficulty_level": "Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹20,00,000",
+      "us": "$75,000 - $130,000"
+    },
+    "tools_and_technologies": [
+      "Figma",
+      "Adobe XD",
+      "Sketch",
+      "InVision",
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "Zeplin",
+      "Principle",
+      "Miro",
+      "Balsamiq",
+      "HTML/CSS Basics",
+      "Webflow",
+      "Proto.io",
+      "Marvel App",
+      "Axure RP",
+      "Notion"
+    ],
+    "related_job_titles": [
+      "Product Designer",
+      "User Interface Designer",
+      "User Experience Researcher",
+      "Interaction Designer"
+    ],
+    "keywords_for_articles": [
+      "wireframing",
+      "prototyping",
+      "user research",
+      "design systems",
+      "accessibility design"
+    ]
+  },
+  {
+    "career_goal_id": "CG-034",
+    "career_goal_name": "Game Developer",
+    "description": "Software developers who specialize in creating video games for consoles, computers, and mobile devices.",
+    "career_category": "Software Development",
+    "difficulty_level": "High",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹4,00,000 - ₹15,00,000",
+      "us": "$70,000 - $120,000"
+    },
+    "tools_and_technologies": [
+      "Unity",
+      "Unreal Engine",
+      "C#",
+      "C++",
+      "Blender",
+      "Maya",
+      "DirectX",
+      "OpenGL",
+      "Vulkan",
+      "Godot",
+      "Visual Studio",
+      "Git",
+      "Photon",
+      "Shader Graph",
+      "FMOD",
+      "Houdini",
+      "Lua"
+    ],
+    "related_job_titles": [
+      "Gameplay Programmer",
+      "Game Designer",
+      "Graphics Programmer",
+      "Unity Developer"
+    ],
+    "keywords_for_articles": [
+      "game physics",
+      "3D rendering",
+      "game loops",
+      "multiplayer networking",
+      "virtual reality"
+    ]
+  },
+  {
+    "career_goal_id": "CG-035",
+    "career_goal_name": "Blockchain Developer",
+    "description": "Developers who specialize in developing decentralized applications (dApps) and smart contracts based on blockchain architecture.",
+    "career_category": "Emerging Tech",
+    "difficulty_level": "Very High",
+    "demand_level": "Moderate-High",
+    "salary_range": {
+      "india": "₹8,00,000 - ₹30,00,000",
+      "us": "$120,000 - $180,000"
+    },
+    "tools_and_technologies": [
+      "Solidity",
+      "Ethereum",
+      "Web3.js",
+      "Ethers.js",
+      "Rust",
+      "Hyperledger Fabric",
+      "Truffle",
+      "Ganache",
+      "Hardhat",
+      "Metamask",
+      "IPFS",
+      "Go",
+      "Node.js",
+      "React",
+      "C++",
+      "Smart Contracts"
+    ],
+    "related_job_titles": [
+      "Smart Contract Developer",
+      "Web3 Developer",
+      "Solidity Engineer",
+      "Crypto Developer"
+    ],
+    "keywords_for_articles": [
+      "decentralized finance",
+      "smart contracts",
+      "cryptography",
+      "NFT development",
+      "consensus algorithms"
+    ]
+  },
+  {
+    "career_goal_id": "CG-036",
+    "career_goal_name": "Network Engineer",
+    "description": "IT professionals who design, implement, and manage the local and wide area networks of an organization to ensure connectivity.",
+    "career_category": "IT Infrastructure",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹4,00,000 - ₹12,00,000",
+      "us": "$70,000 - $110,000"
+    },
+    "tools_and_technologies": [
+      "Cisco IOS",
+      "Wireshark",
+      "SolarWinds",
+      "Juniper",
+      "TCP/IP",
+      "OSPF",
+      "BGP",
+      "VLANs",
+      "VPN",
+      "Firewalls (Palo Alto, Fortinet)",
+      "Python (for automation)",
+      "Ansible",
+      "Linux",
+      "Putty",
+      "GNS3",
+      "Packet Tracer"
+    ],
+    "related_job_titles": [
+      "Network Administrator",
+      "Network Architect",
+      "NOC Engineer",
+      "Infrastructure Engineer"
+    ],
+    "keywords_for_articles": [
+      "network topology",
+      "routing protocols",
+      "subnetting",
+      "network troubleshooting",
+      "SD-WAN"
+    ]
+  },
+  {
+    "career_goal_id": "CG-037",
+    "career_goal_name": "Systems Administrator",
+    "description": "Professionals responsible for the upkeep, configuration, and reliable operation of computer systems and servers.",
+    "career_category": "IT Infrastructure",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹3,50,000 - ₹10,00,000",
+      "us": "$60,000 - $90,000"
+    },
+    "tools_and_technologies": [
+      "Linux (Red Hat, Ubuntu)",
+      "Windows Server",
+      "Active Directory",
+      "PowerShell",
+      "Bash",
+      "VMware",
+      "Hyper-V",
+      "Nagios",
+      "Splunk",
+      "Apache",
+      "Nginx",
+      "DNS",
+      "DHCP",
+      "Backup Exec",
+      "Office 365",
+      "Azure AD"
+    ],
+    "related_job_titles": [
+      "SysAdmin",
+      "IT Administrator",
+      "Server Administrator",
+      "IT Support Specialist"
+    ],
+    "keywords_for_articles": [
+      "server management",
+      "user administration",
+      "patch management",
+      "virtualization",
+      "IT support"
+    ]
+  },
+  {
+    "career_goal_id": "CG-038",
+    "career_goal_name": "Embedded Systems Engineer",
+    "description": "Engineers who design and implement software that runs on embedded devices, often with real-time constraints and hardware limitations.",
+    "career_category": "Software & Hardware",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹20,00,000",
+      "us": "$90,000 - $140,000"
+    },
+    "tools_and_technologies": [
+      "C",
+      "C++",
+      "Assembly Language",
+      "RTOS (FreeRTOS)",
+      "Microcontrollers (ARM, AVR, PIC)",
+      "Linux Embedded",
+      "Yocto",
+      "I2C",
+      "SPI",
+      "UART",
+      "Oscilloscopes",
+      "Logic Analyzers",
+      "Keil",
+      "Altium Designer",
+      "Git",
+      "Python"
+    ],
+    "related_job_titles": [
+      "Firmware Engineer",
+      "IoT Engineer",
+      "Embedded Software Developer"
+    ],
+    "keywords_for_articles": [
+      "microcontroller programming",
+      "real-time operating systems",
+      "IoT devices",
+      "firmware development",
+      "hardware integration"
+    ]
+  },
+  {
+    "career_goal_id": "CG-039",
+    "career_goal_name": "Technical Product Manager",
+    "description": "Product managers with a strong technical background who work with engineering teams to guide product development and strategy.",
+    "career_category": "Product Management",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹15,00,000 - ₹40,00,000",
+      "us": "$110,000 - $170,000"
+    },
+    "tools_and_technologies": [
+      "Jira",
+      "Confluence",
+      "Trello",
+      "Asana",
+      "SQL",
+      "Tableau",
+      "Google Analytics",
+      "Figma",
+      "Slack",
+      "Microsoft Project",
+      "A/B Testing Tools",
+      "Roadmap Software",
+      "Python (basic)",
+      "APIs",
+      "Agile Methodologies",
+      "Scrum"
+    ],
+    "related_job_titles": [
+      "Product Owner",
+      "Group Product Manager",
+      "PM",
+      "Technical Program Manager"
+    ],
+    "keywords_for_articles": [
+      "product lifecycle",
+      "agile product management",
+      "user stories",
+      "roadmap planning",
+      "market fit"
+    ]
+  },
+  {
+    "career_goal_id": "CG-040",
+    "career_goal_name": "Salesforce Developer",
+    "description": "Specialized developers who build applications and customize the Salesforce Customer Relationship Management (CRM) platform.",
+    "career_category": "Enterprise Software",
+    "difficulty_level": "Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹20,00,000",
+      "us": "$90,000 - $140,000"
+    },
+    "tools_and_technologies": [
+      "Apex",
+      "Visualforce",
+      "Lightning Web Components (LWC)",
+      "Salesforce DX",
+      "SOQL",
+      "SOSL",
+      "JavaScript",
+      "HTML/CSS",
+      "Git",
+      "Jenkins",
+      "Salesforce Cloud",
+      "VS Code",
+      "Copado",
+      "MuleSoft",
+      "REST/SOAP APIs",
+      "Process Builder"
+    ],
+    "related_job_titles": [
+      "Salesforce Engineer",
+      "CRM Developer",
+      "Salesforce Technical Consultant"
+    ],
+    "keywords_for_articles": [
+      "CRM customization",
+      "Apex programming",
+      "Lightning framework",
+      "Salesforce administration",
+      "cloud computing"
+    ]
+  },
+  {
+    "career_goal_id": "CG-041",
+    "career_goal_name": "SAP Consultant",
+    "description": "Experts in SAP software who help organizations implement, customize, and maintain their SAP ERP systems.",
+    "career_category": "Enterprise Software",
+    "difficulty_level": "High",
+    "demand_level": "Moderate-High",
+    "salary_range": {
+      "india": "₹7,00,000 - ₹25,00,000",
+      "us": "$90,000 - $150,000"
+    },
+    "tools_and_technologies": [
+      "SAP ERP",
+      "SAP S/4HANA",
+      "ABAP",
+      "SAP Fiori",
+      "SAP BW",
+      "SAP MM/SD/FICO",
+      "Java",
+      "SQL",
+      "Linux",
+      "Solution Manager",
+      "Eclipse",
+      "OData",
+      "HANA Studio",
+      "NetWeaver",
+      "SAP UI5"
+    ],
+    "related_job_titles": [
+      "SAP Developer",
+      "ABAP Consultant",
+      "ERP Consultant",
+      "Functional Consultant"
+    ],
+    "keywords_for_articles": [
+      "ERP implementation",
+      "business process management",
+      "SAP modules",
+      "ABAP programming",
+      "enterprise solutions"
+    ]
+  },
+  {
+    "career_goal_id": "CG-042",
+    "career_goal_name": "Information Security Manager",
+    "description": "Senior roles responsible for protecting an organization's computers, networks, and data against computer viruses, security breaches, and malicious hacker attacks.",
+    "career_category": "Cybersecurity",
+    "difficulty_level": "Very High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹20,00,000 - ₹50,00,000",
+      "us": "$120,000 - $180,000"
+    },
+    "tools_and_technologies": [
+      "SIEM",
+      "Firewalls",
+      "IDS/IPS",
+      "GRC Tools (Governance, Risk, Compliance)",
+      "ISO 27001",
+      "NIST Framework",
+      "Jira",
+      "Splunk",
+      "Qualys",
+      "Tenable",
+      "CrowdStrike",
+      "Microsoft Sentinel",
+      "Excel",
+      "Project Management Tools",
+      "Encryption Tools"
+    ],
+    "related_job_titles": [
+      "CISO (Chief Information Security Officer)",
+      "Security Director",
+      "IT Security Manager"
+    ],
+    "keywords_for_articles": [
+      "security governance",
+      "risk management",
+      "compliance standards",
+      "security strategy",
+      "incident handling"
+    ]
+  },
+  {
+    "career_goal_id": "CG-043",
+    "career_goal_name": "IT Project Manager",
+    "description": "Professionals who plan, organize, and integrate cross-functional information technology projects that are significant in scope and impact.",
+    "career_category": "IT Management",
+    "difficulty_level": "Intermediate-High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹10,00,000 - ₹28,00,000",
+      "us": "$90,000 - $140,000"
+    },
+    "tools_and_technologies": [
+      "Microsoft Project",
+      "Jira",
+      "Asana",
+      "Trello",
+      "Monday.com",
+      "Excel",
+      "SharePoint",
+      "Confluence",
+      "Slack",
+      "Teams",
+      "Visio",
+      "Lucidchart",
+      "Zoom",
+      "Harvest",
+      "Smartsheet",
+      "Basecamp"
+    ],
+    "related_job_titles": [
+      "Technical Project Manager",
+      "Scrum Master",
+      "Delivery Manager",
+      "Program Manager"
+    ],
+    "keywords_for_articles": [
+      "project planning",
+      "resource allocation",
+      "risk mitigation",
+      "waterfall vs agile",
+      "stakeholder management"
+    ]
+  },
+  {
+    "career_goal_id": "CG-044",
+    "career_goal_name": "Technical Writer",
+    "description": "Communicators who translate complex technical information into easily understandable documentation, manuals, and guides.",
+    "career_category": "IT Support & Documentation",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹15,00,000",
+      "us": "$60,000 - $100,000"
+    },
+    "tools_and_technologies": [
+      "Markdown",
+      "Microsoft Word",
+      "Google Docs",
+      "MadCap Flare",
+      "Adobe FrameMaker",
+      "Jira",
+      "Confluence",
+      "Git",
+      "GitHub",
+      "Snagit",
+      "Visio",
+      "Swagger",
+      "Postman",
+      "HTML/XML",
+      "DITA",
+      "WordPress"
+    ],
+    "related_job_titles": [
+      "Documentation Specialist",
+      "Content Developer",
+      "Information Developer",
+      "API Writer"
+    ],
+    "keywords_for_articles": [
+      "API documentation",
+      "user manuals",
+      "technical communication",
+      "content strategy",
+      "knowledge base management"
+    ]
+  },
+  {
+    "career_goal_id": "CG-045",
+    "career_goal_name": "DevSecOps Engineer",
+    "description": "Engineers who integrate security practices within the DevOps process, ensuring security is a shared responsibility throughout the IT lifecycle.",
+    "career_category": "Cybersecurity & Cloud",
+    "difficulty_level": "Very High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹12,00,000 - ₹35,00,000",
+      "us": "$125,000 - $185,000"
+    },
+    "tools_and_technologies": [
+      "Jenkins",
+      "GitLab CI",
+      "Docker",
+      "Kubernetes",
+      "SonarQube",
+      "Snyk",
+      "Checkmarx",
+      "Terraform",
+      "Ansible",
+      "AWS/Azure Security",
+      "OWASP ZAP",
+      "Burp Suite",
+      "Python",
+      "Bash",
+      "Prometheus",
+      "ELK Stack"
+    ],
+    "related_job_titles": [
+      "Security Automation Engineer",
+      "Cloud Security Engineer",
+      "Application Security Engineer"
+    ],
+    "keywords_for_articles": [
+      "security automation",
+      "shift-left security",
+      "secure coding",
+      "container security",
+      "compliance as code"
+    ]
+  },
+  {
+    "career_goal_id": "CG-046",
+    "career_goal_name": "RPA Developer",
+    "description": "Developers who design and implement software robots (bots) to automate repetitive, rule-based business processes.",
+    "career_category": "Automation & AI",
+    "difficulty_level": "Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹18,00,000",
+      "us": "$80,000 - $135,000"
+    },
+    "tools_and_technologies": [
+      "UiPath",
+      "Automation Anywhere",
+      "Blue Prism",
+      "Power Automate",
+      "Python",
+      "C#",
+      ".NET",
+      "SQL",
+      "Excel VBA",
+      "OCR Tools (ABBYY)",
+      "Citrix",
+      "SAP",
+      "Rest APIs",
+      "JSON",
+      "Git",
+      "Orchestrator"
+    ],
+    "related_job_titles": [
+      "RPA Engineer",
+      "Automation Developer",
+      "Bot Developer",
+      "Process Automation Specialist"
+    ],
+    "keywords_for_articles": [
+      "robotic process automation",
+      "business process optimization",
+      "bot orchestration",
+      "workflow automation",
+      "intelligent automation"
+    ]
+  },
+  {
+    "career_goal_id": "CG-047",
+    "career_goal_name": "AR/VR Developer",
+    "description": "Specialists who create immersive experiences for Augmented Reality (AR) and Virtual Reality (VR) headsets and mobile devices.",
+    "career_category": "Immersive Tech",
+    "difficulty_level": "High",
+    "demand_level": "Moderate-High",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹22,00,000",
+      "us": "$90,000 - $160,000"
+    },
+    "tools_and_technologies": [
+      "Unity 3D",
+      "Unreal Engine",
+      "C#",
+      "C++",
+      "ARCore",
+      "ARKit",
+      "Vuforia",
+      "Oculus SDK",
+      "Blender",
+      "Maya",
+      "Shader Graph",
+      "WebGL",
+      "OpenXR",
+      "Git",
+      "Visual Studio",
+      "Adobe Creative Suite"
+    ],
+    "related_job_titles": [
+      "XR Developer",
+      "Mixed Reality Engineer",
+      "Unity Developer",
+      "3D Application Developer"
+    ],
+    "keywords_for_articles": [
+      "augmented reality apps",
+      "virtual reality gaming",
+      "spatial computing",
+      "3D modeling",
+      "metaverse development"
+    ]
+  },
+  {
+    "career_goal_id": "CG-048",
+    "career_goal_name": "IoT Solutions Architect",
+    "description": "Architects who design the end-to-end strategy for Internet of Things (IoT) systems, connecting sensors, networks, and cloud platforms.",
+    "career_category": "Internet of Things",
+    "difficulty_level": "Very High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹15,00,000 - ₹40,00,000",
+      "us": "$120,000 - $190,000"
+    },
+    "tools_and_technologies": [
+      "AWS IoT Core",
+      "Azure IoT Hub",
+      "MQTT",
+      "CoAP",
+      "Python",
+      "Node.js",
+      "Raspberry Pi",
+      "Arduino",
+      "Zigbee",
+      "LoRaWAN",
+      "Docker",
+      "Kubernetes",
+      "NoSQL",
+      "InfluxDB",
+      "Grafana",
+      "Linux"
+    ],
+    "related_job_titles": [
+      "IoT Engineer",
+      "Connected Systems Architect",
+      "Edge Computing Architect"
+    ],
+    "keywords_for_articles": [
+      "IoT ecosystem",
+      "edge computing",
+      "sensor networks",
+      "industrial IoT",
+      "smart city architecture"
+    ]
+  },
+  {
+    "career_goal_id": "CG-049",
+    "career_goal_name": "ServiceNow Developer",
+    "description": "Developers who configure and customize the ServiceNow platform to manage enterprise IT workflows and business processes.",
+    "career_category": "Enterprise Software",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Very High",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹20,00,000",
+      "us": "$90,000 - $145,000"
+    },
+    "tools_and_technologies": [
+      "ServiceNow Platform",
+      "JavaScript",
+      "AngularJS",
+      "HTML",
+      "CSS",
+      "Service Portal",
+      "Flow Designer",
+      "REST/SOAP APIs",
+      "ITSM",
+      "CMDB",
+      "Glide API",
+      "XML",
+      "JSON",
+      "Jelly Scripting",
+      "Agile",
+      "Git"
+    ],
+    "related_job_titles": [
+      "ServiceNow Administrator",
+      "ITSM Developer",
+      "ServiceNow Architect",
+      "Platform Engineer"
+    ],
+    "keywords_for_articles": [
+      "IT service management",
+      "workflow configuration",
+      "business rules",
+      "platform customization",
+      "ITIL processes"
+    ]
+  },
+  {
+    "career_goal_id": "CG-050",
+    "career_goal_name": "Bioinformatics Scientist",
+    "description": "Scientists who apply data science and computational techniques to biological data, such as genetic sequences and protein structures.",
+    "career_category": "Data Science & Healthcare",
+    "difficulty_level": "Very High",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹8,00,000 - ₹25,00,000",
+      "us": "$95,000 - $160,000"
+    },
+    "tools_and_technologies": [
+      "Python",
+      "R",
+      "BioPython",
+      "Bioconductor",
+      "Linux",
+      "Bash",
+      "BLAST",
+      "Nextflow",
+      "Docker",
+      "SQL",
+      "Perl",
+      "GROMACS",
+      "PyMOL",
+      "TensorFlow",
+      "HPC (High Performance Computing)",
+      "Git"
+    ],
+    "related_job_titles": [
+      "Computational Biologist",
+      "Genomics Data Scientist",
+      "Bioinformatician"
+    ],
+    "keywords_for_articles": [
+      "genomic sequencing",
+      "computational biology",
+      "drug discovery",
+      "protein folding",
+      "biological data analysis"
+    ]
+  },
+  {
+    "career_goal_id": "CG-051",
+    "career_goal_name": "GIS Analyst",
+    "description": "Analysts who manage, analyze, and display geographic data using Geographic Information Systems (GIS) software.",
+    "career_category": "Data Analysis",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹4,00,000 - ₹12,00,000",
+      "us": "$60,000 - $100,000"
+    },
+    "tools_and_technologies": [
+      "ArcGIS",
+      "QGIS",
+      "Python",
+      "ArcPy",
+      "SQL",
+      "PostGIS",
+      "R",
+      "GeoJSON",
+      "Google Earth Engine",
+      "Tableau",
+      "AutoCAD",
+      "FME",
+      "Remote Sensing Tools",
+      "ERDAS Imagine",
+      "JavaScript"
+    ],
+    "related_job_titles": [
+      "Geospatial Analyst",
+      "GIS Technician",
+      "Mapping Specialist",
+      "Geographer"
+    ],
+    "keywords_for_articles": [
+      "spatial analysis",
+      "cartography",
+      "remote sensing",
+      "urban planning",
+      "location intelligence"
+    ]
+  },
+  {
+    "career_goal_id": "CG-052",
+    "career_goal_name": "Computer Forensics Investigator",
+    "description": "Cybersecurity professionals who gather and analyze digital evidence from computers and networks for legal purposes.",
+    "career_category": "Cybersecurity",
+    "difficulty_level": "High",
+    "demand_level": "Moderate-High",
+    "salary_range": {
+      "india": "₹7,00,000 - ₹20,00,000",
+      "us": "$85,000 - $140,000"
+    },
+    "tools_and_technologies": [
+      "EnCase",
+      "FTK (Forensic Toolkit)",
+      "Autopsy",
+      "Wireshark",
+      "Volatility",
+      "Sleuth Kit",
+      "Kali Linux",
+      "Python",
+      "Hex Editors",
+      "Tableau Forensic Imagers",
+      "Magnet AXIOM",
+      "X-Ways",
+      "Registry Viewer",
+      "Cellebrite",
+      "HashCalc"
+    ],
+    "related_job_titles": [
+      "Digital Forensics Analyst",
+      "Cyber Crime Investigator",
+      "Forensic Examiner"
+    ],
+    "keywords_for_articles": [
+      "digital evidence",
+      "incident investigation",
+      "cyber law",
+      "data recovery",
+      "chain of custody"
+    ]
+  },
+  {
+    "career_goal_id": "CG-053",
+    "career_goal_name": "IT Auditor",
+    "description": "Professionals who evaluate an organization's IT infrastructure, policies, and operations to ensure they comply with regulations and standards.",
+    "career_category": "IT Management & Compliance",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹8,00,000 - ₹22,00,000",
+      "us": "$90,000 - $150,000"
+    },
+    "tools_and_technologies": [
+      "CISA (certification knowledge)",
+      "SQL",
+      "Excel",
+      "ACL (Audit Command Language)",
+      "IDEA",
+      "SAP GRC",
+      "Oracle GRC",
+      "NIST Framework",
+      "ISO 27001 Tools",
+      "ServiceNow GRC",
+      "SharePoint",
+      "Visio",
+      "Power BI",
+      "Tableau",
+      "Jira"
+    ],
+    "related_job_titles": [
+      "Internal IT Auditor",
+      "Information Systems Auditor",
+      "Risk Compliance Manager",
+      "Technology Auditor"
+    ],
+    "keywords_for_articles": [
+      "IT governance",
+      "risk assessment",
+      "SOX compliance",
+      "audit framework",
+      "internal controls"
+    ]
+  },
+  {
+    "career_goal_id": "CG-054",
+    "career_goal_name": "Release Manager",
+    "description": "Managers responsible for planning, scheduling, and controlling the software build through different stages and environments.",
+    "career_category": "DevOps & Management",
+    "difficulty_level": "High",
+    "demand_level": "Moderate-High",
+    "salary_range": {
+      "india": "₹12,00,000 - ₹30,00,000",
+      "us": "$100,000 - $160,000"
+    },
+    "tools_and_technologies": [
+      "Jenkins",
+      "GitLab",
+      "Jira",
+      "Azure DevOps",
+      "Docker",
+      "Kubernetes",
+      "Ansible",
+      "Chef",
+      "Puppet",
+      "Git",
+      "ServiceNow",
+      "Confluence",
+      "Excel",
+      "Octopus Deploy",
+      "Bamboo",
+      "TeamCity"
+    ],
+    "related_job_titles": [
+      "Build and Release Manager",
+      "Deployment Manager",
+      "Change Manager"
+    ],
+    "keywords_for_articles": [
+      "release lifecycle",
+      "change management",
+      "continuous delivery",
+      "version control",
+      "deployment strategies"
+    ]
+  },
+  {
+    "career_goal_id": "CG-055",
+    "career_goal_name": "VoIP Engineer",
+    "description": "Engineers specializing in Voice over IP systems, ensuring high-quality voice and video communication over networks.",
+    "career_category": "Networking",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹15,00,000",
+      "us": "$80,000 - $130,000"
+    },
+    "tools_and_technologies": [
+      "SIP",
+      "RTP",
+      "Cisco CUCM",
+      "Asterisk",
+      "FreeSWITCH",
+      "Wireshark",
+      "Linux",
+      "Python",
+      "Avaya",
+      "H.323",
+      "QoS",
+      "Firewalls",
+      "VMware",
+      "Session Border Controllers (SBC)",
+      "Genesys"
+    ],
+    "related_job_titles": [
+      "Unified Communications Engineer",
+      "Telecommunications Engineer",
+      "Voice Network Engineer"
+    ],
+    "keywords_for_articles": [
+      "IP telephony",
+      "SIP trunking",
+      "network jitter",
+      "unified communications",
+      "voice protocols"
+    ]
+  },
+  {
+    "career_goal_id": "CG-056",
+    "career_goal_name": "Localization Engineer",
+    "description": "Engineers who handle the technical aspects of adapting software, websites, and games for different languages and regions.",
+    "career_category": "Software Support",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹18,00,000",
+      "us": "$75,000 - $120,000"
+    },
+    "tools_and_technologies": [
+      "Python",
+      "JavaScript",
+      "XML/JSON",
+      "SDL Trados",
+      "MemoQ",
+      "Jenkins",
+      "Git",
+      "Regex",
+      "HTML/CSS",
+      "Android Studio",
+      "Xcode",
+      "i18n Libraries",
+      "L10n Tools",
+      "Bugzilla",
+      "Jira"
+    ],
+    "related_job_titles": [
+      "L10n Engineer",
+      "Internationalization Engineer",
+      "Globalization Engineer"
+    ],
+    "keywords_for_articles": [
+      "software internationalization",
+      "translation memory",
+      "locale management",
+      "unicode standards",
+      "linguistic testing"
+    ]
+  },
+  {
+    "career_goal_id": "CG-057",
+    "career_goal_name": "Data Governance Specialist",
+    "description": "Specialists who ensure data availability, usability, integrity, and security across an enterprise, establishing data standards.",
+    "career_category": "Data Management",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹10,00,000 - ₹25,00,000",
+      "us": "$95,000 - $155,000"
+    },
+    "tools_and_technologies": [
+      "Collibra",
+      "Informatica",
+      "Talend",
+      "Alation",
+      "SQL",
+      "Excel",
+      "Erwin Data Modeler",
+      "SAP Master Data Governance",
+      "IBM InfoSphere",
+      "Tableau",
+      "Jira",
+      "Python",
+      "Data Quality Tools",
+      "Metadata Management Tools",
+      "GDPR Compliance Tools"
+    ],
+    "related_job_titles": [
+      "Data Steward",
+      "Data Quality Manager",
+      "Master Data Management Specialist"
+    ],
+    "keywords_for_articles": [
+      "data lineage",
+      "data dictionary",
+      "regulatory compliance",
+      "master data management",
+      "data quality framework"
+    ]
+  },
+  {
+    "career_goal_id": "CG-058",
+    "career_goal_name": "Blockchain Solutions Architect",
+    "description": "Architects who design and implement complex blockchain-based solutions for enterprise use cases, selecting appropriate platforms.",
+    "career_category": "Emerging Tech",
+    "difficulty_level": "Very High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹25,00,000 - ₹55,00,000",
+      "us": "$150,000 - $220,000"
+    },
+    "tools_and_technologies": [
+      "Ethereum",
+      "Hyperledger Fabric",
+      "Corda",
+      "Solidity",
+      "Go",
+      "Docker",
+      "Kubernetes",
+      "AWS Managed Blockchain",
+      "Truffle",
+      "Ganache",
+      "IPFS",
+      "Node.js",
+      "Python",
+      "Cryptography Libraries",
+      "System Design Tools",
+      "UML"
+    ],
+    "related_job_titles": [
+      "Distributed Ledger Technologist",
+      "Blockchain Lead",
+      "Crypto Architect"
+    ],
+    "keywords_for_articles": [
+      "consensus mechanisms",
+      "private vs public blockchain",
+      "tokenomics",
+      "dApp architecture",
+      "smart contract security"
+    ]
+  },
+  {
+    "career_goal_id": "CG-059",
+    "career_goal_name": "Solutions Engineer",
+    "description": "Technical experts who work alongside sales teams to demonstrate software capabilities and design solutions for prospective clients.",
+    "career_category": "Sales Engineering",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹10,00,000 - ₹30,00,000",
+      "us": "$110,000 - $180,000"
+    },
+    "tools_and_technologies": [
+      "Salesforce",
+      "AWS/Azure/GCP",
+      "Postman",
+      "SQL",
+      "Python",
+      "JavaScript",
+      "Docker",
+      "PowerPoint",
+      "Demo Automation Tools",
+      "CRM Tools",
+      "API Integration Tools",
+      "Jira",
+      "Slack",
+      "Visio",
+      "Tableau"
+    ],
+    "related_job_titles": [
+      "Pre-Sales Engineer",
+      "Sales Engineer",
+      "Technical Account Manager",
+      "Solution Consultant"
+    ],
+    "keywords_for_articles": [
+      "technical demos",
+      "client requirements analysis",
+      "POC development",
+      "RFP response",
+      "value engineering"
+    ]
+  },
+  {
+    "career_goal_id": "CG-060",
+    "career_goal_name": "Hardware Design Engineer",
+    "description": "Engineers who design, develop, and test computer hardware components such as circuit boards, processors, and routers.",
+    "career_category": "Hardware Engineering",
+    "difficulty_level": "High",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹8,00,000 - ₹25,00,000",
+      "us": "$100,000 - $160,000"
+    },
+    "tools_and_technologies": [
+      "Verilog",
+      "VHDL",
+      "SystemVerilog",
+      "FPGA (Xilinx/Altera)",
+      "MATLAB",
+      "Simulink",
+      "Spice",
+      "Altium Designer",
+      "Cadence",
+      "Synopsys",
+      "C/C++",
+      "Python",
+      "Oscilloscopes",
+      "Logic Analyzers",
+      "PCB Design Tools",
+      "Linux"
+    ],
+    "related_job_titles": [
+      "ASIC Engineer",
+      "FPGA Engineer",
+      "Electronics Engineer",
+      "PCB Designer"
+    ],
+    "keywords_for_articles": [
+      "circuit design",
+      "VLSI",
+      "signal integrity",
+      "microprocessor architecture",
+      "hardware testing"
+    ]
+  },
+  {
+    "career_goal_id": "CG-061",
+    "career_goal_name": "Wireless Network Engineer",
+    "description": "Specialists focusing on the planning, design, implementation, and optimization of wireless local area networks (WLANs).",
+    "career_category": "Networking",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹15,00,000",
+      "us": "$80,000 - $130,000"
+    },
+    "tools_and_technologies": [
+      "Ekahau Pro",
+      "AirMagnet",
+      "Cisco WLC",
+      "Aruba Controllers",
+      "Wireshark",
+      "Python",
+      "Spectrum Analyzers",
+      "Visio",
+      "Linux",
+      "802.11 Standards",
+      "Radius Servers",
+      "ISE (Identity Services Engine)",
+      "Meraki",
+      "RF Theory",
+      "OmniPeek"
+    ],
+    "related_job_titles": [
+      "Wi-Fi Engineer",
+      "RF Engineer",
+      "Mobility Engineer",
+      "WLAN Consultant"
+    ],
+    "keywords_for_articles": [
+      "RF site surveys",
+      "wireless security",
+      "interference analysis",
+      "Wi-Fi 6/6E",
+      "antenna design"
+    ]
+  },
+  {
+    "career_goal_id": "CG-062",
+    "career_goal_name": "Mainframe Developer",
+    "description": "Developers who maintain and write code for mainframe systems, which are used by large organizations for critical bulk data processing.",
+    "career_category": "Legacy Systems",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Stable",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹18,00,000",
+      "us": "$80,000 - $140,000"
+    },
+    "tools_and_technologies": [
+      "COBOL",
+      "JCL",
+      "DB2",
+      "CICS",
+      "VSAM",
+      "z/OS",
+      "Rexx",
+      "PL/I",
+      "Assembler",
+      "IBM Rational Developer",
+      "Endevor",
+      "Changeman",
+      "File-AID",
+      "SAS",
+      "SQL"
+    ],
+    "related_job_titles": [
+      "COBOL Programmer",
+      "System z Developer",
+      "Legacy System Engineer"
+    ],
+    "keywords_for_articles": [
+      "mainframe modernization",
+      "batch processing",
+      "COBOL programming",
+      "legacy migration",
+      "transaction processing"
+    ]
+  },
+  {
+    "career_goal_id": "CG-063",
+    "career_goal_name": "E-commerce Specialist",
+    "description": "Tech-savvy professionals who manage the technical and operational aspects of online sales platforms to maximize revenue.",
+    "career_category": "Tech Marketing & Ops",
+    "difficulty_level": "Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹15,00,000",
+      "us": "$65,000 - $110,000"
+    },
+    "tools_and_technologies": [
+      "Shopify",
+      "WooCommerce",
+      "Magento",
+      "BigCommerce",
+      "Google Analytics",
+      "HTML/CSS",
+      "SEO Tools",
+      "Mailchimp",
+      "Klaviyo",
+      "Facebook Ads",
+      "Excel",
+      "Photoshop",
+      "Stripe/PayPal Integration",
+      "Zapier",
+      "Inventory Management Tools"
+    ],
+    "related_job_titles": [
+      "E-commerce Manager",
+      "Digital Store Manager",
+      "Online Merchandiser"
+    ],
+    "keywords_for_articles": [
+      "conversion rate optimization",
+      "shopping cart abandonment",
+      "digital storefront",
+      "payment gateways",
+      "user journey mapping"
+    ]
+  },
+  {
+    "career_goal_id": "CG-064",
+    "career_goal_name": "Web Accessibility Specialist",
+    "description": "Experts who ensure websites and applications are usable by people with disabilities, complying with legal standards like WCAG.",
+    "career_category": "Web Development",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Rising",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹16,00,000",
+      "us": "$75,000 - $125,000"
+    },
+    "tools_and_technologies": [
+      "Screen Readers (NVDA, JAWS)",
+      "WAVE Tool",
+      "Axe",
+      "Lighthouse",
+      "HTML5",
+      "ARIA",
+      "CSS",
+      "JavaScript",
+      "VoiceOver",
+      "Contrast Checkers",
+      "Keyboard Navigation Testing",
+      "Selenium (for automated accessibility)",
+      "Siteimprove",
+      "ZoomText",
+      "PDF Accessibility Tools"
+    ],
+    "related_job_titles": [
+      "Accessibility Engineer",
+      "A11y Advocate",
+      "Inclusive Design Specialist"
+    ],
+    "keywords_for_articles": [
+      "WCAG guidelines",
+      "accessible design",
+      "screen reader compatibility",
+      "ARIA attributes",
+      "digital inclusion"
+    ]
+  },
+  {
+    "career_goal_id": "CG-065",
+    "career_goal_name": "Storage Engineer",
+    "description": "IT professionals who design, implement, and maintain data storage solutions, including SAN, NAS, and cloud storage.",
+    "career_category": "IT Infrastructure",
+    "difficulty_level": "High",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹7,00,000 - ₹20,00,000",
+      "us": "$90,000 - $145,000"
+    },
+    "tools_and_technologies": [
+      "SAN (Storage Area Network)",
+      "NAS (Network Attached Storage)",
+      "NetApp",
+      "Dell EMC",
+      "Pure Storage",
+      "VMware vSphere",
+      "Linux",
+      "Python",
+      "Fibre Channel",
+      "iSCSI",
+      "AWS S3/Glacier",
+      "Azure Blob Storage",
+      "Brocade",
+      "Cisco MDS",
+      "Backup Tools (Veeam, Commvault)"
+    ],
+    "related_job_titles": [
+      "SAN Administrator",
+      "Storage Architect",
+      "Backup Administrator",
+      "Infrastructure Engineer"
+    ],
+    "keywords_for_articles": [
+      "data deduplication",
+      "storage virtualization",
+      "disaster recovery",
+      "cloud storage costs",
+      "RAID levels"
+    ]
+  },
+  {
+    "career_goal_id": "CG-066",
+    "career_goal_name": "Quantum Computing Researcher",
+    "description": "Researchers exploring the frontiers of quantum mechanics to develop new types of computers that can solve problems classical computers cannot.",
+    "career_category": "Deep Tech",
+    "difficulty_level": "Very High",
+    "demand_level": "Niche/Rising",
+    "salary_range": {
+      "india": "₹12,00,000 - ₹35,00,000",
+      "us": "$130,000 - $200,000"
+    },
+    "tools_and_technologies": [
+      "Qiskit (IBM)",
+      "Cirq (Google)",
+      "Python",
+      "C++",
+      "Linear Algebra",
+      "Quantum Assembly Language (QASM)",
+      "PennyLane",
+      "Microsoft Q#",
+      "Jupyter",
+      "MATLAB",
+      "LaTeX",
+      "TensorFlow Quantum",
+      "Amazon Braket",
+      "Git",
+      "HPC"
+    ],
+    "related_job_titles": [
+      "Quantum Algorithm Scientist",
+      "Quantum Physicist",
+      "Quantum Software Engineer"
+    ],
+    "keywords_for_articles": [
+      "qubits",
+      "quantum entanglement",
+      "quantum algorithms",
+      "superposition",
+      "quantum error correction"
+    ]
+  },
+  {
+    "career_goal_id": "CG-067",
+    "career_goal_name": "CRM Architect",
+    "description": "Experts who design and oversee the implementation of Customer Relationship Management systems to support business sales and support goals.",
+    "career_category": "Enterprise Software",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹15,00,000 - ₹35,00,000",
+      "us": "$120,000 - $180,000"
+    },
+    "tools_and_technologies": [
+      "Salesforce",
+      "Microsoft Dynamics 365",
+      "HubSpot",
+      "Zoho CRM",
+      "Apex",
+      "SQL",
+      "JavaScript",
+      "REST APIs",
+      "Informatica",
+      "MuleSoft",
+      "Visio",
+      "Lucidchart",
+      "Jira",
+      "Agile",
+      "Data Migration Tools",
+      "Power BI"
+    ],
+    "related_job_titles": [
+      "Salesforce Architect",
+      "CRM Technical Lead",
+      "Dynamics 365 Architect"
+    ],
+    "keywords_for_articles": [
+      "CRM strategy",
+      "data integration",
+      "customer 360",
+      "workflow automation",
+      "enterprise architecture"
+    ]
+  },
+  {
+    "career_goal_id": "CG-068",
+    "career_goal_name": "Business Systems Analyst",
+    "description": "Analysts who study an organization's current computer systems and procedures and design information systems solutions to help the organization operate more efficiently.",
+    "career_category": "IT Analysis",
+    "difficulty_level": "Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹18,00,000",
+      "us": "$75,000 - $125,000"
+    },
+    "tools_and_technologies": [
+      "SQL",
+      "Visio",
+      "UML",
+      "Jira",
+      "Confluence",
+      "Excel",
+      "Tableau",
+      "Power BI",
+      "BPMN Tools",
+      "Python (basic)",
+      "SharePoint",
+      "ERP Systems",
+      "Use Case Diagrams",
+      "User Stories",
+      "Agile"
+    ],
+    "related_job_titles": [
+      "Systems Analyst",
+      "Functional Analyst",
+      "IT Analyst",
+      "Requirements Engineer"
+    ],
+    "keywords_for_articles": [
+      "requirements gathering",
+      "process mapping",
+      "gap analysis",
+      "system integration",
+      "UAT coordination"
+    ]
+  },
+  {
+    "career_goal_id": "CG-069",
+    "career_goal_name": "Platform Engineer",
+    "description": "Engineers who build and maintain the self-service internal developer platforms (IDPs) that software teams use to deploy and manage their applications.",
+    "career_category": "DevOps & Cloud",
+    "difficulty_level": "High",
+    "demand_level": "Very High",
+    "salary_range": {
+      "india": "₹12,00,000 - ₹35,00,000",
+      "us": "$130,000 - $190,000"
+    },
+    "tools_and_technologies": [
+      "Kubernetes",
+      "Docker",
+      "Terraform",
+      "AWS/GCP/Azure",
+      "Go",
+      "Python",
+      "Backstage (Spotify)",
+      "ArgoCD",
+      "Helm",
+      "Prometheus",
+      "Grafana",
+      "GitOps",
+      "Linux",
+      "Crossplane",
+      "Pulumi",
+      "Jenkins"
+    ],
+    "related_job_titles": [
+      "Internal Tooling Engineer",
+      "Infrastructure Developer",
+      "Cloud Platform Engineer"
+    ],
+    "keywords_for_articles": [
+      "internal developer platform",
+      "platform engineering vs devops",
+      "self-service infrastructure",
+      "scalability",
+      "developer experience (DevEx)"
+    ]
+  },
+  {
+    "career_goal_id": "CG-070",
+    "career_goal_name": "Search Engine Marketing (SEM) Specialist",
+    "description": "Marketing technologists who manage paid search campaigns to increase visibility and drive traffic to websites.",
+    "career_category": "Tech Marketing",
+    "difficulty_level": "Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹15,00,000",
+      "us": "$60,000 - $100,000"
+    },
+    "tools_and_technologies": [
+      "Google Ads",
+      "Bing Ads",
+      "Google Analytics",
+      "Google Tag Manager",
+      "Excel (Pivot Tables)",
+      "SEMrush",
+      "SpyFu",
+      "Ahrefs",
+      "Looker Studio",
+      "Optmyzr",
+      "WordStream",
+      "Landing Page Builders (Unbounce)",
+      "Python (for automation)",
+      "Scripts",
+      "UTM Tracking"
+    ],
+    "related_job_titles": [
+      "PPC Specialist",
+      "Paid Search Manager",
+      "AdWords Specialist",
+      "Performance Marketer"
+    ],
+    "keywords_for_articles": [
+      "PPC strategy",
+      "keyword bidding",
+      "quality score",
+      "ad copywriting",
+      "conversion tracking"
+    ]
+  },
+  {
+    "career_goal_id": "CG-071",
+    "career_goal_name": "Identity and Access Management (IAM) Engineer",
+    "description": "Security specialists who manage digital identities and user access privileges to ensure the right people have access to the right resources.",
+    "career_category": "Cybersecurity",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹8,00,000 - ₹22,00,000",
+      "us": "$100,000 - $160,000"
+    },
+    "tools_and_technologies": [
+      "Okta",
+      "SailPoint",
+      "CyberArk",
+      "Active Directory",
+      "Azure AD",
+      "Ping Identity",
+      "LDAP",
+      "SAML",
+      "OAuth",
+      "OpenID Connect",
+      "Python",
+      "PowerShell",
+      "SQL",
+      "Splunk",
+      "Linux",
+      "REST APIs"
+    ],
+    "related_job_titles": [
+      "IAM Architect",
+      "Access Management Specialist",
+      "Security Engineer (Identity)"
+    ],
+    "keywords_for_articles": [
+      "SSO implementation",
+      "multi-factor authentication",
+      "identity governance",
+      "privileged access management",
+      "zero trust security"
+    ]
+  },
+  {
+    "career_goal_id": "CG-072",
+    "career_goal_name": "Performance Testing Engineer",
+    "description": "Engineers who stress-test software applications to ensure they perform well under expected and peak load conditions.",
+    "career_category": "Quality Assurance",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹18,00,000",
+      "us": "$85,000 - $135,000"
+    },
+    "tools_and_technologies": [
+      "JMeter",
+      "LoadRunner",
+      "Gatling",
+      "K6",
+      "BlazeMeter",
+      "New Relic",
+      "AppDynamics",
+      "Dynatrace",
+      "Python",
+      "Java",
+      "Docker",
+      "Jenkins",
+      "Grafana",
+      "InfluxDB",
+      "SQL",
+      "Git"
+    ],
+    "related_job_titles": [
+      "Load Tester",
+      "Performance Architect",
+      "QA Performance Engineer"
+    ],
+    "keywords_for_articles": [
+      "load testing",
+      "stress testing",
+      "scalability analysis",
+      "bottleneck detection",
+      "performance metrics"
+    ]
+  },
+  {
+    "career_goal_id": "CG-073",
+    "career_goal_name": "Developer Advocate",
+    "description": "Professionals who act as a bridge between a company's engineering team and its developer community, creating tutorials, docs, and demos.",
+    "career_category": "DevRel (Developer Relations)",
+    "difficulty_level": "High",
+    "demand_level": "Moderate-High",
+    "salary_range": {
+      "india": "₹10,00,000 - ₹30,00,000",
+      "us": "$110,000 - $180,000"
+    },
+    "tools_and_technologies": [
+      "Git",
+      "GitHub",
+      "Python",
+      "JavaScript",
+      "Markdown",
+      "Discord",
+      "Slack",
+      "OBS Studio",
+      "YouTube",
+      "Twitter/X",
+      "WordPress",
+      "VS Code",
+      "Docker",
+      "APIs",
+      "Community Platforms"
+    ],
+    "related_job_titles": [
+      "Technical Evangelist",
+      "Developer Relations Manager",
+      "Community Engineer"
+    ],
+    "keywords_for_articles": [
+      "community building",
+      "technical writing",
+      "public speaking",
+      "developer experience",
+      "open source contribution"
+    ]
+  },
+  {
+    "career_goal_id": "CG-074",
+    "career_goal_name": "Search Engine Optimization (SEO) Specialist",
+    "description": "Experts who optimize websites to rank higher in organic search engine results, driving unpaid traffic.",
+    "career_category": "Tech Marketing",
+    "difficulty_level": "Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹4,00,000 - ₹12,00,000",
+      "us": "$55,000 - $95,000"
+    },
+    "tools_and_technologies": [
+      "Google Search Console",
+      "Google Analytics",
+      "SEMrush",
+      "Ahrefs",
+      "Moz",
+      "Screaming Frog",
+      "Yoast SEO",
+      "WordPress",
+      "HTML",
+      "CSS",
+      "Excel",
+      "Schema Markup",
+      "PageSpeed Insights",
+      "Lighthouse",
+      "Python (for scraping)"
+    ],
+    "related_job_titles": [
+      "SEO Manager",
+      "Technical SEO Specialist",
+      "Content Marketer"
+    ],
+    "keywords_for_articles": [
+      "keyword research",
+      "on-page optimization",
+      "backlink strategy",
+      "technical SEO audit",
+      "core web vitals"
+    ]
+  },
+  {
+    "career_goal_id": "CG-075",
+    "career_goal_name": "Incident Responder",
+    "description": "Cybersecurity professionals who are the first line of defense during a security breach, analyzing and mitigating attacks in real-time.",
+    "career_category": "Cybersecurity",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹10,00,000 - ₹28,00,000",
+      "us": "$95,000 - $150,000"
+    },
+    "tools_and_technologies": [
+      "SIEM (Splunk, QRadar)",
+      "Wireshark",
+      "EDR Tools (CrowdStrike, Carbon Black)",
+      "EnCase",
+      "FTK",
+      "Python",
+      "Bash",
+      "Powershell",
+      "Linux",
+      "Firewalls",
+      "IDS/IPS",
+      "Malware Analysis Sandboxes",
+      "Volatility",
+      "CyberChef"
+    ],
+    "related_job_titles": [
+      "CSIRT Member",
+      "Cyber Incident Analyst",
+      "Forensic Analyst"
+    ],
+    "keywords_for_articles": [
+      "incident response plan",
+      "malware analysis",
+      "threat hunting",
+      "ransomware mitigation",
+      "forensics"
+    ]
+  },
+  {
+    "career_goal_id": "CG-076",
+    "career_goal_name": "Chief Technology Officer (CTO)",
+    "description": "Executive role responsible for the overall technological direction and strategy of an organization.",
+    "career_category": "Executive Leadership",
+    "difficulty_level": "Very High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹40,00,000 - ₹1,50,00,000",
+      "us": "$200,000 - $400,000"
+    },
+    "tools_and_technologies": [
+      "Strategic Planning",
+      "Budgeting Software",
+      "Agile Management",
+      "Cloud Architecture (AWS/Azure)",
+      "Cybersecurity Frameworks",
+      "Recruitment Tools",
+      "Slack",
+      "Jira",
+      "Excel",
+      "PowerPoint",
+      "ERP Systems",
+      "CRM",
+      "Data Analytics Platforms"
+    ],
+    "related_job_titles": [
+      "VP of Engineering",
+      "Technical Director",
+      "Head of Technology"
+    ],
+    "keywords_for_articles": [
+      "tech strategy",
+      "team leadership",
+      "digital transformation",
+      "budget management",
+      "innovation roadmap"
+    ]
+  },
+  {
+    "career_goal_id": "CG-077",
+    "career_goal_name": "IT Support Specialist",
+    "description": "Professionals who provide technical assistance and support for incoming queries and issues related to computer systems, software, and hardware.",
+    "career_category": "IT Support",
+    "difficulty_level": "Beginner-Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹3,00,000 - ₹8,00,000",
+      "us": "$45,000 - $70,000"
+    },
+    "tools_and_technologies": [
+      "Active Directory",
+      "ServiceNow",
+      "Jira Service Desk",
+      "TeamViewer",
+      "Remote Desktop Connection",
+      "Office 365 Admin",
+      "Windows 10/11",
+      "MacOS",
+      "Printers",
+      "VPN Clients",
+      "Antivirus Software",
+      "Slack",
+      "Zoom",
+      "Basic Networking (DNS/DHCP)"
+    ],
+    "related_job_titles": [
+      "Technical Support Engineer",
+      "Help Desk Specialist",
+      "IT Technician"
+    ],
+    "keywords_for_articles": [
+      "troubleshooting guide",
+      "remote support",
+      "hardware repair",
+      "ticket management",
+      "customer service in IT"
+    ]
+  },
+  {
+    "career_goal_id": "CG-078",
+    "career_goal_name": "Computer Graphics Engineer",
+    "description": "Engineers who develop the software used to generate images, such as rendering engines for games, movies, or scientific visualization.",
+    "career_category": "Software Engineering",
+    "difficulty_level": "Very High",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹10,00,000 - ₹30,00,000",
+      "us": "$120,000 - $190,000"
+    },
+    "tools_and_technologies": [
+      "C++",
+      "OpenGL",
+      "Vulkan",
+      "DirectX",
+      "HLSL/GLSL",
+      "CUDA",
+      "Metal",
+      "Python",
+      "Unreal Engine",
+      "Unity",
+      "Linear Algebra",
+      "Ray Tracing Algorithms",
+      "Visual Studio",
+      "Git",
+      "RenderDoc"
+    ],
+    "related_job_titles": [
+      "Rendering Engineer",
+      "Graphics Programmer",
+      "GPU Engineer"
+    ],
+    "keywords_for_articles": [
+      "ray tracing",
+      "shader programming",
+      "GPU optimization",
+      "3D mathematics",
+      "rendering pipelines"
+    ]
+  },
+  {
+    "career_goal_id": "CG-079",
+    "career_goal_name": "Smart Contract Auditor",
+    "description": "Security experts who review blockchain smart contract code to identify bugs, vulnerabilities, and security risks before deployment.",
+    "career_category": "Web3 & Security",
+    "difficulty_level": "Very High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹12,00,000 - ₹40,00,000",
+      "us": "$140,000 - $250,000"
+    },
+    "tools_and_technologies": [
+      "Solidity",
+      "Rust",
+      "Foundry",
+      "Hardhat",
+      "Truffle",
+      "Slither",
+      "MythX",
+      "Echidna",
+      "Python",
+      "JavaScript",
+      "Etherscan",
+      "Git",
+      "VS Code",
+      "Formal Verification Tools",
+      "OpenZeppelin"
+    ],
+    "related_job_titles": [
+      "Blockchain Security Engineer",
+      "DeFi Auditor",
+      "Web3 Security Researcher"
+    ],
+    "keywords_for_articles": [
+      "reentrancy attacks",
+      "gas optimization",
+      "smart contract security",
+      "audit reports",
+      "DeFi hacks"
+    ]
+  },
+  {
+    "career_goal_id": "CG-080",
+    "career_goal_name": "No-Code Solutions Architect",
+    "description": "Architects who design and build business applications using low-code/no-code platforms, minimizing the need for traditional programming.",
+    "career_category": "Emerging Tech",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Rising",
+    "salary_range": {
+      "india": "₹8,00,000 - ₹22,00,000",
+      "us": "$90,000 - $145,000"
+    },
+    "tools_and_technologies": [
+      "Bubble",
+      "Webflow",
+      "Airtable",
+      "Zapier",
+      "Make (Integromat)",
+      "Salesforce Lightning",
+      "Microsoft Power Apps",
+      "OutSystems",
+      "Mendix",
+      "Retool",
+      "Glide",
+      "Softr",
+      "Figma",
+      "Notion",
+      "Google Sheets"
+    ],
+    "related_job_titles": [
+      "Low-Code Developer",
+      "Citizen Developer",
+      "Automation Expert"
+    ],
+    "keywords_for_articles": [
+      "rapid application development",
+      "workflow automation",
+      "no-code tools",
+      "MVP building",
+      "citizen development"
+    ]
+  },
+  {
+    "career_goal_id": "CG-081",
+    "career_goal_name": "Validation Engineer",
+    "description": "Engineers who test and validate hardware or software systems (often in manufacturing/semiconductors) to ensure they meet design specifications.",
+    "career_category": "Hardware/Quality",
+    "difficulty_level": "High",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹18,00,000",
+      "us": "$85,000 - $130,000"
+    },
+    "tools_and_technologies": [
+      "LabVIEW",
+      "Python",
+      "MATLAB",
+      "SystemVerilog",
+      "Oscilloscopes",
+      "JIRA",
+      "Linux",
+      "C++",
+      "Perl",
+      "Tcl/Tk",
+      "UVM (Universal Verification Methodology)",
+      "Git",
+      "Excel",
+      "Signal Generators",
+      "FPGA"
+    ],
+    "related_job_titles": [
+      "Hardware Validation Engineer",
+      "Silicon Validation Engineer",
+      "System Validation Engineer"
+    ],
+    "keywords_for_articles": [
+      "post-silicon validation",
+      "test automation",
+      "compliance testing",
+      "semiconductor testing",
+      "embedded systems"
+    ]
+  },
+  {
+    "career_goal_id": "CG-082",
+    "career_goal_name": "PACS Administrator",
+    "description": "Specialized IT administrators in healthcare who manage Picture Archiving and Communication Systems used for medical imaging (X-rays, MRIs).",
+    "career_category": "Healthcare IT",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Stable",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹15,00,000",
+      "us": "$70,000 - $110,000"
+    },
+    "tools_and_technologies": [
+      "DICOM",
+      "HL7",
+      "Radiology Information Systems (RIS)",
+      "SQL",
+      "Windows Server",
+      "Linux",
+      "Networking (TCP/IP)",
+      "Storage Systems (SAN/NAS)",
+      "Merge PACS",
+      "Sectra",
+      "Fujifilm Synapse",
+      "VPN",
+      "Monitor Calibration Tools",
+      "VMware"
+    ],
+    "related_job_titles": [
+      "Radiology Systems Manager",
+      "Imaging Informatics Specialist",
+      "Clinical Systems Admin"
+    ],
+    "keywords_for_articles": [
+      "medical imaging workflow",
+      "DICOM standards",
+      "healthcare interoperability",
+      "radiology IT",
+      "patient data security"
+    ]
+  },
+  {
+    "career_goal_id": "CG-083",
+    "career_goal_name": "Digital Forensics Analyst",
+    "description": "Investigators who recover and investigate material found in digital devices, often in relation to computer crime.",
+    "career_category": "Cybersecurity",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹7,00,000 - ₹20,00,000",
+      "us": "$80,000 - $135,000"
+    },
+    "tools_and_technologies": [
+      "EnCase",
+      "Autopsy",
+      "FTK Imager",
+      "Wireshark",
+      "Volatility",
+      "Cellebrite",
+      "X-Ways",
+      "Python",
+      "Hex Editor",
+      "Linux (Kali/SIFT)",
+      "Registry Viewer",
+      "SQLite Database Browser",
+      "HashCalc",
+      "Write Blockers",
+      "Tableau Forensic"
+    ],
+    "related_job_titles": [
+      "Computer Forensic Examiner",
+      "Cyber Crime Investigator",
+      "Digital Evidence Specialist"
+    ],
+    "keywords_for_articles": [
+      "chain of custody",
+      "mobile forensics",
+      "data recovery",
+      "file system analysis",
+      "incident investigation"
+    ]
+  },
+  {
+    "career_goal_id": "CG-084",
+    "career_goal_name": "Audio Software Engineer",
+    "description": "Programmers who develop software for audio processing, music production, game audio, or voice recognition systems.",
+    "career_category": "Software Engineering",
+    "difficulty_level": "High",
+    "demand_level": "Niche",
+    "salary_range": {
+      "india": "₹8,00,000 - ₹25,00,000",
+      "us": "$100,000 - $160,000"
+    },
+    "tools_and_technologies": [
+      "C++",
+      "JUCE Framework",
+      "Python",
+      "MATLAB",
+      "DSP (Digital Signal Processing)",
+      "Wwise",
+      "FMOD",
+      "DAWs (Digital Audio Workstations)",
+      "VST SDK",
+      "Git",
+      "Visual Studio",
+      "OpenGL",
+      "Max/MSP",
+      "Pure Data",
+      "CoreAudio"
+    ],
+    "related_job_titles": [
+      "Audio Programmer",
+      "DSP Engineer",
+      "Music Tech Developer"
+    ],
+    "keywords_for_articles": [
+      "digital signal processing",
+      "audio plugin development",
+      "spatial audio",
+      "sound synthesis",
+      "latency optimization"
+    ]
+  },
+  {
+    "career_goal_id": "CG-085",
+    "career_goal_name": "HRIS Analyst",
+    "description": "Data analysts specialized in Human Resources Information Systems, bridging the gap between HR processes and IT.",
+    "career_category": "IT Analysis",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹15,00,000",
+      "us": "$65,000 - $105,000"
+    },
+    "tools_and_technologies": [
+      "Workday",
+      "SAP SuccessFactors",
+      "Oracle HCM",
+      "ADP",
+      "BambooHR",
+      "SQL",
+      "Excel",
+      "Tableau",
+      "Power BI",
+      "Python (basic)",
+      "Visio",
+      "Jira",
+      "ServiceNow",
+      "SharePoint",
+      "Reporting Tools"
+    ],
+    "related_job_titles": [
+      "HR Systems Administrator",
+      "HR Data Analyst",
+      "HCM Specialist"
+    ],
+    "keywords_for_articles": [
+      "HR tech stack",
+      "people analytics",
+      "workflow automation",
+      "data migration",
+      "system implementation"
+    ]
+  },
+  {
+    "career_goal_id": "CG-086",
+    "career_goal_name": "Geospatial Developer",
+    "description": "Software developers who build applications that use geographic data, maps, and location services.",
+    "career_category": "Software Development",
+    "difficulty_level": "Intermediate-High",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹18,00,000",
+      "us": "$90,000 - $140,000"
+    },
+    "tools_and_technologies": [
+      "Python",
+      "JavaScript",
+      "Leaflet.js",
+      "Mapbox",
+      "OpenLayers",
+      "PostGIS",
+      "QGIS",
+      "GeoServer",
+      "GDAL",
+      "ArcGIS API",
+      "React",
+      "Node.js",
+      "Docker",
+      "AWS",
+      "Google Maps API",
+      "WebGL"
+    ],
+    "related_job_titles": [
+      "GIS Developer",
+      "Web Map Developer",
+      "Location Intelligence Engineer"
+    ],
+    "keywords_for_articles": [
+      "web mapping",
+      "spatial databases",
+      "location based services",
+      "geocoding",
+      "remote sensing data"
+    ]
+  },
+  {
+    "career_goal_id": "CG-087",
+    "career_goal_name": "Technical Recruiter",
+    "description": "Recruiters who specialize in sourcing and hiring candidates for technical roles like software engineering and data science.",
+    "career_category": "HR Tech",
+    "difficulty_level": "Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹4,00,000 - ₹15,00,000",
+      "us": "$60,000 - $110,000"
+    },
+    "tools_and_technologies": [
+      "LinkedIn Recruiter",
+      "GitHub",
+      "Stack Overflow",
+      "Greenhouse",
+      "Lever",
+      "Workday",
+      "Excel",
+      "Boolean Search",
+      "Calendly",
+      "Zoom",
+      "Slack",
+      "Gmail/Outlook",
+      "HackerRank",
+      "CodeSignal",
+      "Notion"
+    ],
+    "related_job_titles": [
+      "IT Recruiter",
+      "Talent Acquisition Specialist",
+      "Sourcing Specialist"
+    ],
+    "keywords_for_articles": [
+      "technical sourcing",
+      "candidate experience",
+      "tech screening",
+      "recruitment metrics",
+      "diversity hiring"
+    ]
+  },
+  {
+    "career_goal_id": "CG-088",
+    "career_goal_name": "FPGA Engineer",
+    "description": "Hardware engineers who design and program Field-Programmable Gate Arrays for specialized computing tasks.",
+    "career_category": "Hardware Engineering",
+    "difficulty_level": "Very High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹8,00,000 - ₹25,00,000",
+      "us": "$110,000 - $170,000"
+    },
+    "tools_and_technologies": [
+      "Verilog",
+      "VHDL",
+      "Xilinx Vivado",
+      "Intel Quartus",
+      "ModelSim",
+      "SystemVerilog",
+      "C/C++",
+      "MATLAB",
+      "Simulink",
+      "Python",
+      "Tcl Scripting",
+      "Linux",
+      "Oscilloscopes",
+      "Logic Analyzers",
+      "Git"
+    ],
+    "related_job_titles": [
+      "Logic Design Engineer",
+      "ASIC Design Engineer",
+      "Hardware Developer"
+    ],
+    "keywords_for_articles": [
+      "digital logic design",
+      "timing analysis",
+      "hardware acceleration",
+      "embedded systems",
+      "RTL coding"
+    ]
+  },
+  {
+    "career_goal_id": "CG-089",
+    "career_goal_name": "Conversion Rate Optimization (CRO) Specialist",
+    "description": "Data-driven marketers who improve the percentage of website visitors who complete a desired action (like buying a product).",
+    "career_category": "Tech Marketing",
+    "difficulty_level": "Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹18,00,000",
+      "us": "$70,000 - $120,000"
+    },
+    "tools_and_technologies": [
+      "Google Optimize",
+      "Optimizely",
+      "VWO",
+      "Hotjar",
+      "Crazy Egg",
+      "Google Analytics",
+      "Heap",
+      "Figma",
+      "HTML/CSS",
+      "JavaScript",
+      "Excel",
+      "UserTesting",
+      "Qualtrics",
+      "Unbounce",
+      "Instapage"
+    ],
+    "related_job_titles": [
+      "CRO Manager",
+      "Experimentation Lead",
+      "Growth Hacker"
+    ],
+    "keywords_for_articles": [
+      "A/B testing",
+      "user behavior analysis",
+      "landing page optimization",
+      "funnel analysis",
+      "heatmap analysis"
+    ]
+  },
+  {
+    "career_goal_id": "CG-090",
+    "career_goal_name": "IT Procurement Manager",
+    "description": "Managers responsible for sourcing and purchasing technology equipment, software, and services for an organization.",
+    "career_category": "IT Management",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹8,00,000 - ₹20,00,000",
+      "us": "$80,000 - $130,000"
+    },
+    "tools_and_technologies": [
+      "SAP Ariba",
+      "Coupa",
+      "Oracle Procurement",
+      "Excel",
+      "ServiceNow",
+      "Contract Management Software",
+      "DocuSign",
+      "Microsoft Teams",
+      "SharePoint",
+      "Spend Analysis Tools",
+      "Vendor Management Systems",
+      "Power BI",
+      "Jira",
+      "ERP Systems",
+      "Email"
+    ],
+    "related_job_titles": [
+      "Technology Buyer",
+      "Vendor Manager",
+      "Strategic Sourcing Manager"
+    ],
+    "keywords_for_articles": [
+      "vendor negotiation",
+      "software licensing",
+      "cost reduction strategies",
+      "contract management",
+      "supply chain"
+    ]
+  },
+  {
+    "career_goal_id": "CG-091",
+    "career_goal_name": "Tag Management Specialist",
+    "description": "Technical specialists who manage tracking codes (tags) on websites to ensure accurate data collection for analytics and marketing.",
+    "career_category": "Data & Analytics",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹15,00,000",
+      "us": "$70,000 - $115,000"
+    },
+    "tools_and_technologies": [
+      "Google Tag Manager",
+      "Tealium",
+      "Adobe Launch",
+      "Segment",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Google Analytics",
+      "Facebook Pixel",
+      "Chrome DevTools",
+      "Cookiebot",
+      "OneTrust",
+      "Regex",
+      "JSON",
+      "DataLayer"
+    ],
+    "related_job_titles": [
+      "Web Analytics Implementer",
+      "Digital Analytics Engineer",
+      "Tracking Specialist"
+    ],
+    "keywords_for_articles": [
+      "event tracking",
+      "data layer implementation",
+      "tag governance",
+      "analytics debugging",
+      "marketing pixels"
+    ]
+  },
+  {
+    "career_goal_id": "CG-092",
+    "career_goal_name": "Chief Data Officer (CDO)",
+    "description": "C-level executive responsible for enterprise-wide governance and utilization of information as an asset, via data processing and mining.",
+    "career_category": "Executive Leadership",
+    "difficulty_level": "Very High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹40,00,000 - ₹1,20,00,000",
+      "us": "$180,000 - $350,000"
+    },
+    "tools_and_technologies": [
+      "Data Governance Frameworks",
+      "Big Data Platforms",
+      "BI Tools (Tableau/Power BI)",
+      "Cloud Platforms",
+      "AI/ML Strategy",
+      "GDPR/CCPA Compliance Tools",
+      "ERP",
+      "Strategic Planning",
+      "Presentation Tools",
+      "Budget Management",
+      "Snowflake",
+      "Databricks",
+      "Leadership Skills"
+    ],
+    "related_job_titles": [
+      "Head of Data",
+      "VP of Data",
+      "Director of Analytics"
+    ],
+    "keywords_for_articles": [
+      "data strategy",
+      "data culture",
+      "digital transformation",
+      "data monetization",
+      "regulatory compliance"
+    ]
+  },
+  {
+    "career_goal_id": "CG-093",
+    "career_goal_name": "Fraud Analyst",
+    "description": "Analysts who monitor bank accounts and financial transactions to identify and prevent fraudulent activity using data and software.",
+    "career_category": "FinTech & Data",
+    "difficulty_level": "Intermediate",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹15,00,000",
+      "us": "$60,000 - $100,000"
+    },
+    "tools_and_technologies": [
+      "SQL",
+      "Python",
+      "Excel",
+      "SAS",
+      "Splunk",
+      "Tableau",
+      "Power BI",
+      "R",
+      "Machine Learning Models",
+      "Transaction Monitoring Systems",
+      "LexisNexis",
+      "Jira",
+      "Salesforce",
+      "Social Media Intelligence",
+      "Link Analysis Tools"
+    ],
+    "related_job_titles": [
+      "Risk Analyst",
+      "Fraud Investigator",
+      "Trust and Safety Analyst"
+    ],
+    "keywords_for_articles": [
+      "anomaly detection",
+      "financial crime",
+      "risk management",
+      "identity verification",
+      "anti-money laundering (AML)"
+    ]
+  },
+  {
+    "career_goal_id": "CG-094",
+    "career_goal_name": "Email Marketing Developer",
+    "description": "Developers specialized in coding responsive HTML emails and managing technical aspects of email marketing platforms.",
+    "career_category": "Tech Marketing",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹4,00,000 - ₹12,00,000",
+      "us": "$60,000 - $95,000"
+    },
+    "tools_and_technologies": [
+      "HTML (Table-based)",
+      "CSS (Inline)",
+      "MJML",
+      "Litmus",
+      "Email on Acid",
+      "Mailchimp",
+      "Salesforce Marketing Cloud",
+      "HubSpot",
+      "Adobe Campaign",
+      "Photoshop",
+      "Figma",
+      "Amp for Email",
+      "Liquid (Shopify)",
+      "SQL",
+      "Git"
+    ],
+    "related_job_titles": [
+      "Email Developer",
+      "CRM Developer",
+      "Marketing Automation Specialist"
+    ],
+    "keywords_for_articles": [
+      "email deliverability",
+      "responsive email design",
+      "email testing",
+      "dark mode for email",
+      "dynamic content"
+    ]
+  },
+  {
+    "career_goal_id": "CG-095",
+    "career_goal_name": "Motion Graphics Designer",
+    "description": "Creatives who use software to create animated graphics and visual effects for web, video, and user interfaces.",
+    "career_category": "Design & Creative Tech",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹18,00,000",
+      "us": "$65,000 - $110,000"
+    },
+    "tools_and_technologies": [
+      "Adobe After Effects",
+      "Cinema 4D",
+      "Adobe Premiere Pro",
+      "Illustrator",
+      "Photoshop",
+      "Blender",
+      "Maya",
+      "Lottie (for web)",
+      "Final Cut Pro",
+      "Houdini",
+      "Figma",
+      "DaVinci Resolve",
+      "Plugins (Trapcode)",
+      "Wacom Tablet",
+      "Media Encoder"
+    ],
+    "related_job_titles": ["Motion Designer", "Animator", "VFX Artist"],
+    "keywords_for_articles": [
+      "animation principles",
+      "kinetic typography",
+      "visual effects",
+      "3D motion design",
+      "UI animation"
+    ]
+  },
+  {
+    "career_goal_id": "CG-096",
+    "career_goal_name": "Telecommunications Technician",
+    "description": "Technicians who install, maintain, and repair telecommunications equipment and lines for internet and phone services.",
+    "career_category": "Telecommunications",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Stable",
+    "salary_range": {
+      "india": "₹3,00,000 - ₹8,00,000",
+      "us": "$50,000 - $80,000"
+    },
+    "tools_and_technologies": [
+      "Fiber Optic Splicers",
+      "OTDR (Optical Time-Domain Reflectometer)",
+      "Cable Testers",
+      "Crimping Tools",
+      "Spectrum Analyzers",
+      "Signal Meters",
+      "Networking Tools (Punch down)",
+      "Drills",
+      "Ladders",
+      "Laptops (Diagnostics)",
+      "VoIP Testers",
+      "Multimeters",
+      "Windows",
+      "Linux (Basic)"
+    ],
+    "related_job_titles": [
+      "Fiber Optic Technician",
+      "Network Technician",
+      "Cable Installer"
+    ],
+    "keywords_for_articles": [
+      "fiber optics",
+      "network cabling standards",
+      "signal troubleshooting",
+      "broadband installation",
+      "telecom infrastructure"
+    ]
+  },
+  {
+    "career_goal_id": "CG-097",
+    "career_goal_name": "Knowledge Manager",
+    "description": "Professionals who manage the collective knowledge of an organization, ensuring information is stored, organized, and accessible.",
+    "career_category": "IT Support & Ops",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Moderate",
+    "salary_range": {
+      "india": "₹8,00,000 - ₹20,00,000",
+      "us": "$80,000 - $130,000"
+    },
+    "tools_and_technologies": [
+      "Confluence",
+      "Notion",
+      "SharePoint",
+      "ServiceNow Knowledge Base",
+      "Zendesk Guide",
+      "Slack",
+      "Microsoft Teams",
+      "Document Management Systems",
+      "Search Engines (Elasticsearch)",
+      "Bloomfire",
+      "Guru",
+      "Taxonomy Tools",
+      "Analytics Tools",
+      "HTML/Markdown",
+      "Jira"
+    ],
+    "related_job_titles": [
+      "Knowledge Base Administrator",
+      "Information Manager",
+      "Technical Content Manager"
+    ],
+    "keywords_for_articles": [
+      "knowledge centered service (KCS)",
+      "information architecture",
+      "internal documentation",
+      "content lifecycle",
+      "organizational learning"
+    ]
+  },
+  {
+    "career_goal_id": "CG-098",
+    "career_goal_name": "Interaction Designer",
+    "description": "Designers who focus specifically on how users interact with a product, defining the behavior of interface elements.",
+    "career_category": "Design & UX",
+    "difficulty_level": "Intermediate-High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹20,00,000",
+      "us": "$85,000 - $140,000"
+    },
+    "tools_and_technologies": [
+      "Figma",
+      "Proto.io",
+      "Principle",
+      "Framer",
+      "Adobe XD",
+      "Axure RP",
+      "Sketch",
+      "InVision",
+      "HTML/CSS/JS (Basic)",
+      "Origami Studio",
+      "Miro",
+      "After Effects",
+      "User Testing Tools",
+      "Whimsical",
+      "Balsamiq"
+    ],
+    "related_job_titles": ["IxD Designer", "UX Designer", "Product Designer"],
+    "keywords_for_articles": [
+      "micro-interactions",
+      "user flows",
+      "information architecture",
+      "usability testing",
+      "human-computer interaction"
+    ]
+  },
+  {
+    "career_goal_id": "CG-099",
+    "career_goal_name": "Software Sales Representative",
+    "description": "Sales professionals specialized in selling software products (SaaS) to other businesses.",
+    "career_category": "Tech Sales",
+    "difficulty_level": "Intermediate",
+    "demand_level": "Very High",
+    "salary_range": {
+      "india": "₹5,00,000 - ₹25,00,000",
+      "us": "$60,000 - $150,000"
+    },
+    "tools_and_technologies": [
+      "Salesforce",
+      "HubSpot",
+      "LinkedIn Sales Navigator",
+      "ZoomInfo",
+      "Outreach",
+      "SalesLoft",
+      "Gong",
+      "Slack",
+      "Zoom",
+      "Google Workspace",
+      "DocuSign",
+      "Vidyard",
+      "Pipedrive",
+      "Excel",
+      "Calendly"
+    ],
+    "related_job_titles": [
+      "Account Executive",
+      "Business Development Representative (BDR)",
+      "SaaS Sales Specialist"
+    ],
+    "keywords_for_articles": [
+      "consultative selling",
+      "sales pipeline",
+      "lead generation",
+      "CRM management",
+      "negotiation skills"
+    ]
+  },
+  {
+    "career_goal_id": "CG-100",
+    "career_goal_name": "Clinical Informatics Specialist",
+    "description": "Professionals who sit at the intersection of clinical care and IT, helping design systems that work well for doctors and nurses.",
+    "career_category": "Healthcare IT",
+    "difficulty_level": "High",
+    "demand_level": "High",
+    "salary_range": {
+      "india": "₹6,00,000 - ₹18,00,000",
+      "us": "$85,000 - $130,000"
+    },
+    "tools_and_technologies": [
+      "Epic Systems",
+      "Cerner",
+      "Meditech",
+      "SQL",
+      "Excel",
+      "Visio",
+      "Tableau",
+      "Project Management Tools",
+      "EHR/EMR Systems",
+      "HL7 Standards",
+      "Telehealth Platforms",
+      "Dragon Medical (Voice)",
+      "Imprivata",
+      "Citrix",
+      "Jira"
+    ],
+    "related_job_titles": [
+      "Nursing Informatics Specialist",
+      "Health IT Consultant",
+      "EHR Analyst"
+    ],
+    "keywords_for_articles": [
+      "electronic health records",
+      "clinical workflows",
+      "health data standards",
+      "user adoption",
+      "patient safety"
+    ]
+  }
+]

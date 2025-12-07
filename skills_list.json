@@ -1,0 +1,702 @@
+[
+  {
+    "skill_id": "skill_001",
+    "skill_name": "Python",
+    "category": "Programming",
+    "type": "technical",
+    "description": "High-level programming language known for its readability and vast ecosystem for web development, data science, and automation."
+  },
+  {
+    "skill_id": "skill_002",
+    "skill_name": "Java",
+    "category": "Programming",
+    "type": "technical",
+    "description": "Object-oriented programming language used widely for enterprise-scale applications and Android development."
+  },
+  {
+    "skill_id": "skill_003",
+    "skill_name": "SQL",
+    "category": "Database",
+    "type": "technical",
+    "description": "Standard language for managing and manipulating relational databases."
+  },
+  {
+    "skill_id": "skill_004",
+    "skill_name": "JavaScript",
+    "category": "Web Development",
+    "type": "technical",
+    "description": "Scripting language that enables interactive web pages and is a core technology of the World Wide Web."
+  },
+  {
+    "skill_id": "skill_005",
+    "skill_name": "Communication",
+    "category": "Soft Skills",
+    "type": "soft",
+    "description": "The ability to convey information effectively through verbal, non-verbal, and written methods."
+  },
+  {
+    "skill_id": "skill_006",
+    "skill_name": "React.js",
+    "category": "Web Framework",
+    "type": "technical",
+    "description": "JavaScript library for building user interfaces, particularly single-page applications."
+  },
+  {
+    "skill_id": "skill_007",
+    "skill_name": "Docker",
+    "category": "DevOps",
+    "type": "technical",
+    "description": "Platform for developing, shipping, and running applications in containers."
+  },
+  {
+    "skill_id": "skill_008",
+    "skill_name": "Project Management",
+    "category": "Management",
+    "type": "technical",
+    "description": "The application of processes, methods, and skills to achieve specific project objectives."
+  },
+  {
+    "skill_id": "skill_009",
+    "skill_name": "Machine Learning",
+    "category": "Data Science",
+    "type": "technical",
+    "description": "Field of study that gives computers the capability to learn without being explicitly programmed."
+  },
+  {
+    "skill_id": "skill_010",
+    "skill_name": "AWS (Amazon Web Services)",
+    "category": "Cloud Computing",
+    "type": "technical",
+    "description": "Comprehensive cloud computing platform offering infrastructure, platform, and software services."
+  },
+  {
+    "skill_id": "skill_011",
+    "skill_name": "Problem Solving",
+    "category": "Soft Skills",
+    "type": "soft",
+    "description": "The process of identifying complex problems and reviewing related information to develop and evaluate options and implement solutions."
+  },
+  {
+    "skill_id": "skill_012",
+    "skill_name": "Git",
+    "category": "Version Control",
+    "type": "technical",
+    "description": "Distributed version control system for tracking changes in source code during software development."
+  },
+  {
+    "skill_id": "skill_013",
+    "skill_name": "C++",
+    "category": "Programming",
+    "type": "technical",
+    "description": "General-purpose programming language created as an extension of the C programming language."
+  },
+  {
+    "skill_id": "skill_014",
+    "skill_name": "HTML5",
+    "category": "Web Development",
+    "type": "technical",
+    "description": "The latest evolution of the standard that defines HTML, used for structuring and presenting content on the web."
+  },
+  {
+    "skill_id": "skill_015",
+    "skill_name": "CSS3",
+    "category": "Web Development",
+    "type": "technical",
+    "description": "Style sheet language used for describing the presentation of a document written in HTML."
+  },
+  {
+    "skill_id": "skill_016",
+    "skill_name": "Time Management",
+    "category": "Soft Skills",
+    "type": "soft",
+    "description": "The ability to use one's time effectively or productively, especially at work."
+  },
+  {
+    "skill_id": "skill_017",
+    "skill_name": "Linux",
+    "category": "Operating System",
+    "type": "technical",
+    "description": "Open-source Unix-like operating system kernel widely used in servers and embedded systems."
+  },
+  {
+    "skill_id": "skill_018",
+    "skill_name": "Kubernetes",
+    "category": "DevOps",
+    "type": "technical",
+    "description": "Open-source system for automating deployment, scaling, and management of containerized applications."
+  },
+  {
+    "skill_id": "skill_019",
+    "skill_name": "Node.js",
+    "category": "Web Development",
+    "type": "technical",
+    "description": "JavaScript runtime built on Chrome's V8 JavaScript engine for server-side programming."
+  },
+  {
+    "skill_id": "skill_020",
+    "skill_name": "Tableau",
+    "category": "Data Analysis",
+    "type": "technical",
+    "description": "Interactive data visualization software focused on business intelligence."
+  },
+  {
+    "skill_id": "skill_021",
+    "skill_name": "Teamwork",
+    "category": "Soft Skills",
+    "type": "soft",
+    "description": "The collaborative effort of a group to achieve a common goal or to complete a task in the most effective way."
+  },
+  {
+    "skill_id": "skill_022",
+    "skill_name": "Go (Golang)",
+    "category": "Programming",
+    "type": "technical",
+    "description": "Statically typed, compiled programming language designed at Google for scalability and concurrency."
+  },
+  {
+    "skill_id": "skill_023",
+    "skill_name": "Swift",
+    "category": "Mobile Development",
+    "type": "technical",
+    "description": "General-purpose, multi-paradigm, compiled programming language developed by Apple for iOS and macOS."
+  },
+  {
+    "skill_id": "skill_024",
+    "skill_name": "Agile Methodology",
+    "category": "Project Management",
+    "type": "technical",
+    "description": "Project management approach that emphasizes incremental delivery, team collaboration, and continual planning."
+  },
+  {
+    "skill_id": "skill_025",
+    "skill_name": "Cybersecurity",
+    "category": "Security",
+    "type": "technical",
+    "description": "The practice of protecting systems, networks, and programs from digital attacks."
+  },
+  {
+    "skill_id": "skill_026",
+    "skill_name": "Critical Thinking",
+    "category": "Soft Skills",
+    "type": "soft",
+    "description": "The objective analysis and evaluation of an issue in order to form a judgment."
+  },
+  {
+    "skill_id": "skill_027",
+    "skill_name": "TensorFlow",
+    "category": "Data Science",
+    "type": "technical",
+    "description": "End-to-end open-source platform for machine learning developed by Google."
+  },
+  {
+    "skill_id": "skill_028",
+    "skill_name": "Microsoft Excel",
+    "category": "Data Analysis",
+    "type": "technical",
+    "description": "Spreadsheet software featuring calculation, graphing tools, pivot tables, and a macro programming language."
+  },
+  {
+    "skill_id": "skill_029",
+    "skill_name": "Figma",
+    "category": "Design",
+    "type": "technical",
+    "description": "Web-based graphics editing and user interface design app used for wireframing and prototyping."
+  },
+  {
+    "skill_id": "skill_030",
+    "skill_name": "SEO",
+    "category": "Marketing",
+    "type": "technical",
+    "description": "Search Engine Optimization; the practice of increasing the quantity and quality of traffic to a website through organic search engine results."
+  },
+  {
+    "skill_id": "skill_031",
+    "skill_name": "Adaptability",
+    "category": "Soft Skills",
+    "type": "soft",
+    "description": "The quality of being able to adjust to new conditions and changes in the workplace environment."
+  },
+  {
+    "skill_id": "skill_032",
+    "skill_name": "Blockchain",
+    "category": "Emerging Tech",
+    "type": "technical",
+    "description": "Decentralized, distributed ledger technology that records the provenance of a digital asset."
+  },
+  {
+    "skill_id": "skill_033",
+    "skill_name": "Jenkins",
+    "category": "DevOps",
+    "type": "technical",
+    "description": "Open-source automation server that enables developers to build, test, and deploy their software."
+  },
+  {
+    "skill_id": "skill_034",
+    "skill_name": "TypeScript",
+    "category": "Web Development",
+    "type": "technical",
+    "description": "Strict syntactical superset of JavaScript that adds optional static typing."
+  },
+  {
+    "skill_id": "skill_035",
+    "skill_name": "Public Speaking",
+    "category": "Soft Skills",
+    "type": "soft",
+    "description": "The act of performing a speech to a live audience to inform, influence, or entertain."
+  },
+  {
+    "skill_id": "skill_036",
+    "skill_name": "C#",
+    "category": "Programming",
+    "type": "technical",
+    "description": "Modern, object-oriented programming language developed by Microsoft, widely used for Windows applications and game development in Unity."
+  },
+  {
+    "skill_id": "skill_037",
+    "skill_name": "Ruby",
+    "category": "Programming",
+    "type": "technical",
+    "description": "Dynamic, open-source programming language with a focus on simplicity and productivity, often used with the Ruby on Rails framework."
+  },
+  {
+    "skill_id": "skill_038",
+    "skill_name": "PHP",
+    "category": "Web Development",
+    "type": "technical",
+    "description": "Popular general-purpose scripting language that is especially suited to web development and embedded into HTML."
+  },
+  {
+    "skill_id": "skill_039",
+    "skill_name": "Rust",
+    "category": "Programming",
+    "type": "technical",
+    "description": "Systems programming language focused on safety, speed, and concurrency, preventing memory safety errors."
+  },
+  {
+    "skill_id": "skill_040",
+    "skill_name": "Kotlin",
+    "category": "Mobile Development",
+    "type": "technical",
+    "description": "Cross-platform, statically typed, general-purpose programming language with type inference, officially supported for Android development."
+  },
+  {
+    "skill_id": "skill_041",
+    "skill_name": "R",
+    "category": "Data Science",
+    "type": "technical",
+    "description": "Programming language and free software environment for statistical computing and graphics."
+  },
+  {
+    "skill_id": "skill_042",
+    "skill_name": "MATLAB",
+    "category": "Data Science",
+    "type": "technical",
+    "description": "Proprietary multi-paradigm programming language and numeric computing environment used for algorithm development and data visualization."
+  },
+  {
+    "skill_id": "skill_043",
+    "skill_name": "MongoDB",
+    "category": "Database",
+    "type": "technical",
+    "description": "Source-available cross-platform document-oriented database program, classified as a NoSQL database."
+  },
+  {
+    "skill_id": "skill_044",
+    "skill_name": "PostgreSQL",
+    "category": "Database",
+    "type": "technical",
+    "description": "Powerful, open-source object-relational database system known for reliability, feature robustness, and performance."
+  },
+  {
+    "skill_id": "skill_045",
+    "skill_name": "Redis",
+    "category": "Database",
+    "type": "technical",
+    "description": "In-memory data structure store, used as a distributed, in-memory key–value database, cache, and message broker."
+  },
+  {
+    "skill_id": "skill_046",
+    "skill_name": "Angular",
+    "category": "Web Framework",
+    "type": "technical",
+    "description": "Platform and framework for building single-page client applications using HTML and TypeScript."
+  },
+  {
+    "skill_id": "skill_047",
+    "skill_name": "Vue.js",
+    "category": "Web Framework",
+    "type": "technical",
+    "description": "Progressive JavaScript framework for building user interfaces, designed to be incrementally adoptable."
+  },
+  {
+    "skill_id": "skill_048",
+    "skill_name": "Django",
+    "category": "Web Framework",
+    "type": "technical",
+    "description": "High-level Python web framework that encourages rapid development and clean, pragmatic design."
+  },
+  {
+    "skill_id": "skill_049",
+    "skill_name": "Spring Boot",
+    "category": "Web Framework",
+    "type": "technical",
+    "description": "Open-source Java-based framework used to create a micro Service with minimal effort."
+  },
+  {
+    "skill_id": "skill_050",
+    "skill_name": "GraphQL",
+    "category": "Web Development",
+    "type": "technical",
+    "description": "Query language for APIs and a runtime for fulfilling those queries with your existing data."
+  },
+  {
+    "skill_id": "skill_051",
+    "skill_name": "AWS Lambda",
+    "category": "Cloud Computing",
+    "type": "technical",
+    "description": "Serverless compute service that lets you run code without provisioning or managing servers."
+  },
+  {
+    "skill_id": "skill_052",
+    "skill_name": "Terraform",
+    "category": "DevOps",
+    "type": "technical",
+    "description": "Infrastructure as code software tool that enables you to safely and predictably create, change, and improve infrastructure."
+  },
+  {
+    "skill_id": "skill_053",
+    "skill_name": "Ansible",
+    "category": "DevOps",
+    "type": "technical",
+    "description": "Open-source software provisioning, configuration management, and application-deployment tool."
+  },
+  {
+    "skill_id": "skill_054",
+    "skill_name": "Hadoop",
+    "category": "Data Science",
+    "type": "technical",
+    "description": "Collection of open-source software utilities that facilitate using a network of many computers to solve problems involving massive amounts of data and computation."
+  },
+  {
+    "skill_id": "skill_055",
+    "skill_name": "Apache Spark",
+    "category": "Data Science",
+    "type": "technical",
+    "description": "Unified analytics engine for large-scale data processing."
+  },
+  {
+    "skill_id": "skill_056",
+    "skill_name": "Apache Kafka",
+    "category": "Data Science",
+    "type": "technical",
+    "description": "Distributed event store and stream-processing platform."
+  },
+  {
+    "skill_id": "skill_057",
+    "skill_name": "Pandas",
+    "category": "Data Science",
+    "type": "technical",
+    "description": "Fast, powerful, flexible, and easy-to-use open-source data analysis and manipulation tool for Python."
+  },
+  {
+    "skill_id": "skill_058",
+    "skill_name": "PyTorch",
+    "category": "Data Science",
+    "type": "technical",
+    "description": "Open-source machine learning library based on the Torch library, used for applications such as computer vision and natural language processing."
+  },
+  {
+    "skill_id": "skill_059",
+    "skill_name": "Leadership",
+    "category": "Soft Skills",
+    "type": "soft",
+    "description": "The ability of an individual or a group of individuals to influence and guide followers or other members of an organization."
+  },
+  {
+    "skill_id": "skill_060",
+    "skill_name": "Emotional Intelligence",
+    "category": "Soft Skills",
+    "type": "soft",
+    "description": "The capability to understand, manage, and use one's own emotions in positive ways to communicate effectively and empathize with others."
+  },
+  {
+    "skill_id": "skill_061",
+    "skill_name": "Conflict Resolution",
+    "category": "Soft Skills",
+    "type": "soft",
+    "description": "The process by which two or more parties engaged in a disagreement, dispute, or debate reach an agreement resolving it."
+  },
+  {
+    "skill_id": "skill_062",
+    "skill_name": "Negotiation",
+    "category": "Soft Skills",
+    "type": "soft",
+    "description": "Strategic discussion that resolves an issue in a way that both parties find acceptable."
+  },
+  {
+    "skill_id": "skill_063",
+    "skill_name": "Strategic Thinking",
+    "category": "Soft Skills",
+    "type": "soft",
+    "description": "The ability to plan for the future, analyzing opportunities and problems from a broad perspective."
+  },
+  {
+    "skill_id": "skill_064",
+    "skill_name": "Jira",
+    "category": "Management",
+    "type": "technical",
+    "description": "Proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management."
+  },
+  {
+    "skill_id": "skill_065",
+    "skill_name": "Confluence",
+    "category": "Management",
+    "type": "technical",
+    "description": "Web-based corporate wiki developed by Atlassian, used for team collaboration and knowledge management."
+  },
+  {
+    "skill_id": "skill_066",
+    "skill_name": "Microsoft Azure",
+    "category": "Cloud Computing",
+    "type": "technical",
+    "description": "Cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services."
+  },
+  {
+    "skill_id": "skill_067",
+    "skill_name": "Google Cloud Platform (GCP)",
+    "category": "Cloud Computing",
+    "type": "technical",
+    "description": "Suite of cloud computing services offered by Google that runs on the same infrastructure that Google uses internally."
+  },
+  {
+    "skill_id": "skill_068",
+    "skill_name": "Selenium",
+    "category": "Quality Assurance",
+    "type": "technical",
+    "description": "Portable framework for testing web applications, providing a playback tool for authoring tests without the need to learn a test scripting language."
+  },
+  {
+    "skill_id": "skill_069",
+    "skill_name": "Flutter",
+    "category": "Mobile Development",
+    "type": "technical",
+    "description": "Open-source UI software development kit created by Google for building natively compiled applications for mobile, web, and desktop."
+  },
+  {
+    "skill_id": "skill_070",
+    "skill_name": "Dart",
+    "category": "Programming",
+    "type": "technical",
+    "description": "Client-optimized programming language for apps on multiple platforms, developed by Google and used to write Flutter apps."
+  },
+  {
+    "skill_id": "skill_071",
+    "skill_name": "Bash",
+    "category": "Scripting",
+    "type": "technical",
+    "description": "Unix shell and command language written as a free software replacement for the Bourne shell."
+  },
+  {
+    "skill_id": "skill_072",
+    "skill_name": "PowerShell",
+    "category": "Scripting",
+    "type": "technical",
+    "description": "Task automation and configuration management program from Microsoft, consisting of a command-line shell and the associated scripting language."
+  },
+  {
+    "skill_id": "skill_073",
+    "skill_name": "Wireshark",
+    "category": "Networking",
+    "type": "technical",
+    "description": "Free and open-source packet analyzer used for network troubleshooting, analysis, software and communications protocol development."
+  },
+  {
+    "skill_id": "skill_074",
+    "skill_name": "TCP/IP",
+    "category": "Networking",
+    "type": "technical",
+    "description": "Set of communication protocols used in the Internet and similar computer networks."
+  },
+  {
+    "skill_id": "skill_075",
+    "skill_name": "Metasploit",
+    "category": "Security",
+    "type": "technical",
+    "description": "Penetration testing framework that makes hacking simpler, used for developing and executing exploit code against a remote target machine."
+  },
+  {
+    "skill_id": "skill_076",
+    "skill_name": "Burp Suite",
+    "category": "Security",
+    "type": "technical",
+    "description": "Integrated platform for performing security testing of web applications."
+  },
+  {
+    "skill_id": "skill_077",
+    "skill_name": "Adobe Photoshop",
+    "category": "Design",
+    "type": "technical",
+    "description": "Raster graphics editor developed and published by Adobe Inc. for Windows and macOS."
+  },
+  {
+    "skill_id": "skill_078",
+    "skill_name": "Adobe Illustrator",
+    "category": "Design",
+    "type": "technical",
+    "description": "Vector graphics editor and design program developed and marketed by Adobe."
+  },
+  {
+    "skill_id": "skill_079",
+    "skill_name": "Cassandra",
+    "category": "Database",
+    "type": "technical",
+    "description": "Free and open-source, distributed, wide-column store, NoSQL database management system designed to handle large amounts of data."
+  },
+  {
+    "skill_id": "skill_080",
+    "skill_name": "Apache Hive",
+    "category": "Data Science",
+    "type": "technical",
+    "description": "Data warehouse software project built on top of Apache Hadoop for providing data summarization, query and analysis."
+  },
+  {
+    "skill_id": "skill_081",
+    "skill_name": "Prometheus",
+    "category": "DevOps",
+    "type": "technical",
+    "description": "Free software application used for event monitoring and alerting, recording real-time metrics in a time series database."
+  },
+  {
+    "skill_id": "skill_082",
+    "skill_name": "Grafana",
+    "category": "DevOps",
+    "type": "technical",
+    "description": "Multi-platform open source analytics and interactive visualization web application."
+  },
+  {
+    "skill_id": "skill_083",
+    "skill_name": "Scikit-learn",
+    "category": "Data Science",
+    "type": "technical",
+    "description": "Free software machine learning library for the Python programming language."
+  },
+  {
+    "skill_id": "skill_084",
+    "skill_name": "Keras",
+    "category": "Data Science",
+    "type": "technical",
+    "description": "Open-source software library that provides a Python interface for artificial neural networks."
+  },
+  {
+    "skill_id": "skill_085",
+    "skill_name": "C",
+    "category": "Programming",
+    "type": "technical",
+    "description": "General-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion."
+  },
+  {
+    "skill_id": "skill_086",
+    "skill_name": "Scala",
+    "category": "Programming",
+    "type": "technical",
+    "description": "Strongly statically typed general-purpose programming language which supports both object-oriented programming and functional programming."
+  },
+  {
+    "skill_id": "skill_087",
+    "skill_name": "Perl",
+    "category": "Programming",
+    "type": "technical",
+    "description": "Family of two high-level, general-purpose, interpreted, dynamic programming languages."
+  },
+  {
+    "skill_id": "skill_088",
+    "skill_name": "Creativity",
+    "category": "Soft Skills",
+    "type": "soft",
+    "description": "The use of the imagination or original ideas, especially in the production of an artistic work or problem solving."
+  },
+  {
+    "skill_id": "skill_089",
+    "skill_name": "Mentoring",
+    "category": "Soft Skills",
+    "type": "soft",
+    "description": "The practice of training and advising a less experienced colleague."
+  },
+  {
+    "skill_id": "skill_090",
+    "skill_name": "Decision Making",
+    "category": "Soft Skills",
+    "type": "soft",
+    "description": "The process of making choices by identifying a decision, gathering information, and assessing alternative resolutions."
+  },
+  {
+    "skill_id": "skill_091",
+    "skill_name": "Active Listening",
+    "category": "Soft Skills",
+    "type": "soft",
+    "description": "Pattern of listening that keeps you engaged with your conversation partner in a positive way."
+  },
+  {
+    "skill_id": "skill_092",
+    "skill_name": "Nginx",
+    "category": "Web Development",
+    "type": "technical",
+    "description": "Web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache."
+  },
+  {
+    "skill_id": "skill_093",
+    "skill_name": "Apache HTTP Server",
+    "category": "Web Development",
+    "type": "technical",
+    "description": "Free and open-source cross-platform web server software."
+  },
+  {
+    "skill_id": "skill_094",
+    "skill_name": "Markdown",
+    "category": "Documentation",
+    "type": "technical",
+    "description": "Lightweight markup language for creating formatted text using a plain-text editor."
+  },
+  {
+    "skill_id": "skill_095",
+    "skill_name": "LaTeX",
+    "category": "Documentation",
+    "type": "technical",
+    "description": "Software system for document preparation, widely used in academia for the communication and publication of scientific documents."
+  },
+  {
+    "skill_id": "skill_096",
+    "skill_name": "Scrum",
+    "category": "Management",
+    "type": "technical",
+    "description": "Framework for developing, delivering, and sustaining complex products, primarily used in software development."
+  },
+  {
+    "skill_id": "skill_097",
+    "skill_name": "Kanban",
+    "category": "Management",
+    "type": "technical",
+    "description": "Visual method for managing work as it moves through a process."
+  },
+  {
+    "skill_id": "skill_098",
+    "skill_name": "Unit Testing",
+    "category": "Quality Assurance",
+    "type": "technical",
+    "description": "Software testing method by which individual units of source code are tested to determine whether they are fit for use."
+  },
+  {
+    "skill_id": "skill_099",
+    "skill_name": "API Testing",
+    "category": "Quality Assurance",
+    "type": "technical",
+    "description": "Type of software testing that validates Application Programming Interfaces (APIs)."
+  },
+  {
+    "skill_id": "skill_100",
+    "skill_name": "Empathy",
+    "category": "Soft Skills",
+    "type": "soft",
+    "description": "The ability to understand and share the feelings of another, crucial for user experience design and team management."
+  }
+]

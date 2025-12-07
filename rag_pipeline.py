@@ -1,186 +1,176 @@
 import os
 import json
 import chromadb
-from chromadb.config import Settings
 import google.generativeai as genai
 from pymongo import MongoClient
 from sentence_transformers import SentenceTransformer
 from dotenv import load_dotenv
+from typing import Dict, List, Any
+import logging
+from pathlib import Path
+import re
 
-# Load environment variables
+# Setup logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 load_dotenv()
 
 class CareerAdvisorRAG:
     def __init__(self):
-        # 1. Initialize Google Gemini
-        # Using a specific model version for better stability
+        logger.info("🚀 Initializing Career Advisor RAG System...")
+        self._init_gemini()
+        self._init_embedder()
+        self._init_mongodb()
+        self._init_chromadb()
+        self.skill_durations = self._load_skill_durations()
+        
+    def _init_gemini(self):
         genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
         self.model = genai.GenerativeModel('gemini-2.0-flash')
-        
-        # 2. Initialize Local Embeddings
-        print("⏳ Loading local embedding model (all-MiniLM-L6-v2)...")
-        self.embedder = SentenceTransformer('all-MiniLM-L6-v2')
-        print("✅ Model loaded.")
 
-        # 3. Initialize MongoDB
-        self.mongo_client = MongoClient(os.getenv("MONGO_URI"))
+    def _init_embedder(self):
+        self.embedder = SentenceTransformer('all-MiniLM-L6-v2')
+
+    def _init_mongodb(self):
+        self.mongo_client = MongoClient(os.getenv("MONGO_URL", "mongodb://localhost:27017"))
+        # FIXED: Changed to 'skillsage_db' to match main.py and user request
         self.user_db = self.mongo_client.skillsage_db
         self.users_col = self.user_db.users
-        
-        # 4. Initialize Local ChromaDB
-        print("📂 Connecting to Local ChromaDB...")
-        self.chroma_client = chromadb.PersistentClient(path="./skillsage_chroma_db")
-        
-        self.kb_collection = self.chroma_client.get_or_create_collection(
-            name="skillsage_vdb", 
-            metadata={"hnsw:space": "cosine"}
-        )
-        print("✅ Connected to Vector Database.")
+        self.careers_col = self.user_db.careers 
 
-    def _get_embedding(self, text):
-        embedding = self.embedder.encode(text)
-        return embedding.tolist()
+    def _init_chromadb(self):
+        base_dir = Path(__file__).resolve().parent
+        db_path = base_dir / "skillsage_chroma_db"
+        self.chroma_client = chromadb.PersistentClient(path=str(db_path))
+        self.chroma_careers = self.chroma_client.get_or_create_collection(name="careers")
 
-    def ingest_from_json(self, json_file_path):
+    def _load_skill_durations(self) -> Dict[str, int]:
         try:
-            with open(json_file_path, 'r') as f:
+            path = Path(__file__).resolve().parent / "learning_path.json"
+            if not path.exists(): return {}
+            with open(path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-            
-            if isinstance(data, dict) and "skills" in data:
-                schema_data_list = data["skills"]
-            elif isinstance(data, list):
-                schema_data_list = data
-            else:
-                print("❌ JSON format not recognized.")
-                return
+            duration_map = {}
+            for step in data:
+                weeks = step.get('duration_weeks', 4)
+                for skill in step.get('skills_covered', []):
+                    s_key = skill.lower().strip()
+                    if weeks > duration_map.get(s_key, 0):
+                        duration_map[s_key] = weeks
+            return duration_map
+        except: return {}
 
-            print(f"🔄 Processing {len(schema_data_list)} items from {json_file_path}...")
-            
-            ids = []
-            documents = []
-            metadatas = []
-            embeddings = []
-            
-            # TRACK SEEN IDs TO PREVENT DUPLICATES
-            seen_ids = set()
-
-            for item in schema_data_list:
-                skill_name = item.get('skill_name', 'Unknown Skill')
-                
-                # --- DUPLICATE CHECK FIX ---
-                if skill_name in seen_ids:
-                    print(f"⚠️ Skipping duplicate skill: {skill_name}")
-                    continue
-                seen_ids.add(skill_name)
-                # ---------------------------
-
-                semantic_text = (
-                    f"Skill: {skill_name}. "
-                    f"Category: {item.get('category', 'General')}. "
-                    f"Description: {item.get('description', '')} "
-                    f"Difficulty: {item.get('difficulty_level', 'Medium')}. "
-                    f"Time to learn: {item.get('learning_time', 'Variable')}. "
-                    f"Industry Demand: {item.get('industry_demand', 'Medium')}. "
-                    f"Used in careers: {', '.join(item.get('careers_using_this', []))}. "
-                    f"Use cases: {', '.join(item.get('use_cases', []))}."
-                )
-
-                vector = self._get_embedding(semantic_text)
-
-                ids.append(skill_name)
-                documents.append(semantic_text)
-                embeddings.append(vector)
-                metadatas.append({
-                    "category": item.get('category', 'General'),
-                    "difficulty": item.get('difficulty_level', 'Medium'),
-                    "demand": item.get('industry_demand', 'Medium')
-                })
-
-            if ids:
-                self.kb_collection.upsert(
-                    ids=ids,
-                    documents=documents,
-                    embeddings=embeddings,
-                    metadatas=metadatas
-                )
-                print(f"✅ Successfully ingested {len(ids)} unique skills!")
-            else:
-                print("⚠️ No new unique skills found to ingest.")
-
-        except Exception as e:
-            print(f"❌ Error during ingestion: {str(e)}")
-
-    def get_user_context(self, user_email):
+    # --- CORE LOGIC: MongoDB for Charts ---
+    def get_detailed_gap_analysis(self, user_email: str) -> Dict:
         user = self.users_col.find_one({"email": user_email})
-        if not user:
-            return "User profile not found. Treat as a generic user."
+        if not user: return {"error": "User not found"}
+
+        user_skills_list = user.get('skills', [])
+        # Normalize user ratings for easier lookup
+        user_ratings = {k.lower().strip(): v for k, v in user.get('skill_ratings', {}).items()}
         
-        return (
-            f"User Profile: {user.get('name', 'User')}. "
-            f"Skills: {', '.join(user.get('skills', []))}. "
-            f"Experience: {user.get('experience', 'Not specified')}. "
-            f"Goal: {user.get('career_goal', 'Not specified')}."
-        )
+        raw_goals = user.get('career_goal', [])
+        goals = [g.strip() for g in (raw_goals if isinstance(raw_goals, list) else [str(raw_goals)]) if g]
+
+        goals_data = []
+        all_missing_skills = []
+
+        for goal in goals:
+            # 1. Fetch Exact Career from MongoDB
+            # Use regex for case-insensitive matching (e.g. "Data Scientist" matches "data scientist")
+            career_doc = self.careers_col.find_one({
+                "title": {"$regex": f"^{re.escape(goal)}$", "$options": "i"}
+            })
+            
+            # 2. Get Required Skills
+            req_skills_map = {}
+            if career_doc and "required_skills" in career_doc:
+                req_skills_map = career_doc["required_skills"]
+            else:
+                # Fallback to prevent "Loading..." hang if goal not found
+                req_skills_map = {"Technical Skills": 5, "Communication": 5, "Problem Solving": 5}
+
+            # 3. Build Chart Data
+            # Take top 12 skills max for UI clarity
+            chart_labels = list(req_skills_map.keys())[:12]
+            user_data = []
+            target_data = []
+            
+            for skill_name in chart_labels:
+                target_level = req_skills_map[skill_name]
+                target_data.append(target_level)
+                
+                # --- MATCHING LOGIC ---
+                rating = 0
+                
+                # Tokenize (e.g., "C++ / C#" -> ["c++", "c#"])
+                tokens = [t.strip().lower() for t in re.split(r'[ /&,]+', skill_name)]
+                
+                # Check 1: Do any tokens match a user skill exactly?
+                for token in tokens:
+                    if token in user_ratings:
+                        rating = max(rating, user_ratings[token])
+                
+                # Check 2: Direct name match
+                if rating == 0:
+                    s_lower = skill_name.lower()
+                    if s_lower in user_ratings:
+                        rating = user_ratings[s_lower]
+
+                user_data.append(rating)
+
+                # 4. Identify Missing Skills
+                # Missing if (Not in profile) OR (Rating is 0) OR (Rating < Target - 2)
+                is_missing = False
+                
+                # Check if user essentially "has" the skill (string check)
+                has_skill_in_profile = False
+                for token in tokens:
+                    # Check against the raw list of user skills
+                    if any(token == us.lower().strip() for us in user_skills_list):
+                        has_skill_in_profile = True
+                        break
+                
+                if not has_skill_in_profile or rating == 0 or rating < (target_level - 2):
+                    is_missing = True
+
+                if is_missing:
+                    # Avoid duplicates
+                    if not any(m['name'] == skill_name and m['for_goal'] == goal for m in all_missing_skills):
+                        all_missing_skills.append({
+                            "name": skill_name,
+                            "priority": "High" if target_level >= 9 else "Medium",
+                            "for_goal": goal,
+                            "time_estimate": self._estimate_learning_time(skill_name)
+                        })
+
+            goals_data.append({
+                "goal": goal,
+                "required_skills": chart_labels,
+                "user_ratings": user_data,
+                "target_data": target_data
+            })
+
+        return {
+            "goals_summary": goals_data,
+            "missing_skills": all_missing_skills,
+            "skills_have": user_skills_list,
+            "skill_ratings": user.get('skill_ratings', {})
+        }
+
+    def _estimate_learning_time(self, skill: str) -> str:
+        s_lower = skill.lower().strip()
+        if s_lower in self.skill_durations: return f"{self.skill_durations[s_lower]} weeks"
+        for k, v in self.skill_durations.items():
+            if k in s_lower: return f"{v} weeks"
+        return "4-6 weeks"
 
     def query_advisor(self, user_email, query):
-        # 1. Get User Context
-        user_context = self.get_user_context(user_email)
-        
-        # 2. Embed Query
-        query_embedding = self._get_embedding(query)
-        
-        # 3. Retrieve from Chroma
-        print(f"\n🔍 Searching Knowledge Base for: '{query}'...")
-        results = self.kb_collection.query(
-            query_embeddings=[query_embedding],
-            n_results=3
-        )
-        
-        # --- DEBUG PRINT START ---
-        # This will show you EXACTLY what Chroma found (or if it found nothing)
-        print("📊 Retrieval Results:")
-        found_docs = results['documents'][0]
-        for i, doc in enumerate(found_docs):
-            print(f"   [Result {i+1}]: {doc[:100]}...") # Print first 100 chars
-        # --- DEBUG PRINT END ---
-        
-        if not found_docs:
-            print("⚠️ No relevant documents found in ChromaDB!")
-            kb_context = "No specific data found in the Knowledge Base."
-        else:
-            kb_context = "\n".join(found_docs)
-        
-        # 4. Construct Prompt (Made stricter)
-        full_prompt = f"""
-        You are SkillSage, an AI Career Advisor.
-        
-        --- USER PROFILE ---
-        {user_context}
-        
-        --- KNOWLEDGE BASE (SOURCE OF TRUTH) ---
-        {kb_context}
-        
-        --- USER QUESTION ---
-        {query}
-        
-        --- INSTRUCTIONS ---
-        1. Answer ONLY using information from the 'KNOWLEDGE BASE' section above.
-        2. If the Knowledge Base is empty or doesn't contain the answer, say: "I'm sorry, my internal database doesn't have information on that specific skill yet."
-        3. Do NOT use your outside training data to make up skills.
-        """
-        
-        # 5. Generate
-        response = self.model.generate_content(full_prompt)
-        return response.text
-
-if __name__ == "__main__":
-    advisor = CareerAdvisorRAG()
-
-    # 1. LOAD DATA (It will now skip duplicates instead of crashing)
-    #advisor.ingest_from_json("seed_data.json")
-
-    # 2. TEST QUERY
-    print("\n💬 Testing Query...")
-    # Ensure you are using a valid email or the fallback will trigger
-    response = advisor.query_advisor("test@example.com", "I want to learn Python. Is it good for Data Science?")
-    print(f"\n🤖 SkillSage: {response}")
+        # Retrieve context from Chroma (Chat Only)
+        user = self.users_col.find_one({"email": user_email})
+        query_vec = self.embedder.encode(query).tolist()
+        results = self.chroma_careers.query(query_embeddings=[query_vec], n_results=2)
+        context = ""
+        if results['documents']: context = "\n".join(results['documents'][0])
+        prompt = f"User: {user.get('name')}\nContext: {context}\nQuery: {query}"
+        return self.model.generate_content(prompt).text

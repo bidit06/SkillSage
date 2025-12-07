@@ -2,171 +2,129 @@ import os
 import json
 import chromadb
 from sentence_transformers import SentenceTransformer
+from pymongo import MongoClient
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # --- CONFIGURATION ---
-# Define paths relative to this script (backend/ingest_data.py)
 BASE_DIR = Path(__file__).resolve().parent
-# Ensure the database is stored INSIDE the backend folder as requested
 CHROMA_DB_PATH = BASE_DIR / "skillsage_chroma_db"
+# CRITICAL: Ensure this matches your main.py database
+MONGO_URL = os.getenv("MONGO_URL", "mongodb://localhost:27017")
+DB_NAME = "skillsage_db" 
 
-print(f"📂 Database Path: {CHROMA_DB_PATH}")
+print("="*70)
+print(f"🚀 DATA INGESTION - TARGET DB: {DB_NAME}")
+print("="*70)
 
-# Initialize ChromaDB (Persistent)
-chroma_client = chromadb.PersistentClient(path=str(CHROMA_DB_PATH))
+# 1. Initialize MongoDB
+try:
+    mongo_client = MongoClient(MONGO_URL)
+    db = mongo_client[DB_NAME]
+    careers_col = db.careers
+    # Clear existing careers to prevent duplicates/stale data
+    careers_col.delete_many({})
+    print(f"✅ MongoDB '{DB_NAME}.careers' collection cleared and ready.")
+except Exception as e:
+    print(f"❌ MongoDB Error: {e}")
+    exit(1)
 
-# Initialize Embedding Model (Local)
-print("⏳ Loading embedding model (all-MiniLM-L6-v2)...")
+# 2. Initialize ChromaDB (For Chat Context Only)
+try:
+    chroma_client = chromadb.PersistentClient(path=str(CHROMA_DB_PATH))
+    try: chroma_client.delete_collection("careers")
+    except: pass
+    chroma_careers = chroma_client.create_collection(name="careers", metadata={"hnsw:space": "cosine"})
+    print("✅ ChromaDB initialized for Chat.")
+except Exception as e:
+    print(f"❌ ChromaDB Error: {e}")
+    exit(1)
+
+# Initialize Embedding Model
+print("⏳ Loading Embedding Model...")
 embedder = SentenceTransformer('all-MiniLM-L6-v2')
-print("✅ Model loaded.")
 
-def get_embedding(text):
-    return embedder.encode(text).tolist()
+def load_json(filename):
+    path = BASE_DIR / filename
+    if not path.exists(): 
+        print(f"⚠️ Warning: {filename} not found")
+        return []
+    with open(path, 'r', encoding='utf-8') as f: return json.load(f)
 
-def ingest_collection(collection_name, data, type_label):
-    collection = chroma_client.get_or_create_collection(name=collection_name)
+# --- LOAD DATA ---
+career_goals = load_json("career_goals.json")
+roadmaps = load_json("roadmap.json")
+
+print(f"\n🔄 Processing Data...")
+
+mongo_docs = []
+processed_goals = set()
+
+# --- PHASE 1: INGEST ROADMAPS (High Priority - Has specific Levels) ---
+for item in roadmaps:
+    name = item.get("career_goal")
+    if not name: continue
     
-    ids = []
-    documents = []
-    embeddings = []
-    metadatas = []
+    # Extract skills: { "Python": 9, "SQL": 8 }
+    tech_skills = item.get('required_skills', {}).get('technical_skills', [])
+    skills_map = {s['skill']: s['required_level'] for s in tech_skills}
     
-    # Track IDs seen in this batch to prevent duplicates causing a crash
-    seen_ids_in_batch = set()
+    doc = {
+        "title": name,
+        "description": item.get("description"),
+        "type": "roadmap",
+        "required_skills": skills_map, # Structured map for Radar Chart
+        "salary": item.get("estimated_salary_range", {})
+    }
+    mongo_docs.append(doc)
+    processed_goals.add(name.lower().strip())
+
+# --- PHASE 2: INGEST CAREER GOALS (Fallback - Has Tools List) ---
+for item in career_goals:
+    name = item.get("career_goal_name")
+    # If we already have a roadmap for this goal, skip it (roadmap is better)
+    if not name or name.lower().strip() in processed_goals: continue
     
-    print(f"🔄 Processing {len(data)} items for '{collection_name}'...")
+    # Career goals file has "tools_and_technologies" (list of strings)
+    # We assign a default level of 8 to these skills so they show up on the chart
+    tools = item.get('tools_and_technologies', [])
+    skills_map = {t: 8 for t in tools[:12]} # Limit to top 12 to fit on chart
+    
+    doc = {
+        "title": name,
+        "description": item.get("description"),
+        "type": "career_profile",
+        "required_skills": skills_map,
+        "salary": item.get("salary_range", {})
+    }
+    mongo_docs.append(doc)
 
-    for item in data:
-        # --- 1. ID GENERATION LOGIC ---
-        if 'career_id' in item:
-            item_id = item['career_id']
-            title = item.get('career_title', 'Unknown Career')
-        elif 'skill_id' in item:
-            item_id = item['skill_id']
-            title = item.get('skill_name', 'Unknown Skill')
-        elif 'faq_id' in item:
-            item_id = item['faq_id']
-            title = item.get('question', 'Unknown Question')
-        elif 'skill_name' in item: # Fallback for seed_data.json
-            clean_name = item['skill_name'].lower().replace(" ", "_")
-            item_id = f"seed_{clean_name}"
-            title = item['skill_name']
-        else:
-            print(f"⚠️ Skipping item with no identifiable ID: {item}")
-            continue
+# Insert into MongoDB
+if mongo_docs:
+    careers_col.insert_many(mongo_docs)
+    print(f"✅ Ingested {len(mongo_docs)} career documents into MongoDB.")
 
-        # --- DUPLICATE CHECK ---
-        if item_id in seen_ids_in_batch:
-            # print(f"⚠️ Skipping duplicate ID in this batch: {item_id}")
-            continue
-        
-        seen_ids_in_batch.add(item_id)
+# --- PHASE 3: CHROMA INGESTION (For Chat RAG) ---
+c_ids, c_docs, c_metas, c_vecs = [], [], [], []
 
-        # --- 2. CONTENT FORMATTING (The Text AI Reads) ---
-        if type_label == "career":
-            salary = item.get('salary_range', {}).get('mid_level', 'N/A')
-            demand = item.get('job_market', {}).get('demand', 'N/A')
-            
-            text = (
-                f"Career: {title}. "
-                f"Category: {item.get('category', '')}. "
-                f"Description: {item.get('description', '')} "
-                f"Salary: {salary}. "
-                f"Demand: {demand}. "
-                f"Skills Needed: {', '.join(item.get('required_skills', []))}. "
-                f"Education: {item.get('education_requirements', {}).get('minimum', '')}."
-            )
-            
-        elif type_label == "skill":
-            lt_raw = item.get('learning_time', 'N/A')
-            if isinstance(lt_raw, dict):
-                learning_time = lt_raw.get('proficiency', 'Variable')
-            else:
-                learning_time = str(lt_raw)
+for doc in mongo_docs:
+    # Flatten skills for text embedding for the chatbot to read
+    skills_str = ", ".join([f"{k} (Level {v})" for k, v in doc['required_skills'].items()])
+    
+    text = f"""ROLE: {doc['title']}
+DESCRIPTION: {doc['description']}
+REQUIRED SKILLS: {skills_str}
+SALARY: {doc.get('salary', {}).get('india', 'N/A')}
+"""
+    c_ids.append(f"career_{doc['title'].replace(' ', '_').replace('/', '-')}")
+    c_docs.append(text)
+    c_metas.append({"title": doc['title']})
+    c_vecs.append(embedder.encode(text).tolist())
 
-            careers = item.get('career_applications', []) or item.get('careers_using_this', [])
+if c_ids:
+    chroma_careers.upsert(ids=c_ids, documents=c_docs, embeddings=c_vecs, metadatas=c_metas)
+    print(f"✅ Ingested {len(c_ids)} documents into ChromaDB for Chat.")
 
-            text = (
-                f"Skill: {title}. "
-                f"Category: {item.get('category', '')}. "
-                f"Description: {item.get('description', '')} "
-                f"Difficulty: {item.get('difficulty_level', '')}. "
-                f"Time to learn: {learning_time}. "
-                f"Use Cases: {', '.join(item.get('use_cases', []))}. "
-                f"Related Careers: {', '.join(careers)}."
-            )
-            
-        elif type_label == "faq":
-            text = (
-                f"Question: {title} "
-                f"Answer: {item.get('answer', '')} "
-                f"Category: {item.get('category', '')}."
-            )
-        else:
-            text = str(item)
-
-        # --- 3. METADATA ---
-        meta = {
-            "type": type_label,
-            "title": title
-        }
-        
-        ids.append(item_id)
-        documents.append(text)
-        embeddings.append(get_embedding(text))
-        metadatas.append(meta)
-
-    # --- 4. BATCH UPSERT ---
-    if ids:
-        try:
-            collection.upsert(
-                ids=ids,
-                documents=documents,
-                embeddings=embeddings,
-                metadatas=metadatas
-            )
-            print(f"✅ Successfully ingested {len(ids)} into '{collection_name}'!")
-        except Exception as e:
-            print(f"❌ Error upserting batch to ChromaDB: {e}")
-    else:
-        print("⚠️ No valid items to ingest.")
-
-# --- MAIN EXECUTION ---
-if __name__ == "__main__":
-    # List of files and their logical type
-    datasets = [
-        ("careers_dataset.json", "career"),
-        ("skills_dataset.json", "skill"),
-        ("faqs_dataset.json", "faq"),
-        ("seed_data.json", "skill")
-    ]
-
-    for filename, data_type in datasets:
-        file_path = BASE_DIR / filename
-        
-        if file_path.exists():
-            try:
-                with open(file_path, "r", encoding="utf-8") as f:
-                    data = json.load(f)
-                    
-                    # Logic to unwrap data if it's inside a key like "skills": []
-                    if isinstance(data, dict):
-                        keys = list(data.keys())
-                        for k in keys:
-                            if isinstance(data[k], list):
-                                data = data[k]
-                                break
-                        if isinstance(data, dict): 
-                            print(f"⚠️ Structure warning in {filename}: could not find main list.")
-                            continue
-
-                    if isinstance(data, list):
-                        ingest_collection("skillsage_vdb", data, data_type)
-                    else:
-                        print(f"❌ Format error in {filename}: Expected a list.")
-            except Exception as e:
-                print(f"❌ Error processing {filename}: {e}")
-        else:
-            print(f"⚠️ File not found: {filename}")
-
-    print("\n🎉 All Data Ingestion Complete!")
+print("\n🎉 Migration Complete! Run 'python ingest_data.py' once to apply changes.")

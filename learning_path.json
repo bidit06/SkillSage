@@ -1,0 +1,3610 @@
+[
+  {
+    "learning_step_id": "LP-001",
+    "career_goal_name": "Data Scientist",
+    "step_number": 1,
+    "title": "Mathematics & Statistics Foundations",
+    "description": "Master linear algebra, calculus, probability, and statistics essential for understanding data patterns.",
+    "duration_weeks": 6,
+    "skills_covered": ["Mathematics", "Data Analysis", "Critical Thinking"]
+  },
+  {
+    "learning_step_id": "LP-002",
+    "career_goal_name": "Data Scientist",
+    "step_number": 2,
+    "title": "Python for Data Science",
+    "description": "Learn Python programming with a focus on libraries like NumPy and Pandas for data manipulation.",
+    "duration_weeks": 5,
+    "skills_covered": ["Python", "Pandas", "Data Analysis"]
+  },
+  {
+    "learning_step_id": "LP-003",
+    "career_goal_name": "Data Scientist",
+    "step_number": 3,
+    "title": "Data Visualization & EDA",
+    "description": "Learn to tell stories with data using Matplotlib, Seaborn, and Tableau.",
+    "duration_weeks": 4,
+    "skills_covered": ["Data Visualization", "Tableau", "Communication"]
+  },
+  {
+    "learning_step_id": "LP-004",
+    "career_goal_name": "Data Scientist",
+    "step_number": 4,
+    "title": "Machine Learning Basics",
+    "description": "Understand supervised and unsupervised learning algorithms using Scikit-learn.",
+    "duration_weeks": 8,
+    "skills_covered": ["Machine Learning", "Scikit-learn", "Python"]
+  },
+  {
+    "learning_step_id": "LP-005",
+    "career_goal_name": "Data Scientist",
+    "step_number": 5,
+    "title": "Deep Learning & Neural Networks",
+    "description": "Dive into advanced AI concepts using TensorFlow and Keras.",
+    "duration_weeks": 8,
+    "skills_covered": ["Deep Learning", "TensorFlow", "Keras"]
+  },
+  {
+    "learning_step_id": "LP-006",
+    "career_goal_name": "Data Scientist",
+    "step_number": 6,
+    "title": "Big Data Technologies",
+    "description": "Learn to handle massive datasets using Spark and Hadoop ecosystems.",
+    "duration_weeks": 6,
+    "skills_covered": ["Apache Spark", "Hadoop", "SQL"]
+  },
+  {
+    "learning_step_id": "LP-007",
+    "career_goal_name": "Data Scientist",
+    "step_number": 7,
+    "title": "Capstone Project",
+    "description": "Build and deploy an end-to-end data science project solving a real-world problem.",
+    "duration_weeks": 4,
+    "skills_covered": ["Project Management", "Problem Solving", "Git"]
+  },
+  {
+    "learning_step_id": "LP-008",
+    "career_goal_name": "Frontend Developer",
+    "step_number": 1,
+    "title": "Web Fundamentals",
+    "description": "Learn how the web works, HTML5 structure, and CSS3 styling.",
+    "duration_weeks": 4,
+    "skills_covered": ["HTML5", "CSS3", "Web Development"]
+  },
+  {
+    "learning_step_id": "LP-009",
+    "career_goal_name": "Frontend Developer",
+    "step_number": 2,
+    "title": "JavaScript Essentials",
+    "description": "Master core JavaScript concepts, DOM manipulation, and ES6+ features.",
+    "duration_weeks": 6,
+    "skills_covered": ["JavaScript", "Problem Solving", "DOM Manipulation"]
+  },
+  {
+    "learning_step_id": "LP-010",
+    "career_goal_name": "Frontend Developer",
+    "step_number": 3,
+    "title": "Responsive Design & Frameworks",
+    "description": "Learn to create mobile-first layouts using CSS Grid/Flexbox and frameworks like Tailwind.",
+    "duration_weeks": 3,
+    "skills_covered": ["CSS3", "Design", "Adaptability"]
+  },
+  {
+    "learning_step_id": "LP-011",
+    "career_goal_name": "Frontend Developer",
+    "step_number": 4,
+    "title": "Modern JavaScript Frameworks",
+    "description": "Deep dive into React.js for building dynamic user interfaces.",
+    "duration_weeks": 8,
+    "skills_covered": ["React.js", "Web Development", "Node.js"]
+  },
+  {
+    "learning_step_id": "LP-012",
+    "career_goal_name": "Frontend Developer",
+    "step_number": 5,
+    "title": "State Management & APIs",
+    "description": "Handle complex application state and fetch data from APIs.",
+    "duration_weeks": 4,
+    "skills_covered": ["Redux", "API Integration", "JSON"]
+  },
+  {
+    "learning_step_id": "LP-013",
+    "career_goal_name": "Frontend Developer",
+    "step_number": 6,
+    "title": "Version Control & Deployment",
+    "description": "Learn Git workflows and deploying apps to platforms like Vercel or Netlify.",
+    "duration_weeks": 2,
+    "skills_covered": ["Git", "DevOps", "CI/CD"]
+  },
+  {
+    "learning_step_id": "LP-014",
+    "career_goal_name": "Backend Developer",
+    "step_number": 1,
+    "title": "Server-Side Programming Basics",
+    "description": "Choose a language (Node.js, Python, or Java) and learn runtime basics.",
+    "duration_weeks": 5,
+    "skills_covered": ["Node.js", "Python", "Java"]
+  },
+  {
+    "learning_step_id": "LP-015",
+    "career_goal_name": "Backend Developer",
+    "step_number": 2,
+    "title": "Relational Databases",
+    "description": "Master SQL, database design, normalization, and complex queries.",
+    "duration_weeks": 5,
+    "skills_covered": ["SQL", "PostgreSQL", "Database Design"]
+  },
+  {
+    "learning_step_id": "LP-016",
+    "career_goal_name": "Backend Developer",
+    "step_number": 3,
+    "title": "Building RESTful APIs",
+    "description": "Learn to design and implement robust APIs with authentication.",
+    "duration_weeks": 6,
+    "skills_covered": ["API Development", "Web Development", "Security"]
+  },
+  {
+    "learning_step_id": "LP-017",
+    "career_goal_name": "Backend Developer",
+    "step_number": 4,
+    "title": "NoSQL Databases",
+    "description": "Understand document stores and caching mechanisms.",
+    "duration_weeks": 3,
+    "skills_covered": ["MongoDB", "Redis", "Database Management"]
+  },
+  {
+    "learning_step_id": "LP-018",
+    "career_goal_name": "Backend Developer",
+    "step_number": 5,
+    "title": "Containerization & Cloud",
+    "description": "Deploy backend services using Docker and basic AWS services.",
+    "duration_weeks": 4,
+    "skills_covered": ["Docker", "AWS", "Cloud Computing"]
+  },
+  {
+    "learning_step_id": "LP-019",
+    "career_goal_name": "DevOps Engineer",
+    "step_number": 1,
+    "title": "Linux Administration",
+    "description": "Master the command line, shell scripting, and server management.",
+    "duration_weeks": 5,
+    "skills_covered": ["Linux", "Bash", "Shell Scripting"]
+  },
+  {
+    "learning_step_id": "LP-020",
+    "career_goal_name": "DevOps Engineer",
+    "step_number": 2,
+    "title": "Networking Fundamentals",
+    "description": "Understand TCP/IP, DNS, HTTP, and load balancing.",
+    "duration_weeks": 4,
+    "skills_covered": ["Networking", "TCP/IP", "Wireshark"]
+  },
+  {
+    "learning_step_id": "LP-021",
+    "career_goal_name": "DevOps Engineer",
+    "step_number": 3,
+    "title": "Cloud Infrastructure",
+    "description": "Gain proficiency in a major cloud provider (AWS/Azure).",
+    "duration_weeks": 6,
+    "skills_covered": ["AWS", "Cloud Computing", "Infrastructure"]
+  },
+  {
+    "learning_step_id": "LP-022",
+    "career_goal_name": "DevOps Engineer",
+    "step_number": 4,
+    "title": "Infrastructure as Code",
+    "description": "Automate infrastructure provisioning using Terraform.",
+    "duration_weeks": 5,
+    "skills_covered": ["Terraform", "Automation", "Scripting"]
+  },
+  {
+    "learning_step_id": "LP-023",
+    "career_goal_name": "DevOps Engineer",
+    "step_number": 5,
+    "title": "CI/CD Pipelines",
+    "description": "Build automated build, test, and deployment pipelines using Jenkins.",
+    "duration_weeks": 5,
+    "skills_covered": ["Jenkins", "CI/CD", "Git"]
+  },
+  {
+    "learning_step_id": "LP-024",
+    "career_goal_name": "DevOps Engineer",
+    "step_number": 6,
+    "title": "Container Orchestration",
+    "description": "Deploy and manage scalable applications with Kubernetes.",
+    "duration_weeks": 7,
+    "skills_covered": ["Kubernetes", "Docker", "Microservices"]
+  },
+  {
+    "learning_step_id": "LP-025",
+    "career_goal_name": "Machine Learning Engineer",
+    "step_number": 1,
+    "title": "Advanced Python & Math",
+    "description": "Solidify Python skills and linear algebra concepts for ML.",
+    "duration_weeks": 4,
+    "skills_covered": ["Python", "Mathematics", "NumPy"]
+  },
+  {
+    "learning_step_id": "LP-026",
+    "career_goal_name": "Machine Learning Engineer",
+    "step_number": 2,
+    "title": "ML Algorithms Implementation",
+    "description": "Implement core algorithms from scratch to understand mechanics.",
+    "duration_weeks": 6,
+    "skills_covered": ["Machine Learning", "Algorithms", "Problem Solving"]
+  },
+  {
+    "learning_step_id": "LP-027",
+    "career_goal_name": "Machine Learning Engineer",
+    "step_number": 3,
+    "title": "Deep Learning Frameworks",
+    "description": "Build neural networks using PyTorch or TensorFlow.",
+    "duration_weeks": 8,
+    "skills_covered": ["Deep Learning", "PyTorch", "TensorFlow"]
+  },
+  {
+    "learning_step_id": "LP-028",
+    "career_goal_name": "Machine Learning Engineer",
+    "step_number": 4,
+    "title": "Model Deployment (MLOps)",
+    "description": "Learn to serve models via APIs and monitor performance.",
+    "duration_weeks": 5,
+    "skills_covered": ["MLOps", "Docker", "FastAPI"]
+  },
+  {
+    "learning_step_id": "LP-029",
+    "career_goal_name": "Machine Learning Engineer",
+    "step_number": 5,
+    "title": "Computer Vision / NLP Specialization",
+    "description": "Specialize in processing images or text data.",
+    "duration_weeks": 6,
+    "skills_covered": ["NLP", "Computer Vision", "Deep Learning"]
+  },
+  {
+    "learning_step_id": "LP-030",
+    "career_goal_name": "UI/UX Designer",
+    "step_number": 1,
+    "title": "Design Principles",
+    "description": "Understand color theory, typography, and layout basics.",
+    "duration_weeks": 3,
+    "skills_covered": ["Design", "Creativity", "Visual Design"]
+  },
+  {
+    "learning_step_id": "LP-031",
+    "career_goal_name": "UI/UX Designer",
+    "step_number": 2,
+    "title": "User Research",
+    "description": "Learn to conduct interviews, create personas, and map user journeys.",
+    "duration_weeks": 4,
+    "skills_covered": ["User Research", "Empathy", "Communication"]
+  },
+  {
+    "learning_step_id": "LP-032",
+    "career_goal_name": "UI/UX Designer",
+    "step_number": 3,
+    "title": "Wireframing & Prototyping",
+    "description": "Create low and high fidelity prototypes using Figma.",
+    "duration_weeks": 5,
+    "skills_covered": ["Figma", "Prototyping", "Wireframing"]
+  },
+  {
+    "learning_step_id": "LP-033",
+    "career_goal_name": "UI/UX Designer",
+    "step_number": 4,
+    "title": "Interaction Design",
+    "description": "Design interactive elements and micro-interactions.",
+    "duration_weeks": 3,
+    "skills_covered": ["Interaction Design", "Adobe XD", "Animation"]
+  },
+  {
+    "learning_step_id": "LP-034",
+    "career_goal_name": "Project Manager",
+    "step_number": 1,
+    "title": "Project Management Fundamentals",
+    "description": "Learn the project lifecycle: Initiation, Planning, Execution, and Closure.",
+    "duration_weeks": 4,
+    "skills_covered": ["Project Management", "Organization", "Planning"]
+  },
+  {
+    "learning_step_id": "LP-035",
+    "career_goal_name": "Project Manager",
+    "step_number": 2,
+    "title": "Agile & Scrum Methodologies",
+    "description": "Master the Agile mindset and Scrum framework events.",
+    "duration_weeks": 4,
+    "skills_covered": ["Agile Methodology", "Scrum", "Teamwork"]
+  },
+  {
+    "learning_step_id": "LP-036",
+    "career_goal_name": "Project Manager",
+    "step_number": 3,
+    "title": "Management Tools",
+    "description": "Gain proficiency in Jira, Asana, or Trello for task tracking.",
+    "duration_weeks": 2,
+    "skills_covered": ["Jira", "Software Tools", "Tracking"]
+  },
+  {
+    "learning_step_id": "LP-037",
+    "career_goal_name": "Project Manager",
+    "step_number": 4,
+    "title": "Risk & Quality Management",
+    "description": "Learn to identify risks and maintain project quality standards.",
+    "duration_weeks": 3,
+    "skills_covered": [
+      "Risk Management",
+      "Critical Thinking",
+      "Quality Assurance"
+    ]
+  },
+  {
+    "learning_step_id": "LP-038",
+    "career_goal_name": "Cloud Architect",
+    "step_number": 1,
+    "title": "Cloud Service Models",
+    "description": "Understand IaaS, PaaS, SaaS and cloud deployment models.",
+    "duration_weeks": 2,
+    "skills_covered": ["Cloud Computing", "AWS", "Azure"]
+  },
+  {
+    "learning_step_id": "LP-039",
+    "career_goal_name": "Cloud Architect",
+    "step_number": 2,
+    "title": "Architecting Solutions on AWS",
+    "description": "Learn to design available, cost-efficient, fault-tolerant, and scalable systems.",
+    "duration_weeks": 8,
+    "skills_covered": ["AWS", "System Design", "Scalability"]
+  },
+  {
+    "learning_step_id": "LP-040",
+    "career_goal_name": "Cloud Architect",
+    "step_number": 3,
+    "title": "Security & Compliance",
+    "description": "Master cloud security, identity management, and compliance standards.",
+    "duration_weeks": 4,
+    "skills_covered": ["Cybersecurity", "Compliance", "IAM"]
+  },
+  {
+    "learning_step_id": "LP-041",
+    "career_goal_name": "Cloud Architect",
+    "step_number": 4,
+    "title": "Hybrid & Multi-Cloud Strategies",
+    "description": "Learn to integrate on-premise infrastructure with cloud resources using VPNs and Direct Connect.",
+    "duration_weeks": 5,
+    "skills_covered": ["Networking", "Cloud Computing", "Hybrid Cloud"]
+  },
+  {
+    "learning_step_id": "LP-042",
+    "career_goal_name": "Cloud Architect",
+    "step_number": 5,
+    "title": "Cost Optimization & Monitoring",
+    "description": "Master tools for monitoring cloud health (CloudWatch) and optimizing spend.",
+    "duration_weeks": 3,
+    "skills_covered": ["Cost Management", "Monitoring", "AWS"]
+  },
+  {
+    "learning_step_id": "LP-043",
+    "career_goal_name": "Cybersecurity Analyst",
+    "step_number": 1,
+    "title": "Networking & Security Fundamentals",
+    "description": "Understand the OSI model, TCP/IP, and basic network security protocols.",
+    "duration_weeks": 6,
+    "skills_covered": ["Networking", "TCP/IP", "Cybersecurity"]
+  },
+  {
+    "learning_step_id": "LP-044",
+    "career_goal_name": "Cybersecurity Analyst",
+    "step_number": 2,
+    "title": "Linux & Scripting for Security",
+    "description": "Gain proficiency in Linux command line and Python/Bash scripting for automation.",
+    "duration_weeks": 5,
+    "skills_covered": ["Linux", "Python", "Bash"]
+  },
+  {
+    "learning_step_id": "LP-045",
+    "career_goal_name": "Cybersecurity Analyst",
+    "step_number": 3,
+    "title": "Vulnerability Assessment Tools",
+    "description": "Learn to use scanners like Nessus and Nmap to identify system weaknesses.",
+    "duration_weeks": 4,
+    "skills_covered": ["Vulnerability Assessment", "Nmap", "Security"]
+  },
+  {
+    "learning_step_id": "LP-046",
+    "career_goal_name": "Cybersecurity Analyst",
+    "step_number": 4,
+    "title": "Penetration Testing Basics",
+    "description": "Introduction to ethical hacking using Metasploit and Burp Suite.",
+    "duration_weeks": 6,
+    "skills_covered": ["Penetration Testing", "Metasploit", "Burp Suite"]
+  },
+  {
+    "learning_step_id": "LP-047",
+    "career_goal_name": "Cybersecurity Analyst",
+    "step_number": 5,
+    "title": "Incident Response & SIEM",
+    "description": "Learn to analyze logs and respond to threats using Splunk or equivalent SIEMs.",
+    "duration_weeks": 5,
+    "skills_covered": ["Splunk", "Incident Response", "Data Analysis"]
+  },
+  {
+    "learning_step_id": "LP-048",
+    "career_goal_name": "Full Stack Developer",
+    "step_number": 1,
+    "title": "Frontend Mastery",
+    "description": "Deep dive into HTML, CSS, and modern JavaScript (ES6+).",
+    "duration_weeks": 5,
+    "skills_covered": ["JavaScript", "HTML5", "CSS3"]
+  },
+  {
+    "learning_step_id": "LP-049",
+    "career_goal_name": "Full Stack Developer",
+    "step_number": 2,
+    "title": "Frontend Frameworks (React)",
+    "description": "Build single-page applications using React and manage state with Redux.",
+    "duration_weeks": 6,
+    "skills_covered": ["React.js", "Redux", "Web Development"]
+  },
+  {
+    "learning_step_id": "LP-050",
+    "career_goal_name": "Full Stack Developer",
+    "step_number": 3,
+    "title": "Backend Development with Node.js",
+    "description": "Create server-side logic and APIs using Node.js and Express.",
+    "duration_weeks": 5,
+    "skills_covered": ["Node.js", "API Development", "Backend"]
+  },
+  {
+    "learning_step_id": "LP-051",
+    "career_goal_name": "Full Stack Developer",
+    "step_number": 4,
+    "title": "Database Management",
+    "description": "Connect your app to SQL (PostgreSQL) and NoSQL (MongoDB) databases.",
+    "duration_weeks": 4,
+    "skills_covered": ["SQL", "MongoDB", "Database Design"]
+  },
+  {
+    "learning_step_id": "LP-052",
+    "career_goal_name": "Full Stack Developer",
+    "step_number": 5,
+    "title": "Authentication & Security",
+    "description": "Implement JWT, OAuth, and secure coding practices.",
+    "duration_weeks": 3,
+    "skills_covered": ["Security", "Authentication", "OAuth"]
+  },
+  {
+    "learning_step_id": "LP-053",
+    "career_goal_name": "Full Stack Developer",
+    "step_number": 6,
+    "title": "DevOps & Deployment",
+    "description": "Deploy full stack apps using Docker, CI/CD pipelines, and cloud services.",
+    "duration_weeks": 4,
+    "skills_covered": ["Docker", "DevOps", "AWS"]
+  },
+  {
+    "learning_step_id": "LP-054",
+    "career_goal_name": "Business Analyst",
+    "step_number": 1,
+    "title": "Excel for Business Analytics",
+    "description": "Master advanced Excel functions, pivot tables, and VBA.",
+    "duration_weeks": 3,
+    "skills_covered": ["Microsoft Excel", "Data Analysis", "Reporting"]
+  },
+  {
+    "learning_step_id": "LP-055",
+    "career_goal_name": "Business Analyst",
+    "step_number": 2,
+    "title": "SQL for Data Retrieval",
+    "description": "Learn to write queries to extract and aggregate data from relational databases.",
+    "duration_weeks": 4,
+    "skills_covered": ["SQL", "Database", "Querying"]
+  },
+  {
+    "learning_step_id": "LP-056",
+    "career_goal_name": "Business Analyst",
+    "step_number": 3,
+    "title": "Data Visualization",
+    "description": "Create interactive dashboards using Tableau or Power BI.",
+    "duration_weeks": 4,
+    "skills_covered": ["Tableau", "Data Visualization", "Communication"]
+  },
+  {
+    "learning_step_id": "LP-057",
+    "career_goal_name": "Business Analyst",
+    "step_number": 4,
+    "title": "Requirement Gathering",
+    "description": "Learn techniques for eliciting, analyzing, and documenting business requirements.",
+    "duration_weeks": 3,
+    "skills_covered": ["Communication", "Documentation", "Critical Thinking"]
+  },
+  {
+    "learning_step_id": "LP-058",
+    "career_goal_name": "Business Analyst",
+    "step_number": 5,
+    "title": "Process Modeling",
+    "description": "Map business processes using BPMN and flowcharting tools.",
+    "duration_weeks": 2,
+    "skills_covered": ["Process Mapping", "Visio", "Strategic Thinking"]
+  },
+  {
+    "learning_step_id": "LP-059",
+    "career_goal_name": "Android Developer",
+    "step_number": 1,
+    "title": "Kotlin Fundamentals",
+    "description": "Learn Kotlin syntax, OOP concepts, and functional programming features.",
+    "duration_weeks": 4,
+    "skills_covered": ["Kotlin", "Programming", "OOP"]
+  },
+  {
+    "learning_step_id": "LP-060",
+    "career_goal_name": "Android Developer",
+    "step_number": 2,
+    "title": "Android Studio & UI",
+    "description": "Master Android Studio layout editor, XML, and Jetpack Compose.",
+    "duration_weeks": 5,
+    "skills_covered": ["Android Studio", "UI Design", "XML"]
+  },
+  {
+    "learning_step_id": "LP-061",
+    "career_goal_name": "Android Developer",
+    "step_number": 3,
+    "title": "Architecture Components",
+    "description": "Implement MVVM architecture, LiveData, and ViewModels.",
+    "duration_weeks": 4,
+    "skills_covered": ["Architecture", "MVVM", "Software Design"]
+  },
+  {
+    "learning_step_id": "LP-062",
+    "career_goal_name": "Android Developer",
+    "step_number": 4,
+    "title": "Data Persistence & Networking",
+    "description": "Use Room for local storage and Retrofit for API calls.",
+    "duration_weeks": 5,
+    "skills_covered": ["SQL", "API Integration", "Networking"]
+  },
+  {
+    "learning_step_id": "LP-063",
+    "career_goal_name": "Android Developer",
+    "step_number": 5,
+    "title": "Publishing to Play Store",
+    "description": "Learn app signing, release management, and store guidelines.",
+    "duration_weeks": 2,
+    "skills_covered": ["Deployment", "Mobile Development", "Git"]
+  },
+  {
+    "learning_step_id": "LP-064",
+    "career_goal_name": "iOS Developer",
+    "step_number": 1,
+    "title": "Swift Programming",
+    "description": "Master the Swift language, optionals, closures, and protocols.",
+    "duration_weeks": 4,
+    "skills_covered": ["Swift", "Programming", "iOS"]
+  },
+  {
+    "learning_step_id": "LP-065",
+    "career_goal_name": "iOS Developer",
+    "step_number": 2,
+    "title": "UIKit & SwiftUI",
+    "description": "Build user interfaces using both programmatic UIKit and modern SwiftUI.",
+    "duration_weeks": 6,
+    "skills_covered": ["UI Design", "SwiftUI", "Xcode"]
+  },
+  {
+    "learning_step_id": "LP-066",
+    "career_goal_name": "iOS Developer",
+    "step_number": 3,
+    "title": "Core Data & Networking",
+    "description": "Manage local data persistence and fetch remote data with URLSession.",
+    "duration_weeks": 5,
+    "skills_covered": ["Database", "Networking", "API Integration"]
+  },
+  {
+    "learning_step_id": "LP-067",
+    "career_goal_name": "iOS Developer",
+    "step_number": 4,
+    "title": "App Architecture",
+    "description": "Implement MVC, MVVM, or VIPER patterns for scalable apps.",
+    "duration_weeks": 4,
+    "skills_covered": ["Software Architecture", "Design Patterns", "Clean Code"]
+  },
+  {
+    "learning_step_id": "LP-068",
+    "career_goal_name": "iOS Developer",
+    "step_number": 5,
+    "title": "Testing & App Store",
+    "description": "Write XCTests and manage TestFlight and App Store Connect submissions.",
+    "duration_weeks": 3,
+    "skills_covered": ["Unit Testing", "Deployment", "Quality Assurance"]
+  },
+  {
+    "learning_step_id": "LP-069",
+    "career_goal_name": "QA Automation Engineer",
+    "step_number": 1,
+    "title": "Software Testing Basics",
+    "description": "Understand testing lifecycles, bug reporting, and manual testing techniques.",
+    "duration_weeks": 3,
+    "skills_covered": ["Quality Assurance", "Testing", "Jira"]
+  },
+  {
+    "learning_step_id": "LP-070",
+    "career_goal_name": "QA Automation Engineer",
+    "step_number": 2,
+    "title": "Programming for QA (Java/Python)",
+    "description": "Learn coding basics required for writing automation scripts.",
+    "duration_weeks": 4,
+    "skills_covered": ["Java", "Python", "Scripting"]
+  },
+  {
+    "learning_step_id": "LP-071",
+    "career_goal_name": "QA Automation Engineer",
+    "step_number": 3,
+    "title": "Selenium WebDriver",
+    "description": "Master browser automation, element locators, and TestNG/JUnit.",
+    "duration_weeks": 6,
+    "skills_covered": ["Selenium", "Automation", "Web Testing"]
+  },
+  {
+    "learning_step_id": "LP-072",
+    "career_goal_name": "QA Automation Engineer",
+    "step_number": 4,
+    "title": "API Testing",
+    "description": "Automate API tests using Postman and REST Assured.",
+    "duration_weeks": 3,
+    "skills_covered": ["API Testing", "Postman", "REST"]
+  },
+  {
+    "learning_step_id": "LP-073",
+    "career_goal_name": "QA Automation Engineer",
+    "step_number": 5,
+    "title": "CI/CD for QA",
+    "description": "Integrate test suites into Jenkins pipelines for continuous testing.",
+    "duration_weeks": 3,
+    "skills_covered": ["Jenkins", "CI/CD", "DevOps"]
+  },
+  {
+    "learning_step_id": "LP-074",
+    "career_goal_name": "Blockchain Developer",
+    "step_number": 1,
+    "title": "Blockchain Fundamentals",
+    "description": "Understand distributed ledgers, consensus mechanisms, and cryptography.",
+    "duration_weeks": 3,
+    "skills_covered": ["Blockchain", "Cryptography", "Theory"]
+  },
+  {
+    "learning_step_id": "LP-075",
+    "career_goal_name": "Blockchain Developer",
+    "step_number": 2,
+    "title": "Smart Contracts with Solidity",
+    "description": "Learn to write and deploy smart contracts on Ethereum.",
+    "duration_weeks": 6,
+    "skills_covered": ["Solidity", "Smart Contracts", "Ethereum"]
+  },
+  {
+    "learning_step_id": "LP-076",
+    "career_goal_name": "Blockchain Developer",
+    "step_number": 3,
+    "title": "Web3 Integration",
+    "description": "Connect frontends to the blockchain using Web3.js or Ethers.js.",
+    "duration_weeks": 4,
+    "skills_covered": ["JavaScript", "Web3.js", "DApps"]
+  },
+  {
+    "learning_step_id": "LP-077",
+    "career_goal_name": "Blockchain Developer",
+    "step_number": 4,
+    "title": "Testing & Security",
+    "description": "Test contracts with Truffle/Hardhat and learn security best practices.",
+    "duration_weeks": 4,
+    "skills_covered": ["Testing", "Security", "Hardhat"]
+  },
+  {
+    "learning_step_id": "LP-078",
+    "career_goal_name": "Blockchain Developer",
+    "step_number": 5,
+    "title": "DeFi & NFT Standards",
+    "description": "Deep dive into ERC-20 and ERC-721 token standards.",
+    "duration_weeks": 3,
+    "skills_covered": ["DeFi", "NFTs", "Standards"]
+  },
+  {
+    "learning_step_id": "LP-079",
+    "career_goal_name": "Game Developer",
+    "step_number": 1,
+    "title": "C# Programming",
+    "description": "Master C# specifically for game scripting.",
+    "duration_weeks": 4,
+    "skills_covered": ["C#", "Programming", "Scripting"]
+  },
+  {
+    "learning_step_id": "LP-080",
+    "career_goal_name": "Game Developer",
+    "step_number": 2,
+    "title": "Unity Engine Basics",
+    "description": "Learn the Unity editor, physics engine, and object management.",
+    "duration_weeks": 5,
+    "skills_covered": ["Unity", "Game Engines", "Physics"]
+  },
+  {
+    "learning_step_id": "LP-081",
+    "career_goal_name": "Game Developer",
+    "step_number": 3,
+    "title": "2D & 3D Game Design",
+    "description": "Understand sprites, animations, 3D models, and lighting.",
+    "duration_weeks": 4,
+    "skills_covered": ["Game Design", "Animation", "3D Modeling"]
+  },
+  {
+    "learning_step_id": "LP-082",
+    "career_goal_name": "Game Developer",
+    "step_number": 4,
+    "title": "Game UI & Audio",
+    "description": "Implement user interfaces and integrate sound effects/music.",
+    "duration_weeks": 3,
+    "skills_covered": ["UI Design", "Audio Integration", "Unity"]
+  },
+  {
+    "learning_step_id": "LP-083",
+    "career_goal_name": "Game Developer",
+    "step_number": 5,
+    "title": "Multiplayer Networking",
+    "description": "Learn to create networked games using Photon or Unity Netcode.",
+    "duration_weeks": 5,
+    "skills_covered": ["Networking", "Multiplayer", "Backend"]
+  },
+  {
+    "learning_step_id": "LP-084",
+    "career_goal_name": "Network Engineer",
+    "step_number": 1,
+    "title": "Networking Fundamentals (CCNA)",
+    "description": "Master IP addressing, subnetting, OSI model, and switching.",
+    "duration_weeks": 6,
+    "skills_covered": ["Networking", "TCP/IP", "Subnetting"]
+  },
+  {
+    "learning_step_id": "LP-085",
+    "career_goal_name": "Network Engineer",
+    "step_number": 2,
+    "title": "Routing & Switching",
+    "description": "Configure routers, switches, VLANs, and routing protocols (OSPF, BGP).",
+    "duration_weeks": 5,
+    "skills_covered": ["Cisco IOS", "Routing", "Switching"]
+  },
+  {
+    "learning_step_id": "LP-086",
+    "career_goal_name": "Network Engineer",
+    "step_number": 3,
+    "title": "Network Security",
+    "description": "Implement firewalls, VPNs, and ACLs to secure the network.",
+    "duration_weeks": 4,
+    "skills_covered": ["Cybersecurity", "Firewalls", "VPN"]
+  },
+  {
+    "learning_step_id": "LP-087",
+    "career_goal_name": "Network Engineer",
+    "step_number": 4,
+    "title": "Network Automation",
+    "description": "Automate configurations using Python (Netmiko) and Ansible.",
+    "duration_weeks": 5,
+    "skills_covered": ["Python", "Ansible", "Automation"]
+  },
+  {
+    "learning_step_id": "LP-088",
+    "career_goal_name": "Network Engineer",
+    "step_number": 5,
+    "title": "Cloud Networking",
+    "description": "Understand VPCs, load balancers, and hybrid connectivity in AWS/Azure.",
+    "duration_weeks": 4,
+    "skills_covered": ["Cloud Computing", "AWS", "Networking"]
+  },
+  {
+    "learning_step_id": "LP-089",
+    "career_goal_name": "Data Engineer",
+    "step_number": 1,
+    "title": "Advanced SQL & Warehousing",
+    "description": "Master complex SQL and understand data warehousing concepts (Snowflake/Redshift).",
+    "duration_weeks": 5,
+    "skills_covered": ["SQL", "Data Warehousing", "Database Design"]
+  },
+  {
+    "learning_step_id": "LP-090",
+    "career_goal_name": "Data Engineer",
+    "step_number": 2,
+    "title": "Big Data Processing",
+    "description": "Learn distributed computing with Apache Spark (PySpark).",
+    "duration_weeks": 6,
+    "skills_covered": ["Apache Spark", "Python", "Big Data"]
+  },
+  {
+    "learning_step_id": "LP-091",
+    "career_goal_name": "Data Engineer",
+    "step_number": 3,
+    "title": "Data Pipelines & ETL",
+    "description": "Build automated ETL pipelines using Apache Airflow.",
+    "duration_weeks": 5,
+    "skills_covered": ["ETL", "Airflow", "Python"]
+  },
+  {
+    "learning_step_id": "LP-092",
+    "career_goal_name": "Data Engineer",
+    "step_number": 4,
+    "title": "Streaming Data",
+    "description": "Handle real-time data streams using Apache Kafka.",
+    "duration_weeks": 4,
+    "skills_covered": ["Apache Kafka", "Streaming", "Java"]
+  },
+  {
+    "learning_step_id": "LP-093",
+    "career_goal_name": "Data Engineer",
+    "step_number": 5,
+    "title": "Cloud Data Engineering",
+    "description": "Deploy data solutions on AWS (Glue, EMR, S3).",
+    "duration_weeks": 4,
+    "skills_covered": ["AWS", "Cloud Computing", "Infrastructure"]
+  },
+  {
+    "learning_step_id": "LP-094",
+    "career_goal_name": "Digital Marketer",
+    "step_number": 1,
+    "title": "Marketing Fundamentals",
+    "description": "Understand customer personas, funnels, and brand positioning.",
+    "duration_weeks": 3,
+    "skills_covered": ["Marketing", "Strategy", "Research"]
+  },
+  {
+    "learning_step_id": "LP-095",
+    "career_goal_name": "Digital Marketer",
+    "step_number": 2,
+    "title": "Content & Social Media",
+    "description": "Create engaging content and manage social media calendars.",
+    "duration_weeks": 4,
+    "skills_covered": ["Content Creation", "Social Media", "Copywriting"]
+  },
+  {
+    "learning_step_id": "LP-096",
+    "career_goal_name": "Digital Marketer",
+    "step_number": 3,
+    "title": "SEO Mastery",
+    "description": "Learn on-page, off-page, and technical SEO to rank websites.",
+    "duration_weeks": 5,
+    "skills_covered": ["SEO", "Analytics", "Keyword Research"]
+  },
+  {
+    "learning_step_id": "LP-097",
+    "career_goal_name": "Digital Marketer",
+    "step_number": 4,
+    "title": "Paid Advertising (PPC)",
+    "description": "Run profitable campaigns on Google Ads and Facebook Ads.",
+    "duration_weeks": 5,
+    "skills_covered": ["PPC", "Google Ads", "Advertising"]
+  },
+  {
+    "learning_step_id": "LP-098",
+    "career_goal_name": "Digital Marketer",
+    "step_number": 5,
+    "title": "Analytics & Reporting",
+    "description": "Measure ROI using Google Analytics and Looker Studio.",
+    "duration_weeks": 3,
+    "skills_covered": ["Data Analysis", "Google Analytics", "Reporting"]
+  },
+  {
+    "learning_step_id": "LP-099",
+    "career_goal_name": "Software Sales Representative",
+    "step_number": 1,
+    "title": "Sales Methodologies",
+    "description": "Learn consultative selling, SPIN selling, and challenger sales models.",
+    "duration_weeks": 3,
+    "skills_covered": ["Sales", "Communication", "Psychology"]
+  },
+  {
+    "learning_step_id": "LP-100",
+    "career_goal_name": "Software Sales Representative",
+    "step_number": 2,
+    "title": "Prospecting & Lead Gen",
+    "description": "Master cold calling, emailing, and using LinkedIn Sales Navigator.",
+    "duration_weeks": 4,
+    "skills_covered": ["Lead Generation", "LinkedIn", "Outreach"]
+  },
+  {
+    "learning_step_id": "LP-101",
+    "career_goal_name": "Software Sales Representative",
+    "step_number": 3,
+    "title": "CRM Proficiency",
+    "description": "Manage pipelines and contacts efficiently in Salesforce or HubSpot.",
+    "duration_weeks": 3,
+    "skills_covered": ["CRM", "Salesforce", "Organization"]
+  },
+  {
+    "learning_step_id": "LP-102",
+    "career_goal_name": "Software Sales Representative",
+    "step_number": 4,
+    "title": "Demo & Presentation",
+    "description": "Deliver compelling product demos and handle objections.",
+    "duration_weeks": 4,
+    "skills_covered": ["Presentation", "Public Speaking", "Negotiation"]
+  },
+  {
+    "learning_step_id": "LP-103",
+    "career_goal_name": "Software Sales Representative",
+    "step_number": 5,
+    "title": "Closing & Negotiation",
+    "description": "Learn contract negotiation and closing techniques.",
+    "duration_weeks": 3,
+    "skills_covered": ["Negotiation", "Closing", "Contracts"]
+  },
+  {
+    "learning_step_id": "LP-104",
+    "career_goal_name": "Technical Writer",
+    "step_number": 1,
+    "title": "Technical Writing Basics",
+    "description": "Understand audience analysis, clarity, and conciseness.",
+    "duration_weeks": 3,
+    "skills_covered": ["Writing", "Communication", "Grammar"]
+  },
+  {
+    "learning_step_id": "LP-105",
+    "career_goal_name": "Technical Writer",
+    "step_number": 2,
+    "title": "Documentation Tools",
+    "description": "Master Markdown, static site generators, and help authoring tools.",
+    "duration_weeks": 3,
+    "skills_covered": ["Markdown", "Tools", "Documentation"]
+  },
+  {
+    "learning_step_id": "LP-106",
+    "career_goal_name": "Technical Writer",
+    "step_number": 3,
+    "title": "API Documentation",
+    "description": "Learn to read code and document APIs using Swagger/OpenAPI.",
+    "duration_weeks": 5,
+    "skills_covered": ["API", "JSON", "Documentation"]
+  },
+  {
+    "learning_step_id": "LP-107",
+    "career_goal_name": "Technical Writer",
+    "step_number": 4,
+    "title": "Git & Docs-as-Code",
+    "description": "Manage documentation versioning using Git and GitHub workflows.",
+    "duration_weeks": 3,
+    "skills_covered": ["Git", "Version Control", "Workflow"]
+  },
+  {
+    "learning_step_id": "LP-108",
+    "career_goal_name": "Technical Writer",
+    "step_number": 5,
+    "title": "Information Architecture",
+    "description": "Structure complex information for usability and findability.",
+    "duration_weeks": 3,
+    "skills_covered": ["Information Architecture", "UX Writing", "Planning"]
+  },
+  {
+    "learning_step_id": "LP-109",
+    "career_goal_name": "Product Owner",
+    "step_number": 1,
+    "title": "Agile Product Management",
+    "description": "Understand the role of PO in Scrum and Agile teams.",
+    "duration_weeks": 3,
+    "skills_covered": ["Agile", "Scrum", "Management"]
+  },
+  {
+    "learning_step_id": "LP-110",
+    "career_goal_name": "Product Owner",
+    "step_number": 2,
+    "title": "User Stories & Backlog",
+    "description": "Write effective user stories and prioritize the product backlog.",
+    "duration_weeks": 4,
+    "skills_covered": ["Backlog Management", "Writing", "Prioritization"]
+  },
+  {
+    "learning_step_id": "LP-111",
+    "career_goal_name": "Product Owner",
+    "step_number": 3,
+    "title": "Stakeholder Management",
+    "description": "Learn to balance stakeholder needs and communicate roadmaps.",
+    "duration_weeks": 4,
+    "skills_covered": ["Communication", "Stakeholder Management", "Negotiation"]
+  },
+  {
+    "learning_step_id": "LP-112",
+    "career_goal_name": "Product Owner",
+    "step_number": 4,
+    "title": "Product Strategy & Vision",
+    "description": "Define product vision and align it with business goals.",
+    "duration_weeks": 3,
+    "skills_covered": ["Strategy", "Vision", "Business Analysis"]
+  },
+  {
+    "learning_step_id": "LP-113",
+    "career_goal_name": "Product Owner",
+    "step_number": 5,
+    "title": "Data-Driven Decisions",
+    "description": "Use metrics and analytics to guide product development.",
+    "duration_weeks": 3,
+    "skills_covered": ["Data Analysis", "Analytics", "Decision Making"]
+  },
+  {
+    "learning_step_id": "LP-114",
+    "career_goal_name": "Site Reliability Engineer",
+    "step_number": 1,
+    "title": "Linux & Systems Internals",
+    "description": "Deep dive into kernel, memory management, and process scheduling.",
+    "duration_weeks": 5,
+    "skills_covered": ["Linux", "Operating Systems", "Performance"]
+  },
+  {
+    "learning_step_id": "LP-115",
+    "career_goal_name": "Site Reliability Engineer",
+    "step_number": 2,
+    "title": "Coding for Ops (Go/Python)",
+    "description": "Write efficient code for tooling and automation.",
+    "duration_weeks": 5,
+    "skills_covered": ["Go", "Python", "Programming"]
+  },
+  {
+    "learning_step_id": "LP-116",
+    "career_goal_name": "Site Reliability Engineer",
+    "step_number": 3,
+    "title": "Observability",
+    "description": "Implement logs, metrics, and traces (Prometheus/Grafana/ELK).",
+    "duration_weeks": 4,
+    "skills_covered": ["Monitoring", "Observability", "Logging"]
+  },
+  {
+    "learning_step_id": "LP-117",
+    "career_goal_name": "Site Reliability Engineer",
+    "step_number": 4,
+    "title": "Reliability Engineering",
+    "description": "Define SLIs, SLOs, SLAs, and manage error budgets.",
+    "duration_weeks": 3,
+    "skills_covered": ["SRE", "Reliability", "Metrics"]
+  },
+  {
+    "learning_step_id": "LP-118",
+    "career_goal_name": "Site Reliability Engineer",
+    "step_number": 5,
+    "title": "Incident Management",
+    "description": "Manage on-call rotations, post-mortems, and root cause analysis.",
+    "duration_weeks": 3,
+    "skills_covered": ["Incident Management", "Communication", "Analysis"]
+  },
+  {
+    "learning_step_id": "LP-119",
+    "career_goal_name": "Database Administrator",
+    "step_number": 1,
+    "title": "Database Architecture",
+    "description": "Understand storage engines, indexing strategies, and memory management.",
+    "duration_weeks": 4,
+    "skills_covered": ["Database", "Architecture", "Theory"]
+  },
+  {
+    "learning_step_id": "LP-120",
+    "career_goal_name": "Database Administrator",
+    "step_number": 2,
+    "title": "SQL Performance Tuning",
+    "description": "Analyze query plans and optimize slow-running queries.",
+    "duration_weeks": 5,
+    "skills_covered": ["SQL", "Performance Tuning", "Optimization"]
+  },
+  {
+    "learning_step_id": "LP-121",
+    "career_goal_name": "Database Administrator",
+    "step_number": 3,
+    "title": "Backup & Recovery Strategies",
+    "description": "Implement robust backup plans (full, differential, transaction logs) and practice disaster recovery.",
+    "duration_weeks": 3,
+    "skills_covered": ["Backup", "Disaster Recovery", "Reliability"]
+  },
+  {
+    "learning_step_id": "LP-122",
+    "career_goal_name": "Database Administrator",
+    "step_number": 4,
+    "title": "High Availability & Replication",
+    "description": "Configure clustering, mirroring, and Always On availability groups.",
+    "duration_weeks": 4,
+    "skills_covered": ["High Availability", "Replication", "Clustering"]
+  },
+  {
+    "learning_step_id": "LP-123",
+    "career_goal_name": "Database Administrator",
+    "step_number": 5,
+    "title": "Database Security",
+    "description": "Manage user permissions, encryption, and auditing.",
+    "duration_weeks": 3,
+    "skills_covered": ["Security", "Auditing", "Compliance"]
+  },
+  {
+    "learning_step_id": "LP-124",
+    "career_goal_name": "Marketing Analyst",
+    "step_number": 1,
+    "title": "Data Collection & Cleaning",
+    "description": "Learn to gather data from various sources (social, web, CRM) and clean it for analysis.",
+    "duration_weeks": 3,
+    "skills_covered": ["Data Collection", "Excel", "Data Cleaning"]
+  },
+  {
+    "learning_step_id": "LP-125",
+    "career_goal_name": "Marketing Analyst",
+    "step_number": 2,
+    "title": "Statistical Analysis for Marketing",
+    "description": "Apply statistics to understand customer segments and A/B test results.",
+    "duration_weeks": 4,
+    "skills_covered": ["Statistics", "A/B Testing", "Analysis"]
+  },
+  {
+    "learning_step_id": "LP-126",
+    "career_goal_name": "Marketing Analyst",
+    "step_number": 3,
+    "title": "Visualization & Dashboarding",
+    "description": "Build marketing dashboards in Power BI or Tableau to track KPIs.",
+    "duration_weeks": 4,
+    "skills_covered": ["Power BI", "Tableau", "Reporting"]
+  },
+  {
+    "learning_step_id": "LP-127",
+    "career_goal_name": "Marketing Analyst",
+    "step_number": 4,
+    "title": "Campaign Analysis",
+    "description": "Analyze the performance of email, PPC, and social media campaigns.",
+    "duration_weeks": 3,
+    "skills_covered": ["Marketing", "Analytics", "ROI Analysis"]
+  },
+  {
+    "learning_step_id": "LP-128",
+    "career_goal_name": "Marketing Analyst",
+    "step_number": 5,
+    "title": "Predictive Modeling Basics",
+    "description": "Use basic Python/R to forecast sales and churn.",
+    "duration_weeks": 5,
+    "skills_covered": ["Python", "Forecasting", "Modeling"]
+  },
+  {
+    "learning_step_id": "LP-129",
+    "career_goal_name": "Graphic Designer",
+    "step_number": 1,
+    "title": "Visual Design Theory",
+    "description": "Master composition, color theory, typography, and grid systems.",
+    "duration_weeks": 3,
+    "skills_covered": ["Design Theory", "Color Theory", "Typography"]
+  },
+  {
+    "learning_step_id": "LP-130",
+    "career_goal_name": "Graphic Designer",
+    "step_number": 2,
+    "title": "Adobe Photoshop Mastery",
+    "description": "Learn photo manipulation, retouching, and raster graphics.",
+    "duration_weeks": 4,
+    "skills_covered": ["Adobe Photoshop", "Photo Editing", "Design"]
+  },
+  {
+    "learning_step_id": "LP-131",
+    "career_goal_name": "Graphic Designer",
+    "step_number": 3,
+    "title": "Vector Art with Illustrator",
+    "description": "Create logos, icons, and illustrations using vector tools.",
+    "duration_weeks": 5,
+    "skills_covered": ["Adobe Illustrator", "Vector Art", "Branding"]
+  },
+  {
+    "learning_step_id": "LP-132",
+    "career_goal_name": "Graphic Designer",
+    "step_number": 4,
+    "title": "Layout Design (InDesign)",
+    "description": "Design brochures, magazines, and digital publications.",
+    "duration_weeks": 3,
+    "skills_covered": ["Adobe InDesign", "Layout", "Print Design"]
+  },
+  {
+    "learning_step_id": "LP-133",
+    "career_goal_name": "Graphic Designer",
+    "step_number": 5,
+    "title": "Portfolio Development",
+    "description": "Curate and present your best work in a professional portfolio.",
+    "duration_weeks": 2,
+    "skills_covered": ["Portfolio", "Presentation", "Self-Promotion"]
+  },
+  {
+    "learning_step_id": "LP-134",
+    "career_goal_name": "IT Support Specialist",
+    "step_number": 1,
+    "title": "Computer Hardware & OS",
+    "description": "Understand PC components and installation of Windows/macOS.",
+    "duration_weeks": 3,
+    "skills_covered": ["Hardware", "Windows", "MacOS"]
+  },
+  {
+    "learning_step_id": "LP-135",
+    "career_goal_name": "IT Support Specialist",
+    "step_number": 2,
+    "title": "Basic Networking",
+    "description": "Troubleshoot connectivity issues (DNS, DHCP, Wi-Fi).",
+    "duration_weeks": 3,
+    "skills_covered": ["Networking", "Troubleshooting", "Wi-Fi"]
+  },
+  {
+    "learning_step_id": "LP-136",
+    "career_goal_name": "IT Support Specialist",
+    "step_number": 3,
+    "title": "Ticketing Systems & Customer Service",
+    "description": "Learn to log, prioritize, and resolve tickets (ServiceNow/Jira).",
+    "duration_weeks": 2,
+    "skills_covered": ["ServiceNow", "Customer Service", "Communication"]
+  },
+  {
+    "learning_step_id": "LP-137",
+    "career_goal_name": "IT Support Specialist",
+    "step_number": 4,
+    "title": "Active Directory Administration",
+    "description": "Manage users, groups, and passwords in AD.",
+    "duration_weeks": 3,
+    "skills_covered": ["Active Directory", "User Management", "Security"]
+  },
+  {
+    "learning_step_id": "LP-138",
+    "career_goal_name": "IT Support Specialist",
+    "step_number": 5,
+    "title": "Remote Support Tools",
+    "description": "Use RDP, TeamViewer, and SSH to support remote users.",
+    "duration_weeks": 2,
+    "skills_covered": ["Remote Support", "Troubleshooting", "Tools"]
+  },
+  {
+    "learning_step_id": "LP-139",
+    "career_goal_name": "Systems Administrator",
+    "step_number": 1,
+    "title": "Server Configuration",
+    "description": "Install and configure Linux and Windows servers.",
+    "duration_weeks": 4,
+    "skills_covered": ["Linux", "Windows Server", "Configuration"]
+  },
+  {
+    "learning_step_id": "LP-140",
+    "career_goal_name": "Systems Administrator",
+    "step_number": 2,
+    "title": "User & Group Management",
+    "description": "Manage permissions, file systems, and user accounts.",
+    "duration_weeks": 3,
+    "skills_covered": ["Linux", "Security", "Administration"]
+  },
+  {
+    "learning_step_id": "LP-141",
+    "career_goal_name": "Systems Administrator",
+    "step_number": 3,
+    "title": "Scripting & Automation",
+    "description": "Automate routine tasks using Bash and PowerShell.",
+    "duration_weeks": 5,
+    "skills_covered": ["Bash", "PowerShell", "Automation"]
+  },
+  {
+    "learning_step_id": "LP-142",
+    "career_goal_name": "Systems Administrator",
+    "step_number": 4,
+    "title": "Virtualization",
+    "description": "Deploy and manage VMs using VMware or Hyper-V.",
+    "duration_weeks": 4,
+    "skills_covered": ["VMware", "Virtualization", "Infrastructure"]
+  },
+  {
+    "learning_step_id": "LP-143",
+    "career_goal_name": "Systems Administrator",
+    "step_number": 5,
+    "title": "Monitoring & Logging",
+    "description": "Set up Nagios, Zabbix, or Prometheus to monitor system health.",
+    "duration_weeks": 3,
+    "skills_covered": ["Monitoring", "Nagios", "Maintenance"]
+  },
+  {
+    "learning_step_id": "LP-144",
+    "career_goal_name": "Embedded Systems Engineer",
+    "step_number": 1,
+    "title": "C/C++ Programming",
+    "description": "Master low-level programming and memory management.",
+    "duration_weeks": 5,
+    "skills_covered": ["C", "C++", "Programming"]
+  },
+  {
+    "learning_step_id": "LP-145",
+    "career_goal_name": "Embedded Systems Engineer",
+    "step_number": 2,
+    "title": "Microcontroller Architecture",
+    "description": "Understand registers, interrupts, and GPIO (ARM/AVR).",
+    "duration_weeks": 4,
+    "skills_covered": ["Microcontrollers", "Hardware", "Architecture"]
+  },
+  {
+    "learning_step_id": "LP-146",
+    "career_goal_name": "Embedded Systems Engineer",
+    "step_number": 3,
+    "title": "Communication Protocols",
+    "description": "Implement I2C, SPI, UART, and CAN protocols.",
+    "duration_weeks": 4,
+    "skills_covered": ["Networking", "Protocols", "Embedded Systems"]
+  },
+  {
+    "learning_step_id": "LP-147",
+    "career_goal_name": "Embedded Systems Engineer",
+    "step_number": 4,
+    "title": "Real-Time Operating Systems (RTOS)",
+    "description": "Learn task scheduling and concurrency with FreeRTOS.",
+    "duration_weeks": 5,
+    "skills_covered": ["RTOS", "Concurrency", "Scheduling"]
+  },
+  {
+    "learning_step_id": "LP-148",
+    "career_goal_name": "Embedded Systems Engineer",
+    "step_number": 5,
+    "title": "Hardware Debugging",
+    "description": "Use oscilloscopes, logic analyzers, and JTAG debuggers.",
+    "duration_weeks": 3,
+    "skills_covered": ["Debugging", "Electronics", "Testing"]
+  },
+  {
+    "learning_step_id": "LP-149",
+    "career_goal_name": "AI Research Scientist",
+    "step_number": 1,
+    "title": "Advanced Mathematics",
+    "description": "Deep dive into linear algebra, calculus, and probability theory.",
+    "duration_weeks": 6,
+    "skills_covered": ["Mathematics", "Statistics", "Theory"]
+  },
+  {
+    "learning_step_id": "LP-150",
+    "career_goal_name": "AI Research Scientist",
+    "step_number": 2,
+    "title": "Research Paper Reading",
+    "description": "Learn to read, critique, and implement state-of-the-art AI papers.",
+    "duration_weeks": 4,
+    "skills_covered": ["Research", "Critical Thinking", "Analysis"]
+  },
+  {
+    "learning_step_id": "LP-151",
+    "career_goal_name": "AI Research Scientist",
+    "step_number": 3,
+    "title": "Advanced Deep Learning",
+    "description": "Master Transformers, GANs, and Reinforcement Learning.",
+    "duration_weeks": 8,
+    "skills_covered": ["Deep Learning", "PyTorch", "AI"]
+  },
+  {
+    "learning_step_id": "LP-152",
+    "career_goal_name": "AI Research Scientist",
+    "step_number": 4,
+    "title": "Experimentation & Tracking",
+    "description": "Run controlled experiments using Weights & Biases.",
+    "duration_weeks": 4,
+    "skills_covered": ["Experimentation", "MLOps", "Data Science"]
+  },
+  {
+    "learning_step_id": "LP-153",
+    "career_goal_name": "AI Research Scientist",
+    "step_number": 5,
+    "title": "Publishing & Writing",
+    "description": "Learn to write LaTeX papers for conferences like NeurIPS/ICML.",
+    "duration_weeks": 4,
+    "skills_covered": ["Writing", "LaTeX", "Research"]
+  },
+  {
+    "learning_step_id": "LP-154",
+    "career_goal_name": "Scrum Master",
+    "step_number": 1,
+    "title": "Agile Manifesto & Principles",
+    "description": "Understand the core values and history of Agile.",
+    "duration_weeks": 2,
+    "skills_covered": ["Agile", "Theory", "Mindset"]
+  },
+  {
+    "learning_step_id": "LP-155",
+    "career_goal_name": "Scrum Master",
+    "step_number": 2,
+    "title": "Scrum Framework",
+    "description": "Master roles, events, and artifacts of Scrum.",
+    "duration_weeks": 3,
+    "skills_covered": ["Scrum", "Process", "Management"]
+  },
+  {
+    "learning_step_id": "LP-156",
+    "career_goal_name": "Scrum Master",
+    "step_number": 3,
+    "title": "Servant Leadership & Coaching",
+    "description": "Learn to facilitate meetings and remove impediments for the team.",
+    "duration_weeks": 4,
+    "skills_covered": ["Leadership", "Coaching", "Communication"]
+  },
+  {
+    "learning_step_id": "LP-157",
+    "career_goal_name": "Scrum Master",
+    "step_number": 4,
+    "title": "Jira Administration",
+    "description": "Configure boards, workflows, and reports in Jira.",
+    "duration_weeks": 3,
+    "skills_covered": ["Jira", "Tools", "Reporting"]
+  },
+  {
+    "learning_step_id": "LP-158",
+    "career_goal_name": "Scrum Master",
+    "step_number": 5,
+    "title": "Scaling Agile",
+    "description": "Introduction to frameworks like SAFe and LeSS.",
+    "duration_weeks": 3,
+    "skills_covered": ["Scaling", "SAFe", "Enterprise"]
+  },
+  {
+    "learning_step_id": "LP-159",
+    "career_goal_name": "DevSecOps Engineer",
+    "step_number": 1,
+    "title": "DevOps Foundation",
+    "description": "Ensure strong grasp of CI/CD, Git, and Docker.",
+    "duration_weeks": 4,
+    "skills_covered": ["DevOps", "CI/CD", "Docker"]
+  },
+  {
+    "learning_step_id": "LP-160",
+    "career_goal_name": "DevSecOps Engineer",
+    "step_number": 2,
+    "title": "SAST & DAST",
+    "description": "Integrate Static and Dynamic Application Security Testing tools (SonarQube, OWASP ZAP).",
+    "duration_weeks": 4,
+    "skills_covered": ["Security Testing", "SonarQube", "Automation"]
+  },
+  {
+    "learning_step_id": "LP-161",
+    "career_goal_name": "DevSecOps Engineer",
+    "step_number": 3,
+    "title": "Container Security",
+    "description": "Secure Docker images and Kubernetes clusters.",
+    "duration_weeks": 4,
+    "skills_covered": ["Container Security", "Kubernetes", "Security"]
+  },
+  {
+    "learning_step_id": "LP-162",
+    "career_goal_name": "DevSecOps Engineer",
+    "step_number": 4,
+    "title": "Compliance as Code",
+    "description": "Automate policy enforcement using tools like OPA.",
+    "duration_weeks": 3,
+    "skills_covered": ["Compliance", "Policy", "Automation"]
+  },
+  {
+    "learning_step_id": "LP-163",
+    "career_goal_name": "DevSecOps Engineer",
+    "step_number": 5,
+    "title": "Security Monitoring",
+    "description": "Implement runtime security monitoring and alerting.",
+    "duration_weeks": 3,
+    "skills_covered": ["Monitoring", "Security", "Alerting"]
+  },
+  {
+    "learning_step_id": "LP-164",
+    "career_goal_name": "Salesforce Developer",
+    "step_number": 1,
+    "title": "Salesforce Admin Basics",
+    "description": "Understand objects, fields, security models, and automation tools (Flows).",
+    "duration_weeks": 4,
+    "skills_covered": ["Salesforce", "Administration", "Configuration"]
+  },
+  {
+    "learning_step_id": "LP-165",
+    "career_goal_name": "Salesforce Developer",
+    "step_number": 2,
+    "title": "Apex Programming",
+    "description": "Learn Apex syntax, triggers, classes, and SOQL.",
+    "duration_weeks": 6,
+    "skills_covered": ["Apex", "Programming", "Database"]
+  },
+  {
+    "learning_step_id": "LP-166",
+    "career_goal_name": "Salesforce Developer",
+    "step_number": 3,
+    "title": "Lightning Web Components",
+    "description": "Build modern UIs using LWC and JavaScript.",
+    "duration_weeks": 5,
+    "skills_covered": ["JavaScript", "LWC", "Frontend"]
+  },
+  {
+    "learning_step_id": "LP-167",
+    "career_goal_name": "Salesforce Developer",
+    "step_number": 4,
+    "title": "Integrations",
+    "description": "Connect Salesforce with external systems using REST/SOAP APIs.",
+    "duration_weeks": 4,
+    "skills_covered": ["API Integration", "REST", "System Design"]
+  },
+  {
+    "learning_step_id": "LP-168",
+    "career_goal_name": "Salesforce Developer",
+    "step_number": 5,
+    "title": "Deployment & Testing",
+    "description": "Master unit testing in Apex and deployment using DX/DevOps.",
+    "duration_weeks": 3,
+    "skills_covered": ["Testing", "Deployment", "DevOps"]
+  },
+  {
+    "learning_step_id": "LP-169",
+    "career_goal_name": "Robotics Engineer",
+    "step_number": 1,
+    "title": "Robotics Foundations",
+    "description": "Learn coordinate transforms, kinematics, and dynamics.",
+    "duration_weeks": 5,
+    "skills_covered": ["Mathematics", "Physics", "Robotics"]
+  },
+  {
+    "learning_step_id": "LP-170",
+    "career_goal_name": "Robotics Engineer",
+    "step_number": 2,
+    "title": "ROS (Robot Operating System)",
+    "description": "Master nodes, topics, services, and simulation in Gazebo.",
+    "duration_weeks": 6,
+    "skills_covered": ["ROS", "Linux", "Simulation"]
+  },
+  {
+    "learning_step_id": "LP-171",
+    "career_goal_name": "Robotics Engineer",
+    "step_number": 3,
+    "title": "Sensors & Perception",
+    "description": "Work with LIDAR, cameras, and IMUs to perceive the environment.",
+    "duration_weeks": 4,
+    "skills_covered": ["Sensors", "Computer Vision", "Hardware"]
+  },
+  {
+    "learning_step_id": "LP-172",
+    "career_goal_name": "Robotics Engineer",
+    "step_number": 4,
+    "title": "Path Planning & Navigation",
+    "description": "Implement algorithms like A* and RRT for autonomous navigation.",
+    "duration_weeks": 5,
+    "skills_covered": ["Algorithms", "AI", "Navigation"]
+  },
+  {
+    "learning_step_id": "LP-173",
+    "career_goal_name": "Robotics Engineer",
+    "step_number": 5,
+    "title": "Control Systems",
+    "description": "Design PID controllers for precise motor control.",
+    "duration_weeks": 4,
+    "skills_covered": ["Control Theory", "Mathematics", "Engineering"]
+  },
+  {
+    "learning_step_id": "LP-174",
+    "career_goal_name": "Data Analyst",
+    "step_number": 1,
+    "title": "Spreadsheet Mastery",
+    "description": "Advanced Excel/Sheets: Lookups, Pivot Tables, and Macros.",
+    "duration_weeks": 3,
+    "skills_covered": ["Excel", "Data Analysis", "Reporting"]
+  },
+  {
+    "learning_step_id": "LP-175",
+    "career_goal_name": "Data Analyst",
+    "step_number": 2,
+    "title": "SQL for Analytics",
+    "description": "Write efficient SQL queries to extract insights.",
+    "duration_weeks": 4,
+    "skills_covered": ["SQL", "Database", "Querying"]
+  },
+  {
+    "learning_step_id": "LP-176",
+    "career_goal_name": "Data Analyst",
+    "step_number": 3,
+    "title": "Data Visualization",
+    "description": "Create storytelling dashboards in Tableau or Power BI.",
+    "duration_weeks": 4,
+    "skills_covered": ["Tableau", "Power BI", "Communication"]
+  },
+  {
+    "learning_step_id": "LP-177",
+    "career_goal_name": "Data Analyst",
+    "step_number": 4,
+    "title": "Python for Analytics",
+    "description": "Use Pandas and Seaborn for deeper analysis.",
+    "duration_weeks": 5,
+    "skills_covered": ["Python", "Pandas", "Coding"]
+  },
+  {
+    "learning_step_id": "LP-178",
+    "career_goal_name": "Data Analyst",
+    "step_number": 5,
+    "title": "Statistical Thinking",
+    "description": "Apply probability and hypothesis testing to business problems.",
+    "duration_weeks": 3,
+    "skills_covered": ["Statistics", "Critical Thinking", "Math"]
+  },
+  {
+    "learning_step_id": "LP-179",
+    "career_goal_name": "Business Intelligence Analyst",
+    "step_number": 1,
+    "title": "BI Concepts & Data Warehousing",
+    "description": "Understand star schema, ETL, and OLAP cubes.",
+    "duration_weeks": 3,
+    "skills_covered": ["Data Warehousing", "Theory", "BI"]
+  },
+  {
+    "learning_step_id": "LP-180",
+    "career_goal_name": "Business Intelligence Analyst",
+    "step_number": 2,
+    "title": "Advanced SQL & ETL",
+    "description": "Write complex stored procedures and build ETL pipelines.",
+    "duration_weeks": 5,
+    "skills_covered": ["SQL", "ETL", "Database"]
+  },
+  {
+    "learning_step_id": "LP-181",
+    "career_goal_name": "Business Intelligence Analyst",
+    "step_number": 3,
+    "title": "Mastering Power BI / Tableau",
+    "description": "Deep dive into DAX or LOD expressions for complex viz.",
+    "duration_weeks": 5,
+    "skills_covered": ["Power BI", "DAX", "Visualization"]
+  },
+  {
+    "learning_step_id": "LP-182",
+    "career_goal_name": "Business Intelligence Analyst",
+    "step_number": 4,
+    "title": "Data Modeling",
+    "description": "Design efficient data models for reporting.",
+    "duration_weeks": 3,
+    "skills_covered": ["Data Modeling", "Database Design", "Architecture"]
+  },
+  {
+    "learning_step_id": "LP-183",
+    "career_goal_name": "Business Intelligence Analyst",
+    "step_number": 5,
+    "title": "Business Strategy",
+    "description": "Align data insights with business KPIs and strategy.",
+    "duration_weeks": 2,
+    "skills_covered": ["Business", "Strategy", "Communication"]
+  },
+  {
+    "learning_step_id": "LP-184",
+    "career_goal_name": "Natural Language Processing Engineer",
+    "step_number": 1,
+    "title": "Text Processing & Regex",
+    "description": "Learn cleaning, tokenization, stemming, and regex.",
+    "duration_weeks": 3,
+    "skills_covered": ["Python", "NLTK", "Regex"]
+  },
+  {
+    "learning_step_id": "LP-185",
+    "career_goal_name": "Natural Language Processing Engineer",
+    "step_number": 2,
+    "title": "Classical NLP & Embeddings",
+    "description": "Understand TF-IDF, Word2Vec, and GloVe.",
+    "duration_weeks": 4,
+    "skills_covered": ["NLP", "Machine Learning", "Algorithms"]
+  },
+  {
+    "learning_step_id": "LP-186",
+    "career_goal_name": "Natural Language Processing Engineer",
+    "step_number": 3,
+    "title": "Deep Learning for NLP",
+    "description": "Build RNNs, LSTMs, and GRUs for sequence modeling.",
+    "duration_weeks": 5,
+    "skills_covered": ["Deep Learning", "PyTorch", "RNN"]
+  },
+  {
+    "learning_step_id": "LP-187",
+    "career_goal_name": "Natural Language Processing Engineer",
+    "step_number": 4,
+    "title": "Transformers & BERT",
+    "description": "Master the Transformer architecture and attention mechanisms.",
+    "duration_weeks": 5,
+    "skills_covered": ["Transformers", "BERT", "AI"]
+  },
+  {
+    "learning_step_id": "LP-188",
+    "career_goal_name": "Natural Language Processing Engineer",
+    "step_number": 5,
+    "title": "LLMs & Prompt Engineering",
+    "description": "Work with GPT APIs, fine-tuning, and LangChain.",
+    "duration_weeks": 4,
+    "skills_covered": ["LLMs", "LangChain", "Generative AI"]
+  },
+  {
+    "learning_step_id": "LP-189",
+    "career_goal_name": "Computer Vision Engineer",
+    "step_number": 1,
+    "title": "Image Processing Basics",
+    "description": "Learn OpenCV for filtering, transformations, and edge detection.",
+    "duration_weeks": 4,
+    "skills_covered": ["OpenCV", "Python", "Image Processing"]
+  },
+  {
+    "learning_step_id": "LP-190",
+    "career_goal_name": "Computer Vision Engineer",
+    "step_number": 2,
+    "title": "CNNs & Architectures",
+    "description": "Build CNNs and study ResNet, VGG, and Inception.",
+    "duration_weeks": 5,
+    "skills_covered": ["Deep Learning", "CNN", "TensorFlow"]
+  },
+  {
+    "learning_step_id": "LP-191",
+    "career_goal_name": "Computer Vision Engineer",
+    "step_number": 3,
+    "title": "Object Detection",
+    "description": "Implement YOLO and R-CNN families for detection.",
+    "duration_weeks": 5,
+    "skills_covered": ["Object Detection", "YOLO", "AI"]
+  },
+  {
+    "learning_step_id": "LP-192",
+    "career_goal_name": "Computer Vision Engineer",
+    "step_number": 4,
+    "title": "Image Segmentation",
+    "description": "Learn Semantic and Instance segmentation using U-Net.",
+    "duration_weeks": 4,
+    "skills_covered": ["Segmentation", "U-Net", "Computer Vision"]
+  },
+  {
+    "learning_step_id": "LP-193",
+    "career_goal_name": "Computer Vision Engineer",
+    "step_number": 5,
+    "title": "Video Analysis & tracking",
+    "description": "Work on object tracking and action recognition in video.",
+    "duration_weeks": 4,
+    "skills_covered": ["Video Analysis", "Tracking", "Real-time"]
+  },
+  {
+    "learning_step_id": "LP-194",
+    "career_goal_name": "Big Data Architect",
+    "step_number": 1,
+    "title": "Distributed Systems Theory",
+    "description": "Understand CAP theorem, consistency models, and scalability.",
+    "duration_weeks": 3,
+    "skills_covered": ["System Design", "Theory", "Architecture"]
+  },
+  {
+    "learning_step_id": "LP-195",
+    "career_goal_name": "Big Data Architect",
+    "step_number": 2,
+    "title": "Hadoop Ecosystem",
+    "description": "Master HDFS, MapReduce, YARN, and Hive.",
+    "duration_weeks": 5,
+    "skills_covered": ["Hadoop", "Big Data", "Infrastructure"]
+  },
+  {
+    "learning_step_id": "LP-196",
+    "career_goal_name": "Big Data Architect",
+    "step_number": 3,
+    "title": "NoSQL Architectures",
+    "description": "Deep dive into Cassandra, HBase, and MongoDB internals.",
+    "duration_weeks": 5,
+    "skills_covered": ["NoSQL", "Database", "Cassandra"]
+  },
+  {
+    "learning_step_id": "LP-197",
+    "career_goal_name": "Big Data Architect",
+    "step_number": 4,
+    "title": "Stream Processing Architecture",
+    "description": "Design systems using Kafka, Flink, and Spark Streaming.",
+    "duration_weeks": 5,
+    "skills_covered": ["Streaming", "Kafka", "Architecture"]
+  },
+  {
+    "learning_step_id": "LP-198",
+    "career_goal_name": "Big Data Architect",
+    "step_number": 5,
+    "title": "Data Governance & Security",
+    "description": "Implement Kerberos, Ranger, and Atlas for enterprise security.",
+    "duration_weeks": 3,
+    "skills_covered": ["Security", "Governance", "Enterprise"]
+  },
+  {
+    "learning_step_id": "LP-199",
+    "career_goal_name": "MLOps Engineer",
+    "step_number": 1,
+    "title": "Model Packaging",
+    "description": "Learn to containerize models with Docker and expose APIs.",
+    "duration_weeks": 3,
+    "skills_covered": ["Docker", "Python", "API"]
+  },
+  {
+    "learning_step_id": "LP-200",
+    "career_goal_name": "MLOps Engineer",
+    "step_number": 2,
+    "title": "Workflow Orchestration",
+    "description": "Manage ML pipelines using Airflow or Kubeflow.",
+    "duration_weeks": 5,
+    "skills_covered": ["Airflow", "Kubeflow", "Pipelines"]
+  },
+  {
+    "learning_step_id": "LP-201",
+    "career_goal_name": "MLOps Engineer",
+    "step_number": 3,
+    "title": "Model Monitoring & Observability",
+    "description": "Implement drift detection and performance monitoring using Prometheus and Grafana.",
+    "duration_weeks": 4,
+    "skills_covered": ["Monitoring", "Grafana", "Data Science"]
+  },
+  {
+    "learning_step_id": "LP-202",
+    "career_goal_name": "MLOps Engineer",
+    "step_number": 4,
+    "title": "Feature Stores",
+    "description": "Manage features for training and serving using tools like Feast.",
+    "duration_weeks": 3,
+    "skills_covered": ["Feature Engineering", "Feast", "Database"]
+  },
+  {
+    "learning_step_id": "LP-203",
+    "career_goal_name": "MLOps Engineer",
+    "step_number": 5,
+    "title": "Automated Retraining",
+    "description": "Build CI/CD pipelines that trigger retraining based on data drift.",
+    "duration_weeks": 4,
+    "skills_covered": ["CI/CD", "Automation", "DevOps"]
+  },
+  {
+    "learning_step_id": "LP-204",
+    "career_goal_name": "Quantitative Analyst",
+    "step_number": 1,
+    "title": "Mathematical Finance",
+    "description": "Master stochastic calculus, linear algebra, and probability theory.",
+    "duration_weeks": 6,
+    "skills_covered": ["Mathematics", "Calculus", "Probability"]
+  },
+  {
+    "learning_step_id": "LP-205",
+    "career_goal_name": "Quantitative Analyst",
+    "step_number": 2,
+    "title": "C++ for Finance",
+    "description": "Learn high-performance C++ for implementing pricing models.",
+    "duration_weeks": 6,
+    "skills_covered": ["C++", "Programming", "Performance"]
+  },
+  {
+    "learning_step_id": "LP-206",
+    "career_goal_name": "Quantitative Analyst",
+    "step_number": 3,
+    "title": "Derivatives & Pricing",
+    "description": "Understand options, futures, and the Black-Scholes model.",
+    "duration_weeks": 5,
+    "skills_covered": ["Finance", "Modeling", "Economics"]
+  },
+  {
+    "learning_step_id": "LP-207",
+    "career_goal_name": "Quantitative Analyst",
+    "step_number": 4,
+    "title": "Monte Carlo Simulations",
+    "description": "Implement simulations to assess risk and price complex instruments.",
+    "duration_weeks": 4,
+    "skills_covered": ["Simulation", "Python", "Algorithms"]
+  },
+  {
+    "learning_step_id": "LP-208",
+    "career_goal_name": "Quantitative Analyst",
+    "step_number": 5,
+    "title": "Algorithmic Trading Strategies",
+    "description": "Develop and backtest trading strategies using time series data.",
+    "duration_weeks": 5,
+    "skills_covered": ["Trading", "Backtesting", "Data Analysis"]
+  },
+  {
+    "learning_step_id": "LP-209",
+    "career_goal_name": "Statistician",
+    "step_number": 1,
+    "title": "Probability Theory",
+    "description": "Deep dive into distributions, random variables, and convergence.",
+    "duration_weeks": 5,
+    "skills_covered": ["Statistics", "Mathematics", "Theory"]
+  },
+  {
+    "learning_step_id": "LP-210",
+    "career_goal_name": "Statistician",
+    "step_number": 2,
+    "title": "Statistical Inference",
+    "description": "Master hypothesis testing, estimation, and confidence intervals.",
+    "duration_weeks": 5,
+    "skills_covered": ["Inference", "Hypothesis Testing", "Critical Thinking"]
+  },
+  {
+    "learning_step_id": "LP-211",
+    "career_goal_name": "Statistician",
+    "step_number": 3,
+    "title": "Experimental Design",
+    "description": "Learn ANOVA, factorial design, and A/B testing methodologies.",
+    "duration_weeks": 4,
+    "skills_covered": ["Experimentation", "Research", "Analysis"]
+  },
+  {
+    "learning_step_id": "LP-212",
+    "career_goal_name": "Statistician",
+    "step_number": 4,
+    "title": "Regression Analysis",
+    "description": "Advanced linear and logistic regression techniques and diagnostics.",
+    "duration_weeks": 4,
+    "skills_covered": ["Regression", "Modeling", "R"]
+  },
+  {
+    "learning_step_id": "LP-213",
+    "career_goal_name": "Statistician",
+    "step_number": 5,
+    "title": "Statistical Computing (R/SAS)",
+    "description": "Gain proficiency in R or SAS for statistical programming.",
+    "duration_weeks": 5,
+    "skills_covered": ["R", "SAS", "Programming"]
+  },
+  {
+    "learning_step_id": "LP-214",
+    "career_goal_name": "AI Ethicist",
+    "step_number": 1,
+    "title": "AI & Ethics Fundamentals",
+    "description": "Understand utilitarianism, deontology, and their application to AI.",
+    "duration_weeks": 3,
+    "skills_covered": ["Ethics", "Philosophy", "AI"]
+  },
+  {
+    "learning_step_id": "LP-215",
+    "career_goal_name": "AI Ethicist",
+    "step_number": 2,
+    "title": "Algorithmic Bias & Fairness",
+    "description": "Learn to detect and mitigate bias in datasets and models.",
+    "duration_weeks": 4,
+    "skills_covered": ["Bias Detection", "Fairness", "Data Analysis"]
+  },
+  {
+    "learning_step_id": "LP-216",
+    "career_goal_name": "AI Ethicist",
+    "step_number": 3,
+    "title": "Explainable AI (XAI)",
+    "description": "Study SHAP, LIME, and counterfactual explanations.",
+    "duration_weeks": 4,
+    "skills_covered": ["XAI", "Interpretability", "Machine Learning"]
+  },
+  {
+    "learning_step_id": "LP-217",
+    "career_goal_name": "AI Ethicist",
+    "step_number": 4,
+    "title": "Privacy & Compliance",
+    "description": "Master GDPR, CCPA, and differential privacy concepts.",
+    "duration_weeks": 3,
+    "skills_covered": ["Privacy", "Compliance", "Law"]
+  },
+  {
+    "learning_step_id": "LP-218",
+    "career_goal_name": "AI Ethicist",
+    "step_number": 5,
+    "title": "AI Governance Frameworks",
+    "description": "Design internal policies and auditing frameworks for AI systems.",
+    "duration_weeks": 4,
+    "skills_covered": ["Governance", "Policy", "Strategy"]
+  },
+  {
+    "learning_step_id": "LP-219",
+    "career_goal_name": "Marketing Data Analyst",
+    "step_number": 1,
+    "title": "Digital Marketing Ecosystem",
+    "description": "Understand SEO, SEM, social, and display advertising metrics.",
+    "duration_weeks": 3,
+    "skills_covered": ["Marketing", "Metrics", "Analytics"]
+  },
+  {
+    "learning_step_id": "LP-220",
+    "career_goal_name": "Marketing Data Analyst",
+    "step_number": 2,
+    "title": "Web Analytics (GA4)",
+    "description": "Deep dive into Google Analytics 4 configuration and reporting.",
+    "duration_weeks": 4,
+    "skills_covered": ["Google Analytics", "Tracking", "Web Analytics"]
+  },
+  {
+    "learning_step_id": "LP-221",
+    "career_goal_name": "Marketing Data Analyst",
+    "step_number": 3,
+    "title": "Customer Segmentation",
+    "description": "Use clustering techniques to identify customer personas.",
+    "duration_weeks": 4,
+    "skills_covered": ["Clustering", "Python", "Segmentation"]
+  },
+  {
+    "learning_step_id": "LP-222",
+    "career_goal_name": "Marketing Data Analyst",
+    "step_number": 4,
+    "title": "Attribution Modeling",
+    "description": "Learn multi-touch attribution to assign credit to marketing channels.",
+    "duration_weeks": 3,
+    "skills_covered": ["Attribution", "Modeling", "Statistics"]
+  },
+  {
+    "learning_step_id": "LP-223",
+    "career_goal_name": "Marketing Data Analyst",
+    "step_number": 5,
+    "title": "Marketing Mix Modeling",
+    "description": "Quantify the impact of various marketing inputs on sales.",
+    "duration_weeks": 4,
+    "skills_covered": ["Regression", "Modeling", "Economics"]
+  },
+  {
+    "learning_step_id": "LP-224",
+    "career_goal_name": "Prompt Engineer",
+    "step_number": 1,
+    "title": "LLM Fundamentals",
+    "description": "Understand architecture, tokens, context windows, and temperature.",
+    "duration_weeks": 3,
+    "skills_covered": ["LLMs", "AI", "Theory"]
+  },
+  {
+    "learning_step_id": "LP-225",
+    "career_goal_name": "Prompt Engineer",
+    "step_number": 2,
+    "title": "Prompting Strategies",
+    "description": "Master zero-shot, few-shot, and Chain-of-Thought prompting.",
+    "duration_weeks": 3,
+    "skills_covered": ["Prompt Engineering", "Creativity", "Logic"]
+  },
+  {
+    "learning_step_id": "LP-226",
+    "career_goal_name": "Prompt Engineer",
+    "step_number": 3,
+    "title": "API Integration",
+    "description": "Connect Python apps to OpenAI, Anthropic, and Cohere APIs.",
+    "duration_weeks": 3,
+    "skills_covered": ["Python", "API", "Coding"]
+  },
+  {
+    "learning_step_id": "LP-227",
+    "career_goal_name": "Prompt Engineer",
+    "step_number": 4,
+    "title": "RAG & Vector Databases",
+    "description": "Implement Retrieval-Augmented Generation using Pinecone/LangChain.",
+    "duration_weeks": 4,
+    "skills_covered": ["RAG", "Vector Databases", "Search"]
+  },
+  {
+    "learning_step_id": "LP-228",
+    "career_goal_name": "Prompt Engineer",
+    "step_number": 5,
+    "title": "Evaluation & Fine-Tuning",
+    "description": "Evaluate model outputs and perform basic fine-tuning.",
+    "duration_weeks": 4,
+    "skills_covered": ["Evaluation", "Fine-Tuning", "Testing"]
+  },
+  {
+    "learning_step_id": "LP-229",
+    "career_goal_name": "Deep Learning Engineer",
+    "step_number": 1,
+    "title": "Neural Network Mathematics",
+    "description": "Master backpropagation, gradient descent, and loss functions.",
+    "duration_weeks": 4,
+    "skills_covered": ["Mathematics", "Calculus", "Optimization"]
+  },
+  {
+    "learning_step_id": "LP-230",
+    "career_goal_name": "Deep Learning Engineer",
+    "step_number": 2,
+    "title": "Advanced CNNs",
+    "description": "Implement modern architectures like EfficientNet and ConvNeXt.",
+    "duration_weeks": 4,
+    "skills_covered": ["CNN", "Computer Vision", "PyTorch"]
+  },
+  {
+    "learning_step_id": "LP-231",
+    "career_goal_name": "Deep Learning Engineer",
+    "step_number": 3,
+    "title": "Transformers & Attention",
+    "description": "Deep dive into self-attention, encoders, and decoders.",
+    "duration_weeks": 5,
+    "skills_covered": ["Transformers", "NLP", "Deep Learning"]
+  },
+  {
+    "learning_step_id": "LP-232",
+    "career_goal_name": "Deep Learning Engineer",
+    "step_number": 4,
+    "title": "Generative Models",
+    "description": "Build GANs, VAEs, and Diffusion models.",
+    "duration_weeks": 5,
+    "skills_covered": ["Generative AI", "GANs", "Diffusion"]
+  },
+  {
+    "learning_step_id": "LP-233",
+    "career_goal_name": "Deep Learning Engineer",
+    "step_number": 5,
+    "title": "Optimization & Deployment",
+    "description": "Learn quantization, pruning, and TensorRT for inference.",
+    "duration_weeks": 4,
+    "skills_covered": ["Optimization", "Deployment", "Hardware"]
+  },
+  {
+    "learning_step_id": "LP-234",
+    "career_goal_name": "Healthcare Data Analyst",
+    "step_number": 1,
+    "title": "Health Informatics Basics",
+    "description": "Understand US/Global healthcare systems, payers, and providers.",
+    "duration_weeks": 3,
+    "skills_covered": ["Healthcare", "Domain Knowledge", "Research"]
+  },
+  {
+    "learning_step_id": "LP-235",
+    "career_goal_name": "Healthcare Data Analyst",
+    "step_number": 2,
+    "title": "Data Standards (HL7/FHIR)",
+    "description": "Learn the standards for exchanging electronic health information.",
+    "duration_weeks": 4,
+    "skills_covered": ["Standards", "Data Exchange", "Interoperability"]
+  },
+  {
+    "learning_step_id": "LP-236",
+    "career_goal_name": "Healthcare Data Analyst",
+    "step_number": 3,
+    "title": "Clinical Data Analysis",
+    "description": "Analyze patient outcomes using SQL and SAS/R.",
+    "duration_weeks": 5,
+    "skills_covered": ["Data Analysis", "SAS", "SQL"]
+  },
+  {
+    "learning_step_id": "LP-237",
+    "career_goal_name": "Healthcare Data Analyst",
+    "step_number": 4,
+    "title": "EHR Systems",
+    "description": "Gain familiarity with Epic, Cerner, or other EHR data structures.",
+    "duration_weeks": 3,
+    "skills_covered": ["EHR", "Database", "Software"]
+  },
+  {
+    "learning_step_id": "LP-238",
+    "career_goal_name": "Healthcare Data Analyst",
+    "step_number": 5,
+    "title": "HIPAA & Privacy",
+    "description": "Master patient data privacy regulations and security.",
+    "duration_weeks": 2,
+    "skills_covered": ["Compliance", "Privacy", "Security"]
+  },
+  {
+    "learning_step_id": "LP-239",
+    "career_goal_name": "Financial Data Analyst",
+    "step_number": 1,
+    "title": "Financial Accounting",
+    "description": "Read and interpret balance sheets, income statements, and cash flow.",
+    "duration_weeks": 4,
+    "skills_covered": ["Accounting", "Finance", "Analysis"]
+  },
+  {
+    "learning_step_id": "LP-240",
+    "career_goal_name": "Financial Data Analyst",
+    "step_number": 2,
+    "title": "Advanced Excel & VBA",
+    "description": "Build complex financial models and automate reports with macros.",
+    "duration_weeks": 4,
+    "skills_covered": ["Excel", "VBA", "Modeling"]
+  },
+  {
+    "learning_step_id": "LP-241",
+    "career_goal_name": "Financial Data Analyst",
+    "step_number": 3,
+    "title": "Corporate Finance",
+    "description": "Understand capital budgeting, WACC, and valuation methods.",
+    "duration_weeks": 4,
+    "skills_covered": ["Finance", "Valuation", "Business"]
+  },
+  {
+    "learning_step_id": "LP-242",
+    "career_goal_name": "Financial Data Analyst",
+    "step_number": 4,
+    "title": "SQL for Finance",
+    "description": "Retrieve and manipulate large financial datasets.",
+    "duration_weeks": 3,
+    "skills_covered": ["SQL", "Database", "Data Management"]
+  },
+  {
+    "learning_step_id": "LP-243",
+    "career_goal_name": "Financial Data Analyst",
+    "step_number": 5,
+    "title": "Forecasting & Regression",
+    "description": "Use statistical methods to forecast revenue and market trends.",
+    "duration_weeks": 4,
+    "skills_covered": ["Forecasting", "Statistics", "Python"]
+  },
+  {
+    "learning_step_id": "LP-244",
+    "career_goal_name": "Software Architect",
+    "step_number": 1,
+    "title": "Design Patterns",
+    "description": "Master GoF patterns: Singleton, Factory, Observer, Strategy, etc.",
+    "duration_weeks": 4,
+    "skills_covered": ["Design Patterns", "Software Design", "Architecture"]
+  },
+  {
+    "learning_step_id": "LP-245",
+    "career_goal_name": "Software Architect",
+    "step_number": 2,
+    "title": "System Design Principles",
+    "description": "Learn SOLID, DRY, and high-level architectural styles (Monolith vs. Microservices).",
+    "duration_weeks": 5,
+    "skills_covered": ["System Design", "Microservices", "Scalability"]
+  },
+  {
+    "learning_step_id": "LP-246",
+    "career_goal_name": "Software Architect",
+    "step_number": 3,
+    "title": "Distributed Systems",
+    "description": "Understand consistency, availability, partitioning (CAP), and consensus.",
+    "duration_weeks": 5,
+    "skills_covered": ["Distributed Systems", "Theory", "Cloud"]
+  },
+  {
+    "learning_step_id": "LP-247",
+    "career_goal_name": "Software Architect",
+    "step_number": 4,
+    "title": "Cloud Native Architecture",
+    "description": "Design applications for the cloud using containers and serverless.",
+    "duration_weeks": 4,
+    "skills_covered": ["Cloud Computing", "Kubernetes", "AWS"]
+  },
+  {
+    "learning_step_id": "LP-248",
+    "career_goal_name": "Software Architect",
+    "step_number": 5,
+    "title": "Enterprise Integration",
+    "description": "Learn messaging patterns, event-driven architecture, and API gateways.",
+    "duration_weeks": 4,
+    "skills_covered": ["Integration", "Messaging", "Kafka"]
+  },
+  {
+    "learning_step_id": "LP-249",
+    "career_goal_name": "Penetration Tester",
+    "step_number": 1,
+    "title": "Reconnaissance & Scanning",
+    "description": "Master passive and active info gathering with OSINT and Nmap.",
+    "duration_weeks": 4,
+    "skills_covered": ["Reconnaissance", "Nmap", "OSINT"]
+  },
+  {
+    "learning_step_id": "LP-250",
+    "career_goal_name": "Penetration Tester",
+    "step_number": 2,
+    "title": "Exploitation Basics",
+    "description": "Use Metasploit to exploit known vulnerabilities in systems.",
+    "duration_weeks": 5,
+    "skills_covered": ["Exploitation", "Metasploit", "Hacking"]
+  },
+  {
+    "learning_step_id": "LP-251",
+    "career_goal_name": "Penetration Tester",
+    "step_number": 3,
+    "title": "Web App Hacking",
+    "description": "Learn OWASP Top 10 and use Burp Suite for injection attacks.",
+    "duration_weeks": 6,
+    "skills_covered": ["Web Security", "Burp Suite", "OWASP"]
+  },
+  {
+    "learning_step_id": "LP-252",
+    "career_goal_name": "Penetration Tester",
+    "step_number": 4,
+    "title": "Privilege Escalation",
+    "description": "Techniques for gaining root/admin access on Linux and Windows.",
+    "duration_weeks": 5,
+    "skills_covered": ["Linux", "Windows", "Security"]
+  },
+  {
+    "learning_step_id": "LP-253",
+    "career_goal_name": "Penetration Tester",
+    "step_number": 5,
+    "title": "Reporting & Documentation",
+    "description": "Write professional pentest reports detailing findings and remediation.",
+    "duration_weeks": 2,
+    "skills_covered": ["Reporting", "Writing", "Communication"]
+  },
+  {
+    "learning_step_id": "LP-254",
+    "career_goal_name": "Technical Product Manager",
+    "step_number": 1,
+    "title": "Product Management Foundation",
+    "description": "Understand the product lifecycle, market fit, and strategy.",
+    "duration_weeks": 4,
+    "skills_covered": ["Product Management", "Strategy", "Business"]
+  },
+  {
+    "learning_step_id": "LP-255",
+    "career_goal_name": "Technical Product Manager",
+    "step_number": 2,
+    "title": "Tech Stack Fluency",
+    "description": "Gain a high-level understanding of APIs, cloud, and databases to talk to devs.",
+    "duration_weeks": 5,
+    "skills_covered": ["Technical Literacy", "Architecture", "Communication"]
+  },
+  {
+    "learning_step_id": "LP-256",
+    "career_goal_name": "Technical Product Manager",
+    "step_number": 3,
+    "title": "Agile & Scrum for PMs",
+    "description": "Manage backlogs, sprints, and user stories efficiently.",
+    "duration_weeks": 3,
+    "skills_covered": ["Agile", "Jira", "Scrum"]
+  },
+  {
+    "learning_step_id": "LP-257",
+    "career_goal_name": "Technical Product Manager",
+    "step_number": 4,
+    "title": "Data-Driven Product Dev",
+    "description": "Use SQL and analytics tools to make product decisions.",
+    "duration_weeks": 4,
+    "skills_covered": ["SQL", "Analytics", "Decision Making"]
+  },
+  {
+    "learning_step_id": "LP-258",
+    "career_goal_name": "Technical Product Manager",
+    "step_number": 5,
+    "title": "Roadmapping & Prioritization",
+    "description": "Create roadmaps and use RICE/MoSCoW frameworks for prioritization.",
+    "duration_weeks": 3,
+    "skills_covered": ["Roadmapping", "Prioritization", "Planning"]
+  },
+  {
+    "learning_step_id": "LP-259",
+    "career_goal_name": "SAP Consultant",
+    "step_number": 1,
+    "title": "SAP ERP Overview",
+    "description": "Understand the SAP ecosystem and core modules (FI, CO, MM, SD).",
+    "duration_weeks": 4,
+    "skills_covered": ["SAP", "ERP", "Business Process"]
+  },
+  {
+    "learning_step_id": "LP-260",
+    "career_goal_name": "SAP Consultant",
+    "step_number": 2,
+    "title": "Business Process Integration",
+    "description": "Learn how data flows between different SAP modules.",
+    "duration_weeks": 4,
+    "skills_covered": ["Integration", "Process Mapping", "SAP"]
+  },
+  {
+    "learning_step_id": "LP-261",
+    "career_goal_name": "SAP Consultant",
+    "step_number": 3,
+    "title": "SAP Configuration",
+    "description": "Customize and configure specific modules via the IMG.",
+    "duration_weeks": 6,
+    "skills_covered": ["Configuration", "Implementation", "Customization"]
+  },
+  {
+    "learning_step_id": "LP-262",
+    "career_goal_name": "SAP Consultant",
+    "step_number": 4,
+    "title": "ABAP Debugging for Consultants",
+    "description": "Learn basic ABAP to debug issues and read logic.",
+    "duration_weeks": 4,
+    "skills_covered": ["ABAP", "Debugging", "Programming"]
+  },
+  {
+    "learning_step_id": "LP-263",
+    "career_goal_name": "SAP Consultant",
+    "step_number": 5,
+    "title": "S/4HANA Migration",
+    "description": "Understand the transition from ECC to S/4HANA.",
+    "duration_weeks": 4,
+    "skills_covered": ["HANA", "Migration", "Cloud"]
+  },
+  {
+    "learning_step_id": "LP-264",
+    "career_goal_name": "Information Security Manager",
+    "step_number": 1,
+    "title": "Risk Management Frameworks",
+    "description": "Master NIST, ISO 27001, and risk assessment methodologies.",
+    "duration_weeks": 5,
+    "skills_covered": ["Risk Management", "Compliance", "Frameworks"]
+  },
+  {
+    "learning_step_id": "LP-265",
+    "career_goal_name": "Information Security Manager",
+    "step_number": 2,
+    "title": "Security Governance",
+    "description": "Develop security policies, standards, and procedures.",
+    "duration_weeks": 4,
+    "skills_covered": ["Governance", "Policy", "Management"]
+  },
+  {
+    "learning_step_id": "LP-266",
+    "career_goal_name": "Information Security Manager",
+    "step_number": 3,
+    "title": "Incident Management Strategy",
+    "description": "Plan and oversee incident response capabilities.",
+    "duration_weeks": 4,
+    "skills_covered": ["Incident Response", "Strategy", "Leadership"]
+  },
+  {
+    "learning_step_id": "LP-267",
+    "career_goal_name": "Information Security Manager",
+    "step_number": 4,
+    "title": "Security Operations",
+    "description": "Oversee SOC, vulnerability management, and access control.",
+    "duration_weeks": 5,
+    "skills_covered": ["Operations", "Management", "Security"]
+  },
+  {
+    "learning_step_id": "LP-268",
+    "career_goal_name": "Information Security Manager",
+    "step_number": 5,
+    "title": "CISM/CISSP Certification Prep",
+    "description": "Prepare for key industry certifications for management.",
+    "duration_weeks": 6,
+    "skills_covered": ["Certification", "Knowledge", "Security"]
+  },
+  {
+    "learning_step_id": "LP-269",
+    "career_goal_name": "IT Project Manager",
+    "step_number": 1,
+    "title": "PMBOK Guide Fundamentals",
+    "description": "Study the standard terminology and guidelines for project management.",
+    "duration_weeks": 4,
+    "skills_covered": ["Project Management", "Standards", "Theory"]
+  },
+  {
+    "learning_step_id": "LP-270",
+    "career_goal_name": "IT Project Manager",
+    "step_number": 2,
+    "title": "Project Scheduling & Planning",
+    "description": "Use MS Project or similar tools to create Gantt charts and critical paths.",
+    "duration_weeks": 4,
+    "skills_covered": ["Planning", "Scheduling", "Tools"]
+  },
+  {
+    "learning_step_id": "LP-271",
+    "career_goal_name": "IT Project Manager",
+    "step_number": 3,
+    "title": "Budgeting & Cost Control",
+    "description": "Estimate costs, set budgets, and track financial performance.",
+    "duration_weeks": 3,
+    "skills_covered": ["Budgeting", "Finance", "Control"]
+  },
+  {
+    "learning_step_id": "LP-272",
+    "career_goal_name": "IT Project Manager",
+    "step_number": 4,
+    "title": "Software Development Lifecycles",
+    "description": "Deep dive into SDLC models: Waterfall, Agile, Hybrid.",
+    "duration_weeks": 3,
+    "skills_covered": ["SDLC", "Process", "Software"]
+  },
+  {
+    "learning_step_id": "LP-273",
+    "career_goal_name": "IT Project Manager",
+    "step_number": 5,
+    "title": "PMP Certification Prep",
+    "description": "Study for the Project Management Professional exam.",
+    "duration_weeks": 6,
+    "skills_covered": ["Certification", "Career", "Management"]
+  },
+  {
+    "learning_step_id": "LP-274",
+    "career_goal_name": "RPA Developer",
+    "step_number": 1,
+    "title": "RPA Basics & Logic",
+    "description": "Understand process automation, flowcharts, and conditional logic.",
+    "duration_weeks": 3,
+    "skills_covered": ["Logic", "Automation", "Process"]
+  },
+  {
+    "learning_step_id": "LP-275",
+    "career_goal_name": "RPA Developer",
+    "step_number": 2,
+    "title": "UiPath Studio Fundamentals",
+    "description": "Learn to build workflows, variables, and selectors in UiPath.",
+    "duration_weeks": 5,
+    "skills_covered": ["UiPath", "Tooling", "Development"]
+  },
+  {
+    "learning_step_id": "LP-276",
+    "career_goal_name": "RPA Developer",
+    "step_number": 3,
+    "title": "Data Manipulation in RPA",
+    "description": "Work with Excel, DataTables, and strings within automation.",
+    "duration_weeks": 4,
+    "skills_covered": ["Data Manipulation", "Excel", "Automation"]
+  },
+  {
+    "learning_step_id": "LP-277",
+    "career_goal_name": "RPA Developer",
+    "step_number": 4,
+    "title": "Orchestrator & Queues",
+    "description": "Manage bots, triggers, and transaction queues.",
+    "duration_weeks": 3,
+    "skills_covered": ["Orchestration", "Management", "Operations"]
+  },
+  {
+    "learning_step_id": "LP-278",
+    "career_goal_name": "RPA Developer",
+    "step_number": 5,
+    "title": "Exception Handling",
+    "description": "Build robust bots that handle errors and business exceptions.",
+    "duration_weeks": 3,
+    "skills_covered": ["Error Handling", "Debugging", "Reliability"]
+  },
+  {
+    "learning_step_id": "LP-279",
+    "career_goal_name": "AR/VR Developer",
+    "step_number": 1,
+    "title": "3D Math & Physics",
+    "description": "Learn vectors, quaternions, and basic physics for simulation.",
+    "duration_weeks": 4,
+    "skills_covered": ["Mathematics", "Physics", "3D"]
+  },
+  {
+    "learning_step_id": "LP-280",
+    "career_goal_name": "AR/VR Developer",
+    "step_number": 2,
+    "title": "Unity for XR",
+    "description": "Setup Unity XR Interaction Toolkit and build basic VR scenes.",
+    "duration_weeks": 5,
+    "skills_covered": ["Unity", "VR", "XR"]
+  },
+  {
+    "learning_step_id": "LP-281",
+    "career_goal_name": "AR/VR Developer",
+    "step_number": 3,
+    "title": "AR Development (ARFoundation)",
+    "description": "Build mobile AR apps using ARCore and ARKit features.",
+    "duration_weeks": 4,
+    "skills_covered": ["AR", "Mobile Development", "Unity"]
+  },
+  {
+    "learning_step_id": "LP-282",
+    "career_goal_name": "AR/VR Developer",
+    "step_number": 4,
+    "title": "Performance Optimization",
+    "description": "Optimize graphics and code for mobile and standalone VR headsets.",
+    "duration_weeks": 3,
+    "skills_covered": ["Optimization", "Performance", "Profiling"]
+  },
+  {
+    "learning_step_id": "LP-283",
+    "career_goal_name": "AR/VR Developer",
+    "step_number": 5,
+    "title": "Spatial Audio & UX",
+    "description": "Implement immersive audio and comfortable VR user interfaces.",
+    "duration_weeks": 3,
+    "skills_covered": ["Audio", "UX Design", "Immersion"]
+  },
+  {
+    "learning_step_id": "LP-284",
+    "career_goal_name": "IoT Solutions Architect",
+    "step_number": 1,
+    "title": "Embedded Hardware Basics",
+    "description": "Understand sensors, actuators, and microcontrollers (Arduino/ESP32).",
+    "duration_weeks": 4,
+    "skills_covered": ["Hardware", "Electronics", "Sensors"]
+  },
+  {
+    "learning_step_id": "LP-285",
+    "career_goal_name": "IoT Solutions Architect",
+    "step_number": 2,
+    "title": "IoT Protocols",
+    "description": "Master MQTT, CoAP, HTTP, and LoRaWAN for device communication.",
+    "duration_weeks": 4,
+    "skills_covered": ["Networking", "Protocols", "MQTT"]
+  },
+  {
+    "learning_step_id": "LP-286",
+    "career_goal_name": "IoT Solutions Architect",
+    "step_number": 3,
+    "title": "Cloud IoT Platforms",
+    "description": "Connect devices to AWS IoT Core or Azure IoT Hub.",
+    "duration_weeks": 5,
+    "skills_covered": ["Cloud Computing", "AWS", "Azure"]
+  },
+  {
+    "learning_step_id": "LP-287",
+    "career_goal_name": "IoT Solutions Architect",
+    "step_number": 4,
+    "title": "Edge Computing",
+    "description": "Process data locally on gateways using Greengrass or IoT Edge.",
+    "duration_weeks": 4,
+    "skills_covered": ["Edge Computing", "Linux", "Python"]
+  },
+  {
+    "learning_step_id": "LP-288",
+    "career_goal_name": "IoT Solutions Architect",
+    "step_number": 5,
+    "title": "IoT Security",
+    "description": "Secure device identity, firmware updates (OTA), and data in transit.",
+    "duration_weeks": 3,
+    "skills_covered": ["Security", "Cryptography", "Firmware"]
+  },
+  {
+    "learning_step_id": "LP-289",
+    "career_goal_name": "ServiceNow Developer",
+    "step_number": 1,
+    "title": "ServiceNow Fundamentals",
+    "description": "Navigate the platform, manage users, and understand core ITSM tables.",
+    "duration_weeks": 3,
+    "skills_covered": ["ServiceNow", "ITSM", "Administration"]
+  },
+  {
+    "learning_step_id": "LP-290",
+    "career_goal_name": "ServiceNow Developer",
+    "step_number": 2,
+    "title": "Client & Server Scripting",
+    "description": "Write Client Scripts, UI Policies, Business Rules, and Script Includes.",
+    "duration_weeks": 5,
+    "skills_covered": ["JavaScript", "Scripting", "Backend"]
+  },
+  {
+    "learning_step_id": "LP-291",
+    "career_goal_name": "ServiceNow Developer",
+    "step_number": 3,
+    "title": "Service Portal Development",
+    "description": "Build custom portals using AngularJS and HTML/CSS.",
+    "duration_weeks": 4,
+    "skills_covered": ["AngularJS", "Frontend", "UI Design"]
+  },
+  {
+    "learning_step_id": "LP-292",
+    "career_goal_name": "ServiceNow Developer",
+    "step_number": 4,
+    "title": "Flow Designer & Workflow",
+    "description": "Automate processes using the low-code Flow Designer.",
+    "duration_weeks": 3,
+    "skills_covered": ["Automation", "Workflow", "Logic"]
+  },
+  {
+    "learning_step_id": "LP-293",
+    "career_goal_name": "ServiceNow Developer",
+    "step_number": 5,
+    "title": "Integrations (REST/SOAP)",
+    "description": "Connect ServiceNow with external systems using Import Sets and APIs.",
+    "duration_weeks": 4,
+    "skills_covered": ["Integration", "API", "REST"]
+  },
+  {
+    "learning_step_id": "LP-294",
+    "career_goal_name": "Bioinformatics Scientist",
+    "step_number": 1,
+    "title": "Molecular Biology Basics",
+    "description": "Understand DNA, RNA, protein synthesis, and central dogma.",
+    "duration_weeks": 3,
+    "skills_covered": ["Biology", "Genetics", "Science"]
+  },
+  {
+    "learning_step_id": "LP-295",
+    "career_goal_name": "Bioinformatics Scientist",
+    "step_number": 2,
+    "title": "Python for Bioinformatics",
+    "description": "Use Biopython to parse sequences and access biological databases.",
+    "duration_weeks": 4,
+    "skills_covered": ["Python", "Programming", "Data Analysis"]
+  },
+  {
+    "learning_step_id": "LP-296",
+    "career_goal_name": "Bioinformatics Scientist",
+    "step_number": 3,
+    "title": "Genomic Sequencing Analysis",
+    "description": "Learn NGS workflows: alignment, variant calling, and annotation.",
+    "duration_weeks": 5,
+    "skills_covered": ["Genomics", "Algorithms", "Analysis"]
+  },
+  {
+    "learning_step_id": "LP-297",
+    "career_goal_name": "Bioinformatics Scientist",
+    "step_number": 4,
+    "title": "Statistical Genomics (R)",
+    "description": "Use R and Bioconductor for differential expression analysis.",
+    "duration_weeks": 4,
+    "skills_covered": ["R", "Statistics", "Data Visualization"]
+  },
+  {
+    "learning_step_id": "LP-298",
+    "career_goal_name": "Bioinformatics Scientist",
+    "step_number": 5,
+    "title": "Structural Bioinformatics",
+    "description": "Analyze protein structures using PyMOL and docking tools.",
+    "duration_weeks": 3,
+    "skills_covered": ["Proteomics", "Modeling", "Simulation"]
+  },
+  {
+    "learning_step_id": "LP-299",
+    "career_goal_name": "GIS Analyst",
+    "step_number": 1,
+    "title": "GIS Fundamentals & Cartography",
+    "description": "Understand coordinates, projections, and map design principles.",
+    "duration_weeks": 3,
+    "skills_covered": ["GIS", "Geography", "Design"]
+  },
+  {
+    "learning_step_id": "LP-300",
+    "career_goal_name": "GIS Analyst",
+    "step_number": 2,
+    "title": "ArcGIS / QGIS Proficiency",
+    "description": "Master the interface, data management, and basic geoprocessing tools.",
+    "duration_weeks": 5,
+    "skills_covered": ["ArcGIS", "QGIS", "Software"]
+  },
+  {
+    "learning_step_id": "LP-301",
+    "career_goal_name": "GIS Analyst",
+    "step_number": 3,
+    "title": "Spatial Analysis",
+    "description": "Perform buffer, overlay, networking, and raster analysis.",
+    "duration_weeks": 4,
+    "skills_covered": ["Analysis", "Statistics", "Logic"]
+  },
+  {
+    "learning_step_id": "LP-302",
+    "career_goal_name": "GIS Analyst",
+    "step_number": 4,
+    "title": "Python for GIS (ArcPy/PyQGIS)",
+    "description": "Automate map production and analysis tasks using Python.",
+    "duration_weeks": 4,
+    "skills_covered": ["Python", "Automation", "Scripting"]
+  },
+  {
+    "learning_step_id": "LP-303",
+    "career_goal_name": "GIS Analyst",
+    "step_number": 5,
+    "title": "Web GIS & Online Maps",
+    "description": "Publish maps to the web using ArcGIS Online or Leaflet.",
+    "duration_weeks": 3,
+    "skills_covered": ["Web Development", "Mapping", "Deployment"]
+  },
+  {
+    "learning_step_id": "LP-304",
+    "career_goal_name": "Computer Forensics Investigator",
+    "step_number": 1,
+    "title": "Digital Evidence Basics",
+    "description": "Learn chain of custody, evidence handling, and legal procedures.",
+    "duration_weeks": 3,
+    "skills_covered": ["Law", "Procedures", "Ethics"]
+  },
+  {
+    "learning_step_id": "LP-305",
+    "career_goal_name": "Computer Forensics Investigator",
+    "step_number": 2,
+    "title": "File Systems Forensics",
+    "description": "Deep dive into NTFS, FAT, and EXT file structures and artifact recovery.",
+    "duration_weeks": 5,
+    "skills_covered": ["File Systems", "Analysis", "Recovery"]
+  },
+  {
+    "learning_step_id": "LP-306",
+    "career_goal_name": "Computer Forensics Investigator",
+    "step_number": 3,
+    "title": "Forensic Tools Mastery",
+    "description": "Hands-on with EnCase, FTK, or Autopsy for investigation.",
+    "duration_weeks": 4,
+    "skills_covered": ["Tools", "Investigation", "Software"]
+  },
+  {
+    "learning_step_id": "LP-307",
+    "career_goal_name": "Computer Forensics Investigator",
+    "step_number": 4,
+    "title": "Memory Forensics",
+    "description": "Analyze RAM dumps to find malware and active processes using Volatility.",
+    "duration_weeks": 4,
+    "skills_covered": ["Memory Analysis", "Malware", "Volatility"]
+  },
+  {
+    "learning_step_id": "LP-308",
+    "career_goal_name": "Computer Forensics Investigator",
+    "step_number": 5,
+    "title": "Reporting & Expert Testimony",
+    "description": "Write legal-grade reports and prepare for court testimony.",
+    "duration_weeks": 2,
+    "skills_covered": ["Reporting", "Writing", "Communication"]
+  },
+  {
+    "learning_step_id": "LP-309",
+    "career_goal_name": "IT Auditor",
+    "step_number": 1,
+    "title": "Audit Standards & CISA",
+    "description": "Study ISACA standards and the IT audit lifecycle.",
+    "duration_weeks": 4,
+    "skills_covered": ["Auditing", "Standards", "Compliance"]
+  },
+  {
+    "learning_step_id": "LP-310",
+    "career_goal_name": "IT Auditor",
+    "step_number": 2,
+    "title": "IT Governance & Strategy",
+    "description": "Evaluate alignment of IT with business goals and policies.",
+    "duration_weeks": 3,
+    "skills_covered": ["Governance", "Strategy", "Management"]
+  },
+  {
+    "learning_step_id": "LP-311",
+    "career_goal_name": "IT Auditor",
+    "step_number": 3,
+    "title": "General Computer Controls (GCC)",
+    "description": "Test physical security, change management, and access controls.",
+    "duration_weeks": 4,
+    "skills_covered": ["Controls", "Security", "Testing"]
+  },
+  {
+    "learning_step_id": "LP-312",
+    "career_goal_name": "IT Auditor",
+    "step_number": 4,
+    "title": "Application Controls",
+    "description": "Validate input/output controls and business logic in ERPs.",
+    "duration_weeks": 4,
+    "skills_covered": ["Application Security", "ERP", "Validation"]
+  },
+  {
+    "learning_step_id": "LP-313",
+    "career_goal_name": "IT Auditor",
+    "step_number": 5,
+    "title": "Audit Reporting",
+    "description": "Draft audit findings, classify risks, and recommend remediation.",
+    "duration_weeks": 3,
+    "skills_covered": ["Reporting", "Risk Assessment", "Communication"]
+  },
+  {
+    "learning_step_id": "LP-314",
+    "career_goal_name": "Release Manager",
+    "step_number": 1,
+    "title": "Release Management Lifecycle",
+    "description": "Understand planning, building, testing, deploying, and review phases.",
+    "duration_weeks": 3,
+    "skills_covered": ["Process", "Planning", "Management"]
+  },
+  {
+    "learning_step_id": "LP-315",
+    "career_goal_name": "Release Manager",
+    "step_number": 2,
+    "title": "CI/CD Concepts",
+    "description": "Understand how pipelines work to orchestrate releases.",
+    "duration_weeks": 4,
+    "skills_covered": ["CI/CD", "DevOps", "Automation"]
+  },
+  {
+    "learning_step_id": "LP-316",
+    "career_goal_name": "Release Manager",
+    "step_number": 3,
+    "title": "Version Control Strategy",
+    "description": "Master Git branching strategies (GitFlow, Trunk-based) for teams.",
+    "duration_weeks": 3,
+    "skills_covered": ["Git", "Version Control", "Strategy"]
+  },
+  {
+    "learning_step_id": "LP-317",
+    "career_goal_name": "Release Manager",
+    "step_number": 4,
+    "title": "Change Management (ITIL)",
+    "description": "Manage change requests, approvals, and CAB meetings.",
+    "duration_weeks": 4,
+    "skills_covered": ["ITIL", "Change Management", "Process"]
+  },
+  {
+    "learning_step_id": "LP-318",
+    "career_goal_name": "Release Manager",
+    "step_number": 5,
+    "title": "Environment Management",
+    "description": "Coordinate lower environments (Dev, QA, Staging) availability.",
+    "duration_weeks": 3,
+    "skills_covered": ["Infrastructure", "Coordination", "Operations"]
+  },
+  {
+    "learning_step_id": "LP-319",
+    "career_goal_name": "VoIP Engineer",
+    "step_number": 1,
+    "title": "VoIP Fundamentals",
+    "description": "Understand analog vs digital voice, codecs, and bandwidth.",
+    "duration_weeks": 3,
+    "skills_covered": ["Telecommunications", "Theory", "Audio"]
+  },
+  {
+    "learning_step_id": "LP-320",
+    "career_goal_name": "VoIP Engineer",
+    "step_number": 2,
+    "title": "SIP & RTP Protocols",
+    "description": "Deep dive into call setup (SIP) and media transport (RTP) packet analysis.",
+    "duration_weeks": 5,
+    "skills_covered": ["Protocols", "Networking", "Wireshark"]
+  },
+  {
+    "learning_step_id": "LP-321",
+    "career_goal_name": "VoIP Engineer",
+    "step_number": 3,
+    "title": "PBX Administration (Asterisk)",
+    "description": "Install and configure an open-source PBX system.",
+    "duration_weeks": 5,
+    "skills_covered": ["Linux", "Configuration", "Telephony"]
+  },
+  {
+    "learning_step_id": "LP-322",
+    "career_goal_name": "VoIP Engineer",
+    "step_number": 4,
+    "title": "QoS & Network Optimization",
+    "description": "Configure routers/switches to prioritize voice traffic.",
+    "duration_weeks": 4,
+    "skills_covered": ["Networking", "Optimization", "QoS"]
+  },
+  {
+    "learning_step_id": "LP-323",
+    "career_goal_name": "VoIP Engineer",
+    "step_number": 5,
+    "title": "VoIP Troubleshooting",
+    "description": "Diagnose jitter, latency, and one-way audio issues.",
+    "duration_weeks": 3,
+    "skills_covered": ["Troubleshooting", "Analysis", "Problem Solving"]
+  },
+  {
+    "learning_step_id": "LP-324",
+    "career_goal_name": "Localization Engineer",
+    "step_number": 1,
+    "title": "Internationalization (i18n) Basics",
+    "description": "Learn to separate code from content using resource files.",
+    "duration_weeks": 3,
+    "skills_covered": ["Software Development", "Standards", "Coding"]
+  },
+  {
+    "learning_step_id": "LP-325",
+    "career_goal_name": "Localization Engineer",
+    "step_number": 2,
+    "title": "Character Sets & Encodings",
+    "description": "Master Unicode (UTF-8) and handle complex scripts.",
+    "duration_weeks": 2,
+    "skills_covered": ["Data", "Encoding", "Theory"]
+  },
+  {
+    "learning_step_id": "LP-326",
+    "career_goal_name": "Localization Engineer",
+    "step_number": 3,
+    "title": "CAT Tools & TMS",
+    "description": "Work with Translation Memory tools like Trados or MemoQ.",
+    "duration_weeks": 4,
+    "skills_covered": ["Tools", "Translation", "Software"]
+  },
+  {
+    "learning_step_id": "LP-327",
+    "career_goal_name": "Localization Engineer",
+    "step_number": 4,
+    "title": "Automation Scripting",
+    "description": "Write scripts (Python/Regex) to process file formats (XML, JSON, PO).",
+    "duration_weeks": 4,
+    "skills_covered": ["Python", "Scripting", "Automation"]
+  },
+  {
+    "learning_step_id": "LP-328",
+    "career_goal_name": "Localization Engineer",
+    "step_number": 5,
+    "title": "Localization Testing",
+    "description": "Validate UI layouts, formatting (dates/numbers), and functionality.",
+    "duration_weeks": 3,
+    "skills_covered": ["Testing", "QA", "Validation"]
+  },
+  {
+    "learning_step_id": "LP-329",
+    "career_goal_name": "Data Governance Specialist",
+    "step_number": 1,
+    "title": "Data Governance Frameworks",
+    "description": "Understand DAMA-DMBOK and data stewardship models.",
+    "duration_weeks": 4,
+    "skills_covered": ["Governance", "Frameworks", "Theory"]
+  },
+  {
+    "learning_step_id": "LP-330",
+    "career_goal_name": "Data Governance Specialist",
+    "step_number": 2,
+    "title": "Data Quality Management",
+    "description": "Define dimensions of quality and implement profiling tools.",
+    "duration_weeks": 4,
+    "skills_covered": ["Data Quality", "Analysis", "Tools"]
+  },
+  {
+    "learning_step_id": "LP-331",
+    "career_goal_name": "Data Governance Specialist",
+    "step_number": 3,
+    "title": "Master Data Management (MDM)",
+    "description": "Learn concepts of golden records and reference data.",
+    "duration_weeks": 4,
+    "skills_covered": ["MDM", "Data Management", "Architecture"]
+  },
+  {
+    "learning_step_id": "LP-332",
+    "career_goal_name": "Data Governance Specialist",
+    "step_number": 4,
+    "title": "Metadata Management",
+    "description": "Implement data catalogs and lineage tracking (e.g., Collibra).",
+    "duration_weeks": 4,
+    "skills_covered": ["Metadata", "Cataloging", "Tools"]
+  },
+  {
+    "learning_step_id": "LP-333",
+    "career_goal_name": "Data Governance Specialist",
+    "step_number": 5,
+    "title": "Privacy & Compliance",
+    "description": "Ensure data handling meets GDPR, CCPA, and internal policies.",
+    "duration_weeks": 3,
+    "skills_covered": ["Compliance", "Privacy", "Law"]
+  },
+  {
+    "learning_step_id": "LP-334",
+    "career_goal_name": "Blockchain Solutions Architect",
+    "step_number": 1,
+    "title": "Enterprise Blockchain Platforms",
+    "description": "Compare Hyperledger Fabric, Corda, and Ethereum Enterprise.",
+    "duration_weeks": 4,
+    "skills_covered": ["Blockchain", "Architecture", "Comparison"]
+  },
+  {
+    "learning_step_id": "LP-335",
+    "career_goal_name": "Blockchain Solutions Architect",
+    "step_number": 2,
+    "title": "Consensus Mechanisms",
+    "description": "Deep dive into PoW, PoS, Raft, and PBFT algorithms.",
+    "duration_weeks": 3,
+    "skills_covered": ["Algorithms", "Theory", "Consensus"]
+  },
+  {
+    "learning_step_id": "LP-336",
+    "career_goal_name": "Blockchain Solutions Architect",
+    "step_number": 3,
+    "title": "Designing dApp Architecture",
+    "description": "Plan full-stack architecture: Frontend, Wallets, Nodes, and Storage (IPFS).",
+    "duration_weeks": 5,
+    "skills_covered": ["Architecture", "Design", "System Design"]
+  },
+  {
+    "learning_step_id": "LP-337",
+    "career_goal_name": "Blockchain Solutions Architect",
+    "step_number": 4,
+    "title": "Tokenomics & Incentive Models",
+    "description": "Design sustainable economic models for blockchain networks.",
+    "duration_weeks": 3,
+    "skills_covered": ["Economics", "Strategy", "Design"]
+  },
+  {
+    "learning_step_id": "LP-338",
+    "career_goal_name": "Blockchain Solutions Architect",
+    "step_number": 5,
+    "title": "Interoperability & Sidechains",
+    "description": "Learn bridging protocols (Polkadot/Cosmos) and L2 scaling.",
+    "duration_weeks": 4,
+    "skills_covered": ["Scaling", "Bridging", "Advanced Tech"]
+  },
+  {
+    "learning_step_id": "LP-339",
+    "career_goal_name": "Solutions Engineer",
+    "step_number": 1,
+    "title": "Sales Engineering Basics",
+    "description": "Understand the sales cycle, discovery calls, and RFPs.",
+    "duration_weeks": 3,
+    "skills_covered": ["Sales", "Process", "Communication"]
+  },
+  {
+    "learning_step_id": "LP-340",
+    "career_goal_name": "Solutions Engineer",
+    "step_number": 2,
+    "title": "Demo Skills & Storytelling",
+    "description": "Learn to deliver compelling technical demonstrations.",
+    "duration_weeks": 4,
+    "skills_covered": ["Presentation", "Public Speaking", "Storytelling"]
+  },
+  {
+    "learning_step_id": "LP-341",
+    "career_goal_name": "Solutions Engineer",
+    "step_number": 3,
+    "title": "Proof of Concept (POC) Management",
+    "description": "Plan and execute successful POCs to validate technical fit.",
+    "duration_weeks": 4,
+    "skills_covered": [
+      "Project Management",
+      "Technical Implementation",
+      "Testing"
+    ]
+  },
+  {
+    "learning_step_id": "LP-342",
+    "career_goal_name": "Solutions Engineer",
+    "step_number": 4,
+    "title": "API & Integration Patterns",
+    "description": "Master REST, SOAP, and Webhooks to design integration solutions.",
+    "duration_weeks": 5,
+    "skills_covered": ["API Integration", "Architecture", "System Design"]
+  },
+  {
+    "learning_step_id": "LP-343",
+    "career_goal_name": "Solutions Engineer",
+    "step_number": 5,
+    "title": "Technical Objection Handling",
+    "description": "Learn to answer tough technical questions and mitigate risk concerns.",
+    "duration_weeks": 3,
+    "skills_covered": ["Communication", "Negotiation", "Problem Solving"]
+  },
+  {
+    "learning_step_id": "LP-344",
+    "career_goal_name": "Hardware Design Engineer",
+    "step_number": 1,
+    "title": "Digital Logic Design",
+    "description": "Understand boolean algebra, logic gates, and sequential circuits.",
+    "duration_weeks": 4,
+    "skills_covered": ["Electronics", "Logic Design", "Math"]
+  },
+  {
+    "learning_step_id": "LP-345",
+    "career_goal_name": "Hardware Design Engineer",
+    "step_number": 2,
+    "title": "HDL Programming (Verilog/VHDL)",
+    "description": "Learn to describe hardware behavior using Verilog or VHDL.",
+    "duration_weeks": 6,
+    "skills_covered": ["Verilog", "Programming", "Simulation"]
+  },
+  {
+    "learning_step_id": "LP-346",
+    "career_goal_name": "Hardware Design Engineer",
+    "step_number": 3,
+    "title": "FPGA Prototyping",
+    "description": "Implement designs on Field Programmable Gate Arrays (Xilinx/Intel).",
+    "duration_weeks": 5,
+    "skills_covered": ["FPGA", "Hardware", "Prototyping"]
+  },
+  {
+    "learning_step_id": "LP-347",
+    "career_goal_name": "Hardware Design Engineer",
+    "step_number": 4,
+    "title": "PCB Design & Layout",
+    "description": "Design circuit boards using Altium or KiCad.",
+    "duration_weeks": 5,
+    "skills_covered": ["PCB Design", "Electronics", "CAD"]
+  },
+  {
+    "learning_step_id": "LP-348",
+    "career_goal_name": "Hardware Design Engineer",
+    "step_number": 5,
+    "title": "Signal Integrity & Testing",
+    "description": "Analyze signal noise and validate hardware using oscilloscopes.",
+    "duration_weeks": 4,
+    "skills_covered": ["Signal Processing", "Testing", "Debugging"]
+  },
+  {
+    "learning_step_id": "LP-349",
+    "career_goal_name": "Wireless Network Engineer",
+    "step_number": 1,
+    "title": "RF Fundamentals",
+    "description": "Understand radio frequency physics, propagation, and antennas.",
+    "duration_weeks": 4,
+    "skills_covered": ["Physics", "RF", "Telecommunications"]
+  },
+  {
+    "learning_step_id": "LP-350",
+    "career_goal_name": "Wireless Network Engineer",
+    "step_number": 2,
+    "title": "Wi-Fi Standards (802.11)",
+    "description": "Deep dive into 802.11ac, ax (Wi-Fi 6), and be protocols.",
+    "duration_weeks": 3,
+    "skills_covered": ["Networking", "Standards", "Theory"]
+  },
+  {
+    "learning_step_id": "LP-351",
+    "career_goal_name": "Wireless Network Engineer",
+    "step_number": 3,
+    "title": "WLAN Design & Site Surveys",
+    "description": "Use Ekahau or AirMagnet to plan and survey wireless coverage.",
+    "duration_weeks": 5,
+    "skills_covered": ["Site Survey", "Design", "Planning"]
+  },
+  {
+    "learning_step_id": "LP-352",
+    "career_goal_name": "Wireless Network Engineer",
+    "step_number": 4,
+    "title": "Wireless Security",
+    "description": "Implement WPA3, 802.1X, and RADIUS authentication.",
+    "duration_weeks": 3,
+    "skills_covered": ["Security", "Authentication", "Networking"]
+  },
+  {
+    "learning_step_id": "LP-353",
+    "career_goal_name": "Wireless Network Engineer",
+    "step_number": 5,
+    "title": "Troubleshooting & Analysis",
+    "description": "Analyze spectrum data to resolve interference and performance issues.",
+    "duration_weeks": 4,
+    "skills_covered": ["Troubleshooting", "Analysis", "Problem Solving"]
+  },
+  {
+    "learning_step_id": "LP-354",
+    "career_goal_name": "Mainframe Developer",
+    "step_number": 1,
+    "title": "Mainframe Concepts (z/OS)",
+    "description": "Introduction to the IBM mainframe architecture and TSO/ISPF.",
+    "duration_weeks": 3,
+    "skills_covered": ["Mainframe", "OS", "Legacy Systems"]
+  },
+  {
+    "learning_step_id": "LP-355",
+    "career_goal_name": "Mainframe Developer",
+    "step_number": 2,
+    "title": "COBOL Programming",
+    "description": "Learn the syntax and structure of COBOL for business apps.",
+    "duration_weeks": 6,
+    "skills_covered": ["COBOL", "Programming", "Business Logic"]
+  },
+  {
+    "learning_step_id": "LP-356",
+    "career_goal_name": "Mainframe Developer",
+    "step_number": 3,
+    "title": "JCL (Job Control Language)",
+    "description": "Write scripts to execute batch jobs on the mainframe.",
+    "duration_weeks": 3,
+    "skills_covered": ["Scripting", "JCL", "Automation"]
+  },
+  {
+    "learning_step_id": "LP-357",
+    "career_goal_name": "Mainframe Developer",
+    "step_number": 4,
+    "title": "DB2 & CICS",
+    "description": "Manage databases with DB2 and transaction processing with CICS.",
+    "duration_weeks": 5,
+    "skills_covered": ["Database", "SQL", "Transaction Processing"]
+  },
+  {
+    "learning_step_id": "LP-358",
+    "career_goal_name": "Mainframe Developer",
+    "step_number": 5,
+    "title": "Mainframe Modernization",
+    "description": "Expose mainframe logic as APIs and integrate with cloud.",
+    "duration_weeks": 4,
+    "skills_covered": ["API Integration", "Modernization", "Cloud"]
+  },
+  {
+    "learning_step_id": "LP-359",
+    "career_goal_name": "E-commerce Specialist",
+    "step_number": 1,
+    "title": "E-commerce Platforms",
+    "description": "Master administration of Shopify, Magento, or WooCommerce.",
+    "duration_weeks": 4,
+    "skills_covered": ["Shopify", "Platform Admin", "CMS"]
+  },
+  {
+    "learning_step_id": "LP-360",
+    "career_goal_name": "E-commerce Specialist",
+    "step_number": 2,
+    "title": "Product Data Management",
+    "description": "Optimize product listings, taxonomy, and SEO for retail.",
+    "duration_weeks": 3,
+    "skills_covered": ["SEO", "Data Entry", "Catalog Management"]
+  },
+  {
+    "learning_step_id": "LP-361",
+    "career_goal_name": "E-commerce Specialist",
+    "step_number": 3,
+    "title": "Conversion Rate Optimization",
+    "description": "Analyze user behavior to reduce cart abandonment.",
+    "duration_weeks": 4,
+    "skills_covered": ["CRO", "Analytics", "UX"]
+  },
+  {
+    "learning_step_id": "LP-362",
+    "career_goal_name": "E-commerce Specialist",
+    "step_number": 4,
+    "title": "Inventory & Fulfillment",
+    "description": "Understand supply chain, dropshipping, and ERP integration.",
+    "duration_weeks": 3,
+    "skills_covered": ["Logistics", "Operations", "Inventory"]
+  },
+  {
+    "learning_step_id": "LP-363",
+    "career_goal_name": "E-commerce Specialist",
+    "step_number": 5,
+    "title": "Digital Marketing for E-com",
+    "description": "Run Google Shopping ads and email retention campaigns.",
+    "duration_weeks": 4,
+    "skills_covered": ["Marketing", "PPC", "Email Marketing"]
+  },
+  {
+    "learning_step_id": "LP-364",
+    "career_goal_name": "Web Accessibility Specialist",
+    "step_number": 1,
+    "title": "WCAG Guidelines",
+    "description": "Deep dive into WCAG 2.1/2.2 principles (POUR).",
+    "duration_weeks": 3,
+    "skills_covered": ["Compliance", "Standards", "Theory"]
+  },
+  {
+    "learning_step_id": "LP-365",
+    "career_goal_name": "Web Accessibility Specialist",
+    "step_number": 2,
+    "title": "Assistive Technologies",
+    "description": "Learn to use Screen Readers (NVDA/JAWS) and switch controls.",
+    "duration_weeks": 4,
+    "skills_covered": ["Testing", "Empathy", "Tools"]
+  },
+  {
+    "learning_step_id": "LP-366",
+    "career_goal_name": "Web Accessibility Specialist",
+    "step_number": 3,
+    "title": "WAI-ARIA",
+    "description": "Correctly implement ARIA roles, states, and properties.",
+    "duration_weeks": 4,
+    "skills_covered": ["HTML5", "ARIA", "Coding"]
+  },
+  {
+    "learning_step_id": "LP-367",
+    "career_goal_name": "Web Accessibility Specialist",
+    "step_number": 4,
+    "title": "Accessibility Auditing",
+    "description": "Perform manual and automated audits (Axe, Lighthouse).",
+    "duration_weeks": 4,
+    "skills_covered": ["Auditing", "Reporting", "QA"]
+  },
+  {
+    "learning_step_id": "LP-368",
+    "career_goal_name": "Web Accessibility Specialist",
+    "step_number": 5,
+    "title": "Remediation & Training",
+    "description": "Fix code issues and train developers on inclusive design.",
+    "duration_weeks": 3,
+    "skills_covered": ["Training", "Communication", "Fixing"]
+  },
+  {
+    "learning_step_id": "LP-369",
+    "career_goal_name": "Storage Engineer",
+    "step_number": 1,
+    "title": "Storage Fundamentals",
+    "description": "Understand DAS, NAS, SAN, and object storage concepts.",
+    "duration_weeks": 3,
+    "skills_covered": ["Infrastructure", "Storage", "Hardware"]
+  },
+  {
+    "learning_step_id": "LP-370",
+    "career_goal_name": "Storage Engineer",
+    "step_number": 2,
+    "title": "SAN Administration",
+    "description": "Configure Fibre Channel zoning, LUN masking, and HBAs.",
+    "duration_weeks": 5,
+    "skills_covered": ["Networking", "Configuration", "Admin"]
+  },
+  {
+    "learning_step_id": "LP-371",
+    "career_goal_name": "Storage Engineer",
+    "step_number": 3,
+    "title": "Data Protection",
+    "description": "Implement RAID levels, snapshots, and replication.",
+    "duration_weeks": 4,
+    "skills_covered": ["Reliability", "Backup", "Security"]
+  },
+  {
+    "learning_step_id": "LP-372",
+    "career_goal_name": "Storage Engineer",
+    "step_number": 4,
+    "title": "Cloud Storage Solutions",
+    "description": "Manage AWS S3, Azure Blob, and hybrid gateways.",
+    "duration_weeks": 4,
+    "skills_covered": ["Cloud", "AWS", "Azure"]
+  },
+  {
+    "learning_step_id": "LP-373",
+    "career_goal_name": "Storage Engineer",
+    "step_number": 5,
+    "title": "Performance Tuning",
+    "description": "Analyze IOPS, latency, and throughput to optimize loads.",
+    "duration_weeks": 3,
+    "skills_covered": ["Performance", "Analysis", "Troubleshooting"]
+  },
+  {
+    "learning_step_id": "LP-374",
+    "career_goal_name": "Quantum Computing Researcher",
+    "step_number": 1,
+    "title": "Quantum Mechanics Basics",
+    "description": "Understand superposition, entanglement, and interference.",
+    "duration_weeks": 5,
+    "skills_covered": ["Physics", "Theory", "Math"]
+  },
+  {
+    "learning_step_id": "LP-375",
+    "career_goal_name": "Quantum Computing Researcher",
+    "step_number": 2,
+    "title": "Linear Algebra for Quantum",
+    "description": "Master vectors, matrices, and Hilbert spaces.",
+    "duration_weeks": 4,
+    "skills_covered": ["Mathematics", "Linear Algebra", "Calculus"]
+  },
+  {
+    "learning_step_id": "LP-376",
+    "career_goal_name": "Quantum Computing Researcher",
+    "step_number": 3,
+    "title": "Quantum Programming (Qiskit)",
+    "description": "Write quantum circuits and run them on simulators.",
+    "duration_weeks": 6,
+    "skills_covered": ["Programming", "Python", "Qiskit"]
+  },
+  {
+    "learning_step_id": "LP-377",
+    "career_goal_name": "Quantum Computing Researcher",
+    "step_number": 4,
+    "title": "Quantum Algorithms",
+    "description": "Study Shor's, Grover's, and VQE algorithms.",
+    "duration_weeks": 5,
+    "skills_covered": ["Algorithms", "Research", "Analysis"]
+  },
+  {
+    "learning_step_id": "LP-378",
+    "career_goal_name": "Quantum Computing Researcher",
+    "step_number": 5,
+    "title": "Error Correction",
+    "description": "Learn techniques to mitigate noise in quantum systems.",
+    "duration_weeks": 4,
+    "skills_covered": ["Error Correction", "Advanced Tech", "Physics"]
+  },
+  {
+    "learning_step_id": "LP-379",
+    "career_goal_name": "CRM Architect",
+    "step_number": 1,
+    "title": "CRM Strategy & Design",
+    "description": "Align CRM capabilities with sales and marketing goals.",
+    "duration_weeks": 3,
+    "skills_covered": ["Strategy", "Business", "Architecture"]
+  },
+  {
+    "learning_step_id": "LP-380",
+    "career_goal_name": "CRM Architect",
+    "step_number": 2,
+    "title": "Data Modeling for CRM",
+    "description": "Design custom objects, relationships, and data flows.",
+    "duration_weeks": 4,
+    "skills_covered": ["Data Modeling", "Database", "Design"]
+  },
+  {
+    "learning_step_id": "LP-381",
+    "career_goal_name": "CRM Architect",
+    "step_number": 3,
+    "title": "Automation Architecture",
+    "description": "Design complex workflows, triggers, and approval processes.",
+    "duration_weeks": 4,
+    "skills_covered": ["Automation", "Logic", "Workflow"]
+  },
+  {
+    "learning_step_id": "LP-382",
+    "career_goal_name": "CRM Architect",
+    "step_number": 4,
+    "title": "Integration Patterns",
+    "description": "Architect integrations with ERP and Marketing Automation systems.",
+    "duration_weeks": 5,
+    "skills_covered": ["Integration", "API", "System Design"]
+  },
+  {
+    "learning_step_id": "LP-383",
+    "career_goal_name": "CRM Architect",
+    "step_number": 5,
+    "title": "Security & Governance",
+    "description": "Manage role hierarchies, sharing rules, and data compliance.",
+    "duration_weeks": 3,
+    "skills_covered": ["Security", "Governance", "Compliance"]
+  },
+  {
+    "learning_step_id": "LP-384",
+    "career_goal_name": "Business Systems Analyst",
+    "step_number": 1,
+    "title": "Requirements Elicitation",
+    "description": "Learn interviewing techniques and workshop facilitation.",
+    "duration_weeks": 3,
+    "skills_covered": ["Communication", "Analysis", "Planning"]
+  },
+  {
+    "learning_step_id": "LP-385",
+    "career_goal_name": "Business Systems Analyst",
+    "step_number": 2,
+    "title": "BPMN & Process Mapping",
+    "description": "Create detailed process diagrams (As-Is / To-Be).",
+    "duration_weeks": 4,
+    "skills_covered": ["Process Mapping", "Diagramming", "Visio"]
+  },
+  {
+    "learning_step_id": "LP-386",
+    "career_goal_name": "Business Systems Analyst",
+    "step_number": 3,
+    "title": "SQL for Analysts",
+    "description": "Validate data and perform gap analysis using SQL.",
+    "duration_weeks": 4,
+    "skills_covered": ["SQL", "Data Analysis", "Validation"]
+  },
+  {
+    "learning_step_id": "LP-387",
+    "career_goal_name": "Business Systems Analyst",
+    "step_number": 4,
+    "title": "User Acceptance Testing (UAT)",
+    "description": "Plan and coordinate UAT phases with stakeholders.",
+    "duration_weeks": 3,
+    "skills_covered": ["Testing", "QA", "Coordination"]
+  },
+  {
+    "learning_step_id": "LP-388",
+    "career_goal_name": "Business Systems Analyst",
+    "step_number": 5,
+    "title": "Agile Analysis",
+    "description": "Write effective user stories and acceptance criteria.",
+    "duration_weeks": 3,
+    "skills_covered": ["Agile", "Writing", "Scrum"]
+  },
+  {
+    "learning_step_id": "LP-389",
+    "career_goal_name": "Platform Engineer",
+    "step_number": 1,
+    "title": "Internal Developer Platforms",
+    "description": "Understand the concept of IDPs and Developer Experience (DevEx).",
+    "duration_weeks": 3,
+    "skills_covered": ["DevOps", "Platform Engineering", "Strategy"]
+  },
+  {
+    "learning_step_id": "LP-390",
+    "career_goal_name": "Platform Engineer",
+    "step_number": 2,
+    "title": "Kubernetes Administration",
+    "description": "Deep dive into cluster management, Helm, and Operators.",
+    "duration_weeks": 6,
+    "skills_covered": ["Kubernetes", "Container Orchestration", "Admin"]
+  },
+  {
+    "learning_step_id": "LP-391",
+    "career_goal_name": "Platform Engineer",
+    "step_number": 3,
+    "title": "Infrastructure as Code (Advanced)",
+    "description": "Build reusable Terraform modules and state management.",
+    "duration_weeks": 5,
+    "skills_covered": ["Terraform", "Automation", "Coding"]
+  },
+  {
+    "learning_step_id": "LP-392",
+    "career_goal_name": "Platform Engineer",
+    "step_number": 4,
+    "title": "GitOps with ArgoCD",
+    "description": "Implement GitOps workflows for continuous deployment.",
+    "duration_weeks": 4,
+    "skills_covered": ["GitOps", "CI/CD", "DevOps"]
+  },
+  {
+    "learning_step_id": "LP-393",
+    "career_goal_name": "Platform Engineer",
+    "step_number": 5,
+    "title": "Service Mesh (Istio)",
+    "description": "Manage traffic, security, and observability between services.",
+    "duration_weeks": 4,
+    "skills_covered": ["Networking", "Security", "Observability"]
+  },
+  {
+    "learning_step_id": "LP-394",
+    "career_goal_name": "Search Engine Marketing (SEM) Specialist",
+    "step_number": 1,
+    "title": "Keyword Research Strategy",
+    "description": "Find high-intent keywords using Planner and SEMrush.",
+    "duration_weeks": 3,
+    "skills_covered": ["SEO", "Research", "Marketing"]
+  },
+  {
+    "learning_step_id": "LP-395",
+    "career_goal_name": "Search Engine Marketing (SEM) Specialist",
+    "step_number": 2,
+    "title": "Ad Copywriting",
+    "description": "Write compelling headlines and descriptions that convert.",
+    "duration_weeks": 3,
+    "skills_covered": ["Copywriting", "Persuasion", "Writing"]
+  },
+  {
+    "learning_step_id": "LP-396",
+    "career_goal_name": "Search Engine Marketing (SEM) Specialist",
+    "step_number": 3,
+    "title": "Bidding Strategies",
+    "description": "Master manual vs automated bidding (tCPA, ROAS).",
+    "duration_weeks": 4,
+    "skills_covered": ["Strategy", "Analytics", "Finance"]
+  },
+  {
+    "learning_step_id": "LP-397",
+    "career_goal_name": "Search Engine Marketing (SEM) Specialist",
+    "step_number": 4,
+    "title": "Landing Page Optimization",
+    "description": "Improve Quality Score by optimizing landing page experience.",
+    "duration_weeks": 3,
+    "skills_covered": ["CRO", "UX", "Web Design"]
+  },
+  {
+    "learning_step_id": "LP-398",
+    "career_goal_name": "Search Engine Marketing (SEM) Specialist",
+    "step_number": 5,
+    "title": "Conversion Tracking",
+    "description": "Set up GTM and Google Ads conversion tags correctly.",
+    "duration_weeks": 4,
+    "skills_covered": ["Analytics", "Tracking", "Technical"]
+  },
+  {
+    "learning_step_id": "LP-399",
+    "career_goal_name": "Identity and Access Management (IAM) Engineer",
+    "step_number": 1,
+    "title": "IAM Fundamentals",
+    "description": "Understand AAA (Authentication, Authorization, Accounting) and Least Privilege.",
+    "duration_weeks": 3,
+    "skills_covered": ["Security", "Theory", "IAM"]
+  },
+  {
+    "learning_step_id": "LP-400",
+    "career_goal_name": "Identity and Access Management (IAM) Engineer",
+    "step_number": 2,
+    "title": "SSO & Federation (SAML/OIDC)",
+    "description": "Implement Single Sign-On using modern protocols.",
+    "duration_weeks": 5,
+    "skills_covered": ["SSO", "Protocols", "Integration"]
+  }
+]

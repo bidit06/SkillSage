@@ -1,0 +1,548 @@
+[
+  {
+    "career_goal": "Full Stack Web Developer",
+    "description": "A Full Stack Developer works on both frontend and backend of web applications, handling databases, servers, systems engineering, and clients. They build complete web applications from scratch and maintain existing systems.",
+    "required_skills": {
+      "technical_skills": [
+        {
+          "skill": "HTML5",
+          "required_level": 9
+        },
+        {
+          "skill": "CSS3",
+          "required_level": 9
+        },
+        {
+          "skill": "JavaScript",
+          "required_level": 10
+        },
+        {
+          "skill": "React.js",
+          "required_level": 9
+        },
+        {
+          "skill": "Node.js",
+          "required_level": 9
+        },
+        {
+          "skill": "Express.js",
+          "required_level": 8
+        },
+        {
+          "skill": "MongoDB",
+          "required_level": 8
+        },
+        {
+          "skill": "PostgreSQL",
+          "required_level": 7
+        },
+        {
+          "skill": "REST API Design",
+          "required_level": 9
+        },
+        {
+          "skill": "Git Version Control",
+          "required_level": 9
+        },
+        {
+          "skill": "Docker",
+          "required_level": 7
+        },
+        {
+          "skill": "Authentication & Authorization",
+          "required_level": 8
+        },
+        {
+          "skill": "Responsive Design",
+          "required_level": 9
+        },
+        {
+          "skill": "Testing (Unit & Integration)",
+          "required_level": 7
+        }
+      ],
+      "soft_skills": [
+        "Problem Solving",
+        "Communication",
+        "Time Management",
+        "Attention to Detail",
+        "Continuous Learning",
+        "Teamwork",
+        "Adaptability"
+      ]
+    },
+    "tools_and_technologies": [
+      "VS Code",
+      "GitHub",
+      "Postman",
+      "Chrome DevTools",
+      "npm/yarn",
+      "Webpack",
+      "Redux",
+      "Next.js",
+      "AWS/Azure",
+      "Nginx",
+      "Redis",
+      "Jest",
+      "Cypress",
+      "Figma"
+    ],
+    "learning_path": [
+      {
+        "step": 1,
+        "title": "Web Fundamentals",
+        "duration_weeks": 8,
+        "description": "Master HTML5, CSS3, and JavaScript basics. Learn DOM manipulation, events, and ES6+ features. Build static websites and understand responsive design principles."
+      },
+      {
+        "step": 2,
+        "title": "Frontend Framework - React",
+        "duration_weeks": 6,
+        "description": "Learn React fundamentals including components, props, state, hooks, and lifecycle methods. Understand JSX, virtual DOM, and component composition patterns."
+      },
+      {
+        "step": 3,
+        "title": "Backend Development - Node.js",
+        "duration_weeks": 8,
+        "description": "Master Node.js runtime, Express.js framework, middleware, routing, and asynchronous programming. Learn to build RESTful APIs and handle HTTP requests."
+      },
+      {
+        "step": 4,
+        "title": "Database Management",
+        "duration_weeks": 6,
+        "description": "Learn SQL with PostgreSQL and NoSQL with MongoDB. Understand database design, normalization, indexing, queries, and data modeling for web applications."
+      },
+      {
+        "step": 5,
+        "title": "Authentication & Security",
+        "duration_weeks": 4,
+        "description": "Implement JWT authentication, OAuth, password hashing, CORS, XSS protection, and CSRF tokens. Learn security best practices and common vulnerabilities."
+      },
+      {
+        "step": 6,
+        "title": "DevOps & Deployment",
+        "duration_weeks": 4,
+        "description": "Learn Git workflows, CI/CD pipelines, Docker containerization, and cloud deployment on AWS or Azure. Understand environment management and server configuration."
+      },
+      {
+        "step": 7,
+        "title": "Testing & Quality Assurance",
+        "duration_weeks": 3,
+        "description": "Write unit tests with Jest, integration tests, and end-to-end tests with Cypress. Learn TDD principles and debugging techniques."
+      },
+      {
+        "step": 8,
+        "title": "Advanced Topics & Optimization",
+        "duration_weeks": 5,
+        "description": "Learn performance optimization, caching strategies with Redis, WebSockets for real-time features, GraphQL, microservices architecture, and scalability patterns."
+      }
+    ],
+    "recommended_projects": [
+      "E-commerce Platform with payment integration",
+      "Social Media Dashboard with real-time updates",
+      "Task Management System with team collaboration",
+      "Blog Platform with CMS and SEO optimization",
+      "Video Streaming Application",
+      "Real-time Chat Application with WebSockets",
+      "Restaurant Booking System",
+      "Job Board with applicant tracking",
+      "Personal Finance Tracker",
+      "Online Learning Management System"
+    ],
+    "related_job_titles": [
+      "Full Stack Engineer",
+      "MERN Stack Developer",
+      "JavaScript Developer",
+      "Web Application Developer",
+      "Software Engineer",
+      "Frontend + Backend Developer"
+    ],
+    "estimated_salary_range": {
+      "india": "₹4-15 LPA",
+      "us": "$70,000-$140,000"
+    },
+    "career_difficulty": "Medium",
+    "demand_level": "Very High",
+    "keywords_for_articles": [
+      "full stack development",
+      "MERN stack",
+      "web development roadmap",
+      "react node.js",
+      "javascript frameworks",
+      "REST API development",
+      "frontend backend integration",
+      "web app deployment",
+      "fullstack career path"
+    ]
+  },
+  {
+    "career_goal": "Data Scientist",
+    "description": "Data Scientists analyze complex data to extract insights, build predictive models, and solve business problems using statistical analysis, machine learning, and data visualization techniques.",
+    "required_skills": {
+      "technical_skills": [
+        {
+          "skill": "Python",
+          "required_level": 10
+        },
+        {
+          "skill": "Statistics & Probability",
+          "required_level": 9
+        },
+        {
+          "skill": "Machine Learning",
+          "required_level": 9
+        },
+        {
+          "skill": "Deep Learning",
+          "required_level": 8
+        },
+        {
+          "skill": "Pandas",
+          "required_level": 9
+        },
+        {
+          "skill": "NumPy",
+          "required_level": 9
+        },
+        {
+          "skill": "Scikit-learn",
+          "required_level": 9
+        },
+        {
+          "skill": "TensorFlow/PyTorch",
+          "required_level": 8
+        },
+        {
+          "skill": "SQL",
+          "required_level": 9
+        },
+        {
+          "skill": "Data Visualization",
+          "required_level": 8
+        },
+        {
+          "skill": "Feature Engineering",
+          "required_level": 8
+        },
+        {
+          "skill": "Model Deployment",
+          "required_level": 7
+        },
+        {
+          "skill": "Big Data Technologies",
+          "required_level": 6
+        }
+      ],
+      "soft_skills": [
+        "Analytical Thinking",
+        "Business Acumen",
+        "Communication",
+        "Problem Solving",
+        "Curiosity",
+        "Attention to Detail",
+        "Storytelling with Data"
+      ]
+    },
+    "tools_and_technologies": [
+      "Jupyter Notebook",
+      "Google Colab",
+      "Tableau",
+      "Power BI",
+      "Apache Spark",
+      "Hadoop",
+      "Git",
+      "Docker",
+      "AWS SageMaker",
+      "MLflow",
+      "Matplotlib",
+      "Seaborn",
+      "Plotly",
+      "SQL Server",
+      "PostgreSQL"
+    ],
+    "learning_path": [
+      {
+        "step": 1,
+        "title": "Python Programming Foundation",
+        "duration_weeks": 6,
+        "description": "Master Python syntax, data structures, OOP concepts, and file handling. Learn to write clean, efficient code and understand Python libraries ecosystem."
+      },
+      {
+        "step": 2,
+        "title": "Mathematics for Data Science",
+        "duration_weeks": 8,
+        "description": "Study linear algebra, calculus, statistics, probability distributions, hypothesis testing, and statistical inference essential for machine learning."
+      },
+      {
+        "step": 3,
+        "title": "Data Analysis with Pandas",
+        "duration_weeks": 5,
+        "description": "Learn data manipulation, cleaning, transformation, aggregation, and exploratory data analysis using Pandas. Master handling missing data and outliers."
+      },
+      {
+        "step": 4,
+        "title": "Data Visualization",
+        "duration_weeks": 4,
+        "description": "Create insightful visualizations using Matplotlib, Seaborn, and Plotly. Learn to communicate findings effectively through charts, graphs, and dashboards."
+      },
+      {
+        "step": 5,
+        "title": "Machine Learning Fundamentals",
+        "duration_weeks": 10,
+        "description": "Study supervised and unsupervised learning algorithms: regression, classification, clustering, dimensionality reduction. Understand model evaluation and validation."
+      },
+      {
+        "step": 6,
+        "title": "Advanced ML & Feature Engineering",
+        "duration_weeks": 6,
+        "description": "Learn ensemble methods, hyperparameter tuning, cross-validation, feature selection, and engineering techniques to improve model performance."
+      },
+      {
+        "step": 7,
+        "title": "Deep Learning & Neural Networks",
+        "duration_weeks": 8,
+        "description": "Master neural networks, CNNs for computer vision, RNNs/LSTMs for sequences, transfer learning, and model optimization using TensorFlow or PyTorch."
+      },
+      {
+        "step": 8,
+        "title": "SQL & Database Management",
+        "duration_weeks": 4,
+        "description": "Learn SQL queries, joins, subqueries, window functions, and database optimization for efficient data extraction and manipulation."
+      },
+      {
+        "step": 9,
+        "title": "Big Data & Model Deployment",
+        "duration_weeks": 6,
+        "description": "Introduction to Spark for big data processing. Learn to deploy models using Flask, FastAPI, Docker, and cloud services like AWS or Azure."
+      },
+      {
+        "step": 10,
+        "title": "Real-world Projects & Portfolio",
+        "duration_weeks": 8,
+        "description": "Build end-to-end projects from data collection to model deployment. Create a strong portfolio showcasing problem-solving and technical skills."
+      }
+    ],
+    "recommended_projects": [
+      "Customer Churn Prediction Model",
+      "Sentiment Analysis of Social Media Data",
+      "Stock Price Prediction using Time Series",
+      "Recommendation System for E-commerce",
+      "Image Classification with CNN",
+      "Credit Risk Assessment Model",
+      "Sales Forecasting Dashboard",
+      "Fraud Detection System",
+      "Natural Language Processing Chatbot",
+      "Healthcare Disease Prediction Model"
+    ],
+    "related_job_titles": [
+      "Machine Learning Engineer",
+      "Data Analyst",
+      "AI Engineer",
+      "Research Scientist",
+      "Quantitative Analyst",
+      "Business Intelligence Analyst"
+    ],
+    "estimated_salary_range": {
+      "india": "₹6-25 LPA",
+      "us": "$85,000-$160,000"
+    },
+    "career_difficulty": "High",
+    "demand_level": "Very High",
+    "keywords_for_articles": [
+      "data science career path",
+      "machine learning roadmap",
+      "python for data science",
+      "data scientist skills",
+      "ML algorithms",
+      "data analysis techniques",
+      "deep learning applications",
+      "data science projects",
+      "AI career guide"
+    ]
+  },
+  {
+    "career_goal": "DevOps Engineer",
+    "description": "DevOps Engineers bridge development and operations teams, automating and streamlining software development lifecycle. They implement CI/CD pipelines, manage infrastructure, and ensure system reliability and scalability.",
+    "required_skills": {
+      "technical_skills": [
+        {
+          "skill": "Linux System Administration",
+          "required_level": 9
+        },
+        {
+          "skill": "Docker",
+          "required_level": 9
+        },
+        {
+          "skill": "Kubernetes",
+          "required_level": 9
+        },
+        {
+          "skill": "CI/CD Pipelines",
+          "required_level": 9
+        },
+        {
+          "skill": "Jenkins",
+          "required_level": 8
+        },
+        {
+          "skill": "Git & GitHub Actions",
+          "required_level": 9
+        },
+        {
+          "skill": "AWS/Azure/GCP",
+          "required_level": 9
+        },
+        {
+          "skill": "Terraform",
+          "required_level": 8
+        },
+        {
+          "skill": "Ansible",
+          "required_level": 7
+        },
+        {
+          "skill": "Shell Scripting",
+          "required_level": 8
+        },
+        {
+          "skill": "Python",
+          "required_level": 7
+        },
+        {
+          "skill": "Monitoring & Logging",
+          "required_level": 8
+        },
+        {
+          "skill": "Networking Fundamentals",
+          "required_level": 8
+        }
+      ],
+      "soft_skills": [
+        "Problem Solving",
+        "Collaboration",
+        "Communication",
+        "Automation Mindset",
+        "Continuous Learning",
+        "Attention to Detail",
+        "Critical Thinking"
+      ]
+    },
+    "tools_and_technologies": [
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "GitLab CI",
+      "GitHub Actions",
+      "Terraform",
+      "Ansible",
+      "Prometheus",
+      "Grafana",
+      "ELK Stack",
+      "AWS",
+      "Azure DevOps",
+      "Nginx",
+      "HAProxy",
+      "Vault"
+    ],
+    "learning_path": [
+      {
+        "step": 1,
+        "title": "Linux Fundamentals & Command Line",
+        "duration_weeks": 6,
+        "description": "Master Linux OS, shell commands, file system, permissions, process management, and system administration tasks. Learn shell scripting for automation."
+      },
+      {
+        "step": 2,
+        "title": "Networking & Security Basics",
+        "duration_weeks": 4,
+        "description": "Understand TCP/IP, DNS, HTTP/HTTPS, load balancing, firewalls, SSL/TLS certificates, and network troubleshooting."
+      },
+      {
+        "step": 3,
+        "title": "Version Control & Git",
+        "duration_weeks": 3,
+        "description": "Learn Git workflows, branching strategies, merge conflicts resolution, Git hooks, and collaborative development practices."
+      },
+      {
+        "step": 4,
+        "title": "Containerization with Docker",
+        "duration_weeks": 5,
+        "description": "Master Docker containers, images, Dockerfile creation, Docker Compose, networking, volumes, and container registry management."
+      },
+      {
+        "step": 5,
+        "title": "Container Orchestration - Kubernetes",
+        "duration_weeks": 8,
+        "description": "Learn K8s architecture, pods, services, deployments, ingress, persistent volumes, ConfigMaps, secrets, and cluster management."
+      },
+      {
+        "step": 6,
+        "title": "CI/CD Pipeline Implementation",
+        "duration_weeks": 6,
+        "description": "Build automated pipelines using Jenkins, GitLab CI, or GitHub Actions. Implement testing, building, and deployment automation."
+      },
+      {
+        "step": 7,
+        "title": "Infrastructure as Code - Terraform",
+        "duration_weeks": 5,
+        "description": "Learn to provision and manage infrastructure using Terraform. Understand state management, modules, and best practices."
+      },
+      {
+        "step": 8,
+        "title": "Configuration Management - Ansible",
+        "duration_weeks": 4,
+        "description": "Automate configuration management using Ansible playbooks, roles, and inventory management for consistent environments."
+      },
+      {
+        "step": 9,
+        "title": "Cloud Platforms - AWS/Azure",
+        "duration_weeks": 8,
+        "description": "Master cloud services including EC2, S3, RDS, Lambda, VPC, IAM, CloudWatch. Learn cloud architecture and best practices."
+      },
+      {
+        "step": 10,
+        "title": "Monitoring & Logging",
+        "duration_weeks": 4,
+        "description": "Implement monitoring with Prometheus and Grafana. Set up centralized logging with ELK stack. Create alerts and dashboards."
+      }
+    ],
+    "recommended_projects": [
+      "Automated CI/CD Pipeline for Microservices",
+      "Kubernetes Cluster Setup with Auto-scaling",
+      "Infrastructure as Code for Multi-cloud Deployment",
+      "Monitoring Stack with Prometheus & Grafana",
+      "Blue-Green Deployment Strategy Implementation",
+      "Disaster Recovery System",
+      "Container Security Scanning Pipeline",
+      "Multi-environment Configuration Management",
+      "Log Aggregation and Analysis System",
+      "Cloud Cost Optimization Automation"
+    ],
+    "related_job_titles": [
+      "Site Reliability Engineer (SRE)",
+      "Cloud Engineer",
+      "Infrastructure Engineer",
+      "Platform Engineer",
+      "Release Engineer",
+      "Automation Engineer"
+    ],
+    "estimated_salary_range": {
+      "india": "₹6-20 LPA",
+      "us": "$90,000-$150,000"
+    },
+    "career_difficulty": "High",
+    "demand_level": "Very High",
+    "keywords_for_articles": [
+      "devops engineer roadmap",
+      "CI/CD pipeline",
+      "kubernetes tutorial",
+      "docker containerization",
+      "infrastructure as code",
+      "cloud automation",
+      "devops tools",
+      "site reliability engineering",
+      "devops career path"
+    ]
+  }
+]
