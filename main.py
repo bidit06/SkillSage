@@ -73,6 +73,12 @@ class AnalysisSaveRequest(BaseModel):
     skill_ratings: Dict[str, int]
     custom_missing_skills: List[Dict[str, Any]]
 
+# --- NEW MODEL FOR SKILL ACTIONS ---
+class SkillAction(BaseModel):
+    skill: str
+    action: str # "learned" or "learning"
+    active: bool # True = Tick (Add), False = Untick (Remove)
+
 # --- ROUTES ---
 
 @app.get("/", response_class=HTMLResponse)
@@ -174,6 +180,53 @@ async def update_profile(data: UserProfileUpdate, request: Request):
     await users_collection.update_one({"email": user["email"]}, {"$set": update_data})
     return {"message": "Updated"}
 
+# --- UPDATED SKILL ACTION ENDPOINT ---
+@app.post("/api/skills/action")
+async def skill_action(data: SkillAction, request: Request):
+    user = await get_current_user(request)
+    if not user: raise HTTPException(401)
+    
+    if data.action == "learned":
+        if data.active:
+            # Tick: Add to skills, remove from currently_learning
+            await users_collection.update_one(
+                {"email": user["email"]},
+                {
+                    "$addToSet": {"skills": data.skill},
+                    "$pull": {"currently_learning": data.skill}
+                }
+            )
+            # Give it a default rating of 1 if it doesn't exist
+            await users_collection.update_one(
+                {"email": user["email"], f"skill_ratings.{data.skill}": {"$exists": False}},
+                {"$set": {f"skill_ratings.{data.skill}": 1}}
+            )
+        else:
+            # Untick: Remove from skills and ratings
+            await users_collection.update_one(
+                {"email": user["email"]},
+                {
+                    "$pull": {"skills": data.skill},
+                    "$unset": {f"skill_ratings.{data.skill}": ""}
+                }
+            )
+        
+    elif data.action == "learning":
+        if data.active:
+            # Tick: Add to learning
+            await users_collection.update_one(
+                {"email": user["email"]},
+                {"$addToSet": {"currently_learning": data.skill}}
+            )
+        else:
+            # Untick: Remove from learning
+            await users_collection.update_one(
+                {"email": user["email"]},
+                {"$pull": {"currently_learning": data.skill}}
+            )
+    
+    return {"message": "Updated"}
+
 @app.get("/api/detailed-analysis")
 async def get_detailed_analysis(request: Request):
     user = await get_current_user(request)
@@ -183,6 +236,10 @@ async def get_detailed_analysis(request: Request):
     analysis = rag_advisor.get_detailed_gap_analysis(user["email"])
     if user.get("custom_missing_skills"):
         analysis["missing_skills"].extend(user["custom_missing_skills"])
+    
+    # Inject currently_learning for the frontend checkboxes
+    analysis["currently_learning"] = user.get("currently_learning", [])
+    
     return analysis
 
 @app.post("/api/save-analysis")
@@ -202,13 +259,8 @@ async def save_analysis(data: AnalysisSaveRequest, request: Request):
 # ... (Chat APIs as before)
 @app.get("/chat", response_class=HTMLResponse)
 async def chat_page(request: Request):
-    # 1. Check Authentication
-    if not await get_current_user(request): 
-        return RedirectResponse("/auth")
-    
-    # 2. Render the chat template (ensure you have a chat.html file)
+    if not await get_current_user(request): return RedirectResponse("/auth")
     return templates.TemplateResponse("index.html", {"request": request})
-
 
 @app.get("/api/chats")
 async def get_chats(request: Request):
