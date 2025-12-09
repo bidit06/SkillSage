@@ -1,303 +1,736 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detailed Skill Gap Analysis</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); min-height: 100vh; padding-bottom: 40px; }
-        .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
-        .section { background: rgba(255, 255, 255, 0.95); padding: 30px; border-radius: 16px; margin-bottom: 25px; box-shadow: 0 8px 32px rgba(204, 49, 61, 0.15); }
-        .section-title { font-size: 22px; color: #CC313D; margin-bottom: 25px; font-weight: 800; display: flex; align-items: center; gap: 10px; }
-        
-        .header { background: rgba(255, 255, 255, 0.98); padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(204, 49, 61, 0.15); }
-        .logo { font-size: 24px; font-weight: 800; color: #CC313D; cursor: pointer; }
-        .back-btn { padding: 8px 20px; border: 2px solid #CC313D; color: #CC313D; border-radius: 20px; cursor: pointer; background: transparent; font-weight: 700; }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+        background: linear-gradient(135deg, #cc313d 0%, #f7c5cc 100%);
+        min-height: 100vh;
+        padding-bottom: 40px;
+      }
 
-        .rating-grid { display: grid; grid-template-columns: 1fr; gap: 10px; max-height: 400px; overflow-y: auto; }
-        .skill-rating-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; background: white; border-radius: 8px; border: 1px solid #eee; }
-        .star-container-10 { display: flex; gap: 4px; }
-        .star-10 { font-size: 20px; cursor: pointer; color: #e0e0e0; transition: color 0.2s; }
-        .star-10.filled { color: #f1c40f; }
+      /* UPDATED: Increased Width */
+      .container {
+        max-width: 1600px;
+        width: 95%;
+        margin: 30px auto;
+        padding: 0 20px;
+      }
 
-        .charts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px; }
-        .chart-card { background: white; border-radius: 16px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .chart-container { position: relative; height: 400px; width: 100%; }
-        
-        .save-btn { padding: 12px 30px; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); color: white; border: none; border-radius: 30px; font-weight: 700; cursor: pointer; }
-        .save-btn.dirty { animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(204, 49, 61, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(204, 49, 61, 0); } 100% { box-shadow: 0 0 0 0 rgba(204, 49, 61, 0); } }
-        
-        .empty-state { text-align: center; color: #888; padding: 20px; font-style: italic; }
-        
-        /* Table Styles */
-        .skills-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        .skills-table th, .skills-table td { padding: 12px 15px; border-bottom: 1px solid #eee; text-align: left; }
-        .skills-table th { background-color: #f8f9fa; color: #666; font-size: 12px; text-transform: uppercase; }
-        
-        .add-skill-form { margin-top: 20px; padding: 20px; background: #f9f9f9; border-radius: 12px; }
-        .form-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; }
-        .form-input { padding: 10px; border: 1px solid #ddd; border-radius: 8px; flex: 1; }
-        .add-btn { padding: 10px 20px; background: #333; color: white; border: none; border-radius: 8px; cursor: pointer; }
+      .section {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        border-radius: 16px;
+        margin-bottom: 25px;
+        box-shadow: 0 8px 32px rgba(204, 49, 61, 0.15);
+      }
+      .section-title {
+        font-size: 22px;
+        color: #cc313d;
+        margin-bottom: 25px;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .header {
+        background: rgba(255, 255, 255, 0.98);
+        padding: 20px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 20px rgba(204, 49, 61, 0.15);
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: 800;
+        color: #cc313d;
+        cursor: pointer;
+      }
+      .back-btn {
+        padding: 8px 20px;
+        border: 2px solid #cc313d;
+        color: #cc313d;
+        border-radius: 20px;
+        cursor: pointer;
+        background: transparent;
+        font-weight: 700;
+      }
+
+      .rating-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 15px;
+        max-height: 400px;
+        overflow-y: auto;
+      }
+      .skill-rating-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 20px;
+        background: white;
+        border-radius: 8px;
+        border: 1px solid #eee;
+      }
+      .star-container-10 {
+        display: flex;
+        gap: 4px;
+      }
+      .star-10 {
+        font-size: 20px;
+        cursor: pointer;
+        color: #e0e0e0;
+        transition: color 0.2s;
+      }
+      .star-10.filled {
+        color: #f1c40f;
+      }
+
+      /* UPDATED: Horizontal Scrolling for Charts */
+      .charts-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 20px;
+      }
+      .charts-grid {
+        display: flex;
+        gap: 30px;
+        width: max-content; /* Ensures content stretches */
+      }
+      .chart-card {
+        background: white;
+        border-radius: 16px;
+        padding: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        min-width: 500px; /* Fixed width to prevent squishing */
+        flex: 0 0 auto;
+      }
+      .chart-container {
+        position: relative;
+        height: 400px;
+        width: 100%;
+      }
+
+      /* Custom Scrollbar */
+      .charts-wrapper::-webkit-scrollbar {
+        height: 10px;
+      }
+      .charts-wrapper::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 5px;
+      }
+      .charts-wrapper::-webkit-scrollbar-thumb {
+        background: #cc313d;
+        border-radius: 5px;
+      }
+      .charts-wrapper::-webkit-scrollbar-thumb:hover {
+        background: #a0262f;
+      }
+
+      .save-btn {
+        padding: 12px 30px;
+        background: linear-gradient(135deg, #cc313d 0%, #f7c5cc 100%);
+        color: white;
+        border: none;
+        border-radius: 30px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .save-btn.dirty {
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(204, 49, 61, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 10px rgba(204, 49, 61, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(204, 49, 61, 0);
+        }
+      }
+
+      .empty-state {
+        text-align: center;
+        color: #888;
+        padding: 20px;
+        font-style: italic;
+        width: 100%;
+      }
+
+      /* Table Styles */
+      .skills-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      .skills-table th,
+      .skills-table td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #eee;
+        text-align: left;
+      }
+      .skills-table th {
+        background-color: #f8f9fa;
+        color: #666;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      .add-skill-form {
+        margin-top: 20px;
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 12px;
+      }
+      .form-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: flex-end;
+      }
+      .form-input {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        flex: 1;
+      }
+      .add-btn {
+        padding: 10px 20px;
+        background: #333;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      /* Styles for new checkboxes */
+      .action-cell {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+      .action-label {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        color: #555;
+      }
+      .action-label input {
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        accent-color: #cc313d;
+      }
+      .action-label:hover {
+        color: #cc313d;
+      }
+      .loading-text {
+        font-size: 11px;
+        color: #888;
+        margin-left: 5px;
+        display: none;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <h1 class="logo" onclick="window.location.href='/dashboard'">Career Advisor</h1>
-        <button class="back-btn" onclick="handleBack()">← Dashboard</button>
+      <h1 class="logo" onclick="window.location.href='/dashboard'">
+        Career Advisor
+      </h1>
+      <button class="back-btn" onclick="handleBack()">← Dashboard</button>
     </header>
 
     <div class="container">
-        <!-- 1. SKILL RATING -->
-        <div class="section">
-            <div class="section-title"><i class="ri-star-line"></i> Skill Proficiency Self-Assessment</div>
-            <div class="rating-grid" id="skillsRatingContainer"><div class="empty-state">Loading skills...</div></div>
+      <div class="section">
+        <div class="section-title">
+          <i class="ri-star-line"></i> Skill Proficiency Self-Assessment
         </div>
+        <div class="rating-grid" id="skillsRatingContainer">
+          <div class="empty-state">Loading skills...</div>
+        </div>
+      </div>
 
-        <!-- 2. RADAR CHARTS -->
-        <div class="section">
-            <div class="section-title"><i class="ri-radar-line"></i> Career Goal Analysis</div>
-            <div class="charts-grid" id="radarChartsContainer"><div class="empty-state">Loading charts...</div></div>
+      <div class="section">
+        <div class="section-title">
+          <i class="ri-radar-line"></i> Career Goal Analysis
         </div>
+        <div class="charts-wrapper">
+          <div class="charts-grid" id="radarChartsContainer">
+            <div class="empty-state">Loading charts...</div>
+          </div>
+        </div>
+      </div>
 
-        <!-- 3. MISSING SKILLS -->
-        <div class="section">
-            <div class="section-title"><i class="ri-list-check-2"></i> Missing Skills Breakdown</div>
-            <div id="missingSkillsContent"></div>
-            
-            <div class="add-skill-form">
-                <h4>+ Add Custom Missing Skill</h4>
-                <div class="form-row">
-                    <input type="text" class="form-input" id="newSkillName" placeholder="Skill Name">
-                    <select class="form-input" id="newSkillGoal"><option>Select Goal...</option></select>
-                    <button class="add-btn" onclick="addManualSkill()">Add</button>
-                </div>
-            </div>
+      <div class="section">
+        <div class="section-title">
+          <i class="ri-list-check-2"></i> Missing Skills Breakdown
         </div>
+        <div id="missingSkillsContent"></div>
 
-        <div style="text-align: right; padding-top: 20px;">
-            <button class="save-btn" onclick="saveData()">💾 Save Analysis Plan</button>
+        <div class="add-skill-form">
+          <h4>+ Add Custom Missing Skill</h4>
+          <div class="form-row">
+            <input
+              type="text"
+              class="form-input"
+              id="newSkillName"
+              placeholder="Skill Name"
+            />
+            <select class="form-input" id="newSkillGoal">
+              <option>Select Goal...</option>
+            </select>
+            <button class="add-btn" onclick="addManualSkill()">Add</button>
+          </div>
         </div>
+      </div>
+
+      <div style="text-align: right; padding-top: 20px">
+        <button class="save-btn" onclick="saveData()">
+          💾 Save Analysis Plan
+        </button>
+      </div>
     </div>
 
     <script>
-        let analysisData = {};
-        let skillRatings = {};
-        let customMissingSkills = [];
-        let charts = [];
-        let hasUnsavedChanges = false;
+      let analysisData = {};
+      let skillRatings = {};
+      let customMissingSkills = [];
+      let chartInstances = {};
+      let hasUnsavedChanges = false;
 
-        document.getElementById('skillsRatingContainer').addEventListener('click', function(e) {
-            if (e.target.classList.contains('star-10')) {
-                const skillName = e.target.closest('.skill-rating-row').dataset.skill;
-                const value = parseInt(e.target.dataset.val);
-                setRating(skillName, value);
-            }
+      document
+        .getElementById("skillsRatingContainer")
+        .addEventListener("click", function (e) {
+          if (e.target.classList.contains("star-10")) {
+            const skillName =
+              e.target.closest(".skill-rating-row").dataset.skill;
+            const value = parseInt(e.target.dataset.val);
+            setRating(skillName, value);
+          }
         });
 
-        window.addEventListener('load', loadAnalysis);
+      window.addEventListener("load", loadAnalysis);
 
-        async function loadAnalysis() {
-            try {
-                const response = await fetch('/api/detailed-analysis');
-                if (response.status === 401) { window.location.href = '/auth'; return; }
-                const data = await response.json();
-                
-                if (data.error) {
-                    document.getElementById('radarChartsContainer').innerHTML = `<div class="empty-state">Error: ${data.error}</div>`;
-                    return;
-                }
+      async function loadAnalysis() {
+        try {
+          const response = await fetch("/api/detailed-analysis");
+          if (response.status === 401) {
+            window.location.href = "/auth";
+            return;
+          }
+          const data = await response.json();
 
-                analysisData = data;
-                skillRatings = data.skill_ratings || {};
-                
-                // Ensure all skills have a rating entry
-                if (data.skills_have) {
-                    data.skills_have.forEach(s => { if (skillRatings[s] === undefined) skillRatings[s] = 0; });
-                }
+          if (data.error) {
+            document.getElementById(
+              "radarChartsContainer"
+            ).innerHTML = `<div class="empty-state">Error: ${data.error}</div>`;
+            return;
+          }
 
-                renderSkillsRating(data.skills_have || []);
-                renderRadarCharts(data.goals_summary || []); 
-                renderMissingSkills(data.missing_skills || []);
-                populateGoalDropdown(data.goals_summary || []);
-            } catch (e) { 
-                console.error(e); 
-                document.getElementById('skillsRatingContainer').innerHTML = `<div class="empty-state">Error loading skills. Please refresh.</div>`;
-            }
+          // Initial Data Load
+          analysisData = data;
+          skillRatings = data.skill_ratings || {};
+
+          // Initialize ratings for new skills
+          if (data.skills_have) {
+            data.skills_have.forEach((s) => {
+              if (skillRatings[s] === undefined) skillRatings[s] = 0;
+            });
+          }
+
+          refreshUI(); // Centralized UI render
+          populateGoalDropdown(data.goals_summary || []);
+        } catch (e) {
+          console.error(e);
+          document.getElementById(
+            "skillsRatingContainer"
+          ).innerHTML = `<div class="empty-state">Error loading skills. Please refresh.</div>`;
         }
+      }
 
-        function renderSkillsRating(skills) {
-            const container = document.getElementById('skillsRatingContainer');
-            if (!skills || skills.length === 0) { 
-                container.innerHTML = `<div class="empty-state">No skills found. Please add skills in your Profile.</div>`; 
-                return; 
+      // Helper to refresh all sections based on CURRENT local state
+      function refreshUI() {
+        renderSkillsRating(analysisData.skills_have || []);
+        renderRadarCharts(analysisData.goals_summary || []);
+        renderMissingSkills(
+          analysisData.missing_skills || [],
+          analysisData.skills_have || [],
+          analysisData.currently_learning || []
+        );
+      }
+
+      function renderSkillsRating(skills) {
+        const container = document.getElementById("skillsRatingContainer");
+        if (!skills || skills.length === 0) {
+          container.innerHTML = `<div class="empty-state">No skills found. Please add skills in your Profile.</div>`;
+          return;
+        }
+        container.innerHTML = skills
+          .map((skill) => {
+            const rating = skillRatings[skill] || 0;
+            let stars = "";
+            for (let i = 1; i <= 10; i++) {
+              const cls = i <= rating ? "filled" : "";
+              stars += `<span class="ri-star-fill star-10 ${cls}" data-val="${i}"></span>`;
             }
-            container.innerHTML = skills.map(skill => {
-                const rating = skillRatings[skill] || 0;
-                let stars = '';
-                for(let i=1; i<=10; i++) {
-                    const cls = i <= rating ? 'filled' : '';
-                    stars += `<span class="ri-star-fill star-10 ${cls}" data-val="${i}"></span>`;
-                }
-                return `<div class="skill-rating-row" data-skill="${skill}">
+            return `<div class="skill-rating-row" data-skill="${skill}">
                             <strong>${skill}</strong>
                             <div style="display:flex; align-items:center; gap:10px;">
                                 <div class="star-container-10">${stars}</div>
                                 <span style="font-size:12px; color:#666; width:20px; text-align:center;">${rating}</span>
                             </div>
                         </div>`;
-            }).join('');
+          })
+          .join("");
+      }
+
+      function setRating(skill, rating) {
+        hasUnsavedChanges = true;
+        document.querySelector(".save-btn").classList.add("dirty");
+        skillRatings[skill] = rating;
+
+        // Only re-render what is necessary to avoid flickering
+        renderRadarCharts(analysisData.goals_summary);
+        // Update the specific row text
+        const row = document.querySelector(
+          `.skill-rating-row[data-skill="${skill}"]`
+        );
+        if (row) {
+          const stars = row.querySelectorAll(".star-10");
+          stars.forEach((s, idx) => {
+            if (idx < rating) s.classList.add("filled");
+            else s.classList.remove("filled");
+          });
+          row.querySelector('span[style*="font-size"]').textContent = rating;
+        }
+      }
+
+      function renderRadarCharts(goalsSummary) {
+        const container = document.getElementById("radarChartsContainer");
+
+        if (!goalsSummary || goalsSummary.length === 0) {
+          container.innerHTML = `<div class="empty-state">No career goals set. Go to Profile to add one.</div>`;
+          return;
+        }
+        const loadingState = container.querySelector(".empty-state");
+        if (loadingState) {
+          loadingState.remove();
         }
 
-        function setRating(skill, rating) {
-            hasUnsavedChanges = true;
-            document.querySelector('.save-btn').classList.add('dirty');
-            skillRatings[skill] = rating;
-            
-            renderSkillsRating(analysisData.skills_have); 
-            renderRadarCharts(analysisData.goals_summary); 
-        }
+        goalsSummary.forEach((goalData, index) => {
+          const canvasId = `chart-${index}`;
 
-        function renderRadarCharts(goalsSummary) {
-            const container = document.getElementById('radarChartsContainer');
-            charts.forEach(c => c.destroy());
-            charts = [];
-            container.innerHTML = ''; 
+          const userValues = goalData.required_skills.map((chartLabel) => {
+            const chartTokens = chartLabel
+              .toLowerCase()
+              .split(/[\\/\\s,&]+/)
+              .filter((t) => t.length > 0);
+            let bestMatch = 0;
 
-            if (!goalsSummary || goalsSummary.length === 0) { 
-                container.innerHTML = `<div class="empty-state">No career goals set. Go to Profile to add one.</div>`; 
-                return; 
+            for (const [userSkill, val] of Object.entries(skillRatings)) {
+              const userSkillLower = userSkill.toLowerCase().trim();
+              if (userSkillLower === chartLabel.toLowerCase().trim())
+                return val;
+              if (chartTokens.includes(userSkillLower))
+                bestMatch = Math.max(bestMatch, val);
+            }
+            return bestMatch;
+          });
+
+          if (chartInstances[canvasId]) {
+            chartInstances[canvasId].data.datasets[0].data = userValues;
+            chartInstances[canvasId].update("none");
+          } else {
+            let card = document.getElementById(`card-${index}`);
+            if (!card) {
+              card = document.createElement("div");
+              card.id = `card-${index}`;
+              card.className = "chart-card";
+              card.innerHTML = `<h3>${goalData.goal}</h3><div class="chart-container"><canvas id="${canvasId}"></canvas></div>`;
+              container.appendChild(card);
             }
 
-            goalsSummary.forEach((goalData, index) => {
-                const card = document.createElement('div');
-                card.className = 'chart-card';
-                const canvasId = `chart-${index}`;
-                card.innerHTML = `<h3>${goalData.goal}</h3><div class="chart-container"><canvas id="${canvasId}"></canvas></div>`;
-                container.appendChild(card);
-
-                const userValues = goalData.required_skills.map(chartLabel => {
-                    const chartTokens = chartLabel.toLowerCase().split(/[\/\s,&]+/).filter(t => t.length > 0);
-                    let bestMatch = 0;
-
-                    for (const [userSkill, val] of Object.entries(skillRatings)) {
-                        const userSkillLower = userSkill.toLowerCase().trim();
-                        
-                        // Strict Match
-                        if (userSkillLower === chartLabel.toLowerCase().trim()) return val;
-                        // Token Match
-                        if (chartTokens.includes(userSkillLower)) bestMatch = Math.max(bestMatch, val);
-                    }
-                    return bestMatch;
-                });
-
-                const ctx = document.getElementById(canvasId).getContext('2d');
-                charts.push(new Chart(ctx, {
-                    type: 'radar',
-                    data: {
-                        labels: goalData.required_skills,
-                        datasets: [{
-                            label: 'Your Level',
-                            data: userValues,
-                            backgroundColor: 'rgba(204, 49, 61, 0.2)',
-                            borderColor: '#CC313D',
-                            pointBackgroundColor: '#CC313D',
-                            borderWidth: 2
-                        }, {
-                            label: 'Required',
-                            data: goalData.target_data,
-                            backgroundColor: 'transparent',
-                            borderColor: 'rgba(150, 150, 150, 0.5)',
-                            borderDash: [5, 5],
-                            pointRadius: 0
-                        }]
-                    },
-                    options: {
-                        scales: { r: { suggestedMin: 0, suggestedMax: 10, pointLabels: { font: { size: 11, weight: 'bold' } } } },
-                        maintainAspectRatio: false
-                    }
-                }));
+            const ctx = document.getElementById(canvasId).getContext("2d");
+            chartInstances[canvasId] = new Chart(ctx, {
+              type: "radar",
+              data: {
+                labels: goalData.required_skills,
+                datasets: [
+                  {
+                    label: "Your Level",
+                    data: userValues,
+                    backgroundColor: "rgba(204, 49, 61, 0.2)",
+                    borderColor: "#CC313D",
+                    pointBackgroundColor: "#CC313D",
+                    borderWidth: 2,
+                  },
+                  {
+                    label: "Required",
+                    data: goalData.target_data,
+                    backgroundColor: "transparent",
+                    borderColor: "rgba(150, 150, 150, 0.5)",
+                    borderDash: [5, 5],
+                    pointRadius: 0,
+                  },
+                ],
+              },
+              options: {
+                scales: {
+                  r: {
+                    suggestedMin: 0,
+                    suggestedMax: 10,
+                    pointLabels: { font: { size: 11, weight: "bold" } },
+                  },
+                },
+                maintainAspectRatio: false,
+              },
             });
+          }
+        });
+      }
+
+      function renderMissingSkills(skills, skillsHave, skillsLearning) {
+        const container = document.getElementById("missingSkillsContent");
+        if (!skills || skills.length === 0) {
+          container.innerHTML = `<div class="empty-state">No missing skills detected.</div>`;
+          return;
         }
 
-        function renderMissingSkills(skills) {
-            const container = document.getElementById('missingSkillsContent');
-            if(!skills || skills.length === 0) { container.innerHTML = `<div class="empty-state">No missing skills detected.</div>`; return; }
-            
-            const grouped = skills.reduce((acc, s) => { (acc[s.for_goal] = acc[s.for_goal] || []).push(s); return acc; }, {});
-            
-            container.innerHTML = Object.entries(grouped).map(([goal, items]) => `
+        const grouped = skills.reduce((acc, s) => {
+          (acc[s.for_goal] = acc[s.for_goal] || []).push(s);
+          return acc;
+        }, {});
+
+        container.innerHTML = Object.entries(grouped)
+          .map(
+            ([goal, items]) => `
                 <div class="missing-group" style="margin-bottom:20px;">
                     <div style="font-weight:bold; margin-bottom:5px; border-bottom:1px solid #eee;">${goal}</div>
                     <table class="skills-table">
-                        <thead><tr><th>Skill</th><th>Priority</th><th>Time</th></tr></thead>
+                        <thead><tr><th>Skill</th><th>Priority</th><th>Time</th><th>Actions</th></tr></thead>
                         <tbody>
-                            ${items.map(i => `
+                            ${items
+                              .map((i) => {
+                                const isLearned = skillsHave.some(
+                                  (s) =>
+                                    s.toLowerCase() === i.name.toLowerCase()
+                                );
+                                const isLearning = skillsLearning.some(
+                                  (s) =>
+                                    s.toLowerCase() === i.name.toLowerCase()
+                                );
+
+                                return `
                                 <tr>
                                     <td><strong>${i.name}</strong></td>
-                                    <td><span style="padding:4px 8px; border-radius:4px; font-size:11px; background:${i.priority==='High'?'#ffebee':'#e8f5e9'}; color:${i.priority==='High'?'#c62828':'#2e7d32'};">${i.priority}</span></td>
+                                    <td><span style="padding:4px 8px; border-radius:4px; font-size:11px; background:${
+                                      i.priority === "High"
+                                        ? "#ffebee"
+                                        : "#e8f5e9"
+                                    }; color:${
+                                  i.priority === "High" ? "#c62828" : "#2e7d32"
+                                };">${i.priority}</span></td>
                                     <td>${i.time_estimate}</td>
-                                </tr>`).join('')}
+                                    <td class="action-cell">
+                                        <label class="action-label" title="Mark as Currently Learning">
+                                            <input type="checkbox" 
+                                                ${isLearning ? "checked" : ""} 
+                                                onchange="handleSkillAction(this, '${
+                                                  i.name
+                                                }', 'learning')"> 
+                                            Currently Learning
+                                            <span class="loading-text">Saving...</span>
+                                        </label>
+                                        <label class="action-label" title="Mark as Learnt (Add to skills)">
+                                            <input type="checkbox" 
+                                                ${isLearned ? "checked" : ""} 
+                                                onchange="handleSkillAction(this, '${
+                                                  i.name
+                                                }', 'learned')"> 
+                                            Learnt
+                                            <span class="loading-text">Saving...</span>
+                                        </label>
+                                    </td>
+                                </tr>`;
+                              })
+                              .join("")}
                         </tbody>
                     </table>
                 </div>
-            `).join('');
-        }
+            `
+          )
+          .join("");
+      }
 
-        function populateGoalDropdown(goalsSummary) {
-            const sel = document.getElementById('newSkillGoal');
-            sel.innerHTML = '<option value="">Select Goal...</option>';
-            if(goalsSummary) goalsSummary.forEach(g => { 
-                let o = document.createElement('option'); 
-                o.text = g.goal; 
-                o.value = g.goal;
-                sel.add(o); 
-            });
-        }
+      // --- UPDATED LOGIC: Update LOCAL state instead of re-fetching DB ---
+      async function handleSkillAction(checkbox, skillName, actionType) {
+        const isActive = checkbox.checked;
+        const loadingSpan =
+          checkbox.parentElement.querySelector(".loading-text");
+        if (loadingSpan) loadingSpan.style.display = "inline";
+        checkbox.disabled = true;
 
-        function addManualSkill() {
-            const name = document.getElementById('newSkillName').value.trim();
-            const goal = document.getElementById('newSkillGoal').value;
-            if (name && goal) {
-                hasUnsavedChanges = true;
-                const newSkill = { name, for_goal: goal, priority: "High", time_estimate: "TBD" };
-                customMissingSkills.push(newSkill);
-                const container = document.getElementById('missingSkillsContent');
-                const row = document.createElement('div');
-                row.innerHTML = `<strong>${name}</strong> added for ${goal}`;
-                container.appendChild(row);
-            }
-        }
+        try {
+          const res = await fetch("/api/skills/action", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              skill: skillName,
+              action: actionType,
+              active: isActive,
+            }),
+          });
 
-        async function saveData() {
-            const btn = document.querySelector('.save-btn');
-            const original = btn.innerText;
-            btn.innerText = "Saving...";
-            try {
-                const res = await fetch('/api/save-analysis', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({ skill_ratings: skillRatings, custom_missing_skills: customMissingSkills })
-                });
-                if (res.ok) {
-                    hasUnsavedChanges = false;
-                    btn.classList.remove('dirty');
-                    btn.innerText = "✅ Saved!";
-                    setTimeout(() => btn.innerText = original, 2000);
+          if (res.ok) {
+            // Update Local State MANUALLY to prevent overwriting unsaved ratings
+            if (actionType === "learned") {
+              if (isActive) {
+                // Add to skills_have if not present
+                if (!analysisData.skills_have.includes(skillName)) {
+                  analysisData.skills_have.push(skillName);
+                  // Default rating 1
+                  skillRatings[skillName] = skillRatings[skillName] || 1;
                 }
-            } catch(e) { alert("Error saving"); btn.innerText = original; }
-        }
+                // Remove from currently_learning
+                analysisData.currently_learning =
+                  analysisData.currently_learning.filter(
+                    (s) => s !== skillName
+                  );
+              } else {
+                // Remove from skills_have
+                analysisData.skills_have = analysisData.skills_have.filter(
+                  (s) => s !== skillName
+                );
+                delete skillRatings[skillName];
+              }
+            } else if (actionType === "learning") {
+              if (isActive) {
+                if (!analysisData.currently_learning.includes(skillName)) {
+                  analysisData.currently_learning.push(skillName);
+                }
+              } else {
+                analysisData.currently_learning =
+                  analysisData.currently_learning.filter(
+                    (s) => s !== skillName
+                  );
+              }
+            }
 
-        window.addEventListener('beforeunload', function (e) { if (hasUnsavedChanges) { e.preventDefault(); e.returnValue = ''; } });
-        function handleBack() {
-            if(hasUnsavedChanges && !confirm("Unsaved changes will be lost. Leave?")) return;
-            window.location.href='/dashboard';
+            // Refresh UI with LOCAL data (keeps unsaved ratings intact)
+            refreshUI();
+          } else {
+            alert("Failed to update skill.");
+            checkbox.checked = !isActive;
+          }
+        } catch (err) {
+          console.error(err);
+          alert("Error connecting to server.");
+          checkbox.checked = !isActive;
+        } finally {
+          // Since we re-rendered the UI in refreshUI(), the old checkbox element is gone.
+          // We don't need to un-disable it.
         }
+      }
+
+      function populateGoalDropdown(goalsSummary) {
+        const sel = document.getElementById("newSkillGoal");
+        sel.innerHTML = '<option value="">Select Goal...</option>';
+        if (goalsSummary)
+          goalsSummary.forEach((g) => {
+            let o = document.createElement("option");
+            o.text = g.goal;
+            o.value = g.goal;
+            sel.add(o);
+          });
+      }
+
+      function addManualSkill() {
+        const name = document.getElementById("newSkillName").value.trim();
+        const goal = document.getElementById("newSkillGoal").value;
+        if (name && goal) {
+          hasUnsavedChanges = true;
+          const newSkill = {
+            name,
+            for_goal: goal,
+            priority: "High",
+            time_estimate: "TBD",
+          };
+          if (!analysisData.missing_skills) analysisData.missing_skills = [];
+          analysisData.missing_skills.push(newSkill);
+
+          renderMissingSkills(
+            analysisData.missing_skills,
+            analysisData.skills_have || [],
+            analysisData.currently_learning || []
+          );
+          document.getElementById("newSkillName").value = "";
+        }
+      }
+
+      async function saveData() {
+        const btn = document.querySelector(".save-btn");
+        const original = btn.innerText;
+        btn.innerText = "Saving...";
+        try {
+          const res = await fetch("/api/save-analysis", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              skill_ratings: skillRatings,
+              custom_missing_skills: customMissingSkills,
+            }),
+          });
+          if (res.ok) {
+            hasUnsavedChanges = false;
+            btn.classList.remove("dirty");
+            btn.innerText = "✅ Saved!";
+            setTimeout(() => (btn.innerText = original), 2000);
+          }
+        } catch (e) {
+          alert("Error saving");
+          btn.innerText = original;
+        }
+      }
+
+      window.addEventListener("beforeunload", function (e) {
+        if (hasUnsavedChanges) {
+          e.preventDefault();
+          e.returnValue = "";
+        }
+      });
+      function handleBack() {
+        if (
+          hasUnsavedChanges &&
+          !confirm("Unsaved changes will be lost. Leave?")
+        )
+          return;
+        window.location.href = "/dashboard";
+      }
     </script>
-</body>
+  </body>
 </html>
