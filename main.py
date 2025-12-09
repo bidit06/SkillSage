@@ -41,7 +41,7 @@ client = AsyncIOMotorClient(MONGO_URL)
 db = client.skillsage_db
 users_collection = db.users
 chats_collection = db.chats
-world_chats_collection = db.world_chats # NEW COLLECTION
+world_chats_collection = db.world_chats
 
 pwd_context = CryptContext(schemes=["argon2"], deprecated="auto")
 
@@ -74,11 +74,10 @@ class AnalysisSaveRequest(BaseModel):
     skill_ratings: Dict[str, int]
     custom_missing_skills: List[Dict[str, Any]]
 
-# --- NEW MODEL FOR SKILL ACTIONS ---
 class SkillAction(BaseModel):
     skill: str
-    action: str # "learned" or "learning"
-    active: bool # True = Tick (Add), False = Untick (Remove)
+    action: str
+    active: bool
 
 # --- ROUTES ---
 
@@ -103,7 +102,6 @@ async def detailed_analysis_page(request: Request):
     if not await get_current_user(request): return RedirectResponse("/auth")
     return templates.TemplateResponse("detailed-skill-analysis.html", {"request": request})
 
-# --- NEW WORLD CHAT PAGE ROUTE ---
 @app.get("/world-chat", response_class=HTMLResponse)
 async def world_chat_page(request: Request):
     if not await get_current_user(request): return RedirectResponse("/auth")
@@ -134,11 +132,9 @@ async def get_dashboard_data(request: Request):
     user = await get_current_user(request)
     if not user: raise HTTPException(401)
     
-    # Recent activity
     cursor = chats_collection.find({"user_email": user["email"]}).sort("updated_at", -1).limit(3)
     recent = [{"id": str(c["_id"]), "title": c.get("title", "Chat"), "timestamp": c.get("updated_at")} async for c in cursor]
 
-    # Recommendations
     recs = []
     if rag_advisor:
         try: recs = rag_advisor.get_career_recommendations(user["email"], 3)
@@ -176,18 +172,16 @@ async def update_profile(data: UserProfileUpdate, request: Request):
     
     update_data = {k: v for k, v in data.dict().items() if v is not None}
     
-    # SYNC SKILL RATINGS
     if "skills" in update_data:
         current_ratings = user.get("skill_ratings", {})
         new_skills_set = set(update_data["skills"])
-        # Only keep ratings for skills that still exist in the new list
         clean_ratings = {k: v for k, v in current_ratings.items() if k in new_skills_set}
         update_data["skill_ratings"] = clean_ratings
     
     await users_collection.update_one({"email": user["email"]}, {"$set": update_data})
+    
     return {"message": "Updated"}
 
-# --- UPDATED SKILL ACTION ENDPOINT ---
 @app.post("/api/skills/action")
 async def skill_action(data: SkillAction, request: Request):
     user = await get_current_user(request)
@@ -195,7 +189,7 @@ async def skill_action(data: SkillAction, request: Request):
     
     if data.action == "learned":
         if data.active:
-            # Tick: Add to skills, remove from currently_learning
+            # Tick 'Learned': Add to skills, REMOVE from currently_learning
             await users_collection.update_one(
                 {"email": user["email"]},
                 {
@@ -203,13 +197,13 @@ async def skill_action(data: SkillAction, request: Request):
                     "$pull": {"currently_learning": data.skill}
                 }
             )
-            # Give it a default rating of 1 if it doesn't exist
+            # Add default rating
             await users_collection.update_one(
                 {"email": user["email"], f"skill_ratings.{data.skill}": {"$exists": False}},
                 {"$set": {f"skill_ratings.{data.skill}": 1}}
             )
         else:
-            # Untick: Remove from skills and ratings
+            # Untick 'Learned': Remove from skills/ratings
             await users_collection.update_one(
                 {"email": user["email"]},
                 {
@@ -220,13 +214,17 @@ async def skill_action(data: SkillAction, request: Request):
         
     elif data.action == "learning":
         if data.active:
-            # Tick: Add to learning
+            # Tick 'Learning': Add to learning, REMOVE from skills and ratings
             await users_collection.update_one(
                 {"email": user["email"]},
-                {"$addToSet": {"currently_learning": data.skill}}
+                {
+                    "$addToSet": {"currently_learning": data.skill},
+                    "$pull": {"skills": data.skill},
+                    "$unset": {f"skill_ratings.{data.skill}": ""}
+                }
             )
         else:
-            # Untick: Remove from learning
+            # Untick 'Learning': Remove from learning
             await users_collection.update_one(
                 {"email": user["email"]},
                 {"$pull": {"currently_learning": data.skill}}
@@ -243,8 +241,6 @@ async def get_detailed_analysis(request: Request):
     analysis = rag_advisor.get_detailed_gap_analysis(user["email"])
     if user.get("custom_missing_skills"):
         analysis["missing_skills"].extend(user["custom_missing_skills"])
-    
-    # Inject currently_learning for the frontend checkboxes
     analysis["currently_learning"] = user.get("currently_learning", [])
     
     return analysis
@@ -267,7 +263,6 @@ async def save_analysis(data: AnalysisSaveRequest, request: Request):
 @app.get("/api/world-chat")
 async def get_world_chat_messages(request: Request):
     if not await get_current_user(request): raise HTTPException(401)
-    # Fetch last 100 messages
     cursor = world_chats_collection.find().sort("timestamp", -1).limit(100)
     messages = []
     async for doc in cursor:
@@ -276,7 +271,7 @@ async def get_world_chat_messages(request: Request):
             "text": doc.get("text", ""),
             "timestamp": doc.get("timestamp")
         })
-    return messages[::-1] # Oldest first for chat log
+    return messages[::-1]
 
 @app.post("/api/world-chat")
 async def post_world_chat_message(request: Request, data: dict = Body(...)):
@@ -292,7 +287,6 @@ async def post_world_chat_message(request: Request, data: dict = Body(...)):
     await world_chats_collection.insert_one(msg)
     return {"status": "ok"}
 
-# ... (Chat APIs as before)
 @app.get("/chat", response_class=HTMLResponse)
 async def chat_page(request: Request):
     if not await get_current_user(request): return RedirectResponse("/auth")
