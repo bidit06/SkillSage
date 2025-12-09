@@ -68,7 +68,7 @@
         .orion-arrow { font-size: 32px; font-weight: bold; z-index: 1; animation: slideArrow 1.5s ease-in-out infinite; }
         @keyframes slideArrow { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(10px); } }
 
-        /* 3. Skills Gap Analysis - Bottom (Full Width) */
+        /* 3. Skills Gap Analysis - Middle (Full Width) */
         .skills-gap { grid-column: 1 / 13; min-height: 350px; }
         .skills-content { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-bottom: 24px; position: relative; z-index: 1; }
         .skills-subtitle { font-size: 15px; font-weight: 700; color: #CC313D; margin-bottom: 16px; }
@@ -87,9 +87,17 @@
         .btn-primary:hover::before { width: 300px; height: 300px; }
         .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(204, 49, 61, 0.4); }
 
+        /* 4. World Chat - Bottom (Full Width) */
+        .world-chat-widget { grid-column: 1 / 13; min-height: 150px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 20px; background: linear-gradient(135deg, #fff 0%, #fff0f1 100%); border: 2px solid #CC313D; }
+        .world-chat-widget:hover { background: #fff5f6; transform: translateY(-5px); }
+        .wc-content { flex: 1; z-index: 1; }
+        .wc-icon { font-size: 50px; animation: spinEarth 10s linear infinite; }
+        @keyframes spinEarth { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .wc-arrow { font-size: 24px; color: #CC313D; font-weight: 800; }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
-            .activity-feed, .talk-to-orion, .skills-gap { grid-column: 1 / 13; }
+            .activity-feed, .talk-to-orion, .skills-gap, .world-chat-widget { grid-column: 1 / 13; }
             .skills-content { grid-template-columns: 1fr; }
         }
     </style>
@@ -111,7 +119,6 @@
 
     <div class="dashboard-container">
         
-        <!-- SECTION 1: Recent Activity & Talk to Orion -->
         <div class="widget activity-feed">
             <h2 class="widget-title">Recent Activity</h2>
             <div class="activity-list"></div>
@@ -124,7 +131,6 @@
             <div class="orion-arrow">→</div>
         </div>
 
-        <!-- SECTION 2: Skills Gap Analysis -->
         <div class="widget skills-gap">
             <h2 class="widget-title">Skills Gap Analysis</h2>
             <div class="skills-content">
@@ -137,8 +143,16 @@
                     <div class="skill-tags" id="skillsLearningContainer"></div>
                 </div>
             </div>
-            <!-- REDIRECT -->
             <button class="btn-primary" onclick="window.location.href='/detailed-skill-analysis'">View Detailed Analysis</button>
+        </div>
+
+        <div class="widget world-chat-widget" onclick="window.location.href='/world-chat'">
+            <div class="wc-icon">🌍</div>
+            <div class="wc-content">
+                <h2 class="widget-title" style="margin-bottom: 5px;">World Chat</h2>
+                <p style="color: #666; font-weight: 500;">Connect with the global community of learners and professionals.</p>
+            </div>
+            <div class="wc-arrow">→</div>
         </div>
 
     </div>
