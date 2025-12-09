@@ -41,6 +41,7 @@ client = AsyncIOMotorClient(MONGO_URL)
 db = client.skillsage_db
 users_collection = db.users
 chats_collection = db.chats
+world_chats_collection = db.world_chats # NEW COLLECTION
 
 pwd_context = CryptContext(schemes=["argon2"], deprecated="auto")
 
@@ -101,6 +102,12 @@ async def profile_page(request: Request):
 async def detailed_analysis_page(request: Request):
     if not await get_current_user(request): return RedirectResponse("/auth")
     return templates.TemplateResponse("detailed-skill-analysis.html", {"request": request})
+
+# --- NEW WORLD CHAT PAGE ROUTE ---
+@app.get("/world-chat", response_class=HTMLResponse)
+async def world_chat_page(request: Request):
+    if not await get_current_user(request): return RedirectResponse("/auth")
+    return templates.TemplateResponse("world-chat.html", {"request": request})
 
 @app.post("/register")
 async def register(user: UserCreate):
@@ -255,6 +262,35 @@ async def save_analysis(data: AnalysisSaveRequest, request: Request):
         }}
     )
     return {"message": "Saved"}
+
+# --- WORLD CHAT API ---
+@app.get("/api/world-chat")
+async def get_world_chat_messages(request: Request):
+    if not await get_current_user(request): raise HTTPException(401)
+    # Fetch last 100 messages
+    cursor = world_chats_collection.find().sort("timestamp", -1).limit(100)
+    messages = []
+    async for doc in cursor:
+        messages.append({
+            "user": doc.get("user", "Anonymous"),
+            "text": doc.get("text", ""),
+            "timestamp": doc.get("timestamp")
+        })
+    return messages[::-1] # Oldest first for chat log
+
+@app.post("/api/world-chat")
+async def post_world_chat_message(request: Request, data: dict = Body(...)):
+    user = await get_current_user(request)
+    if not user: raise HTTPException(401)
+    
+    msg = {
+        "user": user.get("name", "Unknown"),
+        "email": user["email"],
+        "text": data.get("message"),
+        "timestamp": datetime.utcnow().isoformat()
+    }
+    await world_chats_collection.insert_one(msg)
+    return {"status": "ok"}
 
 # ... (Chat APIs as before)
 @app.get("/chat", response_class=HTMLResponse)
