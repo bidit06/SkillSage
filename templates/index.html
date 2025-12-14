@@ -7,6 +7,12 @@
     <title>Gemini Clone</title>
     
     <script>
+        // Check for saved theme preference or system default
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+        
         const token = localStorage.getItem('token');
         if (!token) {
             window.location.href = "/";
@@ -20,6 +26,21 @@
     <style>
         /* --- CSS STYLES --- */
         :root {
+            /* DEFAULT: Premium Light Theme */
+            --bg-color: #FFFDF6;
+            --sidebar-bg: #E2D4E0;
+            --text-color: #4C5372;
+            --secondary-text: #7C7E9D;
+            --hover-bg: #dcd0da;
+            --input-bg: #ffffff;
+            --accent-color: #4C5372;
+            --user-msg-bg: #E2D4E0;
+            --border-color: #949AB1;
+            --icon-color: #4C5372;
+        }
+
+        /* DARK MODE OVERRIDES */
+        body.dark-mode {
             --bg-color: #131314;
             --sidebar-bg: #1e1f20;
             --text-color: #e3e3e3;
@@ -29,33 +50,35 @@
             --accent-color: #a8c7fa;
             --user-msg-bg: #282a2c;
             --border-color: #444746;
+            --icon-color: #e3e3e3;
         }
 
-        body.light-mode {
-            --bg-color: #ffffff;
-            --sidebar-bg: #f0f4f9;
-            --text-color: #1f1f1f;
-            --secondary-text: #444746;
-            --hover-bg: #dfe3e7;
-            --input-bg: #f0f4f9;
-            --accent-color: #0b57d0;
-            --user-msg-bg: #f0f4f9;
-            --border-color: #e0e3e7;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; transition: background 0.2s, color 0.2s; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; transition: background 0.3s, color 0.3s, border-color 0.3s; }
         body { background-color: var(--bg-color); color: var(--text-color); display: flex; height: 100vh; overflow: hidden; }
 
         /* Sidebar */
-        #sidebar { width: 260px; background-color: var(--sidebar-bg); display: flex; flex-direction: column; padding: 20px 10px; flex-shrink: 0; }
-        .new-chat-btn { background-color: var(--hover-bg); color: var(--secondary-text); border: none; padding: 10px 15px; border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500; margin-bottom: 20px; }
-        .new-chat-btn:hover { background-color: var(--border-color); color: var(--text-color); }
-        .chat-list-label { font-size: 12px; color: var(--secondary-text); padding: 0 10px; margin-bottom: 10px; }
-        #chat-history { flex-grow: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
+        #sidebar { width: 280px; background-color: var(--sidebar-bg); display: flex; flex-direction: column; padding: 20px 15px; flex-shrink: 0; border-right: 1px solid var(--border-color); }
         
-        .chat-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 15px; border-radius: 50px; cursor: pointer; color: var(--text-color); font-size: 14px; position: relative; text-decoration: none; }
+        .new-chat-btn { 
+            background-color: var(--hover-bg); 
+            color: var(--text-color); 
+            border: 1px solid var(--border-color); 
+            padding: 12px 15px; 
+            border-radius: 50px; 
+            cursor: pointer; 
+            display: flex; align-items: center; gap: 10px; 
+            font-size: 14px; font-weight: 600; 
+            margin-bottom: 25px; 
+            transition: all 0.2s; 
+        }
+        .new-chat-btn:hover { background-color: var(--input-bg); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        
+        .chat-list-label { font-size: 12px; color: var(--secondary-text); padding: 0 10px; margin-bottom: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        #chat-history { flex-grow: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 4px; }
+        
+        .chat-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 15px; border-radius: 8px; cursor: pointer; color: var(--text-color); font-size: 14px; position: relative; text-decoration: none; }
         .chat-item:hover, .chat-item.active { background-color: var(--hover-bg); }
-        .chat-item.active { font-weight: 600; }
+        .chat-item.active { font-weight: 600; background-color: var(--input-bg); }
         .chat-title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px; pointer-events: none; }
         
         .chat-options-btn { background: none; border: none; color: var(--secondary-text); cursor: pointer; padding: 4px; border-radius: 50%; display: none; align-items: center; justify-content: center; }
@@ -63,64 +86,88 @@
         .chat-options-btn:hover { background-color: var(--border-color); color: var(--text-color); }
 
         /* Dropdown */
-        .dropdown-menu { position: absolute; right: 10px; top: 35px; background-color: var(--sidebar-bg); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 100; display: none; flex-direction: column; min-width: 120px; overflow: hidden; }
+        .dropdown-menu { position: absolute; right: 10px; top: 35px; background-color: var(--input-bg); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); z-index: 100; display: none; flex-direction: column; min-width: 120px; overflow: hidden; }
         .dropdown-menu.show { display: flex; }
         .dropdown-item { padding: 10px 15px; cursor: pointer; font-size: 13px; display: flex; align-items: center; gap: 8px; color: var(--text-color); }
         .dropdown-item:hover { background-color: var(--hover-bg); }
-        .dropdown-item.delete { color: #ff8b8b; }
+        .dropdown-item.delete { color: #ff6b6b; }
 
         /* Main Content */
         #main-content { flex-grow: 1; display: flex; flex-direction: column; background-color: var(--bg-color); position: relative; }
-        header { padding: 20px; display: flex; justify-content: space-between; align-items: center; color: var(--secondary-text); }
-        .theme-toggle-btn { background: none; border: none; color: var(--secondary-text); cursor: pointer; padding: 8px; border-radius: 50%; }
         
-        .back-dashboard-btn { display: flex; align-items: center; gap: 8px; padding: 8px 16px; background-color: var(--hover-bg); color: var(--text-color); text-decoration: none; border-radius: 20px; font-size: 14px; font-weight: 500; transition: background 0.2s; margin-left: 15px; }
-        .back-dashboard-btn:hover { background-color: var(--border-color); }
+        header { 
+            padding: 20px 30px; 
+            display: flex; justify-content: space-between; align-items: center; 
+            color: var(--text-color); 
+            border-bottom: 1px solid var(--border-color); 
+            background: var(--bg-color); 
+        }
+        
+        .header-actions { display: flex; align-items: center; gap: 15px; }
 
-        #chat-container { flex-grow: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 20px; }
-        .welcome-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; text-align: center; }
-        .welcome-text { font-size: 48px; background: linear-gradient(90deg, #4285f4, #9b72cb, #d96570); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 500; margin-bottom: 10px; }
+        /* Dark Mode Button */
+        .theme-toggle-btn { 
+            background: var(--hover-bg); 
+            border: 1px solid var(--border-color); 
+            color: var(--icon-color); 
+            cursor: pointer; 
+            width: 40px; height: 40px; 
+            border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .theme-toggle-btn:hover { background-color: var(--border-color); transform: scale(1.05); }
         
-        .message-wrapper { width: 100%; max-width: 800px; display: flex; gap: 15px; }
+        .back-dashboard-btn { display: flex; align-items: center; gap: 8px; padding: 10px 20px; background-color: var(--sidebar-bg); color: var(--text-color); text-decoration: none; border-radius: 20px; font-size: 14px; font-weight: 600; transition: background 0.2s; margin-left: 15px; border: 1px solid var(--border-color); }
+        .back-dashboard-btn:hover { background-color: var(--input-bg); }
+
+        #chat-container { flex-grow: 1; overflow-y: auto; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 30px; }
+        .welcome-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; text-align: center; animation: fadeIn 0.8s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .welcome-text { font-size: 42px; color: var(--text-color); font-weight: 700; margin-bottom: 15px; }
+        .welcome-subtext { color: var(--secondary-text); font-size: 18px; }
+        
+        .message-wrapper { width: 100%; max-width: 800px; display: flex; gap: 20px; }
         .message-wrapper.user { justify-content: flex-end; }
-        .message-icon { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: white; }
-        .ai-icon { background: linear-gradient(135deg, #4285f4, #d96570); }
-        .user-icon { background-color: #5f6368; }
+        .message-icon { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .ai-icon { background: var(--accent-color); }
+        .user-icon { background-color: var(--secondary-text); }
         
         .message-content { line-height: 1.6; font-size: 16px; color: var(--text-color); display: flex; flex-direction: column; gap: 8px; max-width: 80%; }
-        .user .message-content { background-color: var(--user-msg-bg); padding: 10px 20px; border-radius: 20px 20px 5px 20px; }
+        .user .message-content { background-color: var(--user-msg-bg); padding: 15px 20px; border-radius: 20px 20px 5px 20px; border: 1px solid var(--border-color); }
         
         /* Attachments */
-        .attachment-preview { display: flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.1); padding: 8px 12px; border-radius: 8px; font-size: 13px; border: 1px solid var(--border-color); }
-        .attachment-preview img { width: 30px; height: 30px; object-fit: cover; border-radius: 4px; }
+        .attachment-preview { display: flex; align-items: center; gap: 10px; background: var(--input-bg); padding: 10px 15px; border-radius: 8px; font-size: 13px; border: 1px solid var(--border-color); }
+        .attachment-preview img { width: 40px; height: 40px; object-fit: cover; border-radius: 4px; }
         
-        #input-container { padding: 20px; display: flex; justify-content: center; background-color: var(--bg-color); }
+        #input-container { padding: 30px; display: flex; justify-content: center; background-color: var(--bg-color); }
         #input-wrapper { width: 100%; max-width: 800px; display: flex; flex-direction: column; gap: 10px; }
         #file-preview-area { display: none; flex-wrap: wrap; gap: 10px; padding: 0 10px; }
-        .preview-chip { background-color: var(--input-bg); border: 1px solid var(--border-color); padding: 5px 10px; border-radius: 8px; display: flex; align-items: center; gap: 8px; font-size: 13px; }
+        .preview-chip { background-color: var(--input-bg); border: 1px solid var(--border-color); padding: 8px 12px; border-radius: 8px; display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-color); }
         
-        .input-box { width: 100%; background-color: var(--input-bg); border-radius: 50px; padding: 10px 20px; display: flex; align-items: center; gap: 10px; border: 1px solid transparent; }
-        .input-box:focus-within { background-color: var(--hover-bg); border-color: var(--secondary-text); }
-        #message-input { flex-grow: 1; background: transparent; border: none; color: var(--text-color); font-size: 16px; outline: none; padding: 10px 0; }
-        .icon-btn { background: none; border: none; cursor: pointer; color: var(--secondary-text); padding: 8px; border-radius: 50%; display: flex; }
-        .icon-btn:hover { background-color: rgba(128,128,128,0.1); color: var(--text-color); }
+        .input-box { width: 100%; background-color: var(--input-bg); border-radius: 50px; padding: 12px 25px; display: flex; align-items: center; gap: 15px; border: 1px solid var(--border-color); box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: box-shadow 0.3s; }
+        .input-box:focus-within { box-shadow: 0 6px 20px rgba(76, 83, 114, 0.15); border-color: var(--text-color); }
+        #message-input { flex-grow: 1; background: transparent; border: none; color: var(--text-color); font-size: 16px; outline: none; padding: 5px 0; }
+        .icon-btn { background: none; border: none; cursor: pointer; color: var(--secondary-text); padding: 8px; border-radius: 50%; display: flex; transition: color 0.2s; }
+        .icon-btn:hover { color: var(--text-color); background-color: var(--hover-bg); }
 
         /* Rename Modal */
-        #rename-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 2000; }
-        .modal-content { background: var(--sidebar-bg); padding: 20px; border-radius: 12px; width: 300px; display: flex; flex-direction: column; gap: 15px; color: var(--text-color); border: 1px solid var(--border-color); }
-        .modal-input { padding: 10px; background: var(--bg-color); border: 1px solid var(--secondary-text); color: var(--text-color); border-radius: 6px; outline: none; }
-        .modal-actions { display: flex; justify-content: flex-end; gap: 10px; }
-        .btn { padding: 8px 16px; border-radius: 4px; cursor: pointer; border: none; font-size: 14px; }
-        .btn-cancel { background: transparent; color: var(--accent-color); }
-        .btn-confirm { background: var(--accent-color); color: white; font-weight: 500; }
+        #rename-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: none; align-items: center; justify-content: center; z-index: 2000; backdrop-filter: blur(2px); }
+        .modal-content { background: var(--bg-color); padding: 30px; border-radius: 16px; width: 350px; display: flex; flex-direction: column; gap: 20px; color: var(--text-color); border: 1px solid var(--border-color); box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .modal-input { padding: 12px; background: var(--input-bg); border: 1px solid var(--border-color); color: var(--text-color); border-radius: 8px; outline: none; font-size: 15px; }
+        .modal-actions { display: flex; justify-content: flex-end; gap: 12px; }
+        .btn { padding: 10px 20px; border-radius: 8px; cursor: pointer; border: none; font-size: 14px; font-weight: 600; }
+        .btn-cancel { background: transparent; color: var(--secondary-text); border: 1px solid var(--border-color); }
+        .btn-confirm { background: var(--text-color); color: var(--bg-color); }
     </style>
 </head>
 
-<body>
+<body class="">
 
     <aside id="sidebar">
         <button class="new-chat-btn" onclick="startNewChat()">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5V19M5 12H19"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5V19M5 12H19"/></svg>
             New Chat
         </button>
         <div class="chat-list-label">Recent</div>
@@ -130,7 +177,7 @@
     <main id="main-content">
         <header>
             <div style="display:flex; align-items:center;">
-                <div style="font-weight: 500; font-size: 18px;">Gemini Clone</div>
+                <div style="font-weight: 700; font-size: 20px; color: var(--text-color);">Gemini Clone</div>
                 <a href="/dashboard" class="back-dashboard-btn">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                     Back to Dashboard
@@ -138,11 +185,14 @@
             </div>
 
             <div class="header-actions">
-                <button class="theme-toggle-btn" onclick="toggleTheme()">
-                    <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                <button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle Dark Mode">
+                    <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
                 </button>
-                <div class="user-icon" onclick="window.location.href='/profile'" style="width: 32px; height: 32px; border-radius: 50%; overflow: hidden; cursor: pointer; margin-left:10px;" title="Go to Profile">
-                    <svg viewBox="0 0 24 24" fill="#ccc" width="32" height="32"><circle cx="12" cy="12" r="12"/></svg>
+
+                <div class="user-icon" onclick="window.location.href='/profile'" style="width: 36px; height: 36px; border-radius: 50%; overflow: hidden; cursor: pointer;" title="Go to Profile">
+                    <svg viewBox="0 0 24 24" fill="var(--secondary-text)" width="36" height="36"><circle cx="12" cy="12" r="12"/></svg>
                 </div>
             </div>
         </header>
@@ -172,10 +222,9 @@
         </div>
     </main>
 
-    <!-- Rename Modal -->
     <div id="rename-modal">
         <div class="modal-content">
-            <h3>Rename Chat</h3>
+            <h3 style="margin-bottom: 0;">Rename Chat</h3>
             <input type="text" id="rename-input" class="modal-input" placeholder="New Chat Name">
             <div class="modal-actions">
                 <button class="btn btn-cancel" onclick="closeRenameModal()">Cancel</button>
@@ -185,6 +234,33 @@
     </div>
 
     <script>
+        // --- THEME TOGGLE LOGIC ---
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateThemeIcon(isDark);
+        }
+
+        function updateThemeIcon(isDark) {
+            const icon = document.getElementById('theme-icon');
+            if (isDark) {
+                // Sun Icon
+                icon.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+            } else {
+                // Moon Icon
+                icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+            }
+        }
+
+        // Initialize Theme Icon on Load
+        document.addEventListener('DOMContentLoaded', () => {
+            const isDark = localStorage.getItem('theme') === 'dark';
+            if(isDark) document.body.classList.add('dark-mode');
+            updateThemeIcon(isDark);
+        });
+
+        // ... (Rest of JS Logic remains exactly the same) ...
         let chats = []; 
         let currentChatId = null; 
         let currentFile = null;
@@ -199,7 +275,6 @@
                     handleSendMessage();
                 }
             });
-            // Close dropdowns when clicking outside
             document.addEventListener('click', (e) => {
                 if (!e.target.closest('.chat-item')) {
                     closeAllDropdowns();
@@ -234,7 +309,6 @@
                 const div = document.createElement('div');
                 div.className = `chat-item ${isActive}`;
                 
-                // Click on chat item loads the chat
                 div.onclick = (e) => {
                     if (!e.target.closest('.chat-options-btn') && !e.target.closest('.dropdown-menu')) {
                         loadChat(chat.id);
@@ -259,7 +333,7 @@
         }
 
         function toggleMenu(chatId, event) {
-            event.stopPropagation(); // Prevent triggering loadChat
+            event.stopPropagation(); 
             closeAllDropdowns();
             const menu = document.getElementById(`menu-${chatId}`);
             menu.style.display = 'flex';
@@ -269,7 +343,6 @@
             document.querySelectorAll('.dropdown-menu').forEach(el => el.style.display = 'none');
         }
 
-        // --- NEW: DELETE CHAT ---
         async function deleteChat(id) {
             if(!confirm("Are you sure you want to delete this chat?")) return;
             
@@ -281,11 +354,8 @@
                 });
 
                 if(response.ok) {
-                    // Remove from local array
                     chats = chats.filter(c => c.id !== id);
-                    // If we deleted the current chat, reset view
                     if(currentChatId === id) startNewChat();
-                    // Re-render sidebar
                     renderSidebar();
                 } else {
                     console.error("Delete failed");
@@ -293,7 +363,6 @@
             } catch(e) { console.error(e); }
         }
 
-        // --- RENAME LOGIC ---
         function openRenameModal(id) {
             chatToRenameId = id;
             const chat = chats.find(c => c.id === id);
@@ -366,7 +435,6 @@
         async function handleSendMessage() {
             const input = document.getElementById('message-input');
             const text = input.value.trim();
-            const activeChatId = currentChatId; 
 
             if (!text && !currentFile) return;
 
@@ -471,10 +539,6 @@
             currentFile = null;
             document.getElementById('file-upload').value = '';
             document.getElementById('file-preview-area').style.display = 'none';
-        }
-
-        function toggleTheme() {
-            document.body.classList.toggle('light-mode');
         }
     </script>
 </body>
