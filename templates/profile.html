@@ -48,7 +48,7 @@
       }
       .back-btn:hover { background: #3E445B; transform: translateY(-2px); }
 
-      /* --- NEW LOGOUT BUTTON STYLE --- */
+      /* --- LOGOUT BUTTON STYLE --- */
       .logout-btn {
         padding: 10px 24px;
         background: transparent;
@@ -131,7 +131,7 @@
       .goal-tag { background: var(--primary-text); opacity: 0.8; color: var(--bg-color); padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
       .qual-tag { background: var(--primary-text); opacity: 0.7; color: var(--bg-color); padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
       
-      .remove-skill { cursor: pointer; font-weight: bold; color: var(--border-color); transition: color 0.2s; }
+      .remove-skill { cursor: pointer; font-weight: bold; color: var(--border-color); transition: color 0.2s; margin-left: 5px; }
       .remove-skill:hover { color: #FFF; }
       
       .skills-input-container input { border: none; outline: none; flex: 1; min-width: 120px; font-size: 15px; background: transparent; color: var(--primary-text); font-family: 'Montserrat', sans-serif; font-weight: 500; }
@@ -165,7 +165,7 @@
   <body>
     <header class="header">
       <div class="header-content" style="width: 100%; display:flex; justify-content:space-between; align-items:center;">
-        <h1 class="logo" onclick="window.location.href='/dashboard'">Profile</h1>
+        <h1 class="logo" onclick="window.location.href='/dashboard'">Career Advisor</h1>
         <div style="display: flex; gap: 15px; align-items: center;">
             <button class="back-btn" onclick="window.location.href='/dashboard'">← Back</button>
             <button class="logout-btn" onclick="window.location.href='/logout'">Logout ➔</button>
@@ -194,18 +194,12 @@
               <label class="form-label"><span>📧</span> Email Address</label>
               <input type="email" class="form-input" id="email" placeholder="your.email@example.com" required />
             </div>
+            
             <div class="form-group">
               <label class="form-label"><span>📍</span> Location</label>
-              <select class="form-select" id="location" required>
-                <option value="">Select your location</option>
-                <option value="Mumbai">Mumbai</option>
-                <option value="Delhi">Delhi</option>
-                <option value="Bangalore">Bangalore</option>
-                <option value="Hyderabad">Hyderabad</option>
-                <option value="Chennai">Chennai</option>
-                <option value="Other">Other</option>
-              </select>
+              <input type="text" class="form-input" id="location" placeholder="e.g. New York, London" required />
             </div>
+            
             <div class="form-group">
               <label class="form-label"><span>💼</span> Employment Status</label>
               <select class="form-select" id="employmentStatus" required>
@@ -257,9 +251,11 @@
     </div>
     <script>
       let state = { skills: [], currentlyLearning: [], careerGoals: [], qualifications: [] };
+      
       function setupTagInput(inputId, containerId, stateKey, cssClass) {
         const input = document.getElementById(inputId);
         const container = document.getElementById(containerId);
+        
         input.addEventListener("keypress", function (e) {
           if (e.key === "Enter") {
             e.preventDefault();
@@ -272,21 +268,37 @@
           }
         });
       }
+
       function renderTag(text, container, cssClass, stateKey) {
         const tag = document.createElement("div");
         tag.className = cssClass;
-        tag.innerHTML = `${text} <span class="remove-skill" onclick="removeTag(this, '${text}', '${stateKey}')">×</span>`;
+        
+        const textNode = document.createTextNode(text + " ");
+        tag.appendChild(textNode);
+
+        const removeBtn = document.createElement("span");
+        removeBtn.className = "remove-skill";
+        removeBtn.textContent = "×";
+        
+        removeBtn.onclick = function() {
+            removeTag(removeBtn, text, stateKey);
+        };
+
+        tag.appendChild(removeBtn);
         container.insertBefore(tag, container.querySelector("input"));
       }
+
       window.removeTag = function (element, text, stateKey) {
         const idx = state[stateKey].indexOf(text);
         if (idx > -1) state[stateKey].splice(idx, 1);
         element.parentElement.remove();
       };
+
       setupTagInput("skillInput", "skillsContainer", "skills", "skill-tag");
       setupTagInput("learningInput", "learningContainer", "currentlyLearning", "learning-tag");
       setupTagInput("goalInput", "goalContainer", "careerGoals", "goal-tag");
       setupTagInput("qualInput", "qualContainer", "qualifications", "qual-tag");
+
       window.addEventListener("load", async function () {
         const res = await fetch("/api/profile");
         if (res.ok) {
@@ -299,7 +311,11 @@
             state[key] = []; 
             const container = document.getElementById(containerId);
             Array.from(container.children).forEach((c) => { if (c.tagName !== "INPUT") c.remove(); });
-            arr.forEach((item) => { state[key].push(item); renderTag(item, container, cssClass, key); });
+            
+            arr.forEach((item) => { 
+                state[key].push(item); 
+                renderTag(item, container, cssClass, key); 
+            });
           };
           loadArray("skills", "skills", "skillsContainer", "skill-tag");
           loadArray("currentlyLearning", "currently_learning", "learningContainer", "learning-tag");
@@ -307,6 +323,7 @@
           loadArray("qualifications", "qualifications", "qualContainer", "qual-tag");
         }
       });
+
       document.getElementById("profileForm").addEventListener("submit", async function (e) {
           e.preventDefault();
           const btn = document.querySelector(".btn-save");
