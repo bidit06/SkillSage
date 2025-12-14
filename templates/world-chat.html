@@ -13,6 +13,7 @@
             --border-color: #949AB1;
             --icon-label: #7C7E9D;
             --primary-text: #4C5372;
+            --modal-overlay: rgba(76, 83, 114, 0.6);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -66,11 +67,22 @@
             padding: 20px 30px; 
             background: rgba(255,255,255,0.2); 
             border-bottom: 1px solid var(--border-color); 
-            display: flex; align-items: center; gap: 15px; 
+            display: flex; align-items: center; justify-content: space-between;
         }
+        
+        .header-left { display: flex; align-items: center; gap: 15px; }
+        
         .world-icon { font-size: 30px; animation: spin 10s linear infinite; }
         @keyframes spin { 100% { transform: rotate(360deg); } }
         
+        /* Info Button for Rules */
+        .info-btn {
+            background: transparent; border: none; cursor: pointer;
+            font-size: 24px; color: var(--icon-label);
+            transition: color 0.3s, transform 0.3s;
+        }
+        .info-btn:hover { color: var(--primary-text); transform: scale(1.1); }
+
         .messages-area { 
             flex: 1; 
             padding: 30px; 
@@ -91,11 +103,10 @@
         }
         @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         
-        /* SELF MESSAGE: Dark background, light text */
         .message.self { 
             align-self: flex-end; 
-            background: var(--primary-text); /* #4C5372 */
-            color: var(--bg-color); /* #FFFDF6 */
+            background: var(--primary-text); 
+            color: var(--bg-color); 
             border-bottom-right-radius: 4px; 
         }
         .message.other { 
@@ -139,22 +150,88 @@
         .send-btn:hover { transform: scale(1.1); }
         .send-btn i { font-size: 24px; }
 
+        /* --- RULES MODAL STYLES --- */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--modal-overlay);
+            backdrop-filter: blur(8px);
+            z-index: 3000;
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.4s ease;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .modal-content {
+            background: var(--bg-color);
+            width: 90%; max-width: 500px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            border: 1px solid var(--border-color);
+            text-align: center;
+            animation: scaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        @keyframes scaleUp { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+        .rules-icon { font-size: 48px; color: var(--primary-text); margin-bottom: 15px; }
+        .rules-title { font-size: 24px; font-weight: 800; color: var(--primary-text); margin-bottom: 10px; }
+        .rules-subtitle { font-size: 14px; color: var(--icon-label); margin-bottom: 25px; }
+
+        .rules-list {
+            text-align: left;
+            margin-bottom: 30px;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .rule-item {
+            display: flex; gap: 12px; margin-bottom: 15px;
+            align-items: flex-start;
+            font-size: 14px; color: var(--primary-text);
+            line-height: 1.5;
+        }
+        .rule-item:last-child { margin-bottom: 0; }
+        .rule-item i { color: var(--primary-text); font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+
+        .agree-btn {
+            background: var(--primary-text);
+            color: var(--bg-color);
+            padding: 14px 40px;
+            border-radius: 30px;
+            border: none;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(76, 83, 114, 0.2);
+        }
+        .agree-btn:hover { background: #3E445B; transform: translateY(-3px); }
+
     </style>
 </head>
 <body>
     <header class="header">
-        <h1 class="logo" onclick="window.location.href='/dashboard'">World Chat</h1>
+        <h1 class="logo" onclick="window.location.href='/dashboard'">Career Advisor</h1>
         <button class="back-btn" onclick="window.location.href='/dashboard'">← Dashboard</button>
     </header>
 
     <div class="container">
         <div class="chat-box">
             <div class="chat-header">
-                <div class="world-icon">🌍</div>
-                <div>
-                    <h2 style="font-size: 20px; color: var(--primary-text);">Global Community Chat</h2>
-                    <span style="font-size: 13px; color: var(--icon-label);">Connect with everyone online</span>
+                <div class="header-left">
+                    <div class="world-icon">🌍</div>
+                    <div>
+                        <h2 style="font-size: 20px; color: var(--primary-text);">Global Community Chat</h2>
+                        <span style="font-size: 13px; color: var(--icon-label);">Connect with everyone online</span>
+                    </div>
                 </div>
+                <button class="info-btn" onclick="openRules()" title="View Community Rules">
+                    <i class="ri-information-fill"></i>
+                </button>
             </div>
             
             <div class="messages-area" id="messagesArea">
@@ -168,14 +245,65 @@
         </div>
     </div>
 
+    <div id="rulesModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="rules-icon"><i class="ri-shield-check-fill"></i></div>
+            <h2 class="rules-title">Community Guidelines</h2>
+            <p class="rules-subtitle">Please follow these rules to keep our community safe and professional.</p>
+            
+            <div class="rules-list">
+                <div class="rule-item">
+                    <i class="ri-check-double-line"></i>
+                    <span><strong>Be Respectful:</strong> Treat everyone with kindness. Harassment or hate speech will not be tolerated.</span>
+                </div>
+                <div class="rule-item">
+                    <i class="ri-briefcase-line"></i>
+                    <span><strong>Stay Professional:</strong> This is a career-focused platform. Keep discussions relevant to skills and growth.</span>
+                </div>
+                <div class="rule-item">
+                    <i class="ri-spam-2-line"></i>
+                    <span><strong>No Spamming:</strong> Do not flood the chat or promote unrelated services/links.</span>
+                </div>
+                <div class="rule-item">
+                    <i class="ri-user-unfollow-line"></i>
+                    <span><strong>Protect Privacy:</strong> Never share sensitive personal information (passwords, phone numbers, etc.).</span>
+                </div>
+                <div class="rule-item">
+                    <i class="ri-english-input"></i>
+                    <span><strong>Language:</strong> Please communicate primarily in English to ensure everyone understands.</span>
+                </div>
+            </div>
+
+            <button class="agree-btn" onclick="closeRules()">I Understand & Agree</button>
+        </div>
+    </div>
+
     <script>
         const messagesArea = document.getElementById('messagesArea');
         const chatForm = document.getElementById('chatForm');
         const messageInput = document.getElementById('messageInput');
-        let lastRenderedTimestamp = ""; // To prevent re-rendering/flickering
+        let lastRenderedTimestamp = ""; 
         let currentUserEmail = null;
 
-        // Get current user email for 'self' identification
+        // --- RULES MODAL LOGIC ---
+        function openRules() {
+            document.getElementById('rulesModal').style.display = 'flex';
+        }
+
+        function closeRules() {
+            document.getElementById('rulesModal').style.display = 'none';
+            // Save that user has seen rules
+            localStorage.setItem('hasSeenRules', 'true');
+        }
+
+        // Check if rules should show on load
+        window.addEventListener('load', () => {
+            if (!localStorage.getItem('hasSeenRules')) {
+                openRules();
+            }
+        });
+
+        // --- CHAT LOGIC ---
         async function getUserInfo() {
             try {
                 const res = await fetch('/api/profile');
@@ -199,16 +327,13 @@
         function renderMessages(messages) {
             if (!messages || messages.length === 0) return;
 
-            // 1. Check if user is near bottom before adding (to auto-scroll)
             const isNearBottom = messagesArea.scrollHeight - messagesArea.scrollTop - messagesArea.clientHeight < 100;
             const isFirstLoad = lastRenderedTimestamp === "";
             
-            // Remove loading text if it exists
             const loadingText = messagesArea.querySelector('div[style*="text-align: center"]');
             if (loadingText) loadingText.remove();
 
             messages.forEach(msg => {
-                // Only append NEW messages based on timestamp string comparison
                 if (msg.timestamp > lastRenderedTimestamp) {
                     const isSelf = msg.email === currentUserEmail;
                     
@@ -225,7 +350,6 @@
                 }
             });
 
-            // 2. Scroll Logic: Scroll if first load OR user was already at bottom
             if (isFirstLoad || isNearBottom) {
                 scrollToBottom();
             }
@@ -249,9 +373,8 @@
                     body: JSON.stringify({ message: text })
                 });
                 
-                // Immediately fetch to show own message and force scroll
                 await fetchMessages();
-                scrollToBottom(); // Force scroll on manual send
+                scrollToBottom(); 
                 
             } catch (e) { alert("Failed to send"); }
         });
