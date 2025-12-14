@@ -39,6 +39,8 @@ Get instant answers to frequently asked questions about career transitions, skil
 ### **12. 🔍 Smart Knowledge Retrieval**
 Powered by RAG (Retrieval-Augmented Generation) with ChromaDB vector database. Get accurate, fact-based answers with zero hallucinations.
 
+### **13. World Chat**
+
 ---
 
 ## 🚀 HOW IT WORKS (User Flow for Website)

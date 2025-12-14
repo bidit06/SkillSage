@@ -1,218 +1,748 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Advisor Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        /* ... (Core Styles) ... */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); min-height: 100vh; padding-bottom: 40px; animation: gradientShift 15s ease infinite; background-size: 200% 200%; }
-        @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-        
-        /* Header */
-        .header { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(204, 49, 61, 0.15); position: sticky; top: 0; z-index: 100; animation: slideDown 0.6s ease; }
-        @keyframes slideDown { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-        .header-content { max-width: 1400px; margin: 0 auto; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 28px; font-weight: 800; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -1px; animation: pulse 3s ease-in-out infinite; }
-        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-        .header-right { display: flex; align-items: center; gap: 20px; }
-        .user-name { font-size: 14px; color: #333; font-weight: 500; }
-        .profile-icon { width: 45px; height: 45px; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); box-shadow: 0 4px 15px rgba(204, 49, 61, 0.3); position: relative; overflow: hidden; }
-        .profile-icon::before { content: ''; position: absolute; top: 50%; left: 50%; width: 0; height: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.3); transform: translate(-50%, -50%); transition: width 0.5s, height 0.5s; }
-        .profile-icon:hover::before { width: 100%; height: 100%; }
-        .profile-icon:hover { transform: rotate(360deg) scale(1.1); box-shadow: 0 6px 25px rgba(204, 49, 61, 0.5); }
-        .profile-icon svg { width: 24px; height: 24px; fill: white; z-index: 1; }
-        
-        /* Dashboard Container - Grid Setup */
-        .dashboard-container { max-width: 1400px; margin: 30px auto; padding: 0 24px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
-        
-        /* Widget Base Styles */
-        .widget { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 16px; padding: 28px; box-shadow: 0 8px 32px rgba(204, 49, 61, 0.15); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); border: 2px solid rgba(247, 197, 204, 0.3); animation: fadeInUp 0.6s ease forwards; opacity: 0; position: relative; overflow: hidden; }
-        .widget::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(247, 197, 204, 0.1) 0%, transparent 70%); animation: rotate 20s linear infinite; }
-        @keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
-        .widget:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 15px 45px rgba(204, 49, 61, 0.25); border-color: #CC313D; }
-        .widget-title { font-size: 20px; font-weight: 700; color: #CC313D; margin-bottom: 24px; position: relative; z-index: 1; letter-spacing: -0.5px; }
-        .widget-title::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 40px; height: 3px; background: linear-gradient(90deg, #CC313D, #F7C5CC); border-radius: 2px; animation: expandLine 2s ease-in-out infinite; }
-        @keyframes expandLine { 0%, 100% { width: 40px; } 50% { width: 60px; } }
-        
-        /* --- LAYOUT UPDATES --- */
-
-        /* 1. Activity Feed - Top Left (Half Width) */
-        .activity-feed { grid-column: 1 / 7; min-height: 300px; }
-        .activity-list { display: flex; flex-direction: column; gap: 18px; position: relative; z-index: 1; }
-        .activity-item { display: flex; gap: 14px; align-items: flex-start; padding: 12px; border-radius: 10px; transition: all 0.3s ease; animation: fadeIn 0.8s ease forwards; opacity: 0; cursor: pointer; }
-        .activity-item:nth-child(1) { animation-delay: 0.1s; }
-        .activity-item:nth-child(2) { animation-delay: 0.2s; }
-        @keyframes fadeIn { to { opacity: 1; } }
-        .activity-item:hover { background: rgba(247, 197, 204, 0.2); transform: translateX(8px); }
-        .activity-icon { font-size: 26px; flex-shrink: 0; animation: bounce 1s ease infinite; }
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
-        .activity-details { flex: 1; }
-        .activity-text { font-size: 14px; font-weight: 600; color: #333; margin-bottom: 6px; }
-        .activity-time { font-size: 12px; color: #999; font-weight: 500; }
-
-        /* 2. Talk to Orion - Top Right (Half Width) */
-        .talk-to-orion { grid-column: 7 / 13; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); color: white; cursor: pointer; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 300px; border: none; }
-        .talk-to-orion::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%); animation: rotateOrion 15s linear infinite; }
-        @keyframes rotateOrion { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        .talk-to-orion:hover { transform: translateY(-10px) scale(1.03); box-shadow: 0 20px 50px rgba(204, 49, 61, 0.5); }
-        .orion-icon { font-size: 64px; margin-bottom: 20px; animation: bounceOrion 2s infinite, rotateOrionIcon 3s ease-in-out infinite; z-index: 1; }
-        @keyframes bounceOrion { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-15px) scale(1.1); } }
-        @keyframes rotateOrionIcon { 0%, 100% { transform: rotate(-10deg); } 50% { transform: rotate(10deg); } }
-        .talk-to-orion .widget-title { color: white; margin-bottom: 15px; font-size: 28px; z-index: 1; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
-        .talk-to-orion .widget-title::after { display: none; }
-        .orion-description { font-size: 16px; opacity: 0.95; margin-bottom: 20px; font-weight: 500; z-index: 1; }
-        .orion-arrow { font-size: 32px; font-weight: bold; z-index: 1; animation: slideArrow 1.5s ease-in-out infinite; }
-        @keyframes slideArrow { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(10px); } }
-
-        /* 3. Skills Gap Analysis - Middle (Full Width) */
-        .skills-gap { grid-column: 1 / 13; min-height: 350px; }
-        .skills-content { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-bottom: 24px; position: relative; z-index: 1; }
-        .skills-subtitle { font-size: 15px; font-weight: 700; color: #CC313D; margin-bottom: 16px; }
-        .skill-tags { display: flex; flex-wrap: wrap; gap: 10px; }
-        .skill-tag { padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: 600; transition: all 0.3s ease; cursor: default; animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards; opacity: 0; transform: scale(0); }
-        .skill-tag:nth-child(1) { animation-delay: 0.3s; }
-        .skill-tag:nth-child(2) { animation-delay: 0.4s; }
-        .skill-tag:nth-child(3) { animation-delay: 0.5s; }
-        @keyframes popIn { to { opacity: 1; transform: scale(1); } }
-        .skill-tag:hover { transform: scale(1.1) rotate(2deg); }
-        .skill-tag.mastered { background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); color: white; }
-        .skill-tag.learning { background: rgba(247, 197, 204, 0.3); color: #CC313D; border: 2px solid #CC313D; }
-        
-        .btn-primary { padding: 12px 28px; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); color: white; border: none; border-radius: 30px; cursor: pointer; font-size: 15px; font-weight: 700; font-family: 'Montserrat', sans-serif; transition: all 0.4s ease; box-shadow: 0 4px 15px rgba(204, 49, 61, 0.3); position: relative; z-index: 1; overflow: hidden; }
-        .btn-primary::before { content: ''; position: absolute; top: 50%; left: 50%; width: 0; height: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.3); transform: translate(-50%, -50%); transition: width 0.6s, height 0.6s; }
-        .btn-primary:hover::before { width: 300px; height: 300px; }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(204, 49, 61, 0.4); }
-
-        /* 4. World Chat - Bottom (Full Width) */
-        .world-chat-widget { grid-column: 1 / 13; min-height: 150px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 20px; background: linear-gradient(135deg, #fff 0%, #fff0f1 100%); border: 2px solid #CC313D; }
-        .world-chat-widget:hover { background: #fff5f6; transform: translateY(-5px); }
-        .wc-content { flex: 1; z-index: 1; }
-        .wc-icon { font-size: 50px; animation: spinEarth 10s linear infinite; }
-        @keyframes spinEarth { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        .wc-arrow { font-size: 24px; color: #CC313D; font-weight: 800; }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .activity-feed, .talk-to-orion, .skills-gap, .world-chat-widget { grid-column: 1 / 13; }
-            .skills-content { grid-template-columns: 1fr; }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillsAge - AI Career Advisor</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              beige: '#FFFDF6',
+              lavender: '#E2D4E0',
+              steel: '#949AB1',
+              slate: '#7C7E9D',
+              cocoa: '#4C5372',
+            },
+            fontFamily: {
+              montserrat: ['Montserrat', 'sans-serif'],
+            },
+          }
         }
+      }
+    </script>
+    
+    <!-- Custom CSS -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+      }
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #FFFDF6;
+        color: #4C5372;
+        overflow-x: hidden;
+      }
+      
+      /* Scrollbar */
+      ::-webkit-scrollbar { width: 10px; }
+      ::-webkit-scrollbar-track { background: #FFFDF6; }
+      ::-webkit-scrollbar-thumb { background: #949AB1; border-radius: 5px; }
+      ::-webkit-scrollbar-thumb:hover { background: #7C7E9D; }
+
+      /* Animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+        transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      
+      .reveal-left {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .reveal-left.active {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      /* Stagger delays */
+      .delay-100 { transition-delay: 100ms; }
+      .delay-200 { transition-delay: 200ms; }
+      .delay-300 { transition-delay: 300ms; }
+      .delay-400 { transition-delay: 400ms; }
+      .delay-500 { transition-delay: 500ms; }
+      .delay-700 { transition-delay: 700ms; }
+      .delay-1000 { transition-delay: 1000ms; }
+
+      /* Blob Animation */
+      @keyframes blob-float {
+        0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.3; }
+        50% { transform: scale(1.1) translate(20px, -20px); opacity: 0.5; }
+      }
+      .animate-blob { animation: blob-float 15s infinite ease-in-out; }
+
+      /* Gradient Text Animation */
+      @keyframes gradient-x {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+      }
+      .animate-gradient {
+        background-size: 200% auto;
+        animation: gradient-x 4s linear infinite;
+      }
+
+      /* Ripple Effect */
+      span.ripple {
+        position: absolute;
+        border-radius: 50%;
+        transform: scale(0);
+        animation: ripple 600ms linear;
+        background-color: rgba(255, 255, 255, 0.4); 
+        pointer-events: none;
+      }
+      button { position: relative; overflow: hidden; }
+      @keyframes ripple {
+        to { transform: scale(4); opacity: 0; }
+      }
+
+      /* Mobile Menu Transition */
+      #mobile-menu {
+        transition: height 0.3s ease-out, opacity 0.3s ease-out;
+      }
     </style>
 </head>
-<body>
-    <header class="header">
-        <div class="header-content">
-            <h1 class="logo">Career Advisor</h1>
-            <div class="header-right">
-                <span class="user-name">Welcome, User</span>
-                <div class="profile-icon" id="profileIcon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
-                </div>
+<body class="antialiased">
+
+    <!-- Flood Transition -->
+    <div id="flood" class="fixed inset-0 bg-cocoa z-[9999] origin-top pointer-events-none transition-transform duration-[1.2s] ease-[cubic-bezier(0.22,1,0.36,1)]"></div>
+
+    <!-- Scroll Progress -->
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-cocoa via-slate to-lavender origin-left z-[100] w-0"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="sticky top-0 z-50 transition-all duration-500 border-b border-transparent">
+      <div class="w-full max-w-[1800px] mx-auto px-6 lg:px-12">
+        <div class="flex justify-between items-center h-24">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer reveal-left active">
+            <div class="w-10 h-10 bg-cocoa text-beige rounded-xl flex items-center justify-center">
+              <i data-lucide="brain" class="h-6 w-6"></i>
             </div>
-        </div>
-    </header>
+            <span class="font-bold text-2xl text-cocoa tracking-tight">SkillsAge</span>
+          </div>
+          
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-10">
+            <a href="#features" class="text-cocoa font-medium relative group text-sm uppercase tracking-wider hover:text-slate transition-colors">
+              Features <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cocoa transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#how-it-works" class="text-cocoa font-medium relative group text-sm uppercase tracking-wider hover:text-slate transition-colors">
+              How It Works <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cocoa transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#testimonials" class="text-cocoa font-medium relative group text-sm uppercase tracking-wider hover:text-slate transition-colors">
+              Testimonials <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cocoa transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#faq" class="text-cocoa font-medium relative group text-sm uppercase tracking-wider hover:text-slate transition-colors">
+              FAQ <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cocoa transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <button class="bg-cocoa text-beige px-7 py-3 rounded-full font-bold transition-all shadow-lg hover:shadow-cocoa/20 hover:scale-105 active:scale-95">
+              Get Started Free
+            </button>
+          </div>
 
-    <div class="dashboard-container">
-        
-        <div class="widget activity-feed">
-            <h2 class="widget-title">Recent Activity</h2>
-            <div class="activity-list"></div>
+          <!-- Mobile Toggle -->
+          <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="text-cocoa p-2">
+              <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+          </div>
         </div>
+      </div>
 
-        <div class="widget talk-to-orion" id="talkToOrion">
-            <div class="orion-icon">🤖</div>
-            <h2 class="widget-title">Talk to Orion</h2>
-            <p class="orion-description">Get personalized career guidance & chat now</p>
-            <div class="orion-arrow">→</div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-beige border-t border-steel/30 overflow-hidden shadow-lg backdrop-blur-md bg-opacity-95">
+        <div class="px-6 pt-4 pb-8 space-y-4">
+          <a href="#features" class="block text-cocoa font-medium text-lg py-3 border-b border-steel/10">Features</a>
+          <a href="#how-it-works" class="block text-cocoa font-medium text-lg py-3 border-b border-steel/10">How It Works</a>
+          <a href="#testimonials" class="block text-cocoa font-medium text-lg py-3 border-b border-steel/10">Testimonials</a>
+          <a href="#faq" class="block text-cocoa font-medium text-lg py-3 border-b border-steel/10">FAQ</a>
+          <button class="w-full bg-cocoa text-beige py-4 rounded-xl font-bold text-lg mt-6 shadow-md">Get Started Free</button>
         </div>
+      </div>
+    </nav>
 
-        <div class="widget skills-gap">
-            <h2 class="widget-title">Skills Gap Analysis</h2>
-            <div class="skills-content">
-                <div class="skills-column">
-                    <h3 class="skills-subtitle">Skills You Have</h3>
-                    <div class="skill-tags" id="skillsHaveContainer"></div>
+    <!-- Hero Section -->
+    <section id="hero-section" class="relative min-h-[90vh] flex items-center pt-20 pb-20 overflow-hidden bg-beige perspective-1000">
+        <!-- Blobs -->
+        <div class="absolute -top-[10%] -right-[5%] w-[800px] h-[800px] bg-gradient-to-br from-lavender/40 to-steel/10 rounded-full blur-[100px] pointer-events-none animate-blob"></div>
+        <div class="absolute bottom-[10%] -left-[10%] w-[600px] h-[600px] bg-gradient-to-tr from-steel/10 to-lavender/30 rounded-full blur-[80px] pointer-events-none animate-blob" style="animation-delay: 2s;"></div>
+
+        <div class="w-full max-w-[1800px] mx-auto px-6 lg:px-12 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                <!-- Content -->
+                <div class="lg:w-1/2 text-center lg:text-left z-10">
+                    <div class="reveal inline-block px-4 py-1.5 rounded-full bg-white/50 backdrop-blur-sm text-cocoa font-semibold text-sm mb-8 border border-steel/20 shadow-sm">
+                        ✨ Your AI Career Companion
+                    </div>
+                    <h1 class="reveal delay-100 text-5xl md:text-7xl font-extrabold text-cocoa leading-[1.1] mb-8 tracking-tight">
+                        From Confused to <br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cocoa via-slate to-cocoa pb-2 animate-gradient">Confident.</span>
+                    </h1>
+                    <p class="reveal delay-200 text-xl text-slate/80 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
+                        Get personalized career guidance, skills gap analysis, and structured learning roadmaps - all powered by AI. <span class="text-cocoa font-bold">Free forever.</span>
+                    </p>
+                    <div class="reveal delay-300 flex flex-col sm:flex-row gap-5 justify-center lg:justify-start items-center">
+                        <button id="hero-btn" class="relative overflow-hidden bg-cocoa text-beige px-8 py-4 rounded-full font-bold text-lg shadow-xl flex items-center justify-center gap-2 group min-w-[220px] hover:bg-[#5D6588] hover:scale-105 active:scale-95 transition-all">
+                            <div id="btn-progress" class="absolute left-0 top-0 h-full bg-slate/40 z-0 w-0 transition-all duration-[2000ms] ease-in-out"></div>
+                            <span id="btn-text" class="relative z-10 flex items-center gap-2">Get Started Free <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i></span>
+                        </button>
+                    </div>
+                    <div class="reveal delay-400 mt-10 flex items-center justify-center lg:justify-start gap-6 text-sm font-semibold text-slate/70">
+                        <div class="flex items-center gap-2"><div class="bg-green-100 text-green-600 rounded-full p-0.5"><i data-lucide="check-circle-2" class="w-4 h-4"></i></div> Free Forever</div>
+                        <div class="flex items-center gap-2"><div class="bg-green-100 text-green-600 rounded-full p-0.5"><i data-lucide="check-circle-2" class="w-4 h-4"></i></div> No Credit Card</div>
+                        <div class="flex items-center gap-2"><div class="bg-green-100 text-green-600 rounded-full p-0.5"><i data-lucide="check-circle-2" class="w-4 h-4"></i></div> AI Powered</div>
+                    </div>
                 </div>
-                <div class="skills-column">
-                    <h3 class="skills-subtitle">Currently Learning Skills</h3>
-                    <div class="skill-tags" id="skillsLearningContainer"></div>
-                </div>
-            </div>
-            <button class="btn-primary" onclick="window.location.href='/detailed-skill-analysis'">View Detailed Analysis</button>
-        </div>
 
-        <div class="widget world-chat-widget" onclick="window.location.href='/world-chat'">
-            <div class="wc-icon">🌍</div>
-            <div class="wc-content">
-                <h2 class="widget-title" style="margin-bottom: 5px;">World Chat</h2>
-                <p style="color: #666; font-weight: 500;">Connect with the global community of learners and professionals.</p>
-            </div>
-            <div class="wc-arrow">→</div>
-        </div>
-
-    </div>
-
-    <script>
-        function timeAgo(dateString) {
-            const date = new Date(dateString);
-            const now = new Date();
-            const seconds = Math.floor((now - date) / 1000);
-            let interval = seconds / 31536000;
-            if (interval > 1) return Math.floor(interval) + " years ago";
-            interval = seconds / 2592000;
-            if (interval > 1) return Math.floor(interval) + " months ago";
-            interval = seconds / 86400;
-            if (interval > 1) return Math.floor(interval) + " days ago";
-            interval = seconds / 3600;
-            if (interval > 1) return Math.floor(interval) + " hours ago";
-            interval = seconds / 60;
-            if (interval > 1) return Math.floor(interval) + " minutes ago";
-            return "Just now";
-        }
-
-        async function loadDashboard() {
-            try {
-                const response = await fetch('/api/dashboard-data');
-                if (response.status === 401) { window.location.href = '/auth'; return; }
-                if (response.ok) {
-                    const data = await response.json();
-                    
-                    document.querySelector('.user-name').textContent = `Welcome, ${data.name}`;
-
-                    // Populate Skills
-                    const skillsHave = document.getElementById('skillsHaveContainer');
-                    skillsHave.innerHTML = data.skills.map(s => `<span class="skill-tag mastered">${s}</span>`).join('') || '<span style="color:#666;font-size:13px;">No skills added</span>';
-
-                    const skillsLearning = document.getElementById('skillsLearningContainer');
-                    skillsLearning.innerHTML = data.currently_learning.map(s => `<span class="skill-tag learning">${s}</span>`).join('') || '<span style="color:#666;font-size:13px;">Not learning anything</span>';
-
-                    // Populate Activity
-                    const activityList = document.querySelector('.activity-list');
-                    if (data.recent_activity.length > 0) {
-                        activityList.innerHTML = data.recent_activity.map(a => `
-                            <div class="activity-item" onclick="window.location.href='/chat?id=${a.id}'">
-                                <div class="activity-icon">💬</div>
-                                <div class="activity-details">
-                                    <p class="activity-text">Chat: ${a.title}</p>
-                                    <span class="activity-time">${timeAgo(a.timestamp)}</span>
+                <!-- Dashboard Visual with Parallax ID -->
+                <div id="dashboard-visual" class="lg:w-1/2 relative w-full max-w-2xl reveal delay-200 transition-transform duration-100 ease-out">
+                    <div class="relative bg-white/40 backdrop-blur-xl rounded-[2.5rem] p-4 shadow-2xl border border-white/50">
+                        <div class="bg-beige rounded-[2rem] overflow-hidden shadow-inner p-8 min-h-[500px] flex flex-col gap-6 relative border border-steel/10">
+                            <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-cocoa via-slate to-lavender"></div>
+                            <div class="flex items-center gap-5 mb-2 border-b border-steel/10 pb-6">
+                                <div class="w-14 h-14 bg-gradient-to-br from-cocoa to-slate rounded-2xl flex items-center justify-center text-beige shadow-lg">
+                                    <i data-lucide="bot" class="w-7 h-7"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-cocoa text-lg">Orion AI</div>
+                                    <div class="text-sm text-slate flex items-center gap-1.5">
+                                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Online • Career Mentor
+                                    </div>
                                 </div>
                             </div>
-                        `).join('');
-                    } else {
-                        activityList.innerHTML = '<div style="padding:10px; color:#666;">No recent activity.</div>';
-                    }
-                }
-            } catch (error) { console.error("Error loading dashboard:", error); }
-        }
+                            <!-- Chat Bubbles -->
+                            <div class="space-y-6">
+                                <div class="bg-white p-5 rounded-3xl rounded-tl-sm self-start max-w-[85%] border border-steel/10 shadow-sm reveal delay-500">
+                                    <p class="text-base text-cocoa leading-relaxed">Hello! I see you know Python. Based on your profile, you're an <span class="font-bold text-green-600">85% match</span> for Data Science.</p>
+                                </div>
+                                <div class="bg-lavender/50 p-5 rounded-3xl rounded-tr-sm self-end max-w-[85%] ml-auto shadow-sm reveal delay-700">
+                                    <p class="text-base font-medium text-cocoa">That's great! What skills am I missing?</p>
+                                </div>
+                                <div class="bg-white p-5 rounded-3xl rounded-tl-sm self-start max-w-[95%] border border-steel/10 shadow-sm reveal delay-1000">
+                                    <p class="text-base mb-3 text-cocoa">You need to prioritize these skills (2-8 weeks):</p>
+                                    <div class="flex gap-2.5 flex-wrap">
+                                        <span class="text-sm px-3 py-1.5 rounded-lg font-medium shadow-sm bg-cocoa text-beige">SQL (High)</span>
+                                        <span class="text-sm px-3 py-1.5 rounded-lg font-medium shadow-sm bg-slate/20 text-cocoa">Pandas (Med)</span>
+                                        <span class="text-sm px-3 py-1.5 rounded-lg font-medium shadow-sm bg-steel/10 text-slate">Tableau (Low)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating Stats -->
+                    <div class="absolute -bottom-10 -left-10 bg-white/90 backdrop-blur-md border border-white/50 p-5 rounded-2xl shadow-xl flex items-center gap-4 z-20 reveal delay-500">
+                        <div class="bg-lavender p-3 rounded-xl text-cocoa"><i data-lucide="users" class="w-6 h-6"></i></div>
+                        <div>
+                            <div class="font-extrabold text-cocoa text-2xl flex"><span class="counter" data-target="2500">0</span>+</div>
+                            <div class="text-xs font-bold text-slate uppercase tracking-wide">Users Benefiting</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        window.addEventListener('load', () => { loadDashboard(); });
-        document.getElementById('profileIcon').addEventListener('click', () => window.location.href = '/profile');
-        document.getElementById('talkToOrion').addEventListener('click', () => window.location.href = '/chat');
+    <!-- Stats Bar -->
+    <div class="bg-white/50 backdrop-blur-sm py-16 border-y border-steel/10">
+        <div class="w-full max-w-[1800px] mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                <div class="flex flex-col items-center text-center text-cocoa group cursor-default reveal delay-100">
+                    <div class="mb-4 text-cocoa bg-lavender/30 p-4 rounded-2xl border border-steel/10 shadow-sm group-hover:bg-cocoa group-hover:text-beige transition-colors duration-500 transform group-hover:rotate-180 group-hover:scale-110">
+                        <i data-lucide="briefcase" class="w-5 h-5"></i>
+                    </div>
+                    <div class="text-4xl font-extrabold mb-2 flex items-baseline tracking-tight"><span class="counter" data-target="105">0</span>+</div>
+                    <div class="text-sm opacity-70 uppercase tracking-widest text-slate font-bold group-hover:text-cocoa transition-colors">Career Paths</div>
+                </div>
+                <div class="flex flex-col items-center text-center text-cocoa group cursor-default reveal delay-200">
+                    <div class="mb-4 text-cocoa bg-lavender/30 p-4 rounded-2xl border border-steel/10 shadow-sm group-hover:bg-cocoa group-hover:text-beige transition-colors duration-500 transform group-hover:rotate-180 group-hover:scale-110">
+                        <i data-lucide="book-open" class="w-5 h-5"></i>
+                    </div>
+                    <div class="text-4xl font-extrabold mb-2 flex items-baseline tracking-tight"><span class="counter" data-target="110">0</span>+</div>
+                    <div class="text-sm opacity-70 uppercase tracking-widest text-slate font-bold group-hover:text-cocoa transition-colors">Skills Library</div>
+                </div>
+                <div class="flex flex-col items-center text-center text-cocoa group cursor-default reveal delay-300">
+                    <div class="mb-4 text-cocoa bg-lavender/30 p-4 rounded-2xl border border-steel/10 shadow-sm group-hover:bg-cocoa group-hover:text-beige transition-colors duration-500 transform group-hover:rotate-180 group-hover:scale-110">
+                        <i data-lucide="map" class="w-5 h-5"></i>
+                    </div>
+                    <div class="text-4xl font-extrabold mb-2 flex items-baseline tracking-tight"><span class="counter" data-target="3">0</span></div>
+                    <div class="text-sm opacity-70 uppercase tracking-widest text-slate font-bold group-hover:text-cocoa transition-colors">Complete Roadmaps</div>
+                </div>
+                <div class="flex flex-col items-center text-center text-cocoa group cursor-default reveal delay-400">
+                    <div class="mb-4 text-cocoa bg-lavender/30 p-4 rounded-2xl border border-steel/10 shadow-sm group-hover:bg-cocoa group-hover:text-beige transition-colors duration-500 transform group-hover:rotate-180 group-hover:scale-110">
+                        <i data-lucide="help-circle" class="w-5 h-5"></i>
+                    </div>
+                    <div class="text-4xl font-extrabold mb-2 flex items-baseline tracking-tight"><span class="counter" data-target="50">0</span>+</div>
+                    <div class="text-sm opacity-70 uppercase tracking-widest text-slate font-bold group-hover:text-cocoa transition-colors">FAQs Answered</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <section id="features" class="py-32 bg-beige relative overflow-hidden">
+        <div class="w-full max-w-[1800px] mx-auto px-6 lg:px-12">
+            <div class="text-center mb-20">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-lavender/50 text-cocoa font-bold text-xs uppercase tracking-widest mb-4 reveal">Features</div>
+                <h2 class="text-4xl md:text-6xl font-extrabold text-cocoa mb-6 reveal delay-100">Everything You Need</h2>
+                <p class="text-xl text-slate max-w-2xl mx-auto leading-relaxed reveal delay-200">Navigate your career journey with powerful tools designed to give you clarity and direction.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="features-grid">
+                <!-- Content populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works (Timeline) -->
+    <section id="how-it-works" class="py-32 relative overflow-hidden bg-gradient-to-b from-beige via-lavender/20 to-beige">
+        <div class="w-full max-w-[1200px] mx-auto px-6 lg:px-12 relative z-10">
+            <div class="text-center mb-24">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-lavender/50 text-cocoa font-bold text-xs uppercase tracking-widest mb-4 reveal">Process</div>
+                <h2 class="text-4xl md:text-6xl font-extrabold text-cocoa mb-6 reveal delay-100">How It Works</h2>
+                <p class="text-xl text-slate reveal delay-200">Your User Flow for Career Success</p>
+            </div>
+
+            <div class="relative">
+                <!-- Central Line -->
+                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-cocoa/10 md:-translate-x-1/2 rounded-full h-full"></div>
+                <!-- Animated Line -->
+                <div id="timeline-line" class="absolute left-4 md:left-1/2 top-0 w-1 bg-cocoa md:-translate-x-1/2 rounded-full transition-all duration-100 ease-linear" style="height: 0;"></div>
+                
+                <div class="space-y-12 md:space-y-0">
+                    <!-- Step 1 (Right) -->
+                    <div class="reveal relative flex flex-col md:flex-row items-center w-full">
+                        <div class="absolute left-4 md:left-1/2 top-0 md:top-1/2 w-4 h-4 rounded-full bg-cocoa border-[3px] border-beige z-20 -translate-x-1/2 md:-translate-y-1/2 shadow-md ring-4 ring-lavender/30"></div>
+                        <div class="hidden md:block w-1/2"></div> <!-- Empty left -->
+                        <div class="w-full md:w-1/2 pl-12 md:pl-16 md:text-left">
+                            <div class="p-8 bg-white/80 backdrop-blur-md border border-steel/20 rounded-3xl shadow-sm hover:shadow-xl transition-all relative group hover:-translate-y-1">
+                                <div class="hidden md:block absolute top-1/2 -translate-y-1/2 w-4 h-4 transform rotate-45 -left-2.5 border-b border-l border-steel/20 bg-white/80"></div>
+                                <div class="flex items-center gap-4 mb-4 md:flex-row">
+                                    <span class="text-4xl">🔐</span>
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="text-xl font-bold text-cocoa">Step 1: Sign Up</h3>
+                                        <span class="text-xs font-bold text-slate uppercase bg-lavender/50 px-2 py-1 rounded-full self-start">1 min</span>
+                                    </div>
+                                </div>
+                                <p class="text-slate leading-relaxed font-medium">Create your free account with just an email. No credit card required. Free forever.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 (Left) -->
+                    <div class="reveal delay-100 relative flex flex-col md:flex-row-reverse items-center w-full">
+                        <div class="absolute left-4 md:left-1/2 top-0 md:top-1/2 w-4 h-4 rounded-full bg-cocoa border-[3px] border-beige z-20 -translate-x-1/2 md:-translate-y-1/2 shadow-md ring-4 ring-lavender/30"></div>
+                        <div class="hidden md:block w-1/2"></div> <!-- Empty right -->
+                        <div class="w-full md:w-1/2 pl-12 md:pr-16 md:pl-0 md:text-right">
+                            <div class="p-8 bg-white/80 backdrop-blur-md border border-steel/20 rounded-3xl shadow-sm hover:shadow-xl transition-all relative group hover:-translate-y-1">
+                                <div class="hidden md:block absolute top-1/2 -translate-y-1/2 w-4 h-4 transform -rotate-135 -right-2.5 border-b border-l border-steel/20 bg-white/80"></div>
+                                <div class="flex items-center gap-4 mb-4 md:flex-row-reverse">
+                                    <span class="text-4xl">✍️</span>
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="text-xl font-bold text-cocoa">Step 2: Profile</h3>
+                                        <span class="text-xs font-bold text-slate uppercase bg-lavender/50 px-2 py-1 rounded-full self-start md:self-end">3 min</span>
+                                    </div>
+                                </div>
+                                <p class="text-slate leading-relaxed font-medium">Tell us about your skills, current learning status, and your dream career goals.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 (Right) -->
+                    <div class="reveal delay-200 relative flex flex-col md:flex-row items-center w-full">
+                         <div class="absolute left-4 md:left-1/2 top-0 md:top-1/2 w-4 h-4 rounded-full bg-cocoa border-[3px] border-beige z-20 -translate-x-1/2 md:-translate-y-1/2 shadow-md ring-4 ring-lavender/30"></div>
+                         <div class="hidden md:block w-1/2"></div>
+                         <div class="w-full md:w-1/2 pl-12 md:pl-16 md:text-left">
+                             <div class="p-8 bg-white/80 backdrop-blur-md border border-steel/20 rounded-3xl shadow-sm hover:shadow-xl transition-all relative group hover:-translate-y-1">
+                                 <div class="hidden md:block absolute top-1/2 -translate-y-1/2 w-4 h-4 transform rotate-45 -left-2.5 border-b border-l border-steel/20 bg-white/80"></div>
+                                 <div class="flex items-center gap-4 mb-4 md:flex-row">
+                                     <span class="text-4xl">📊</span>
+                                     <div class="flex flex-col gap-1">
+                                         <h3 class="text-xl font-bold text-cocoa">Step 3: Insights</h3>
+                                         <span class="text-xs font-bold text-slate uppercase bg-lavender/50 px-2 py-1 rounded-full self-start">2 min</span>
+                                     </div>
+                                 </div>
+                                 <p class="text-slate leading-relaxed font-medium">See top career matches, skills gaps, learning progress, and dynamic radar charts.</p>
+                             </div>
+                         </div>
+                     </div>
+
+                     <!-- Step 4 (Left) -->
+                     <div class="reveal delay-300 relative flex flex-col md:flex-row-reverse items-center w-full">
+                        <div class="absolute left-4 md:left-1/2 top-0 md:top-1/2 w-4 h-4 rounded-full bg-cocoa border-[3px] border-beige z-20 -translate-x-1/2 md:-translate-y-1/2 shadow-md ring-4 ring-lavender/30"></div>
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="w-full md:w-1/2 pl-12 md:pr-16 md:pl-0 md:text-right">
+                            <div class="p-8 bg-white/80 backdrop-blur-md border border-steel/20 rounded-3xl shadow-sm hover:shadow-xl transition-all relative group hover:-translate-y-1">
+                                <div class="hidden md:block absolute top-1/2 -translate-y-1/2 w-4 h-4 transform -rotate-135 -right-2.5 border-b border-l border-steel/20 bg-white/80"></div>
+                                <div class="flex items-center gap-4 mb-4 md:flex-row-reverse">
+                                    <span class="text-4xl">🤖</span>
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="text-xl font-bold text-cocoa">Step 4: Chat AI</h3>
+                                        <span class="text-xs font-bold text-slate uppercase bg-lavender/50 px-2 py-1 rounded-full self-start md:self-end">10 min</span>
+                                    </div>
+                                </div>
+                                <p class="text-slate leading-relaxed font-medium">Ask specific questions like 'How do I become a Data Scientist?' and get answers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience -->
+    <section class="py-24 bg-white/40 border-y border-steel/10 backdrop-blur-sm">
+        <div class="w-full max-w-[1800px] mx-auto px-6 lg:px-12 text-center">
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-cocoa reveal">Who is SkillsAge For?</h2>
+                <p class="text-slate font-medium text-lg reveal delay-100">Built for every stage of your career journey.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4 reveal delay-200">
+                <div class="audience-pill bg-white border border-steel/30 px-8 py-4 rounded-full text-base font-bold text-slate cursor-pointer transition-colors shadow-sm hover:scale-105 hover:bg-cocoa hover:text-beige hover:border-cocoa">College Students</div>
+                <div class="audience-pill bg-white border border-steel/30 px-8 py-4 rounded-full text-base font-bold text-slate cursor-pointer transition-colors shadow-sm hover:scale-105 hover:bg-cocoa hover:text-beige hover:border-cocoa">Career Changers</div>
+                <div class="audience-pill bg-white border border-steel/30 px-8 py-4 rounded-full text-base font-bold text-slate cursor-pointer transition-colors shadow-sm hover:scale-105 hover:bg-cocoa hover:text-beige hover:border-cocoa">Job Seekers</div>
+                <div class="audience-pill bg-white border border-steel/30 px-8 py-4 rounded-full text-base font-bold text-slate cursor-pointer transition-colors shadow-sm hover:scale-105 hover:bg-cocoa hover:text-beige hover:border-cocoa">Working Pros</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-32 bg-beige relative overflow-hidden">
+        <div class="w-full max-w-[1800px] mx-auto px-6 lg:px-12 relative z-10">
+            <div class="text-center mb-12">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-lavender/50 text-cocoa font-bold text-xs uppercase tracking-widest mb-4 reveal">Community</div>
+                <h2 class="text-4xl md:text-6xl font-extrabold text-cocoa mb-6 reveal delay-100">Success Stories</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div class="reveal delay-100 bg-white p-12 rounded-[3rem] border border-steel/20 shadow-xl relative flex flex-col justify-between h-full min-h-[400px]">
+                    <div>
+                         <div class="text-lavender mb-8"><i data-lucide="quote" class="w-16 h-16 opacity-30 fill-current"></i></div>
+                         <p class="text-cocoa mb-10 italic text-2xl leading-relaxed font-medium">"I was lost after graduation. Orion helped me map out a path to Full Stack Development in just 3 months."</p>
+                    </div>
+                    <div class="flex items-center gap-5 mt-auto border-t border-steel/10 pt-8">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cocoa to-slate flex items-center justify-center text-beige font-bold text-2xl shadow-md">S</div>
+                        <div><h4 class="font-bold text-cocoa text-xl">Surya Swami</h4><p class="text-sm text-slate uppercase font-semibold">Software Engineer</p></div>
+                    </div>
+                </div>
+                <div class="reveal delay-200 bg-white p-12 rounded-[3rem] border border-steel/20 shadow-xl relative flex flex-col justify-between h-full min-h-[400px]">
+                    <div>
+                         <div class="text-lavender mb-8"><i data-lucide="quote" class="w-16 h-16 opacity-30 fill-current"></i></div>
+                         <p class="text-cocoa mb-10 italic text-2xl leading-relaxed font-medium">"The match score is incredibly accurate. It identified skills I didn't even know were valuable for Data Science."</p>
+                    </div>
+                    <div class="flex items-center gap-5 mt-auto border-t border-steel/10 pt-8">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cocoa to-slate flex items-center justify-center text-beige font-bold text-2xl shadow-md">A</div>
+                        <div><h4 class="font-bold text-cocoa text-xl">Alex Montrio</h4><p class="text-sm text-slate uppercase font-semibold">Data Analyst</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-32 bg-beige">
+        <div class="w-full max-w-4xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-cocoa mb-4 reveal">FAQ</h2>
+                <p class="text-lg text-slate reveal delay-100">Got questions? We've got answers.</p>
+            </div>
+            <div class="bg-white rounded-[2rem] p-10 shadow-xl border border-steel/10 reveal delay-200">
+                <div class="faq-item border-b border-steel/20 last:border-0">
+                    <button class="w-full py-8 flex justify-between items-center text-left focus:outline-none group" onclick="toggleFaq(this)">
+                        <span class="text-xl font-bold text-cocoa group-hover:text-slate transition-colors">Is SkillsAge really free?</span>
+                        <div class="icon-container text-cocoa bg-lavender/30 p-2 rounded-full transition-transform duration-300"><i data-lucide="chevron-down" class="w-5 h-5"></i></div>
+                    </button>
+                    <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+                        <p class="pb-8 text-slate leading-relaxed text-lg">Yes! 100% free forever. No hidden charges, no premium tiers, no credit card required.</p>
+                    </div>
+                </div>
+                <div class="faq-item border-b border-steel/20 last:border-0">
+                    <button class="w-full py-8 flex justify-between items-center text-left focus:outline-none group" onclick="toggleFaq(this)">
+                        <span class="text-xl font-bold text-cocoa group-hover:text-slate transition-colors">How accurate is the AI?</span>
+                        <div class="icon-container text-cocoa bg-lavender/30 p-2 rounded-full transition-transform duration-300"><i data-lucide="chevron-down" class="w-5 h-5"></i></div>
+                    </button>
+                    <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+                        <p class="pb-8 text-slate leading-relaxed text-lg">Orion is powered by advanced RAG technology using a verified database of 105+ careers and real-time market data, ensuring high accuracy.</p>
+                    </div>
+                </div>
+                 <div class="faq-item border-b border-steel/20 last:border-0">
+                    <button class="w-full py-8 flex justify-between items-center text-left focus:outline-none group" onclick="toggleFaq(this)">
+                        <span class="text-xl font-bold text-cocoa group-hover:text-slate transition-colors">Do you have roadmaps for beginners?</span>
+                        <div class="icon-container text-cocoa bg-lavender/30 p-2 rounded-full transition-transform duration-300"><i data-lucide="chevron-down" class="w-5 h-5"></i></div>
+                    </button>
+                    <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+                        <p class="pb-8 text-slate leading-relaxed text-lg">Absolutely. We have specific roadmaps for career changers and beginners to take you from zero to job-ready.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 px-6 bg-beige">
+        <div class="reveal w-full max-w-[1600px] mx-auto bg-cocoa rounded-[3rem] p-12 md:p-24 text-center text-beige relative overflow-hidden shadow-2xl group">
+             <!-- BG Orbs -->
+             <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-lavender opacity-20 rounded-full blur-[100px] animate-blob"></div>
+             <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate opacity-20 rounded-full blur-[100px] animate-blob" style="animation-delay: 1s;"></div>
+             
+             <div class="relative z-10">
+                 <h2 class="text-4xl md:text-6xl font-bold mb-8 leading-tight">Your Dream Career is <br/>Just 5 Minutes Away</h2>
+                 <p class="text-xl opacity-80 mb-12 max-w-2xl mx-auto leading-relaxed">Stop guessing. Start planning. Join the community today.</p>
+                 <button class="bg-beige text-cocoa px-12 py-5 rounded-full font-bold text-xl transition-all shadow-xl hover:scale-105 active:scale-95">Get Started Free</button>
+             </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-lavender/30 text-slate py-20 border-t border-steel/10">
+        <div class="w-full max-w-[1800px] mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center gap-2 mb-6 text-cocoa font-bold text-2xl"><i data-lucide="brain" class="w-6 h-6"></i> SkillsAge</div>
+                    <p class="text-base leading-relaxed mb-6 max-w-xs">Empowering careers with AI guidance, skills analysis, and structured learning.</p>
+                </div>
+                <div><h4 class="text-cocoa font-bold mb-6 text-lg">Platform</h4><ul class="space-y-4"><li><a href="#" class="hover:text-cocoa transition-colors">Career Matching</a></li><li><a href="#" class="hover:text-cocoa">AI Advisor</a></li></ul></div>
+                <div><h4 class="text-cocoa font-bold mb-6 text-lg">Resources</h4><ul class="space-y-4"><li><a href="#" class="hover:text-cocoa transition-colors">Skills Library</a></li><li><a href="#" class="hover:text-cocoa">Blog</a></li></ul></div>
+                <div><h4 class="text-cocoa font-bold mb-6 text-lg">Contact</h4><p>support@skillsage.com<br>Bangalore, India</p></div>
+            </div>
+            <div class="border-t border-steel/20 pt-10 flex flex-col md:flex-row justify-between items-center text-sm"><p>© 2024 SkillsAge. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+      // Populate Features
+      const featuresData = [
+          { icon: 'bot', title: 'AI Career Advisor (Orion)', desc: 'Your 24/7 AI mentor powered by RAG. Get instant answers about careers, skills, salaries, and learning paths.', tip: 'Ask anything - "How do I become a Data Scientist?" or "What skills do I need for Full Stack Development?"' },
+          { icon: 'target', title: 'Smart Career Matching', desc: 'Get personalized career recommendations. Our algorithm analyzes your skills and suggests top 3 careers.', tip: 'Includes exact match percentages (e.g., Data Scientist - 85% match).' },
+          { icon: 'bar-chart-3', title: 'Skills Gap Analysis', desc: 'See exactly which skills you\'re missing for your dream career with priority levels and learning times.', tip: 'Get resource recommendations for each skill.' },
+          { icon: 'radar', title: 'Dynamic Radar Charts', desc: 'See what your current skills level and what is required for the market through Dynamic Radar chart visualization.', tip: 'Visual comparison of your skills vs market requirements.' },
+          { icon: 'map', title: 'Learning Roadmaps', desc: 'Follow step-by-step learning paths for Data Science, Full Stack Development, and DevOps.', tip: 'Get weekly milestones, project recommendations, and estimated completion times.' },
+          { icon: 'briefcase', title: '105+ Career Database', desc: 'Explore detailed information on 105 careers across Tech, Data, Design, Business, Marketing, and Healthcare.', tip: 'Each career includes required skills, salary ranges, and job demand.' },
+          { icon: 'library', title: '110+ Skills Library', desc: 'Access definitions, learning resources, and difficulty levels for 110+ skills including frameworks.', tip: 'Includes programming languages, frameworks, tools, and soft skills.' },
+          { icon: 'user-circle-2', title: 'Smart Profile System', desc: 'Create your profile with tag-based inputs for skills, learning goals, qualifications, and career aspirations.', tip: 'Get personalized recommendations based on your profile.' },
+          { icon: 'message-square', title: 'Chat History', desc: 'All conversations with Orion are saved automatically. Resume previous discussions anytime.', tip: 'Review career advice and track your progress over time.' },
+          { icon: 'layout-dashboard', title: 'Interactive Dashboard', desc: 'View your career readiness, top career matches, skills gap, learning progress, and recent activity.', tip: 'All in one beautiful dashboard.' },
+          { icon: 'help-circle', title: '50+ Career FAQs', desc: 'Get instant answers to frequently asked questions about career transitions, skill requirements, and salaries.', tip: 'Covers transitions, skill requirements, salaries, and learning resources.' },
+          { icon: 'database', title: 'Smart Knowledge Retrieval', desc: 'Powered by RAG (Retrieval-Augmented Generation) with ChromaDB vector database.', tip: 'Get accurate, fact-based answers with zero hallucinations.' },
+          { icon: 'globe', title: 'World Chat', desc: 'Connect with a global community of learners and professionals worldwide to share insights.', tip: 'Real-time community discussions.' }
+      ];
+
+      const featuresGrid = document.getElementById('features-grid');
+      featuresData.forEach((f, i) => {
+          const delayClass = i < 5 ? `delay-${(i+1)*100}` : 'delay-100'; // Stagger first few, rest standard
+          const html = `
+            <div class="reveal ${delayClass} bg-white border border-steel/20 p-8 rounded-3xl shadow-sm transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:border-cocoa/20 relative cursor-default">
+                <div class="relative">
+                    <div class="w-14 h-14 bg-lavender/40 rounded-2xl flex items-center justify-center text-cocoa mb-6 group-hover:bg-cocoa group-hover:text-beige transition-all duration-300 shadow-sm cursor-help transform group-hover:rotate-6">
+                        <i data-lucide="${f.icon}" class="w-6 h-6"></i>
+                    </div>
+                    <div class="absolute top-16 left-0 z-20 w-64 p-4 bg-cocoa text-beige text-sm rounded-xl shadow-xl border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                        ${f.tip}
+                        <div class="absolute -top-1.5 left-5 w-3 h-3 bg-cocoa rotate-45 border-l border-t border-white/10"></div>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-cocoa mb-4">${f.title}</h3>
+                <p class="text-slate leading-relaxed text-sm">${f.desc}</p>
+            </div>
+          `;
+          featuresGrid.innerHTML += html;
+      });
+
+      // Initialize Lucide Icons (Runs after DOM populates)
+      setTimeout(() => {
+          lucide.createIcons();
+      }, 0);
+
+      // Flood Transition
+      window.addEventListener('load', () => {
+        document.getElementById('flood').style.transform = 'scaleY(0)';
+      });
+
+      // Navbar Scroll Logic
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('bg-beige/80', 'backdrop-blur-lg', 'shadow-sm', 'border-b', 'border-steel/10');
+            navbar.classList.remove('border-transparent');
+        } else {
+            navbar.classList.remove('bg-beige/80', 'backdrop-blur-lg', 'shadow-sm', 'border-b', 'border-steel/10');
+            navbar.classList.add('border-transparent');
+        }
+      });
+
+      // Scroll Progress Bar
+      const progressBar = document.getElementById('scroll-progress');
+      window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = (scrollTop / scrollHeight) * 100;
+        progressBar.style.width = progress + '%';
+      });
+
+      // Mouse Parallax for Hero
+      const heroSection = document.getElementById('hero-section');
+      const dashboardVisual = document.getElementById('dashboard-visual');
+      
+      if(heroSection && dashboardVisual) {
+          heroSection.addEventListener('mousemove', (e) => {
+              const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+              const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+              
+              dashboardVisual.style.transform = `translate(${moveX * -1}px, ${moveY * -1}px)`;
+          });
+          
+          heroSection.addEventListener('mouseleave', () => {
+              dashboardVisual.style.transform = `translate(0px, 0px)`;
+          });
+      }
+
+      // Timeline Scroll Animation
+      const timelineSection = document.getElementById('how-it-works');
+      const timelineLine = document.getElementById('timeline-line');
+      
+      window.addEventListener('scroll', () => {
+         if (!timelineSection || !timelineLine) return;
+         
+         const rect = timelineSection.getBoundingClientRect();
+         const windowHeight = window.innerHeight;
+         
+         // Start animating when section enters view
+         if (rect.top < windowHeight && rect.bottom > 0) {
+             const height = rect.height;
+             const progress = (windowHeight - rect.top) / (windowHeight + height);
+             // Clamp and adjust timing to finish drawing slightly before section ends
+             const clamped = Math.max(0, Math.min(1, progress * 1.2)); 
+             timelineLine.style.height = `${clamped * 100}%`;
+         }
+      });
+
+      // Intersection Observer for Animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            
+            // Trigger Counters if inside this section
+            if (entry.target.querySelectorAll('.counter').length > 0) {
+                entry.target.querySelectorAll('.counter').forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const duration = 2000;
+                    const increment = target / (duration / 16);
+                    
+                    let current = 0;
+                    const updateCounter = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.innerText = Math.ceil(current);
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCounter();
+                    counter.classList.remove('counter'); // Run only once
+                });
+            }
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal, .reveal-left').forEach(el => observer.observe(el));
+
+      // Mobile Menu
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      let isMenuOpen = false;
+
+      menuBtn.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+            mobileMenu.classList.remove('hidden');
+            // Small timeout to allow removing 'hidden' to render before applying opacity
+            setTimeout(() => {
+                mobileMenu.style.height = mobileMenu.scrollHeight + 'px';
+                mobileMenu.style.opacity = '1';
+            }, 10);
+            menuBtn.innerHTML = '<i data-lucide="x" class="w-6 h-6"></i>';
+        } else {
+            mobileMenu.style.height = '0px';
+            mobileMenu.style.opacity = '0';
+            setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+            menuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+        }
+        lucide.createIcons();
+      });
+
+      // Hero Button Progress
+      const heroBtn = document.getElementById('hero-btn');
+      const btnProgress = document.getElementById('btn-progress');
+      const btnText = document.getElementById('btn-text');
+      
+      heroBtn.addEventListener('click', () => {
+         btnProgress.style.width = '100%';
+         btnText.innerText = 'Setting up...';
+         
+         setTimeout(() => {
+             btnText.innerHTML = 'Welcome! <i data-lucide="check-circle-2" class="w-5 h-5"></i>';
+             lucide.createIcons();
+         }, 2000);
+      });
+
+      // FAQ Accordion
+      function toggleFaq(btn) {
+          const content = btn.nextElementSibling;
+          const icon = btn.querySelector('.icon-container');
+          
+          if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+              content.style.maxHeight = '0px';
+              icon.style.transform = 'rotate(0deg)';
+          } else {
+              content.style.maxHeight = content.scrollHeight + 'px';
+              icon.style.transform = 'rotate(180deg)';
+          }
+      }
+
+      // Global Ripple Effect
+      document.addEventListener('click', (e) => {
+        const button = e.target.closest('button, .audience-pill');
+        if (!button) return;
+
+        const circle = document.createElement('span');
+        const diameter = Math.max(button.clientWidth, button.clientHeight);
+        const radius = diameter / 2;
+        const rect = button.getBoundingClientRect();
+
+        circle.style.width = circle.style.height = `${diameter}px`;
+        circle.style.left = `${e.clientX - rect.left - radius}px`;
+        circle.style.top = `${e.clientY - rect.top - radius}px`;
+        circle.classList.add('ripple');
+
+        const ripple = button.querySelector('.ripple');
+        if (ripple) ripple.remove();
+
+        button.appendChild(circle);
+      });
     </script>
 </body>
 </html>

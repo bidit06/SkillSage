@@ -1,563 +1,766 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI-Powered Career Advisor - Discover your perfect career path with personalized recommendations.">
-    <title>CareerPulse AI | Premium Career Guidance</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillsAge - AI Career Advisor</title>
     
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              beige: '#FFFDF6',
+              lavender: '#E2D4E0',
+              steel: '#949AB1',
+              slate: '#7C7E9D',
+              cocoa: '#4C5372',
+            },
+            fontFamily: {
+              montserrat: ['Montserrat', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    
+    <!-- Custom CSS -->
     <style>
-        /* =========================================
-           1. CORE VARIABLES & RESET
-           ========================================= */
-        :root {
-            /* New Color Palette */
-            --primary-color: #CC313D;
-            --secondary-color: #F7C5CC;
-            
-            /* Neutral Colors */
-            --text-dark: #333333;
-            --text-light: #666666;
-            --bg-light: #ffffff;
-            --bg-off-white: #fafafa;
-            
-            /* Gradients */
-            --gradient-hero: linear-gradient(135deg, var(--bg-light) 0%, #fff0f3 100%); /* Very subtle pink gradient */
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+      }
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #FFFDF6;
+        color: #4C5372;
+        overflow-x: hidden;
+      }
+      
+      /* Scrollbar */
+      ::-webkit-scrollbar { width: 10px; }
+      ::-webkit-scrollbar-track { background: #FFFDF6; }
+      ::-webkit-scrollbar-thumb { background: #949AB1; border-radius: 5px; }
+      ::-webkit-scrollbar-thumb:hover { background: #7C7E9D; }
 
-            /* Layout & Spacing */
-            --container-width: 1200px;
-            --header-height: 80px;
-            --border-radius: 8px; /* Slightly rounded corners for buttons */
-            --card-radius: 12px;
-            
-            /* Animation & Shadows */
-            --transition: all 0.3s ease;
-            --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
-        }
+      /* Animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+        transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      
+      .reveal-left {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .reveal-left.active {
+        opacity: 1;
+        transform: translateX(0);
+      }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+      /* Stagger delays */
+      .delay-100 { transition-delay: 100ms; }
+      .delay-200 { transition-delay: 200ms; }
+      .delay-300 { transition-delay: 300ms; }
+      .delay-400 { transition-delay: 400ms; }
+      .delay-500 { transition-delay: 500ms; }
+      .delay-700 { transition-delay: 700ms; }
+      .delay-1000 { transition-delay: 1000ms; }
 
-        h1, h2, h3, h4 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            color: var(--primary-color);
-            line-height: 1.2;
-        }
+      /* Blob Animation */
+      @keyframes blob-float {
+        0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.3; }
+        50% { transform: scale(1.1) translate(20px, -20px); opacity: 0.5; }
+      }
+      .animate-blob { animation: blob-float 15s infinite ease-in-out; }
 
-        p { color: var(--text-light); }
-        a { text-decoration: none; transition: var(--transition); }
-        ul { list-style: none; }
-        img { max-width: 100%; display: block; }
+      /* Gradient Text Animation */
+      @keyframes gradient-x {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+      }
+      .animate-gradient {
+        background-size: 200% auto;
+        animation: gradient-x 4s linear infinite;
+      }
 
-        /* Utility Classes */
-        .container {
-            max-width: var(--container-width);
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        
-        .section-padding { padding: 100px 0; }
-        
-        /* Buttons - Square with slightly rounded corners */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 28px;
-            border-radius: var(--border-radius);
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 1rem;
-            border: 2px solid transparent;
-        }
+      /* Ripple Effect */
+      span.ripple {
+        position: absolute;
+        border-radius: 50%;
+        transform: scale(0);
+        animation: ripple 600ms linear;
+        background-color: rgba(255, 255, 255, 0.4); 
+        pointer-events: none;
+      }
+      button { position: relative; overflow: hidden; }
+      @keyframes ripple {
+        to { transform: scale(4); opacity: 0; }
+      }
 
-        .btn-primary {
-            background-color: var(--primary-color);
-            color: #ffffff;
-        }
-
-        .btn-primary:hover {
-            background-color: #a8242f; /* Slightly darker shade for hover */
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(204, 49, 61, 0.3);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border-color: var(--primary-color);
-            color: var(--primary-color);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--primary-color);
-            color: #ffffff;
-        }
-
-        /* Premium Cards */
-        .premium-card {
-            background: var(--bg-light);
-            border: 1px solid #eee;
-            border-radius: var(--card-radius);
-            box-shadow: var(--shadow-card);
-            transition: var(--transition);
-        }
-        
-        .premium-card:hover {
-            border-color: var(--secondary-color);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.1);
-        }
-
-        /* =========================================
-           2. NAVIGATION
-           ========================================= */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            height: var(--header-height);
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .nav-container {
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            font-family: 'Poppins', sans-serif;
-            color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-        }
-
-        .nav-links a {
-            color: var(--text-dark);
-            font-weight: 500;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .nav-links a:hover { color: var(--primary-color); }
-        .mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
-
-        /* =========================================
-           3. HERO SECTION
-           ========================================= */
-        .hero {
-            padding-top: calc(var(--header-height) + 80px);
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            background: var(--gradient-hero);
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .hero-content h1 {
-            font-size: 3.8rem;
-            margin-bottom: 24px;
-        }
-
-        .hero-content p {
-            font-size: 1.15rem;
-            margin-bottom: 40px;
-            max-width: 540px;
-        }
-
-        .hero-btns { display: flex; gap: 20px; }
-
-        .hero-visual img {
-            border-radius: var(--card-radius);
-            box-shadow: var(--shadow-card);
-        }
-
-        /* =========================================
-           4. FEATURES SECTION
-           ========================================= */
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 60px;
-        }
-        
-        .section-header h2 { font-size: 2.5rem; margin-bottom: 15px; }
-        .section-header p { font-size: 1.1rem; }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .feature-card { padding: 40px 30px; }
-
-        .icon-box {
-            width: 60px;
-            height: 60px;
-            border-radius: var(--border-radius);
-            background: var(--secondary-color); /* Using secondary color for icon background */
-            color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            margin-bottom: 25px;
-        }
-        
-        .feature-card h3 { margin-bottom: 15px; font-size: 1.25rem; }
-        .feature-card ul { margin-top: 15px; padding-left: 20px; list-style: disc; color: var(--text-light); }
-        .feature-card li { margin-bottom: 8px; font-size: 0.95rem; }
-
-        /* =========================================
-           5. HOW IT WORKS
-           ========================================= */
-        .timeline {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            width: 2px;
-            height: 100%;
-            background: var(--secondary-color);
-            opacity: 0.3;
-        }
-
-        .step-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 70px;
-            position: relative;
-        }
-        .step-row:last-child { margin-bottom: 0; }
-        .step-row:nth-child(even) { flex-direction: row-reverse; }
-
-        .step-content { width: 42%; }
-        .step-content h3 { font-size: 1.4rem; margin-bottom: 10px; }
-        
-        .step-num {
-            width: 60px;
-            height: 60px;
-            background: var(--primary-color);
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.2rem;
-            box-shadow: 0 0 0 8px #fff;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* =========================================
-           6. CTA SECTION
-           ========================================= */
-        .cta-section {
-            background-color: var(--primary-color);
-            text-align: center;
-            border-radius: var(--card-radius);
-            padding: 80px 40px;
-            color: #ffffff;
-        }
-
-        .cta-section h2 { color: #ffffff; font-size: 2.8rem; margin-bottom: 20px; }
-        .cta-section p { color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-bottom: 40px; }
-        
-        .btn-cta {
-            background-color: #ffffff;
-            color: var(--primary-color);
-        }
-        .btn-cta:hover { background-color: var(--secondary-color); }
-
-        /* =========================================
-           7. FOOTER
-           ========================================= */
-        footer {
-            background: var(--bg-off-white);
-            padding: 80px 0 30px;
-            border-top: 1px solid #eee;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 50px;
-            margin-bottom: 50px;
-        }
-
-        .footer-col h4 { font-size: 1.1rem; margin-bottom: 25px; }
-        .footer-col ul li { margin-bottom: 12px; }
-        .footer-col a { color: var(--text-light); font-size: 0.95rem; }
-        .footer-col a:hover { color: var(--primary-color); }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #eee;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        /* Animations */
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-
-        /* Responsive */
-        @media (max-width: 968px) {
-            .hero-grid { grid-template-columns: 1fr; text-align: center; }
-            .hero-content p { margin: 0 auto 32px; }
-            .hero-btns { justify-content: center; }
-            .hero-visual { display: none; }
-            .timeline::before { left: 0; }
-            .step-row, .step-row:nth-child(even) { flex-direction: row; gap: 30px; }
-            .step-content { width: 100%; text-align: left !important; }
-            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
-        }
-        @media (max-width: 768px) {
-            h1 { font-size: 2.8rem; }
-            .nav-links { display: none; }
-            .mobile-toggle { display: block; }
-        }
+      /* Mobile Menu Transition */
+      #mobile-menu {
+        transition: height 0.3s ease-out, opacity 0.3s ease-out;
+      }
     </style>
 </head>
-<body>
+<body class="antialiased">
 
-    <header>
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <i class="ri-compass-3-line"></i> CareerPulse AI
+    <!-- Flood Transition -->
+    <div id="flood" class="fixed inset-0 bg-cocoa z-[9999] origin-top pointer-events-none transition-transform duration-[1.2s] ease-[cubic-bezier(0.22,1,0.36,1)]"></div>
+
+    <!-- Scroll Progress -->
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-cocoa via-slate to-lavender origin-left z-[100] w-0"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="sticky top-0 z-50 transition-all duration-500 border-b border-transparent">
+      <div class="w-full max-w-[1800px] mx-auto px-6 lg:px-12">
+        <div class="flex justify-between items-center h-24">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer reveal-left active">
+            <div class="w-10 h-10 bg-cocoa text-beige rounded-xl flex items-center justify-center">
+              <i data-lucide="brain" class="h-6 w-6"></i>
+            </div>
+            <span class="font-bold text-2xl text-cocoa tracking-tight">SkillsAge</span>
+          </div>
+          
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-10">
+            <a href="#features" class="text-cocoa font-medium relative group text-sm uppercase tracking-wider hover:text-slate transition-colors">
+              Features <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cocoa transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                </ul>
-            </nav>
-            <div class="mobile-toggle"><i class="ri-menu-line"></i></div>
-        </div>
-    </header>
+            <a href="#how-it-works" class="text-cocoa font-medium relative group text-sm uppercase tracking-wider hover:text-slate transition-colors">
+              How It Works <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cocoa transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#testimonials" class="text-cocoa font-medium relative group text-sm uppercase tracking-wider hover:text-slate transition-colors">
+              Testimonials <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cocoa transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#faq" class="text-cocoa font-medium relative group text-sm uppercase tracking-wider hover:text-slate transition-colors">
+              FAQ <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cocoa transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <button class="bg-cocoa text-beige px-7 py-3 rounded-full font-bold transition-all shadow-lg hover:shadow-cocoa/20 hover:scale-105 active:scale-95">
+              Get Started Free
+            </button>
+          </div>
 
-    <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content reveal">
-                <h1>Discover Your Perfect Career Path with AI</h1>
-                <p>Get personalized career recommendations, comprehensive skill gap analysis, and 24/7 guidance from our advanced AI advisor to make confident professional decisions.</p>
-                <div class="hero-btns">
-                    <a href="/auth" class="btn btn-primary">Get Started Free <i class="ri-arrow-right-line"></i></a>
-                    <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+          <!-- Mobile Toggle -->
+          <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="text-cocoa p-2">
+              <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-beige border-t border-steel/30 overflow-hidden shadow-lg backdrop-blur-md bg-opacity-95">
+        <div class="px-6 pt-4 pb-8 space-y-4">
+          <a href="#features" class="block text-cocoa font-medium text-lg py-3 border-b border-steel/10">Features</a>
+          <a href="#how-it-works" class="block text-cocoa font-medium text-lg py-3 border-b border-steel/10">How It Works</a>
+          <a href="#testimonials" class="block text-cocoa font-medium text-lg py-3 border-b border-steel/10">Testimonials</a>
+          <a href="#faq" class="block text-cocoa font-medium text-lg py-3 border-b border-steel/10">FAQ</a>
+          <button class="w-full bg-cocoa text-beige py-4 rounded-xl font-bold text-lg mt-6 shadow-md">Get Started Free</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero-section" class="relative min-h-[90vh] flex items-center pt-20 pb-20 overflow-hidden bg-beige perspective-1000">
+        <!-- Blobs -->
+        <div class="absolute -top-[10%] -right-[5%] w-[800px] h-[800px] bg-gradient-to-br from-lavender/40 to-steel/10 rounded-full blur-[100px] pointer-events-none animate-blob"></div>
+        <div class="absolute bottom-[10%] -left-[10%] w-[600px] h-[600px] bg-gradient-to-tr from-steel/10 to-lavender/30 rounded-full blur-[80px] pointer-events-none animate-blob" style="animation-delay: 2s;"></div>
+
+        <div class="w-full max-w-[1800px] mx-auto px-6 lg:px-12 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                <!-- Content -->
+                <div class="lg:w-1/2 text-center lg:text-left z-10">
+                    <div class="reveal inline-block px-4 py-1.5 rounded-full bg-white/50 backdrop-blur-sm text-cocoa font-semibold text-sm mb-8 border border-steel/20 shadow-sm">
+                        ✨ Your AI Career Companion
+                    </div>
+                    <h1 class="reveal delay-100 text-5xl md:text-7xl font-extrabold text-cocoa leading-[1.1] mb-8 tracking-tight">
+                        From Confused to <br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cocoa via-slate to-cocoa pb-2 animate-gradient">Confident.</span>
+                    </h1>
+                    <p class="reveal delay-200 text-xl text-slate/80 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
+                        Get personalized career guidance, skills gap analysis, and structured learning roadmaps - all powered by AI. <span class="text-cocoa font-bold">Free forever.</span>
+                    </p>
+                    <div class="reveal delay-300 flex flex-col sm:flex-row gap-5 justify-center lg:justify-start items-center">
+                        <button id="hero-btn" class="relative overflow-hidden bg-cocoa text-beige px-8 py-4 rounded-full font-bold text-lg shadow-xl flex items-center justify-center gap-2 group min-w-[220px] hover:bg-[#5D6588] hover:scale-105 active:scale-95 transition-all">
+                            <div id="btn-progress" class="absolute left-0 top-0 h-full bg-slate/40 z-0 w-0 transition-all duration-[2000ms] ease-in-out"></div>
+                            <span id="btn-text" class="relative z-10 flex items-center gap-2">Get Started Free <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i></span>
+                        </button>
+                    </div>
+                    <div class="reveal delay-400 mt-10 flex items-center justify-center lg:justify-start gap-6 text-sm font-semibold text-slate/70">
+                        <div class="flex items-center gap-2"><div class="bg-green-100 text-green-600 rounded-full p-0.5"><i data-lucide="check-circle-2" class="w-4 h-4"></i></div> Free Forever</div>
+                        <div class="flex items-center gap-2"><div class="bg-green-100 text-green-600 rounded-full p-0.5"><i data-lucide="check-circle-2" class="w-4 h-4"></i></div> No Credit Card</div>
+                        <div class="flex items-center gap-2"><div class="bg-green-100 text-green-600 rounded-full p-0.5"><i data-lucide="check-circle-2" class="w-4 h-4"></i></div> AI Powered</div>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-visual reveal">
-                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Career Planning">
+
+                <!-- Dashboard Visual with Parallax ID -->
+                <div id="dashboard-visual" class="lg:w-1/2 relative w-full max-w-2xl reveal delay-200 transition-transform duration-100 ease-out">
+                    <div class="relative bg-white/40 backdrop-blur-xl rounded-[2.5rem] p-4 shadow-2xl border border-white/50">
+                        <div class="bg-beige rounded-[2rem] overflow-hidden shadow-inner p-8 min-h-[500px] flex flex-col gap-6 relative border border-steel/10">
+                            <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-cocoa via-slate to-lavender"></div>
+                            <div class="flex items-center gap-5 mb-2 border-b border-steel/10 pb-6">
+                                <div class="w-14 h-14 bg-gradient-to-br from-cocoa to-slate rounded-2xl flex items-center justify-center text-beige shadow-lg">
+                                    <i data-lucide="bot" class="w-7 h-7"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-cocoa text-lg">Orion AI</div>
+                                    <div class="text-sm text-slate flex items-center gap-1.5">
+                                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Online • Career Mentor
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Chat Bubbles -->
+                            <div class="space-y-6">
+                                <div class="bg-white p-5 rounded-3xl rounded-tl-sm self-start max-w-[85%] border border-steel/10 shadow-sm reveal delay-500">
+                                    <p class="text-base text-cocoa leading-relaxed">Hello! I see you know Python. Based on your profile, you're an <span class="font-bold text-green-600">85% match</span> for Data Science.</p>
+                                </div>
+                                <div class="bg-lavender/50 p-5 rounded-3xl rounded-tr-sm self-end max-w-[85%] ml-auto shadow-sm reveal delay-700">
+                                    <p class="text-base font-medium text-cocoa">That's great! What skills am I missing?</p>
+                                </div>
+                                <div class="bg-white p-5 rounded-3xl rounded-tl-sm self-start max-w-[95%] border border-steel/10 shadow-sm reveal delay-1000">
+                                    <p class="text-base mb-3 text-cocoa">You need to prioritize these skills (2-8 weeks):</p>
+                                    <div class="flex gap-2.5 flex-wrap">
+                                        <span class="text-sm px-3 py-1.5 rounded-lg font-medium shadow-sm bg-cocoa text-beige">SQL (High)</span>
+                                        <span class="text-sm px-3 py-1.5 rounded-lg font-medium shadow-sm bg-slate/20 text-cocoa">Pandas (Med)</span>
+                                        <span class="text-sm px-3 py-1.5 rounded-lg font-medium shadow-sm bg-steel/10 text-slate">Tableau (Low)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating Stats -->
+                    <div class="absolute -bottom-10 -left-10 bg-white/90 backdrop-blur-md border border-white/50 p-5 rounded-2xl shadow-xl flex items-center gap-4 z-20 reveal delay-500">
+                        <div class="bg-lavender p-3 rounded-xl text-cocoa"><i data-lucide="users" class="w-6 h-6"></i></div>
+                        <div>
+                            <div class="font-extrabold text-cocoa text-2xl flex"><span class="counter" data-target="2500">0</span>+</div>
+                            <div class="text-xs font-bold text-slate uppercase tracking-wide">Users Benefiting</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="features" class="section-padding">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Premium Features for Your Future</h2>
-                <p>Powered by advanced technologies like Google Gemini and Vector Databases to provide the most accurate guidance.</p>
-            </div>
-
-            <div class="features-grid">
-                <div class="premium-card feature-card reveal">
-                    <div class="icon-box"><i class="ri-robot-2-line"></i></div>
-                    <h3>AI-Powered Career Chatbot</h3>
-                    <p>Your 24/7 intelligent career coach providing context-aware responses.</p>
-                    <ul>
-                        <li>Powered by <strong>Google Gemini API</strong> for human-like interaction.</li>
-                        <li>Uses RAG (Retrieval Augmented Generation) for accurate advice.</li>
-                        <li>Saves conversation history for future reference.</li>
-                    </ul>
+    <!-- Stats Bar -->
+    <div class="bg-white/50 backdrop-blur-sm py-16 border-y border-steel/10">
+        <div class="w-full max-w-[1800px] mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                <div class="flex flex-col items-center text-center text-cocoa group cursor-default reveal delay-100">
+                    <div class="mb-4 text-cocoa bg-lavender/30 p-4 rounded-2xl border border-steel/10 shadow-sm group-hover:bg-cocoa group-hover:text-beige transition-colors duration-500 transform group-hover:rotate-180 group-hover:scale-110">
+                        <i data-lucide="briefcase" class="w-5 h-5"></i>
+                    </div>
+                    <div class="text-4xl font-extrabold mb-2 flex items-baseline tracking-tight"><span class="counter" data-target="105">0</span>+</div>
+                    <div class="text-sm opacity-70 uppercase tracking-widest text-slate font-bold group-hover:text-cocoa transition-colors">Career Paths</div>
                 </div>
-
-                <div class="premium-card feature-card reveal">
-                    <div class="icon-box"><i class="ri-pie-chart-2-line"></i></div>
-                    <h3>Personalized Recommendations</h3>
-                    <p>Discover your best-fit careers based on a deep analysis of your profile.</p>
-                    <ul>
-                        <li>Provides a <strong>Match Percentage (0-100%)</strong> for each career.</li>
-                        <li>Delivers a ranked list of top 10-20 best-fit options.</li>
-                        <li>Includes detailed descriptions, salary expectations, and growth potential.</li>
-                    </ul>
+                <div class="flex flex-col items-center text-center text-cocoa group cursor-default reveal delay-200">
+                    <div class="mb-4 text-cocoa bg-lavender/30 p-4 rounded-2xl border border-steel/10 shadow-sm group-hover:bg-cocoa group-hover:text-beige transition-colors duration-500 transform group-hover:rotate-180 group-hover:scale-110">
+                        <i data-lucide="book-open" class="w-5 h-5"></i>
+                    </div>
+                    <div class="text-4xl font-extrabold mb-2 flex items-baseline tracking-tight"><span class="counter" data-target="110">0</span>+</div>
+                    <div class="text-sm opacity-70 uppercase tracking-widest text-slate font-bold group-hover:text-cocoa transition-colors">Skills Library</div>
                 </div>
-
-                <div class="premium-card feature-card reveal">
-                    <div class="icon-box"><i class="ri-bar-chart-grouped-line"></i></div>
-                    <h3>Skill Gap Analysis</h3>
-                    <p>Identify missing skills and get a clear roadmap to bridge the gap.</p>
-                    <ul>
-                        <li>Visual comparison of skills you have vs. what you need.</li>
-                        <li>Calculates a <strong>Career Readiness Score (0-100%)</strong>.</li>
-                        <li>Provides prioritized learning paths and estimated learning times.</li>
-                    </ul>
+                <div class="flex flex-col items-center text-center text-cocoa group cursor-default reveal delay-300">
+                    <div class="mb-4 text-cocoa bg-lavender/30 p-4 rounded-2xl border border-steel/10 shadow-sm group-hover:bg-cocoa group-hover:text-beige transition-colors duration-500 transform group-hover:rotate-180 group-hover:scale-110">
+                        <i data-lucide="map" class="w-5 h-5"></i>
+                    </div>
+                    <div class="text-4xl font-extrabold mb-2 flex items-baseline tracking-tight"><span class="counter" data-target="3">0</span></div>
+                    <div class="text-sm opacity-70 uppercase tracking-widest text-slate font-bold group-hover:text-cocoa transition-colors">Complete Roadmaps</div>
                 </div>
-
-                <div class="premium-card feature-card reveal">
-                    <div class="icon-box"><i class="ri-book-open-line"></i></div>
-                    <h3>Extensive Knowledge Base</h3>
-                    <p>Access a searchable database of career and skill information.</p>
-                    <ul>
-                        <li>Detailed profiles for <strong>30-50+ careers</strong>.</li>
-                        <li>Over <strong>80-100+ skill descriptions</strong>.</li>
-                        <li>Includes information on job roles, responsibilities, and progression paths.</li>
-                    </ul>
+                <div class="flex flex-col items-center text-center text-cocoa group cursor-default reveal delay-400">
+                    <div class="mb-4 text-cocoa bg-lavender/30 p-4 rounded-2xl border border-steel/10 shadow-sm group-hover:bg-cocoa group-hover:text-beige transition-colors duration-500 transform group-hover:rotate-180 group-hover:scale-110">
+                        <i data-lucide="help-circle" class="w-5 h-5"></i>
+                    </div>
+                    <div class="text-4xl font-extrabold mb-2 flex items-baseline tracking-tight"><span class="counter" data-target="50">0</span>+</div>
+                    <div class="text-sm opacity-70 uppercase tracking-widest text-slate font-bold group-hover:text-cocoa transition-colors">FAQs Answered</div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section id="how-it-works" class="section-padding" style="background: var(--bg-off-white);">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Your Journey to Success</h2>
-                <p>A simple, four-step process to transform your career confusion into clarity.</p>
+    <!-- Features -->
+    <section id="features" class="py-32 bg-beige relative overflow-hidden">
+        <div class="w-full max-w-[1800px] mx-auto px-6 lg:px-12">
+            <div class="text-center mb-20">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-lavender/50 text-cocoa font-bold text-xs uppercase tracking-widest mb-4 reveal">Features</div>
+                <h2 class="text-4xl md:text-6xl font-extrabold text-cocoa mb-6 reveal delay-100">Everything You Need</h2>
+                <p class="text-xl text-slate max-w-2xl mx-auto leading-relaxed reveal delay-200">Navigate your career journey with powerful tools designed to give you clarity and direction.</p>
             </div>
             
-            <div class="timeline">
-                <div class="step-row reveal">
-                    <div class="step-content" style="text-align: right;">
-                        <h3>Create Your Profile</h3>
-                        <p>Build a comprehensive profile including your education, work history, and a detailed skills inventory (technical + soft skills) to get started.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="features-grid">
+                <!-- Feature 1 -->
+                <div class="reveal delay-100 bg-white border border-steel/20 p-8 rounded-3xl shadow-sm transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:border-cocoa/20 relative cursor-default">
+                    <div class="relative">
+                        <div class="w-14 h-14 bg-lavender/40 rounded-2xl flex items-center justify-center text-cocoa mb-6 group-hover:bg-cocoa group-hover:text-beige transition-all duration-300 shadow-sm cursor-help transform group-hover:rotate-6">
+                            <i data-lucide="bot" class="w-6 h-6"></i>
+                        </div>
+                        <div class="absolute top-16 left-0 z-20 w-64 p-4 bg-cocoa text-beige text-sm rounded-xl shadow-xl border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                            Ask Orion anything about your career journey. It remembers your context and provides tailored advice.
+                            <div class="absolute -top-1.5 left-5 w-3 h-3 bg-cocoa rotate-45 border-l border-t border-white/10"></div>
+                        </div>
                     </div>
-                    <div class="step-num">1</div>
-                    <div class="step-content"></div>
+                    <h3 class="text-xl font-bold text-cocoa mb-4">AI Career Advisor</h3>
+                    <p class="text-slate leading-relaxed">24/7 AI mentor powered by RAG. Get instant answers regarding careers, skills, and salaries.</p>
                 </div>
 
-                <div class="step-row reveal">
-                    <div class="step-content"></div>
-                    <div class="step-num">2</div>
-                    <div class="step-content">
-                        <h3>Chat & Explore</h3>
-                        <p>Interact with our AI advisor to explore different industries, ask questions about roles, and get personalized advice based on your goals.</p>
+                 <!-- Feature 2 -->
+                 <div class="reveal delay-200 bg-white border border-steel/20 p-8 rounded-3xl shadow-sm transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:border-cocoa/20 relative cursor-default">
+                    <div class="relative">
+                        <div class="w-14 h-14 bg-lavender/40 rounded-2xl flex items-center justify-center text-cocoa mb-6 group-hover:bg-cocoa group-hover:text-beige transition-all duration-300 shadow-sm cursor-help transform group-hover:rotate-6">
+                            <i data-lucide="target" class="w-6 h-6"></i>
+                        </div>
+                        <div class="absolute top-16 left-0 z-20 w-64 p-4 bg-cocoa text-beige text-sm rounded-xl shadow-xl border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                            Our algorithm analyzes over 50 data points from your profile to find career paths that align with your strengths.
+                            <div class="absolute -top-1.5 left-5 w-3 h-3 bg-cocoa rotate-45 border-l border-t border-white/10"></div>
+                        </div>
                     </div>
+                    <h3 class="text-xl font-bold text-cocoa mb-4">Smart Matching</h3>
+                    <p class="text-slate leading-relaxed">Algorithm analyzes your skills and suggests top 3 careers with exact match percentages.</p>
                 </div>
 
-                <div class="step-row reveal">
-                    <div class="step-content" style="text-align: right;">
-                        <h3>Get Matched</h3>
-                        <p>Receive your personalized list of top career recommendations complete with compatibility scores and detailed insights.</p>
+                 <!-- Feature 3 -->
+                 <div class="reveal delay-300 bg-white border border-steel/20 p-8 rounded-3xl shadow-sm transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:border-cocoa/20 relative cursor-default">
+                    <div class="relative">
+                        <div class="w-14 h-14 bg-lavender/40 rounded-2xl flex items-center justify-center text-cocoa mb-6 group-hover:bg-cocoa group-hover:text-beige transition-all duration-300 shadow-sm cursor-help transform group-hover:rotate-6">
+                            <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                        </div>
+                        <div class="absolute top-16 left-0 z-20 w-64 p-4 bg-cocoa text-beige text-sm rounded-xl shadow-xl border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                            Identify the exact skills you are missing for your target role. We prioritize them based on market demand.
+                            <div class="absolute -top-1.5 left-5 w-3 h-3 bg-cocoa rotate-45 border-l border-t border-white/10"></div>
+                        </div>
                     </div>
-                    <div class="step-num">3</div>
-                    <div class="step-content"></div>
+                    <h3 class="text-xl font-bold text-cocoa mb-4">Skills Gap Analysis</h3>
+                    <p class="text-slate leading-relaxed">See exactly which skills you're missing with priority levels and learning times.</p>
                 </div>
 
-                <div class="step-row reveal">
-                    <div class="step-content"></div>
-                    <div class="step-num">4</div>
-                    <div class="step-content">
-                        <h3>Upskill & Succeed</h3>
-                        <p>Use your personalized skill gap analysis and prioritized learning roadmap to acquire the skills you need to land your dream job.</p>
+                <!-- Feature 4 -->
+                <div class="reveal delay-400 bg-white border border-steel/20 p-8 rounded-3xl shadow-sm transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:border-cocoa/20 relative cursor-default">
+                    <div class="relative">
+                        <div class="w-14 h-14 bg-lavender/40 rounded-2xl flex items-center justify-center text-cocoa mb-6 group-hover:bg-cocoa group-hover:text-beige transition-all duration-300 shadow-sm cursor-help transform group-hover:rotate-6">
+                            <i data-lucide="map" class="w-6 h-6"></i>
+                        </div>
+                        <div class="absolute top-16 left-0 z-20 w-64 p-4 bg-cocoa text-beige text-sm rounded-xl shadow-xl border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                            Access curated, step-by-step learning paths. Each roadmap is broken down into weekly modules.
+                            <div class="absolute -top-1.5 left-5 w-3 h-3 bg-cocoa rotate-45 border-l border-t border-white/10"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-cocoa mb-4">Learning Roadmaps</h3>
+                    <p class="text-slate leading-relaxed">Step-by-step paths for Data Science, Full Stack, and DevOps with weekly milestones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works (Timeline) -->
+    <section id="how-it-works" class="py-32 relative overflow-hidden bg-gradient-to-b from-beige via-lavender/20 to-beige">
+        <div class="w-full max-w-[1200px] mx-auto px-6 lg:px-12 relative z-10">
+            <div class="text-center mb-24">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-lavender/50 text-cocoa font-bold text-xs uppercase tracking-widest mb-4 reveal">Process</div>
+                <h2 class="text-4xl md:text-6xl font-extrabold text-cocoa mb-6 reveal delay-100">How It Works</h2>
+                <p class="text-xl text-slate reveal delay-200">Your User Flow for Career Success</p>
+            </div>
+
+            <div class="relative">
+                <!-- Central Line -->
+                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-cocoa/10 md:-translate-x-1/2 rounded-full h-full"></div>
+                <!-- Animated Line -->
+                <div id="timeline-line" class="absolute left-4 md:left-1/2 top-0 w-1 bg-cocoa md:-translate-x-1/2 rounded-full transition-all duration-100 ease-linear" style="height: 0;"></div>
+                
+                <div class="space-y-12 md:space-y-0">
+                    <!-- Step 1 (Right) -->
+                    <div class="reveal relative flex flex-col md:flex-row items-center w-full">
+                        <div class="absolute left-4 md:left-1/2 top-0 md:top-1/2 w-4 h-4 rounded-full bg-cocoa border-[3px] border-beige z-20 -translate-x-1/2 md:-translate-y-1/2 shadow-md ring-4 ring-lavender/30"></div>
+                        <div class="hidden md:block w-1/2"></div> <!-- Empty left -->
+                        <div class="w-full md:w-1/2 pl-12 md:pl-16 md:text-left">
+                            <div class="p-8 bg-white/80 backdrop-blur-md border border-steel/20 rounded-3xl shadow-sm hover:shadow-xl transition-all relative group hover:-translate-y-1">
+                                <div class="hidden md:block absolute top-1/2 -translate-y-1/2 w-4 h-4 transform rotate-45 -left-2.5 border-b border-l border-steel/20 bg-white/80"></div>
+                                <div class="flex items-center gap-4 mb-4 md:flex-row">
+                                    <span class="text-4xl">🔐</span>
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="text-xl font-bold text-cocoa">Step 1: Sign Up</h3>
+                                        <span class="text-xs font-bold text-slate uppercase bg-lavender/50 px-2 py-1 rounded-full self-start">1 min</span>
+                                    </div>
+                                </div>
+                                <p class="text-slate leading-relaxed font-medium">Create your free account with just an email. No credit card required. Free forever.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 (Left) -->
+                    <div class="reveal delay-100 relative flex flex-col md:flex-row-reverse items-center w-full">
+                        <div class="absolute left-4 md:left-1/2 top-0 md:top-1/2 w-4 h-4 rounded-full bg-cocoa border-[3px] border-beige z-20 -translate-x-1/2 md:-translate-y-1/2 shadow-md ring-4 ring-lavender/30"></div>
+                        <div class="hidden md:block w-1/2"></div> <!-- Empty right -->
+                        <div class="w-full md:w-1/2 pl-12 md:pr-16 md:pl-0 md:text-right">
+                            <div class="p-8 bg-white/80 backdrop-blur-md border border-steel/20 rounded-3xl shadow-sm hover:shadow-xl transition-all relative group hover:-translate-y-1">
+                                <div class="hidden md:block absolute top-1/2 -translate-y-1/2 w-4 h-4 transform -rotate-135 -right-2.5 border-b border-l border-steel/20 bg-white/80"></div>
+                                <div class="flex items-center gap-4 mb-4 md:flex-row-reverse">
+                                    <span class="text-4xl">✍️</span>
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="text-xl font-bold text-cocoa">Step 2: Profile</h3>
+                                        <span class="text-xs font-bold text-slate uppercase bg-lavender/50 px-2 py-1 rounded-full self-start md:self-end">3 min</span>
+                                    </div>
+                                </div>
+                                <p class="text-slate leading-relaxed font-medium">Tell us about your skills, current learning status, and your dream career goals.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 (Right) -->
+                    <div class="reveal delay-200 relative flex flex-col md:flex-row items-center w-full">
+                         <div class="absolute left-4 md:left-1/2 top-0 md:top-1/2 w-4 h-4 rounded-full bg-cocoa border-[3px] border-beige z-20 -translate-x-1/2 md:-translate-y-1/2 shadow-md ring-4 ring-lavender/30"></div>
+                         <div class="hidden md:block w-1/2"></div>
+                         <div class="w-full md:w-1/2 pl-12 md:pl-16 md:text-left">
+                             <div class="p-8 bg-white/80 backdrop-blur-md border border-steel/20 rounded-3xl shadow-sm hover:shadow-xl transition-all relative group hover:-translate-y-1">
+                                 <div class="hidden md:block absolute top-1/2 -translate-y-1/2 w-4 h-4 transform rotate-45 -left-2.5 border-b border-l border-steel/20 bg-white/80"></div>
+                                 <div class="flex items-center gap-4 mb-4 md:flex-row">
+                                     <span class="text-4xl">📊</span>
+                                     <div class="flex flex-col gap-1">
+                                         <h3 class="text-xl font-bold text-cocoa">Step 3: Insights</h3>
+                                         <span class="text-xs font-bold text-slate uppercase bg-lavender/50 px-2 py-1 rounded-full self-start">2 min</span>
+                                     </div>
+                                 </div>
+                                 <p class="text-slate leading-relaxed font-medium">See top career matches, skills gaps, learning progress, and dynamic radar charts.</p>
+                             </div>
+                         </div>
+                     </div>
+
+                     <!-- Step 4 (Left) -->
+                     <div class="reveal delay-300 relative flex flex-col md:flex-row-reverse items-center w-full">
+                        <div class="absolute left-4 md:left-1/2 top-0 md:top-1/2 w-4 h-4 rounded-full bg-cocoa border-[3px] border-beige z-20 -translate-x-1/2 md:-translate-y-1/2 shadow-md ring-4 ring-lavender/30"></div>
+                        <div class="hidden md:block w-1/2"></div>
+                        <div class="w-full md:w-1/2 pl-12 md:pr-16 md:pl-0 md:text-right">
+                            <div class="p-8 bg-white/80 backdrop-blur-md border border-steel/20 rounded-3xl shadow-sm hover:shadow-xl transition-all relative group hover:-translate-y-1">
+                                <div class="hidden md:block absolute top-1/2 -translate-y-1/2 w-4 h-4 transform -rotate-135 -right-2.5 border-b border-l border-steel/20 bg-white/80"></div>
+                                <div class="flex items-center gap-4 mb-4 md:flex-row-reverse">
+                                    <span class="text-4xl">🤖</span>
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="text-xl font-bold text-cocoa">Step 4: Chat AI</h3>
+                                        <span class="text-xs font-bold text-slate uppercase bg-lavender/50 px-2 py-1 rounded-full self-start md:self-end">10 min</span>
+                                    </div>
+                                </div>
+                                <p class="text-slate leading-relaxed font-medium">Ask specific questions like 'How do I become a Data Scientist?' and get answers.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="container section-padding">
-        <div class="cta-section reveal">
-            <h2>Ready to Define Your Future?</h2>
-            <p>Join thousands of professionals making smarter, data-driven career decisions today.</p>
-            <a href="/auth" class="btn btn-cta">Start Your Journey Now</a>
-            <p style="font-size: 0.9rem; margin-top: 20px; color: rgba(255,255,255,0.8);">Free forever • No credit card required</p>
+    <!-- Target Audience -->
+    <section class="py-24 bg-white/40 border-y border-steel/10 backdrop-blur-sm">
+        <div class="w-full max-w-[1800px] mx-auto px-6 lg:px-12 text-center">
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-cocoa reveal">Who is SkillsAge For?</h2>
+                <p class="text-slate font-medium text-lg reveal delay-100">Built for every stage of your career journey.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4 reveal delay-200">
+                <div class="audience-pill bg-white border border-steel/30 px-8 py-4 rounded-full text-base font-bold text-slate cursor-pointer transition-colors shadow-sm hover:scale-105 hover:bg-cocoa hover:text-beige hover:border-cocoa">College Students</div>
+                <div class="audience-pill bg-white border border-steel/30 px-8 py-4 rounded-full text-base font-bold text-slate cursor-pointer transition-colors shadow-sm hover:scale-105 hover:bg-cocoa hover:text-beige hover:border-cocoa">Career Changers</div>
+                <div class="audience-pill bg-white border border-steel/30 px-8 py-4 rounded-full text-base font-bold text-slate cursor-pointer transition-colors shadow-sm hover:scale-105 hover:bg-cocoa hover:text-beige hover:border-cocoa">Job Seekers</div>
+                <div class="audience-pill bg-white border border-steel/30 px-8 py-4 rounded-full text-base font-bold text-slate cursor-pointer transition-colors shadow-sm hover:scale-105 hover:bg-cocoa hover:text-beige hover:border-cocoa">Working Pros</div>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <a href="#" class="logo" style="margin-bottom: 20px;">
-                        <i class="ri-compass-3-line"></i> CareerPulse AI
-                    </a>
-                    <p>Democratizing premium career guidance with advanced Artificial Intelligence.</p>
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-32 bg-beige relative overflow-hidden">
+        <div class="w-full max-w-[1800px] mx-auto px-6 lg:px-12 relative z-10">
+            <div class="text-center mb-12">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-lavender/50 text-cocoa font-bold text-xs uppercase tracking-widest mb-4 reveal">Community</div>
+                <h2 class="text-4xl md:text-6xl font-extrabold text-cocoa mb-6 reveal delay-100">Success Stories</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div class="reveal delay-100 bg-white p-12 rounded-[3rem] border border-steel/20 shadow-xl relative flex flex-col justify-between h-full min-h-[400px]">
+                    <div>
+                         <div class="text-lavender mb-8"><i data-lucide="quote" class="w-16 h-16 opacity-30 fill-current"></i></div>
+                         <p class="text-cocoa mb-10 italic text-2xl leading-relaxed font-medium">"I was lost after graduation. Orion helped me map out a path to Full Stack Development in just 3 months."</p>
+                    </div>
+                    <div class="flex items-center gap-5 mt-auto border-t border-steel/10 pt-8">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cocoa to-slate flex items-center justify-center text-beige font-bold text-2xl shadow-md">S</div>
+                        <div><h4 class="font-bold text-cocoa text-xl">Surya Swami</h4><p class="text-sm text-slate uppercase font-semibold">Software Engineer</p></div>
+                    </div>
                 </div>
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">API</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Connect</h4>
-                    <div style="display: flex; gap: 15px; font-size: 1.5rem; color: var(--primary-color);">
-                        <a href="#"><i class="ri-twitter-x-line"></i></a>
-                        <a href="#"><i class="ri-linkedin-fill"></i></a>
-                        <a href="#"><i class="ri-github-fill"></i></a>
+                <div class="reveal delay-200 bg-white p-12 rounded-[3rem] border border-steel/20 shadow-xl relative flex flex-col justify-between h-full min-h-[400px]">
+                    <div>
+                         <div class="text-lavender mb-8"><i data-lucide="quote" class="w-16 h-16 opacity-30 fill-current"></i></div>
+                         <p class="text-cocoa mb-10 italic text-2xl leading-relaxed font-medium">"The match score is incredibly accurate. It identified skills I didn't even know were valuable for Data Science."</p>
+                    </div>
+                    <div class="flex items-center gap-5 mt-auto border-t border-steel/10 pt-8">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cocoa to-slate flex items-center justify-center text-beige font-bold text-2xl shadow-md">A</div>
+                        <div><h4 class="font-bold text-cocoa text-xl">Alex Montrio</h4><p class="text-sm text-slate uppercase font-semibold">Data Analyst</p></div>
                     </div>
                 </div>
             </div>
-            <div class="copyright">
-                &copy; 2024 CareerPulse AI. All rights reserved.
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-32 bg-beige">
+        <div class="w-full max-w-4xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-cocoa mb-4 reveal">FAQ</h2>
+                <p class="text-lg text-slate reveal delay-100">Got questions? We've got answers.</p>
             </div>
+            <div class="bg-white rounded-[2rem] p-10 shadow-xl border border-steel/10 reveal delay-200">
+                <div class="faq-item border-b border-steel/20 last:border-0">
+                    <button class="w-full py-8 flex justify-between items-center text-left focus:outline-none group" onclick="toggleFaq(this)">
+                        <span class="text-xl font-bold text-cocoa group-hover:text-slate transition-colors">Is SkillsAge really free?</span>
+                        <div class="icon-container text-cocoa bg-lavender/30 p-2 rounded-full transition-transform duration-300"><i data-lucide="chevron-down" class="w-5 h-5"></i></div>
+                    </button>
+                    <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+                        <p class="pb-8 text-slate leading-relaxed text-lg">Yes! 100% free forever. No hidden charges, no premium tiers, no credit card required.</p>
+                    </div>
+                </div>
+                <div class="faq-item border-b border-steel/20 last:border-0">
+                    <button class="w-full py-8 flex justify-between items-center text-left focus:outline-none group" onclick="toggleFaq(this)">
+                        <span class="text-xl font-bold text-cocoa group-hover:text-slate transition-colors">How accurate is the AI?</span>
+                        <div class="icon-container text-cocoa bg-lavender/30 p-2 rounded-full transition-transform duration-300"><i data-lucide="chevron-down" class="w-5 h-5"></i></div>
+                    </button>
+                    <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+                        <p class="pb-8 text-slate leading-relaxed text-lg">Orion is powered by advanced RAG technology using a verified database of 105+ careers and real-time market data, ensuring high accuracy.</p>
+                    </div>
+                </div>
+                 <div class="faq-item border-b border-steel/20 last:border-0">
+                    <button class="w-full py-8 flex justify-between items-center text-left focus:outline-none group" onclick="toggleFaq(this)">
+                        <span class="text-xl font-bold text-cocoa group-hover:text-slate transition-colors">Do you have roadmaps for beginners?</span>
+                        <div class="icon-container text-cocoa bg-lavender/30 p-2 rounded-full transition-transform duration-300"><i data-lucide="chevron-down" class="w-5 h-5"></i></div>
+                    </button>
+                    <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+                        <p class="pb-8 text-slate leading-relaxed text-lg">Absolutely. We have specific roadmaps for career changers and beginners to take you from zero to job-ready.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 px-6 bg-beige">
+        <div class="reveal w-full max-w-[1600px] mx-auto bg-cocoa rounded-[3rem] p-12 md:p-24 text-center text-beige relative overflow-hidden shadow-2xl group">
+             <!-- BG Orbs -->
+             <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-lavender opacity-20 rounded-full blur-[100px] animate-blob"></div>
+             <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate opacity-20 rounded-full blur-[100px] animate-blob" style="animation-delay: 1s;"></div>
+             
+             <div class="relative z-10">
+                 <h2 class="text-4xl md:text-6xl font-bold mb-8 leading-tight">Your Dream Career is <br/>Just 5 Minutes Away</h2>
+                 <p class="text-xl opacity-80 mb-12 max-w-2xl mx-auto leading-relaxed">Stop guessing. Start planning. Join the community today.</p>
+                 <button class="bg-beige text-cocoa px-12 py-5 rounded-full font-bold text-xl transition-all shadow-xl hover:scale-105 active:scale-95">Get Started Free</button>
+             </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-lavender/30 text-slate py-20 border-t border-steel/10">
+        <div class="w-full max-w-[1800px] mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center gap-2 mb-6 text-cocoa font-bold text-2xl"><i data-lucide="brain" class="w-6 h-6"></i> SkillsAge</div>
+                    <p class="text-base leading-relaxed mb-6 max-w-xs">Empowering careers with AI guidance, skills analysis, and structured learning.</p>
+                </div>
+                <div><h4 class="text-cocoa font-bold mb-6 text-lg">Platform</h4><ul class="space-y-4"><li><a href="#" class="hover:text-cocoa transition-colors">Career Matching</a></li><li><a href="#" class="hover:text-cocoa">AI Advisor</a></li></ul></div>
+                <div><h4 class="text-cocoa font-bold mb-6 text-lg">Resources</h4><ul class="space-y-4"><li><a href="#" class="hover:text-cocoa transition-colors">Skills Library</a></li><li><a href="#" class="hover:text-cocoa">Blog</a></li></ul></div>
+                <div><h4 class="text-cocoa font-bold mb-6 text-lg">Contact</h4><p>support@skillsage.com<br>Bangalore, India</p></div>
+            </div>
+            <div class="border-t border-steel/20 pt-10 flex flex-col md:flex-row justify-between items-center text-sm"><p>© 2024 SkillsAge. All rights reserved.</p></div>
         </div>
     </footer>
 
+    <!-- Logic Script -->
     <script>
-        const observerOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      // Initialize Lucide Icons
+      lucide.createIcons();
+
+      // Flood Transition
+      window.addEventListener('load', () => {
+        document.getElementById('flood').style.transform = 'scaleY(0)';
+      });
+
+      // Navbar Scroll Logic
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('bg-beige/80', 'backdrop-blur-lg', 'shadow-sm', 'border-b', 'border-steel/10');
+            navbar.classList.remove('border-transparent');
+        } else {
+            navbar.classList.remove('bg-beige/80', 'backdrop-blur-lg', 'shadow-sm', 'border-b', 'border-steel/10');
+            navbar.classList.add('border-transparent');
+        }
+      });
+
+      // Scroll Progress Bar
+      const progressBar = document.getElementById('scroll-progress');
+      window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = (scrollTop / scrollHeight) * 100;
+        progressBar.style.width = progress + '%';
+      });
+
+      // Mouse Parallax for Hero
+      const heroSection = document.getElementById('hero-section');
+      const dashboardVisual = document.getElementById('dashboard-visual');
+      
+      if(heroSection && dashboardVisual) {
+          heroSection.addEventListener('mousemove', (e) => {
+              const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+              const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+              
+              dashboardVisual.style.transform = `translate(${moveX * -1}px, ${moveY * -1}px)`;
+          });
+          
+          heroSection.addEventListener('mouseleave', () => {
+              dashboardVisual.style.transform = `translate(0px, 0px)`;
+          });
+      }
+
+      // Timeline Scroll Animation
+      const timelineSection = document.getElementById('how-it-works');
+      const timelineLine = document.getElementById('timeline-line');
+      
+      window.addEventListener('scroll', () => {
+         if (!timelineSection || !timelineLine) return;
+         
+         const rect = timelineSection.getBoundingClientRect();
+         const windowHeight = window.innerHeight;
+         
+         // Start animating when section enters view
+         if (rect.top < windowHeight && rect.bottom > 0) {
+             const height = rect.height;
+             const progress = (windowHeight - rect.top) / (windowHeight + height);
+             // Clamp and adjust timing to finish drawing slightly before section ends
+             const clamped = Math.max(0, Math.min(1, progress * 1.2)); 
+             timelineLine.style.height = `${clamped * 100}%`;
+         }
+      });
+
+      // Intersection Observer for Animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            
+            // Trigger Counters if inside this section
+            if (entry.target.querySelectorAll('.counter').length > 0) {
+                entry.target.querySelectorAll('.counter').forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const duration = 2000;
+                    const increment = target / (duration / 16);
+                    
+                    let current = 0;
+                    const updateCounter = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.innerText = Math.ceil(current);
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCounter();
+                    counter.classList.remove('counter'); // Run only once
+                });
+            }
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal, .reveal-left').forEach(el => observer.observe(el));
+
+      // Mobile Menu
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      let isMenuOpen = false;
+
+      menuBtn.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+            mobileMenu.classList.remove('hidden');
+            // Small timeout to allow removing 'hidden' to render before applying opacity
+            setTimeout(() => {
+                mobileMenu.style.height = mobileMenu.scrollHeight + 'px';
+                mobileMenu.style.opacity = '1';
+            }, 10);
+            menuBtn.innerHTML = '<i data-lucide="x" class="w-6 h-6"></i>';
+        } else {
+            mobileMenu.style.height = '0px';
+            mobileMenu.style.opacity = '0';
+            setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+            menuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+        }
+        lucide.createIcons();
+      });
+
+      // Hero Button Progress
+      const heroBtn = document.getElementById('hero-btn');
+      const btnProgress = document.getElementById('btn-progress');
+      const btnText = document.getElementById('btn-text');
+      
+      heroBtn.addEventListener('click', () => {
+         btnProgress.style.width = '100%';
+         btnText.innerText = 'Setting up...';
+         
+         setTimeout(() => {
+             btnText.innerHTML = 'Welcome! <i data-lucide="check-circle-2" class="w-5 h-5"></i>';
+             lucide.createIcons();
+         }, 2000);
+      });
+
+      // FAQ Accordion
+      function toggleFaq(btn) {
+          const content = btn.nextElementSibling;
+          const icon = btn.querySelector('.icon-container');
+          
+          if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+              content.style.maxHeight = '0px';
+              icon.style.transform = 'rotate(0deg)';
+          } else {
+              content.style.maxHeight = content.scrollHeight + 'px';
+              icon.style.transform = 'rotate(180deg)';
+          }
+      }
+
+      // Global Ripple Effect
+      document.addEventListener('click', (e) => {
+        const button = e.target.closest('button, .audience-pill');
+        if (!button) return;
+
+        const circle = document.createElement('span');
+        const diameter = Math.max(button.clientWidth, button.clientHeight);
+        const radius = diameter / 2;
+        const rect = button.getBoundingClientRect();
+
+        circle.style.width = circle.style.height = `${diameter}px`;
+        circle.style.left = `${e.clientX - rect.left - radius}px`;
+        circle.style.top = `${e.clientY - rect.top - radius}px`;
+        circle.classList.add('ripple');
+
+        const ripple = button.querySelector('.ripple');
+        if (ripple) ripple.remove();
+
+        button.appendChild(circle);
+      });
     </script>
 </body>
 </html>
