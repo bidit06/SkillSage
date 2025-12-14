@@ -26,8 +26,7 @@ class CareerAdvisorRAG:
         
     def _init_gemini(self):
         genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-        # We initialize the standard model here to ensure stability at startup.
-        # We will attempt to attach tools dynamically during query time.
+        # Initialize standard model first to prevent startup crashes
         self.model = genai.GenerativeModel('gemini-2.5-flash')
 
     def _init_embedder(self):
@@ -67,7 +66,6 @@ class CareerAdvisorRAG:
         if not user: return {"error": "User not found"}
 
         user_skills_list = user.get('skills', [])
-        # Normalize user ratings for easier lookup
         user_ratings = {k.lower().strip(): v for k, v in user.get('skill_ratings', {}).items()}
         
         raw_goals = user.get('career_goal', [])
@@ -77,19 +75,16 @@ class CareerAdvisorRAG:
         all_missing_skills = []
 
         for goal in goals:
-            # 1. Fetch Exact Career from MongoDB
             career_doc = self.careers_col.find_one({
                 "title": {"$regex": f"^{re.escape(goal)}$", "$options": "i"}
             })
             
-            # 2. Get Required Skills
             req_skills_map = {}
             if career_doc and "required_skills" in career_doc:
                 req_skills_map = career_doc["required_skills"]
             else:
                 req_skills_map = {"Technical Skills": 5, "Communication": 5, "Problem Solving": 5}
 
-            # 3. Build Chart Data
             chart_labels = list(req_skills_map.keys())[:12]
             user_data = []
             target_data = []
@@ -98,16 +93,13 @@ class CareerAdvisorRAG:
                 target_level = req_skills_map[skill_name]
                 target_data.append(target_level)
                 
-                # --- MATCHING LOGIC ---
                 rating = 0
                 tokens = [t.strip().lower() for t in re.split(r'[ /&,]+', skill_name)]
                 
-                # Check 1: Token match
                 for token in tokens:
                     if token in user_ratings:
                         rating = max(rating, user_ratings[token])
                 
-                # Check 2: Direct name match
                 if rating == 0:
                     s_lower = skill_name.lower()
                     if s_lower in user_ratings:
@@ -115,7 +107,6 @@ class CareerAdvisorRAG:
 
                 user_data.append(rating)
 
-                # 4. Identify Missing Skills (ONLY if not in profile string list)
                 is_missing = False
                 has_skill_in_profile = False
                 for token in tokens:
@@ -159,7 +150,7 @@ class CareerAdvisorRAG:
     # --- CHATBOT LOGIC ---
     def query_advisor(self, user_email: str, query: str) -> str:
         """
-        Generates a premium, concise response. 
+        Generates a premium, concise response using Google Search if needed.
         """
         # 1. Fetch User Profile
         user = self.users_col.find_one({"email": user_email})
@@ -184,9 +175,14 @@ class CareerAdvisorRAG:
         if results['documents']:
             knowledge_base_context = "\n".join(results['documents'][0])
 
-        # 3. Premium System Prompt
+        # 3. Premium System Prompt with Strict Scope
         system_instruction = """You are Orion, an elite Career Architect.
-        
+
+        STRICT SCOPE ENFORCEMENT:
+        - You act EXCLUSIVELY as a career and skills advisor.
+        - IF the user asks about unrelated topics (e.g., movies, pop culture, food, politics, general chat), YOU MUST REFUSE.
+        - Do NOT answer the unrelated question even if you know the answer.
+
         TONE & STYLE:
         - Speak like a sophisticated, warm human expert.
         - Be ultra-concise. No fluff.
@@ -194,7 +190,7 @@ class CareerAdvisorRAG:
         - ABSOLUTELY NO MARKDOWN BOLDING (do not use ** or * for emphasis).
         
         LOGIC:
-        1. Context Check: Use the 'Knowledge Base Context' first. If it is empty or irrelevant to the query, use your general knowledge to answer.
+        1. Context Check: Use the 'Knowledge Base Context' first. If it is empty or irrelevant to the query, use your Google Search tool to find fresh, accurate information regarding CAREERS or SKILLS only.
         2. Personalization: Weave the user's profile (skills/goals) naturally into the answer.
         3. Learning Resources: If the user asks for resources, tutorials, or how to learn a skill, DO NOT give a text explanation. Instead, provide ONLY a list of 3-5 high-quality YouTube video titles and URLs. Format them simply as "Title - URL".
         
@@ -212,16 +208,18 @@ class CareerAdvisorRAG:
         {query}
         """
 
-        # 4. Generate Response with fallback
+        # 4. Generate Response with Dynamic Tool Use
         try:
-            # First try generating with search capability if available
-            try:
-                response = self.model.generate_content(final_prompt, tools='google_search_retrieval')
-            except Exception:
-                # If search tool fails/not supported, fallback to standard generation
-                response = self.model.generate_content(final_prompt)
-            
+            # Try to use Google Search dynamically only for this specific call
+            # This prevents the startup crash if tools aren't initialized correctly globally
+            model_with_tools = genai.GenerativeModel('gemini-2.5-flash', tools='google_search_retrieval')
+            response = model_with_tools.generate_content(final_prompt)
             return response.text
-        except Exception as e:
-            logger.error(f"Gemini Generation Error: {e}")
-            return "I'm focusing my thoughts. Please ask me that again in a moment."
+        except Exception:
+            # If search fails or API version issue, fallback to standard model immediately
+            try:
+                response = self.model.generate_content(final_prompt)
+                return response.text
+            except Exception as e:
+                logger.error(f"Gemini Generation Error: {e}")
+                return "I'm focusing my thoughts. Please ask me that again in a moment."

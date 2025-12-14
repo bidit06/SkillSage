@@ -6,149 +6,186 @@
     <title>Career Advisor Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* ... (Core Styles) ... */
+        /* --- CSS VARIABLES --- */
+        :root {
+            --bg-color: #FFFDF6;
+            --card-bg: #E2D4E0;
+            --border-color: #949AB1;
+            --icon-label: #7C7E9D;
+            --primary-text: #4C5372;
+            --accent-color: #4C5372;
+            --hover-shadow: rgba(76, 83, 114, 0.15);
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        /* NEW: Body Background -> #FFFDF6 */
+
+        html { scroll-behavior: smooth; }
+
         body { 
             font-family: 'Montserrat', sans-serif; 
-            background: #FFFDF6; 
+            background: var(--bg-color); 
             min-height: 100vh; 
             padding-bottom: 40px; 
-            color: #4C5372; /* Default text color to Primary Heading color for readability */
+            color: var(--primary-text);
+            overflow-x: hidden;
         }
-        
-        /* Header: Matching Card Background #E2D4E0 */
+
+        /* Full Width Header */
         .header { 
-            background: #E2D4E0; 
-            box-shadow: 0 4px 20px rgba(76, 83, 114, 0.1); 
+            background: var(--card-bg); 
+            box-shadow: 0 4px 20px var(--hover-shadow); 
             position: sticky; top: 0; z-index: 100; 
-            border-bottom: 1px solid #949AB1; /* Border color */
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 40px;
+            animation: slideDown 0.6s ease;
         }
-        .header-content { max-width: 1400px; margin: 0 auto; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; }
-        
-        /* Logo: Headings Color -> #4C5372 */
+        @keyframes slideDown { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+
+        .header-content { 
+            width: 100%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
         .logo { 
             font-size: 28px; 
             font-weight: 800; 
-            color: #4C5372; 
+            color: var(--primary-text); 
             letter-spacing: -1px; 
+            cursor: pointer;
+            transition: transform 0.3s ease;
         }
-        
+        .logo:hover { transform: scale(1.05); }
+
         .header-right { display: flex; align-items: center; gap: 20px; }
-        .user-name { font-size: 14px; color: #4C5372; font-weight: 600; }
-        
-        /* Profile Icon: Button Color -> #4C5372 */
+        .user-name { font-size: 15px; color: var(--primary-text); font-weight: 600; }
+
         .profile-icon { 
             width: 45px; height: 45px; 
-            background: #4C5372; 
+            background: var(--primary-text); 
             border-radius: 50%; 
             display: flex; align-items: center; justify-content: center; 
             cursor: pointer; 
             transition: all 0.3s ease; 
-            box-shadow: 0 4px 10px rgba(76, 83, 114, 0.2); 
+            box-shadow: 0 4px 10px rgba(76, 83, 114, 0.3); 
         }
-        .profile-icon:hover { transform: scale(1.05); background: #3b4059; }
-        .profile-icon svg { width: 24px; height: 24px; fill: #FFFDF6; }
-        
-        /* Dashboard Container */
-        .dashboard-container { max-width: 1400px; margin: 30px auto; padding: 0 24px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
-        
-        /* Widget: Card Background -> #E2D4E0, Border -> #949AB1 */
+        .profile-icon:hover { transform: rotate(360deg) scale(1.1); }
+        .profile-icon svg { width: 24px; height: 24px; fill: var(--bg-color); }
+
+        /* Full Screen Grid Layout */
+        .dashboard-container { 
+            width: 100%;
+            padding: 30px 40px; 
+            display: grid; 
+            grid-template-columns: repeat(12, 1fr); 
+            gap: 30px; 
+            animation: fadeIn 0.8s ease;
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
         .widget { 
-            background: #E2D4E0; 
-            border-radius: 16px; 
-            padding: 28px; 
-            box-shadow: 0 8px 32px rgba(76, 83, 114, 0.05); 
-            transition: all 0.3s ease; 
-            border: 1px solid #949AB1; 
+            background: var(--card-bg); 
+            border-radius: 20px; 
+            padding: 30px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03); 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            border: 1px solid var(--border-color); 
+            position: relative;
+            overflow: hidden;
         }
-        .widget:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(76, 83, 114, 0.15); border-color: #4C5372; }
-        
-        /* Widget Title: Headings Color -> #4C5372 */
+        .widget:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(76, 83, 114, 0.2); border-color: var(--primary-text); }
+
         .widget-title { 
-            font-size: 20px; 
+            font-size: 22px; 
             font-weight: 700; 
-            color: #4C5372; 
-            margin-bottom: 24px; 
+            color: var(--primary-text); 
+            margin-bottom: 25px; 
             position: relative; 
+            display: inline-block;
         }
         .widget-title::after { 
-            content: ''; position: absolute; bottom: -8px; left: 0; width: 40px; height: 3px; 
-            background: #949AB1; /* Divider color */
-            border-radius: 2px; 
+            content: ''; position: absolute; bottom: -5px; left: 0; width: 50px; height: 3px; 
+            background: var(--border-color); border-radius: 2px; 
         }
-        
-        .activity-feed { grid-column: 1 / 7; min-height: 300px; }
-        .activity-list { display: flex; flex-direction: column; gap: 18px; }
-        
-        .activity-item { 
-            display: flex; gap: 14px; align-items: flex-start; padding: 12px; 
-            border-radius: 10px; transition: all 0.3s ease; cursor: pointer; 
-            border-bottom: 1px solid rgba(148, 154, 177, 0.3); /* Subtle divider */
-        }
-        .activity-item:hover { background: rgba(255, 253, 246, 0.5); transform: translateX(5px); }
-        
-        /* Icons: Icons/Labels Color -> #7C7E9D */
-        .activity-icon { font-size: 26px; flex-shrink: 0; color: #7C7E9D; }
-        .activity-details { flex: 1; }
-        .activity-text { font-size: 14px; font-weight: 600; color: #4C5372; margin-bottom: 6px; }
-        .activity-time { font-size: 12px; color: #7C7E9D; font-weight: 500; }
 
-        /* Talk to Orion: Special Card */
+        /* Activity Feed */
+        .activity-feed { grid-column: 1 / 7; min-height: 350px; }
+        .activity-list { display: flex; flex-direction: column; gap: 15px; }
+        .activity-item { 
+            display: flex; gap: 15px; align-items: flex-start; padding: 15px; 
+            border-radius: 12px; transition: all 0.3s ease; cursor: pointer; 
+            background: rgba(255,255,255,0.3);
+            border-left: 3px solid transparent;
+        }
+        .activity-item:hover { 
+            background: rgba(255,255,255,0.6); 
+            transform: translateX(5px); 
+            border-left-color: var(--primary-text);
+        }
+        .activity-icon { font-size: 24px; color: var(--icon-label); }
+        .activity-text { font-size: 15px; font-weight: 600; color: var(--primary-text); margin-bottom: 4px; }
+        .activity-time { font-size: 12px; color: var(--icon-label); font-weight: 500; }
+
+        /* Talk to Orion */
         .talk-to-orion { 
             grid-column: 7 / 13; 
-            background: #4C5372; /* Primary CTA Color */
-            color: #FFFDF6; 
+            background: var(--primary-text); 
+            color: var(--bg-color); 
             cursor: pointer; 
             display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; 
-            min-height: 300px; 
-            border: 1px solid #4C5372;
+            min-height: 350px; 
+            border: 1px solid var(--primary-text);
         }
-        .talk-to-orion:hover { background: #3b4059; }
-        .talk-to-orion .widget-title { color: #FFFDF6; }
-        .talk-to-orion .widget-title::after { background: #949AB1; }
-        .orion-icon { font-size: 64px; margin-bottom: 20px; }
-        .orion-description { font-size: 16px; opacity: 0.9; margin-bottom: 20px; font-weight: 500; color: #E2D4E0; }
-        .orion-arrow { font-size: 32px; font-weight: bold; color: #FFFDF6; }
+        .talk-to-orion:hover { background: #3E445B; } /* Slightly darker shade */
+        .talk-to-orion .widget-title { color: var(--bg-color); }
+        .talk-to-orion .widget-title::after { background: var(--border-color); }
+        .orion-icon { font-size: 70px; margin-bottom: 15px; animation: float 3s ease-in-out infinite; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
+        .orion-description { font-size: 18px; opacity: 0.9; margin-bottom: 20px; font-weight: 500; color: var(--card-bg); }
+        .orion-arrow { font-size: 36px; font-weight: bold; color: var(--bg-color); transition: transform 0.3s; }
+        .talk-to-orion:hover .orion-arrow { transform: translateX(10px); }
 
         /* Skills Gap */
-        .skills-gap { grid-column: 1 / 13; min-height: 350px; }
-        .skills-content { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-bottom: 24px; }
-        .skills-subtitle { font-size: 15px; font-weight: 700; color: #7C7E9D; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .skill-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skills-gap { grid-column: 1 / 13; min-height: 300px; }
+        .skills-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 30px; }
+        .skills-subtitle { font-size: 16px; font-weight: 700; color: var(--icon-label); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 12px; }
         
-        /* Tags */
-        .skill-tag { padding: 8px 16px; border-radius: 25px; font-size: 13px; font-weight: 600; border: 1px solid #949AB1; }
-        .skill-tag.mastered { background: #4C5372; color: #FFFDF6; border-color: #4C5372; }
-        .skill-tag.learning { background: transparent; color: #4C5372; border-color: #4C5372; }
+        .skill-tag { padding: 8px 18px; border-radius: 25px; font-size: 14px; font-weight: 600; border: 1px solid var(--border-color); transition: transform 0.2s; }
+        .skill-tag:hover { transform: scale(1.05); }
+        .skill-tag.mastered { background: var(--primary-text); color: var(--bg-color); border-color: var(--primary-text); }
+        .skill-tag.learning { background: transparent; color: var(--primary-text); border-color: var(--primary-text); border-width: 2px; }
         
-        /* Button: Primary CTA -> #4C5372 */
         .btn-primary { 
-            padding: 12px 28px; 
-            background: #4C5372; 
-            color: #FFFDF6; 
+            padding: 14px 32px; 
+            background: var(--primary-text); 
+            color: var(--bg-color); 
             border: none; border-radius: 30px; cursor: pointer; 
-            font-size: 15px; font-weight: 700; 
-            transition: background 0.3s;
+            font-size: 16px; font-weight: 700; 
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 83, 114, 0.2);
         }
-        .btn-primary:hover { background: #3b4059; }
+        .btn-primary:hover { background: #3E445B; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(76, 83, 114, 0.3); }
 
-        /* World Chat Widget */
+        /* World Chat */
         .world-chat-widget { 
-            grid-column: 1 / 13; min-height: 150px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 20px; 
-            background: #FFFDF6; /* Body bg for contrast inside widget area? Or Card bg? Let's use Card BG but maybe lighter version or just Card BG */
-            background: #E2D4E0;
-            border: 2px solid #4C5372; 
+            grid-column: 1 / 13; min-height: 180px; cursor: pointer; 
+            display: flex; align-items: center; justify-content: space-between; gap: 30px; 
+            background: var(--card-bg);
+            border: 2px solid var(--primary-text); 
         }
         .world-chat-widget:hover { background: #dcd0da; }
         .wc-content { flex: 1; z-index: 1; }
-        .wc-icon { font-size: 50px; }
-        .wc-arrow { font-size: 24px; color: #4C5372; font-weight: 800; }
+        .wc-icon { font-size: 60px; animation: spinEarth 20s linear infinite; }
+        @keyframes spinEarth { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .wc-arrow { font-size: 30px; color: var(--primary-text); font-weight: 800; transition: transform 0.3s; }
+        .world-chat-widget:hover .wc-arrow { transform: translateX(10px); }
 
         @media (max-width: 1024px) {
             .activity-feed, .talk-to-orion, .skills-gap, .world-chat-widget { grid-column: 1 / 13; }
             .skills-content { grid-template-columns: 1fr; }
+            .dashboard-container { padding: 20px; }
         }
     </style>
 </head>
@@ -166,7 +203,6 @@
     </header>
 
     <div class="dashboard-container">
-        
         <div class="widget activity-feed">
             <h2 class="widget-title">Recent Activity</h2>
             <div class="activity-list"></div>
@@ -197,12 +233,11 @@
         <div class="widget world-chat-widget" onclick="window.location.href='/world-chat'">
             <div class="wc-icon">🌍</div>
             <div class="wc-content">
-                <h2 class="widget-title" style="margin-bottom: 5px;">World Chat</h2>
-                <p style="color: #4C5372; font-weight: 500;">Connect with the global community of learners and professionals.</p>
+                <h2 class="widget-title" style="margin-bottom: 8px;">World Chat</h2>
+                <p style="color: var(--primary-text); font-weight: 500; font-size: 16px;">Connect with the global community of learners and professionals.</p>
             </div>
             <div class="wc-arrow">→</div>
         </div>
-
     </div>
 
     <script>
@@ -232,14 +267,12 @@
                     
                     document.querySelector('.user-name').textContent = `Welcome, ${data.name}`;
 
-                    // Populate Skills
                     const skillsHave = document.getElementById('skillsHaveContainer');
-                    skillsHave.innerHTML = data.skills.map(s => `<span class="skill-tag mastered">${s}</span>`).join('') || '<span style="color:#7C7E9D;font-size:13px;">No skills added</span>';
+                    skillsHave.innerHTML = data.skills.map(s => `<span class="skill-tag mastered">${s}</span>`).join('') || '<span style="color:var(--icon-label);font-size:14px;">No skills added</span>';
 
                     const skillsLearning = document.getElementById('skillsLearningContainer');
-                    skillsLearning.innerHTML = data.currently_learning.map(s => `<span class="skill-tag learning">${s}</span>`).join('') || '<span style="color:#7C7E9D;font-size:13px;">Not learning anything</span>';
+                    skillsLearning.innerHTML = data.currently_learning.map(s => `<span class="skill-tag learning">${s}</span>`).join('') || '<span style="color:var(--icon-label);font-size:14px;">Not learning anything</span>';
 
-                    // Populate Activity
                     const activityList = document.querySelector('.activity-list');
                     if (data.recent_activity.length > 0) {
                         activityList.innerHTML = data.recent_activity.map(a => `
@@ -252,7 +285,7 @@
                             </div>
                         `).join('');
                     } else {
-                        activityList.innerHTML = '<div style="padding:10px; color:#7C7E9D;">No recent activity.</div>';
+                        activityList.innerHTML = '<div style="padding:15px; color:var(--icon-label); font-style: italic;">No recent activity found. Start a chat with Orion!</div>';
                     }
                 }
             } catch (error) { console.error("Error loading dashboard:", error); }
