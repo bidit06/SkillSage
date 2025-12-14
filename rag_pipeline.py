@@ -26,14 +26,15 @@ class CareerAdvisorRAG:
         
     def _init_gemini(self):
         genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-        self.model = genai.GenerativeModel('gemini-2.0-flash')
+        # We initialize the standard model here to ensure stability at startup.
+        # We will attempt to attach tools dynamically during query time.
+        self.model = genai.GenerativeModel('gemini-2.5-flash')
 
     def _init_embedder(self):
         self.embedder = SentenceTransformer('all-MiniLM-L6-v2')
 
     def _init_mongodb(self):
         self.mongo_client = MongoClient(os.getenv("MONGO_URL", "mongodb://localhost:27017"))
-        # FIXED: Changed to 'skillsage_db' to match main.py and user request
         self.user_db = self.mongo_client.skillsage_db
         self.users_col = self.user_db.users
         self.careers_col = self.user_db.careers 
@@ -77,7 +78,6 @@ class CareerAdvisorRAG:
 
         for goal in goals:
             # 1. Fetch Exact Career from MongoDB
-            # Use regex for case-insensitive matching (e.g. "Data Scientist" matches "data scientist")
             career_doc = self.careers_col.find_one({
                 "title": {"$regex": f"^{re.escape(goal)}$", "$options": "i"}
             })
@@ -87,11 +87,9 @@ class CareerAdvisorRAG:
             if career_doc and "required_skills" in career_doc:
                 req_skills_map = career_doc["required_skills"]
             else:
-                # Fallback to prevent "Loading..." hang if goal not found
                 req_skills_map = {"Technical Skills": 5, "Communication": 5, "Problem Solving": 5}
 
             # 3. Build Chart Data
-            # Take top 12 skills max for UI clarity
             chart_labels = list(req_skills_map.keys())[:12]
             user_data = []
             target_data = []
@@ -102,11 +100,9 @@ class CareerAdvisorRAG:
                 
                 # --- MATCHING LOGIC ---
                 rating = 0
-                
-                # Tokenize (e.g., "C++ / C#" -> ["c++", "c#"])
                 tokens = [t.strip().lower() for t in re.split(r'[ /&,]+', skill_name)]
                 
-                # Check 1: Do any tokens match a user skill exactly?
+                # Check 1: Token match
                 for token in tokens:
                     if token in user_ratings:
                         rating = max(rating, user_ratings[token])
@@ -119,23 +115,18 @@ class CareerAdvisorRAG:
 
                 user_data.append(rating)
 
-                # 4. Identify Missing Skills
-                # Missing if (Not in profile) OR (Rating is 0) OR (Rating < Target - 2)
+                # 4. Identify Missing Skills (ONLY if not in profile string list)
                 is_missing = False
-                
-                # Check if user essentially "has" the skill (string check)
                 has_skill_in_profile = False
                 for token in tokens:
-                    # Check against the raw list of user skills
                     if any(token == us.lower().strip() for us in user_skills_list):
                         has_skill_in_profile = True
                         break
                 
-                if not has_skill_in_profile or rating == 0 or rating < (target_level - 2):
+                if not has_skill_in_profile:
                     is_missing = True
 
                 if is_missing:
-                    # Avoid duplicates
                     if not any(m['name'] == skill_name and m['for_goal'] == goal for m in all_missing_skills):
                         all_missing_skills.append({
                             "name": skill_name,
@@ -165,12 +156,72 @@ class CareerAdvisorRAG:
             if k in s_lower: return f"{v} weeks"
         return "4-6 weeks"
 
-    def query_advisor(self, user_email, query):
-        # Retrieve context from Chroma (Chat Only)
+    # --- CHATBOT LOGIC ---
+    def query_advisor(self, user_email: str, query: str) -> str:
+        """
+        Generates a premium, concise response. 
+        """
+        # 1. Fetch User Profile
         user = self.users_col.find_one({"email": user_email})
+        if not user:
+            return "I couldn't find your profile. Please log in again."
+
+        profile_context = f"""
+        User: {user.get('name', 'User')}
+        Goals: {', '.join(user.get('career_goal', []))}
+        Skills: {', '.join(user.get('skills', []))}
+        Learning: {', '.join(user.get('currently_learning', []))}
+        """
+
+        # 2. Retrieve Relevant Career Context (RAG)
         query_vec = self.embedder.encode(query).tolist()
-        results = self.chroma_careers.query(query_embeddings=[query_vec], n_results=2)
-        context = ""
-        if results['documents']: context = "\n".join(results['documents'][0])
-        prompt = f"User: {user.get('name')}\nContext: {context}\nQuery: {query}"
-        return self.model.generate_content(prompt).text
+        results = self.chroma_careers.query(
+            query_embeddings=[query_vec],
+            n_results=3
+        )
+        
+        knowledge_base_context = ""
+        if results['documents']:
+            knowledge_base_context = "\n".join(results['documents'][0])
+
+        # 3. Premium System Prompt
+        system_instruction = """You are Orion, an elite Career Architect.
+        
+        TONE & STYLE:
+        - Speak like a sophisticated, warm human expert.
+        - Be ultra-concise. No fluff.
+        - NO greetings like "Hello [Name]". Start directly with the value.
+        - ABSOLUTELY NO MARKDOWN BOLDING (do not use ** or * for emphasis).
+        
+        LOGIC:
+        1. Context Check: Use the 'Knowledge Base Context' first. If it is empty or irrelevant to the query, use your general knowledge to answer.
+        2. Personalization: Weave the user's profile (skills/goals) naturally into the answer.
+        3. Learning Resources: If the user asks for resources, tutorials, or how to learn a skill, DO NOT give a text explanation. Instead, provide ONLY a list of 3-5 high-quality YouTube video titles and URLs. Format them simply as "Title - URL".
+        
+        Your goal is to be the most helpful, direct, and polished advisor they have ever used."""
+
+        final_prompt = f"""{system_instruction}
+
+        [USER PROFILE]
+        {profile_context}
+
+        [INTERNAL DB CONTEXT]
+        {knowledge_base_context}
+
+        [USER QUERY]
+        {query}
+        """
+
+        # 4. Generate Response with fallback
+        try:
+            # First try generating with search capability if available
+            try:
+                response = self.model.generate_content(final_prompt, tools='google_search_retrieval')
+            except Exception:
+                # If search tool fails/not supported, fallback to standard generation
+                response = self.model.generate_content(final_prompt)
+            
+            return response.text
+        except Exception as e:
+            logger.error(f"Gemini Generation Error: {e}")
+            return "I'm focusing my thoughts. Please ask me that again in a moment."

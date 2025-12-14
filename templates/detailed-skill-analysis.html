@@ -10,42 +10,106 @@
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); min-height: 100vh; padding-bottom: 40px; }
+        
+        /* NEW COLOR SCHEME */
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background: #FFFDF6; 
+            min-height: 100vh; 
+            padding-bottom: 40px; 
+            color: #4C5372;
+        }
+        
         .container { max-width: 1600px; width: 95%; margin: 30px auto; padding: 0 20px; }
-        .section { background: rgba(255, 255, 255, 0.95); padding: 30px; border-radius: 16px; margin-bottom: 25px; box-shadow: 0 8px 32px rgba(204, 49, 61, 0.15); }
-        .section-title { font-size: 22px; color: #CC313D; margin-bottom: 25px; font-weight: 800; display: flex; align-items: center; gap: 10px; }
-        .header { background: rgba(255, 255, 255, 0.98); padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(204, 49, 61, 0.15); }
-        .logo { font-size: 24px; font-weight: 800; color: #CC313D; cursor: pointer; }
-        .back-btn { padding: 8px 20px; border: 2px solid #CC313D; color: #CC313D; border-radius: 20px; cursor: pointer; background: transparent; font-weight: 700; }
+        
+        /* Section (Card) -> #E2D4E0 */
+        .section { 
+            background: #E2D4E0; 
+            padding: 30px; 
+            border-radius: 16px; 
+            margin-bottom: 25px; 
+            box-shadow: 0 8px 32px rgba(76, 83, 114, 0.05); 
+            border: 1px solid #949AB1;
+        }
+        
+        /* Headings -> #4C5372 */
+        .section-title { font-size: 22px; color: #4C5372; margin-bottom: 25px; font-weight: 800; display: flex; align-items: center; gap: 10px; }
+        
+        .header { 
+            background: #E2D4E0; 
+            padding: 20px 30px; 
+            display: flex; justify-content: space-between; align-items: center; 
+            box-shadow: 0 4px 20px rgba(76, 83, 114, 0.1); 
+            border-bottom: 1px solid #949AB1;
+        }
+        
+        .logo { font-size: 24px; font-weight: 800; color: #4C5372; cursor: pointer; }
+        
+        .back-btn { 
+            padding: 8px 20px; 
+            border: 1px solid #4C5372; 
+            color: #4C5372; 
+            border-radius: 20px; 
+            cursor: pointer; background: transparent; font-weight: 700; 
+        }
+        .back-btn:hover { background: #4C5372; color: #FFFDF6; }
+        
         .rating-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; max-height: 400px; overflow-y: auto; }
-        .skill-rating-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; background: white; border-radius: 8px; border: 1px solid #eee; }
+        
+        .skill-rating-row { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 12px 20px; 
+            background: #FFFDF6; /* Contrast against Card BG */
+            border-radius: 8px; 
+            border: 1px solid #949AB1; 
+        }
+        
         .star-container-10 { display: flex; gap: 4px; }
-        .star-10 { font-size: 20px; cursor: pointer; color: #e0e0e0; transition: color 0.2s; }
-        .star-10.filled { color: #f1c40f; }
+        .star-10 { font-size: 20px; cursor: pointer; color: #949AB1; transition: color 0.2s; }
+        .star-10.filled { color: #4C5372; } /* Changed star color to Primary theme */
+        
         .charts-wrapper { width: 100%; overflow-x: auto; padding-bottom: 20px; }
         .charts-grid { display: flex; gap: 30px; width: max-content; }
-        .chart-card { background: white; border-radius: 16px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); min-width: 500px; flex: 0 0 auto; }
+        
+        .chart-card { 
+            background: #FFFDF6; /* Contrast */
+            border-radius: 16px; padding: 25px; 
+            box-shadow: 0 4px 15px rgba(76, 83, 114, 0.05); 
+            min-width: 500px; flex: 0 0 auto; 
+            border: 1px solid #949AB1;
+        }
         .chart-container { position: relative; height: 400px; width: 100%; }
+        
         .charts-wrapper::-webkit-scrollbar { height: 10px; }
-        .charts-wrapper::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 5px; }
-        .charts-wrapper::-webkit-scrollbar-thumb { background: #CC313D; border-radius: 5px; }
-        .charts-wrapper::-webkit-scrollbar-thumb:hover { background: #a0262f; }
-        .save-btn { padding: 12px 30px; background: linear-gradient(135deg, #CC313D 0%, #F7C5CC 100%); color: white; border: none; border-radius: 30px; font-weight: 700; cursor: pointer; }
+        .charts-wrapper::-webkit-scrollbar-track { background: #E2D4E0; border-radius: 5px; }
+        .charts-wrapper::-webkit-scrollbar-thumb { background: #949AB1; border-radius: 5px; }
+        .charts-wrapper::-webkit-scrollbar-thumb:hover { background: #4C5372; }
+        
+        .save-btn { 
+            padding: 12px 30px; 
+            background: #4C5372; 
+            color: #FFFDF6; 
+            border: none; border-radius: 30px; font-weight: 700; cursor: pointer; 
+        }
         .save-btn.dirty { animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(204, 49, 61, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(204, 49, 61, 0); } 100% { box-shadow: 0 0 0 0 rgba(204, 49, 61, 0); } }
-        .empty-state { text-align: center; color: #888; padding: 20px; font-style: italic; width: 100%; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(76, 83, 114, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(76, 83, 114, 0); } 100% { box-shadow: 0 0 0 0 rgba(76, 83, 114, 0); } }
+        
+        .empty-state { text-align: center; color: #7C7E9D; padding: 20px; font-style: italic; width: 100%; }
+        
         .skills-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        .skills-table th, .skills-table td { padding: 12px 15px; border-bottom: 1px solid #eee; text-align: left; }
-        .skills-table th { background-color: #f8f9fa; color: #666; font-size: 12px; text-transform: uppercase; }
-        .add-skill-form { margin-top: 20px; padding: 20px; background: #f9f9f9; border-radius: 12px; }
+        .skills-table th, .skills-table td { padding: 12px 15px; border-bottom: 1px solid #949AB1; text-align: left; }
+        .skills-table th { background-color: #FFFDF6; color: #7C7E9D; font-size: 12px; text-transform: uppercase; }
+        
+        .add-skill-form { margin-top: 20px; padding: 20px; background: #FFFDF6; border-radius: 12px; border: 1px solid #949AB1; }
         .form-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; }
-        .form-input { padding: 10px; border: 1px solid #ddd; border-radius: 8px; flex: 1; }
-        .add-btn { padding: 10px 20px; background: #333; color: white; border: none; border-radius: 8px; cursor: pointer; }
+        .form-input { padding: 10px; border: 1px solid #949AB1; border-radius: 8px; flex: 1; background: #E2D4E0; color: #4C5372; }
+        .add-btn { padding: 10px 20px; background: #4C5372; color: #FFFDF6; border: none; border-radius: 8px; cursor: pointer; }
+        
         .action-cell { display: flex; gap: 15px; align-items: center; }
-        .action-label { display: flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 500; cursor: pointer; color: #555; }
-        .action-label input { cursor: pointer; width: 16px; height: 16px; accent-color: #CC313D; }
-        .action-label:hover { color: #CC313D; }
-        .loading-text { font-size: 11px; color: #888; margin-left: 5px; display: none; }
+        .action-label { display: flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 500; cursor: pointer; color: #7C7E9D; }
+        .action-label input { cursor: pointer; width: 16px; height: 16px; accent-color: #4C5372; }
+        .action-label:hover { color: #4C5372; }
+        .loading-text { font-size: 11px; color: #7C7E9D; margin-left: 5px; display: none; }
     </style>
 </head>
 <body>
@@ -87,6 +151,7 @@
     </div>
 
     <script>
+        // (JS Logic is identical to previous versions, just preserving functionality)
         let analysisData = {};
         let skillRatings = {};
         let customMissingSkills = [];
@@ -156,7 +221,7 @@
                             <strong>${skill}</strong>
                             <div style="display:flex; align-items:center; gap:10px;">
                                 <div class="star-container-10">${stars}</div>
-                                <span style="font-size:12px; color:#666; width:20px; text-align:center;">${rating}</span>
+                                <span style="font-size:12px; color:#7C7E9D; width:20px; text-align:center;">${rating}</span>
                             </div>
                         </div>`;
             }).join('');
@@ -214,7 +279,7 @@
                         card = document.createElement('div');
                         card.id = `card-${index}`;
                         card.className = 'chart-card';
-                        card.innerHTML = `<h3>${goalData.goal}</h3><div class="chart-container"><canvas id="${canvasId}"></canvas></div>`;
+                        card.innerHTML = `<h3 style="color:#4C5372;">${goalData.goal}</h3><div class="chart-container"><canvas id="${canvasId}"></canvas></div>`;
                         container.appendChild(card);
                     }
 
@@ -226,21 +291,21 @@
                             datasets: [{
                                 label: 'Your Level',
                                 data: userValues,
-                                backgroundColor: 'rgba(204, 49, 61, 0.2)',
-                                borderColor: '#CC313D',
-                                pointBackgroundColor: '#CC313D',
+                                backgroundColor: 'rgba(76, 83, 114, 0.2)', /* #4C5372 with opacity */
+                                borderColor: '#4C5372',
+                                pointBackgroundColor: '#4C5372',
                                 borderWidth: 2
                             }, {
                                 label: 'Required',
                                 data: goalData.target_data,
                                 backgroundColor: 'transparent',
-                                borderColor: 'rgba(150, 150, 150, 0.5)',
+                                borderColor: 'rgba(148, 154, 177, 0.5)', /* #949AB1 with opacity */
                                 borderDash: [5, 5],
                                 pointRadius: 0
                             }]
                         },
                         options: {
-                            scales: { r: { suggestedMin: 0, suggestedMax: 10, pointLabels: { font: { size: 11, weight: 'bold' } } } },
+                            scales: { r: { suggestedMin: 0, suggestedMax: 10, pointLabels: { font: { size: 11, weight: 'bold' }, color: '#4C5372' } } },
                             maintainAspectRatio: false
                         }
                     });
@@ -256,7 +321,7 @@
             
             container.innerHTML = Object.entries(grouped).map(([goal, items]) => `
                 <div class="missing-group" style="margin-bottom:20px;">
-                    <div style="font-weight:bold; margin-bottom:5px; border-bottom:1px solid #eee;">${goal}</div>
+                    <div style="font-weight:bold; margin-bottom:5px; border-bottom:1px solid #949AB1; color:#4C5372;">${goal}</div>
                     <table class="skills-table">
                         <thead><tr><th>Skill</th><th>Priority</th><th>Time</th><th>Actions</th></tr></thead>
                         <tbody>
@@ -266,9 +331,9 @@
                                 
                                 return `
                                 <tr>
-                                    <td><strong>${i.name}</strong></td>
+                                    <td style="color:#4C5372;"><strong>${i.name}</strong></td>
                                     <td><span style="padding:4px 8px; border-radius:4px; font-size:11px; background:${i.priority==='High'?'#ffebee':'#e8f5e9'}; color:${i.priority==='High'?'#c62828':'#2e7d32'};">${i.priority}</span></td>
-                                    <td>${i.time_estimate}</td>
+                                    <td style="color:#7C7E9D;">${i.time_estimate}</td>
                                     <td class="action-cell">
                                         <label class="action-label" title="Mark as Currently Learning">
                                             <input type="checkbox" 
@@ -296,7 +361,6 @@
         async function handleSkillAction(checkbox, skillName, actionType) {
             const isActive = checkbox.checked;
             
-            // Visual Mutual Exclusivity
             if (isActive) {
                 const row = checkbox.closest('tr');
                 const checkboxes = row.querySelectorAll('input[type="checkbox"]');
@@ -317,14 +381,12 @@
                 });
 
                 if (res.ok) {
-                    // Update Local State with Mutual Exclusivity
                     if (actionType === 'learned') {
                         if (isActive) {
                             if (!analysisData.skills_have.includes(skillName)) {
                                 analysisData.skills_have.push(skillName);
                                 skillRatings[skillName] = skillRatings[skillName] || 1;
                             }
-                            // Remove from learning if exists
                             analysisData.currently_learning = analysisData.currently_learning.filter(s => s !== skillName);
                         } else {
                             analysisData.skills_have = analysisData.skills_have.filter(s => s !== skillName);
@@ -335,7 +397,6 @@
                             if (!analysisData.currently_learning.includes(skillName)) {
                                 analysisData.currently_learning.push(skillName);
                             }
-                            // Remove from skills if exists
                             analysisData.skills_have = analysisData.skills_have.filter(s => s !== skillName);
                             delete skillRatings[skillName];
                         } else {
@@ -352,7 +413,6 @@
                 alert("Error connecting to server.");
                 checkbox.checked = !isActive;
             } finally {
-                // Re-enabled by refreshUI
             }
         }
 
