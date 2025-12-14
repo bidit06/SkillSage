@@ -25,9 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent
 TEMPLATE_DIR = BASE_DIR / "templates"
 templates = Jinja2Templates(directory=str(TEMPLATE_DIR))
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-# Initialize standard model first to prevent startup crashes
-model = genai.GenerativeModel('gemini-2.0-flash')
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))                                                                                                                                                                                                                                                                                                                                                                #type: ignore
+model = genai.GenerativeModel('gemini-2.5-flash')                                                                                                                                                                                                                                                                                                                                                                        #type: ignore
 
 rag_advisor = None
 try:
@@ -90,12 +89,9 @@ async def home_page(request: Request): return templates.TemplateResponse("home.h
 @app.get("/auth", response_class=HTMLResponse)
 async def auth_page(request: Request): return templates.TemplateResponse("auth.html", {"request": request})
 
-# --- FIXED LOGOUT ROUTE ---
 @app.get("/logout")
 async def logout():
-    # Use 302 or 303 for standard redirection
     response = RedirectResponse(url="/auth", status_code=302)
-    # Explicitly clear cookie with path="/"
     response.delete_cookie("access_token", path="/")
     return response
 
@@ -136,22 +132,12 @@ async def register(user: UserCreate):
     })
     return {"message": "User created"}
 
-# --- FIXED LOGIN ROUTE ---
 @app.post("/token")
 async def login(response: Response, form_data: OAuth2PasswordRequestForm = Depends()):
     user = await users_collection.find_one({"email": form_data.username})
     if not user or not verify_password(form_data.password, user["hashed_password"]):
         raise HTTPException(400, "Invalid credentials")
-    
-    # Explicitly set cookie attributes to ensure persistence
-    response.set_cookie(
-        key="access_token", 
-        value=user["email"], 
-        httponly=False,  # Allows JS to read if needed (e.g. for localStorage sync)
-        path="/",        # Essential: cookie valid for whole site
-        samesite="lax",  # Standard security
-        secure=False     # Set False for localhost (HTTP), True for HTTPS production
-    )
+    response.set_cookie(key="access_token", value=user["email"], httponly=False, path="/", samesite="lax", secure=False)
     return {"access_token": user["email"], "token_type": "bearer"}
 
 @app.get("/api/dashboard-data")
@@ -164,7 +150,7 @@ async def get_dashboard_data(request: Request):
 
     recs = []
     if rag_advisor:
-        try: recs = rag_advisor.get_career_recommendations(user["email"], 3)
+        try: recs = rag_advisor.get_career_recommendations(user["email"], 3)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    #type: ignore
         except: pass
     
     return {
@@ -267,7 +253,7 @@ async def post_world_chat_message(request: Request, data: dict = Body(...)):
     await world_chats_collection.insert_one(msg)
     return {"status": "ok"}
 
-# --- TOGGLE SAVED MESSAGE API ---
+# --- UPDATED TOGGLE SAVED MESSAGE API ---
 @app.post("/api/toggle-saved-message")
 async def toggle_saved_message(request: Request, data: dict = Body(...)):
     user = await get_current_user(request)
@@ -279,9 +265,12 @@ async def toggle_saved_message(request: Request, data: dict = Body(...)):
         await saved_messages_collection.delete_one({"_id": existing["_id"]})
         return {"status": "removed"}
     else:
+        # Save with Chat Title (default to "General" if missing)
+        chat_title = data.get("chat_title", "General Chat")
         await saved_messages_collection.insert_one({
             "user_email": user["email"],
             "text": data.get("text"),
+            "chat_title": chat_title,
             "saved_at": datetime.utcnow()
         })
         return {"status": "saved"}
@@ -294,7 +283,12 @@ async def get_saved_messages(request: Request):
     cursor = saved_messages_collection.find({"user_email": user["email"]}).sort("saved_at", -1)
     messages = []
     async for doc in cursor:
-        messages.append({"id": str(doc["_id"]), "text": doc["text"], "saved_at": doc["saved_at"]})
+        messages.append({
+            "id": str(doc["_id"]),
+            "text": doc["text"],
+            "chat_title": doc.get("chat_title", "General Chat"),
+            "saved_at": doc["saved_at"]
+        })
     return messages
 
 @app.delete("/api/saved-messages/{msg_id}")
@@ -353,13 +347,7 @@ async def chat_endpoint(request: Request, user_message: str = Form(...), chat_id
     ai_text = ""
     
     if user_upload:
-        file_bytes = await user_upload.read()
-        user_msg_obj["file_name"] = user_upload.filename
-        prompt_content = [user_message]
-        if user_upload.content_type.startswith("image/"): prompt_content.append(Image.open(io.BytesIO(file_bytes)))
-        else: prompt_content.append(f"\n[File Content]:\n{file_bytes.decode('utf-8')}")
-        try: ai_text = direct_model.generate_content(prompt_content).text
-        except Exception as e: ai_text = f"Error: {e}"
+        pass
     else:
         if rag_advisor:
             try: ai_text = rag_advisor.query_advisor(user["email"], user_message)

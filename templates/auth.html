@@ -167,6 +167,12 @@
             transition: color 0.3s;
         }
         
+        /* New Password Wrapper Styles */
+        .password-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
         input { 
             width: 100%; 
             padding: 14px 18px; 
@@ -180,6 +186,11 @@
             font-weight: 500;
         }
         
+        /* Extra padding for password input to prevent text overlap with eye icon */
+        .password-wrapper input {
+            padding-right: 45px;
+        }
+        
         input::placeholder { color: #bdc0ce; }
 
         input:focus { 
@@ -191,6 +202,27 @@
 
         input:focus + label { color: var(--text-primary); }
 
+        /* Eye Icon Button */
+        .toggle-password {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+            transition: color 0.3s ease;
+        }
+
+        .toggle-password:hover {
+            color: var(--text-primary);
+        }
+
         .btn { 
             width: 100%; 
             padding: 16px; 
@@ -199,7 +231,7 @@
             border: none; 
             border-radius: 50px; 
             font-weight: 600; 
-            font-size: 16px;
+            font-size: 16px; 
             cursor: pointer; 
             transition: var(--transition); 
             margin-top: 10px; 
@@ -298,7 +330,12 @@
             </div>
             <div class="form-group">
                 <label>Password</label>
-                <input type="password" id="login-password" placeholder="••••••••" required>
+                <div class="password-wrapper">
+                    <input type="password" id="login-password" placeholder="••••••••" required>
+                    <button type="button" class="toggle-password" onclick="togglePassword('login-password', this)">
+                        <i data-lucide="eye"></i>
+                    </button>
+                </div>
             </div>
             <button type="submit" class="btn">Sign In</button>
             <div class="toggle-text">
@@ -318,7 +355,12 @@
             </div>
             <div class="form-group">
                 <label>Password</label>
-                <input type="password" id="signup-password" placeholder="Create a password" required>
+                <div class="password-wrapper">
+                    <input type="password" id="signup-password" placeholder="Create a password" required>
+                    <button type="button" class="toggle-password" onclick="togglePassword('signup-password', this)">
+                        <i data-lucide="eye"></i>
+                    </button>
+                </div>
             </div>
             <button type="submit" class="btn">Create Account</button>
             <div class="toggle-text">
@@ -330,6 +372,25 @@
 
     <script>
         lucide.createIcons();
+
+        // --- PASSWORD TOGGLE LOGIC ---
+        function togglePassword(inputId, btn) {
+            const input = document.getElementById(inputId);
+            
+            // Toggle input type
+            if (input.type === "password") {
+                input.type = "text";
+                // Switch icon to eye-off
+                btn.innerHTML = '<i data-lucide="eye-off"></i>';
+            } else {
+                input.type = "password";
+                // Switch icon to eye
+                btn.innerHTML = '<i data-lucide="eye"></i>';
+            }
+            
+            // Re-initialize icons for the newly injected HTML
+            lucide.createIcons();
+        }
 
         function toggleMode(mode) {
             const loginForm = document.getElementById('login-form');
@@ -358,7 +419,6 @@
             }
         }
 
-        // --- REAL LOGIN LOGIC ---
         async function handleLogin(e) {
             e.preventDefault();
             const email = document.getElementById('login-email').value;
@@ -366,7 +426,7 @@
 
             if (!email || !password) return showError("Please fill in all fields");
 
-            const btn = e.target.querySelector('button');
+            const btn = e.target.querySelector('button[type="submit"]');
             const originalText = btn.innerText;
             btn.innerText = "Signing in...";
             btn.style.opacity = "0.7";
@@ -397,14 +457,13 @@
             }
         }
 
-        // --- REAL SIGNUP LOGIC ---
         async function handleSignup(e) {
             e.preventDefault();
             const name = document.getElementById('signup-name').value;
             const email = document.getElementById('signup-email').value;
             const password = document.getElementById('signup-password').value;
 
-            const btn = e.target.querySelector('button');
+            const btn = e.target.querySelector('button[type="submit"]');
             const originalText = btn.innerText;
             btn.innerText = "Creating Account...";
             btn.style.opacity = "0.7";

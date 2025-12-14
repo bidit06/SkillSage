@@ -191,7 +191,7 @@
             min-height: 180px; 
             cursor: pointer; 
             display: flex; align-items: center; justify-content: space-between; gap: 30px; 
-            background: #FFFDF6; /* Light contrast */
+            background:var(--card-bg); /* Light contrast */
             border: 2px solid var(--primary-text); 
         }
         .saved-chats-widget:hover { background: #F0F0F0; }
@@ -207,7 +207,7 @@
 <body>
     <header class="header">
         <div class="header-content">
-            <h1 class="logo" onclick="window.location.href='/dashboard'">Career Advisor</h1>
+            <h1 class="logo" onclick="window.location.href='/dashboard'">Dashboard</h1>
             <div class="header-right">
                 <span class="user-name">Welcome, User</span>
                 <div class="profile-icon" id="profileIcon">

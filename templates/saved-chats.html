@@ -13,6 +13,7 @@
             --border-color: #949AB1;
             --icon-label: #7C7E9D;
             --primary-text: #4C5372;
+            --modal-overlay: rgba(76, 83, 114, 0.6);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -30,7 +31,7 @@
             border-bottom: 1px solid var(--border-color);
             position: sticky; top: 0; z-index: 100;
         }
-        .logo { font-size: 24px; font-weight: 800; color: var(--primary-text); cursor: pointer; }
+        .logo { font-size: 28px; font-weight: 800; color: var(--primary-text); cursor: pointer; }
         .back-btn { 
             padding: 8px 20px; 
             border: 2px solid var(--primary-text); 
@@ -42,37 +43,82 @@
         .back-btn:hover { background: var(--primary-text); color: var(--bg-color); }
 
         .container { 
-            max-width: 1000px; margin: 40px auto; padding: 0 20px; 
+            width: 100%; 
+            padding: 40px; 
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
         }
 
         .saved-item {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
+            border-radius: 16px;
+            padding: 25px;
+            height: 220px; 
             position: relative;
-            transition: transform 0.2s;
+            transition: all 0.3s ease;
+            display: flex; flex-direction: column;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            cursor: pointer; 
+            user-select: none; 
         }
-        .saved-item:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .saved-item:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 12px 30px rgba(76, 83, 114, 0.15); 
+            border-color: var(--primary-text);
+        }
         
-        .msg-text { 
-            white-space: pre-wrap; 
-            font-size: 15px; 
+        .msg-preview { 
+            font-size: 14px; 
             line-height: 1.6;
             color: var(--primary-text);
+            margin-bottom: 15px;
+            flex-grow: 1;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4; 
+            -webkit-box-orient: vertical;
+            opacity: 0.9;
         }
         
         .msg-meta {
-            margin-top: 15px;
-            padding-top: 10px;
+            padding-top: 15px;
             border-top: 1px solid var(--border-color);
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-size: 12px;
             color: var(--icon-label);
+            font-weight: 600;
         }
+
+        .source-badge {
+            background: rgba(255,255,255,0.6);
+            padding: 5px 10px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            display: flex; align-items: center; gap: 6px;
+            color: var(--primary-text);
+            font-weight: 700;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .click-hint {
+            position: absolute;
+            top: 15px; right: 15px;
+            font-size: 10px;
+            color: var(--icon-label);
+            opacity: 0;
+            transition: opacity 0.3s;
+            background: var(--bg-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+            pointer-events: none; /* Let clicks pass through to card */
+        }
+        .saved-item:hover .click-hint { opacity: 1; }
 
         .delete-btn {
             color: #ff6b6b;
@@ -81,23 +127,95 @@
             background: none;
             font-weight: 600;
             display: flex; align-items: center; gap: 5px;
+            font-size: 13px;
+            z-index: 5; /* Ensure above card click area */
+            padding: 5px; /* Increase click area */
         }
-        .delete-btn:hover { text-decoration: underline; }
+        .delete-btn:hover { opacity: 0.7; }
 
-        .empty-state { text-align: center; color: var(--icon-label); margin-top: 50px; font-style: italic; }
+        /* MODAL */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--modal-overlay);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .modal-content {
+            background: var(--bg-color);
+            width: 80%; max-width: 800px;
+            height: 80vh;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            display: flex; flex-direction: column;
+            overflow: hidden;
+            animation: scaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        @keyframes scaleUp { from { transform: scale(0.9); } to { transform: scale(1); } }
+
+        .modal-header {
+            padding: 20px 30px;
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .modal-title { font-size: 18px; font-weight: 800; color: var(--primary-text); display: flex; align-items: center; gap: 10px; }
+        
+        .close-modal-btn {
+            background: transparent; border: none; font-size: 24px; cursor: pointer; color: var(--icon-label);
+            transition: color 0.2s;
+        }
+        .close-modal-btn:hover { color: #ff6b6b; }
+
+        .modal-body {
+            padding: 40px;
+            overflow-y: auto;
+            flex: 1;
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--primary-text);
+            white-space: pre-wrap;
+        }
+        .modal-body::-webkit-scrollbar { width: 8px; }
+        .modal-body::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+        .modal-body::-webkit-scrollbar-track { background: transparent; }
+
+        .empty-state { grid-column: 1 / -1; text-align: center; color: var(--icon-label); margin-top: 100px; font-style: italic; font-size: 18px; }
     </style>
 </head>
 <body>
     <header class="header">
-        <h1 class="logo" onclick="window.location.href='/dashboard'">Career Advisor</h1>
+        <h1 class="logo" onclick="window.location.href='/dashboard'">Saved Chats</h1>
         <button class="back-btn" onclick="window.location.href='/dashboard'">← Dashboard</button>
     </header>
 
     <div class="container" id="saved-container">
-        <div style="text-align:center; padding: 20px;">Loading...</div>
+        <div style="text-align:center; padding: 20px; grid-column: 1/-1;">Loading saved responses...</div>
+    </div>
+
+    <div id="messageModal" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i class="ri-chat-history-line"></i> 
+                    <span id="modalSource">Chat Source</span>
+                    <span style="font-size:12px; font-weight:500; color:var(--icon-label); margin-left:10px;" id="modalDate">Date</span>
+                </div>
+                <button class="close-modal-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modalText"></div>
+        </div>
     </div>
 
     <script>
+        // Global object to store message data by ID
+        const savedMessagesData = {};
+
         async function loadSavedMessages() {
             const container = document.getElementById('saved-container');
             try {
@@ -109,33 +227,80 @@
                         return;
                     }
                     
-                    container.innerHTML = messages.map(msg => `
-                        <div class="saved-item" id="msg-${msg.id}">
-                            <div class="msg-text">${msg.text}</div>
+                    container.innerHTML = messages.map(msg => {
+                        // Store full object in map for easy retrieval
+                        savedMessagesData[msg.id] = msg;
+
+                        return `
+                        <div class="saved-item" onclick="openModal('${msg.id}')">
+                            <div class="click-hint">Click to expand</div>
+                            
+                            <div class="source-badge">
+                                <i class="ri-chat-1-fill"></i> ${msg.chat_title || 'General Chat'}
+                            </div>
+
+                            <div class="msg-preview">
+                                ${msg.text}
+                            </div>
+                            
                             <div class="msg-meta">
-                                <span>Saved on: ${new Date(msg.saved_at).toLocaleDateString()}</span>
-                                <button class="delete-btn" onclick="deleteMessage('${msg.id}')">
+                                <span><i class="ri-calendar-line"></i> ${new Date(msg.saved_at).toLocaleDateString()}</span>
+                                <button class="delete-btn" onclick="deleteMessage('${msg.id}', event)">
                                     <i class="ri-delete-bin-line"></i> Remove
                                 </button>
                             </div>
                         </div>
-                    `).join('');
+                    `}).join('');
                 }
             } catch (e) {
+                console.error(e);
                 container.innerHTML = `<div class="empty-state">Error loading saved messages.</div>`;
             }
         }
 
-        async function deleteMessage(id) {
+        // --- MODAL LOGIC ---
+        function openModal(id) {
+            const msg = savedMessagesData[id];
+            if (!msg) return;
+
+            document.getElementById('modalText').innerText = msg.text;
+            document.getElementById('modalSource').innerText = msg.chat_title || 'General Chat';
+            document.getElementById('modalDate').innerText = new Date(msg.saved_at).toLocaleDateString();
+            
+            const modal = document.getElementById('messageModal');
+            modal.style.display = 'flex';
+        }
+
+        function closeModal(event) {
+            if (!event || event.target.classList.contains('modal-overlay') || event.target.classList.contains('close-modal-btn')) {
+                document.getElementById('messageModal').style.display = 'none';
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                document.getElementById('messageModal').style.display = 'none';
+            }
+        });
+
+        async function deleteMessage(id, event) {
+            event.stopPropagation(); // Stop click from propagating to card
             if(!confirm("Remove this saved response?")) return;
+            
             try {
                 const res = await fetch(`/api/saved-messages/${id}`, { method: 'DELETE' });
                 if (res.ok) {
-                    document.getElementById(`msg-${id}`).remove();
-                    // Check if empty
-                    if (document.querySelectorAll('.saved-item').length === 0) {
-                        document.getElementById('saved-container').innerHTML = `<div class="empty-state">No saved responses yet.</div>`;
-                    }
+                    // Remove from DOM with animation
+                    const card = event.target.closest('.saved-item');
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.9)';
+                    setTimeout(() => {
+                        card.remove();
+                        delete savedMessagesData[id]; // Cleanup data
+                        if (document.querySelectorAll('.saved-item').length === 0) {
+                            document.getElementById('saved-container').innerHTML = `<div class="empty-state">No saved responses yet.</div>`;
+                        }
+                    }, 300);
                 }
             } catch(e) { alert("Failed to delete"); }
         }
