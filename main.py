@@ -25,8 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent
 TEMPLATE_DIR = BASE_DIR / "templates"
 templates = Jinja2Templates(directory=str(TEMPLATE_DIR))
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-model = genai.GenerativeModel('gemini-2.0-flash')
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))                                                                                                                                                                                                                                                                                                                                                                #type: ignore
+model = genai.GenerativeModel('gemini-2.5-flash')                                                                                                                                                                                                                                                                                                                                                                        #type: ignore
 
 rag_advisor = None
 try:
@@ -150,7 +150,7 @@ async def get_dashboard_data(request: Request):
 
     recs = []
     if rag_advisor:
-        try: recs = rag_advisor.get_career_recommendations(user["email"], 3)
+        try: recs = rag_advisor.get_career_recommendations(user["email"], 3)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    #type: ignore
         except: pass
     
     return {
@@ -347,13 +347,7 @@ async def chat_endpoint(request: Request, user_message: str = Form(...), chat_id
     ai_text = ""
     
     if user_upload:
-        file_bytes = await user_upload.read()
-        user_msg_obj["file_name"] = user_upload.filename
-        prompt_content = [user_message]
-        if user_upload.content_type.startswith("image/"): prompt_content.append(Image.open(io.BytesIO(file_bytes)))
-        else: prompt_content.append(f"\n[File Content]:\n{file_bytes.decode('utf-8')}")
-        try: ai_text = direct_model.generate_content(prompt_content).text
-        except Exception as e: ai_text = f"Error: {e}"
+        pass
     else:
         if rag_advisor:
             try: ai_text = rag_advisor.query_advisor(user["email"], user_message)

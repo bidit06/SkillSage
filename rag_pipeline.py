@@ -1,3 +1,4 @@
+from codecs import ignore_errors
 import os
 import json
 import chromadb
@@ -25,9 +26,9 @@ class CareerAdvisorRAG:
         self.skill_durations = self._load_skill_durations()
         
     def _init_gemini(self):
-        genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+        genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))                                                                                                                                                                                                                                                                    #type: ignore
         # Initialize standard model first
-        self.model = genai.GenerativeModel('gemini-2.5-flash')
+        self.model = genai.GenerativeModel('gemini-2.5-flash')                                                                                                                                                                                                                                                                                                      #type: ignore
 
     def _init_embedder(self):
         self.embedder = SentenceTransformer('all-MiniLM-L6-v2')
@@ -209,7 +210,7 @@ class CareerAdvisorRAG:
         """
 
         try:
-            model_with_tools = genai.GenerativeModel('gemini-2.5-flash', tools='google_search_retrieval')
+            model_with_tools = genai.GenerativeModel('gemini-2.5-flash', tools='google_search_retrieval')                                                                                                                                                                                                                                                       #type: ignore
             response = model_with_tools.generate_content(final_prompt)
             return response.text
         except Exception:
