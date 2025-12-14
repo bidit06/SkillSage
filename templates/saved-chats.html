@@ -30,7 +30,7 @@
             border-bottom: 1px solid var(--border-color);
             position: sticky; top: 0; z-index: 100;
         }
-        .logo { font-size: 24px; font-weight: 800; color: var(--primary-text); cursor: pointer; }
+        .logo { font-size: 28px; font-weight: 800; color: var(--primary-text); cursor: pointer; }
         .back-btn { 
             padding: 8px 20px; 
             border: 2px solid var(--primary-text); 
@@ -41,37 +41,55 @@
         }
         .back-btn:hover { background: var(--primary-text); color: var(--bg-color); }
 
+        /* FULL WIDTH CONTAINER */
         .container { 
-            max-width: 1000px; margin: 40px auto; padding: 0 20px; 
+            width: 100%; 
+            padding: 40px; 
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 25px;
         }
 
         .saved-item {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
+            border-radius: 16px;
+            padding: 25px;
             position: relative;
             transition: transform 0.2s;
+            display: flex; flex-direction: column;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
         }
-        .saved-item:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .saved-item:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
         
         .msg-text { 
             white-space: pre-wrap; 
             font-size: 15px; 
             line-height: 1.6;
             color: var(--primary-text);
+            margin-bottom: 20px;
+            flex-grow: 1;
         }
         
         .msg-meta {
-            margin-top: 15px;
-            padding-top: 10px;
+            padding-top: 15px;
             border-top: 1px solid var(--border-color);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 12px;
+            font-size: 13px;
             color: var(--icon-label);
+            font-weight: 500;
+        }
+
+        .source-tag {
+            background: rgba(255,255,255,0.5);
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            font-size: 12px;
+            color: var(--primary-text);
+            display: inline-flex; align-items: center; gap: 5px;
         }
 
         .delete-btn {
@@ -81,10 +99,11 @@
             background: none;
             font-weight: 600;
             display: flex; align-items: center; gap: 5px;
+            transition: opacity 0.2s;
         }
-        .delete-btn:hover { text-decoration: underline; }
+        .delete-btn:hover { opacity: 0.7; }
 
-        .empty-state { text-align: center; color: var(--icon-label); margin-top: 50px; font-style: italic; }
+        .empty-state { grid-column: 1 / -1; text-align: center; color: var(--icon-label); margin-top: 100px; font-style: italic; font-size: 18px; }
     </style>
 </head>
 <body>
@@ -94,7 +113,7 @@
     </header>
 
     <div class="container" id="saved-container">
-        <div style="text-align:center; padding: 20px;">Loading...</div>
+        <div style="text-align:center; padding: 20px; grid-column: 1/-1;">Loading saved responses...</div>
     </div>
 
     <script>
@@ -113,7 +132,10 @@
                         <div class="saved-item" id="msg-${msg.id}">
                             <div class="msg-text">${msg.text}</div>
                             <div class="msg-meta">
-                                <span>Saved on: ${new Date(msg.saved_at).toLocaleDateString()}</span>
+                                <div>
+                                    <div style="margin-bottom:5px;">Saved on: ${new Date(msg.saved_at).toLocaleDateString()}</div>
+                                    <span class="source-tag"><i class="ri-chat-1-line"></i> ${msg.chat_title}</span>
+                                </div>
                                 <button class="delete-btn" onclick="deleteMessage('${msg.id}')">
                                     <i class="ri-delete-bin-line"></i> Remove
                                 </button>
@@ -131,11 +153,14 @@
             try {
                 const res = await fetch(`/api/saved-messages/${id}`, { method: 'DELETE' });
                 if (res.ok) {
-                    document.getElementById(`msg-${id}`).remove();
-                    // Check if empty
-                    if (document.querySelectorAll('.saved-item').length === 0) {
-                        document.getElementById('saved-container').innerHTML = `<div class="empty-state">No saved responses yet.</div>`;
-                    }
+                    const el = document.getElementById(`msg-${id}`);
+                    el.style.opacity = '0';
+                    setTimeout(() => {
+                        el.remove();
+                        if (document.querySelectorAll('.saved-item').length === 0) {
+                            document.getElementById('saved-container').innerHTML = `<div class="empty-state">No saved responses yet.</div>`;
+                        }
+                    }, 200);
                 }
             } catch(e) { alert("Failed to delete"); }
         }
