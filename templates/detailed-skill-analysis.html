@@ -9,112 +9,139 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
+        :root {
+            --bg-color: #FFFDF6;
+            --card-bg: #E2D4E0;
+            --border-color: #949AB1;
+            --icon-label: #7C7E9D;
+            --primary-text: #4C5372;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         
-        /* NEW COLOR SCHEME */
         body { 
             font-family: 'Montserrat', sans-serif; 
-            background: #FFFDF6; 
+            background: var(--bg-color); 
             min-height: 100vh; 
             padding-bottom: 40px; 
-            color: #4C5372;
+            color: var(--primary-text);
         }
         
-        .container { max-width: 1600px; width: 95%; margin: 30px auto; padding: 0 20px; }
+        .container { max-width: 100%; width: 100%; margin: 30px auto; padding: 0 20px; }
         
-        /* Section (Card) -> #E2D4E0 */
         .section { 
-            background: #E2D4E0; 
+            background: var(--card-bg); 
             padding: 30px; 
             border-radius: 16px; 
             margin-bottom: 25px; 
             box-shadow: 0 8px 32px rgba(76, 83, 114, 0.05); 
-            border: 1px solid #949AB1;
+            border: 1px solid var(--border-color);
         }
         
-        /* Headings -> #4C5372 */
-        .section-title { font-size: 22px; color: #4C5372; margin-bottom: 25px; font-weight: 800; display: flex; align-items: center; gap: 10px; }
+        .section-title { font-size: 22px; color: var(--primary-text); margin-bottom: 25px; font-weight: 800; display: flex; align-items: center; gap: 10px; }
         
         .header { 
-            background: #E2D4E0; 
-            padding: 20px 30px; 
+            background: var(--card-bg); 
+            padding: 15px 40px; 
             display: flex; justify-content: space-between; align-items: center; 
             box-shadow: 0 4px 20px rgba(76, 83, 114, 0.1); 
-            border-bottom: 1px solid #949AB1;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky; top: 0; z-index: 100;
         }
         
-        .logo { font-size: 24px; font-weight: 800; color: #4C5372; cursor: pointer; }
+        .logo { font-size: 28px; font-weight: 800; color: var(--primary-text); cursor: pointer; }
         
         .back-btn { 
             padding: 8px 20px; 
-            border: 1px solid #4C5372; 
-            color: #4C5372; 
+            border: 1px solid var(--primary-text); 
+            color: var(--primary-text); 
             border-radius: 20px; 
             cursor: pointer; background: transparent; font-weight: 700; 
+            transition: all 0.3s;
         }
-        .back-btn:hover { background: #4C5372; color: #FFFDF6; }
+        .back-btn:hover { background: var(--primary-text); color: var(--bg-color); }
         
-        .rating-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; max-height: 400px; overflow-y: auto; }
+        .rating-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; max-height: 400px; overflow-y: auto; padding-right: 10px; }
+        .rating-grid::-webkit-scrollbar { width: 4px; }
+        .rating-grid::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
         
+        /* --- UPDATED CSS FOR VERTICAL LAYOUT --- */
         .skill-rating-row { 
-            display: flex; justify-content: space-between; align-items: center; 
-            padding: 12px 20px; 
-            background: #FFFDF6; /* Contrast against Card BG */
-            border-radius: 8px; 
-            border: 1px solid #949AB1; 
+            display: flex; 
+            flex-direction: column; /* Stack items vertically */
+            justify-content: center; 
+            align-items: center; /* Center align items */
+            padding: 20px; 
+            gap: 15px; /* Add space between name and stars */
+            background: var(--bg-color); 
+            border-radius: 12px; 
+            border: 1px solid var(--border-color); 
+            transition: transform 0.2s;
+            text-align: center; /* Ensure text is centered */
         }
+        .skill-rating-row strong {
+            font-size: 16px;
+            color: var(--primary-text);
+        }
+        .skill-rating-row:hover { transform: translateY(-5px); box-shadow: 0 4px 10px rgba(76, 83, 114, 0.1); }
+        /* -------------------------------------- */
         
         .star-container-10 { display: flex; gap: 4px; }
-        .star-10 { font-size: 20px; cursor: pointer; color: #949AB1; transition: color 0.2s; }
-        .star-10.filled { color: #4C5372; } /* Changed star color to Primary theme */
+        .star-10 { font-size: 24px; cursor: pointer; color: var(--border-color); transition: color 0.2s, transform 0.2s; } /* Increased star size slightly */
+        .star-10:hover { transform: scale(1.2); }
+        .star-10.filled { color: var(--primary-text); } 
         
         .charts-wrapper { width: 100%; overflow-x: auto; padding-bottom: 20px; }
-        .charts-grid { display: flex; gap: 30px; width: max-content; }
+        .charts-grid { display: flex; gap: 40px; width: max-content; }
         
         .chart-card { 
-            background: #FFFDF6; /* Contrast */
-            border-radius: 16px; padding: 25px; 
-            box-shadow: 0 4px 15px rgba(76, 83, 114, 0.05); 
-            min-width: 500px; flex: 0 0 auto; 
-            border: 1px solid #949AB1;
+            background: var(--bg-color); 
+            border-radius: 20px; padding: 16px; 
+            box-shadow: 0 10px 30px #7c7e9d41; 
+            min-width: 750px; flex: 0 0 auto; 
+            border: 1px solid var(--border-color);
         }
         .chart-container { position: relative; height: 400px; width: 100%; }
         
-        .charts-wrapper::-webkit-scrollbar { height: 10px; }
-        .charts-wrapper::-webkit-scrollbar-track { background: #E2D4E0; border-radius: 5px; }
-        .charts-wrapper::-webkit-scrollbar-thumb { background: #949AB1; border-radius: 5px; }
-        .charts-wrapper::-webkit-scrollbar-thumb:hover { background: #4C5372; }
+        .charts-wrapper::-webkit-scrollbar { height:6px; }
+        .charts-wrapper::-webkit-scrollbar-track { background: var(--card-bg); border-radius: 6px; }
+        .charts-wrapper::-webkit-scrollbar-thumb { background: var(--primary-text); border-radius: 6px; }
         
         .save-btn { 
-            padding: 12px 30px; 
-            background: #4C5372; 
-            color: #FFFDF6; 
+            padding: 14px 35px; 
+            background: var(--primary-text); 
+            color: var(--bg-color); 
             border: none; border-radius: 30px; font-weight: 700; cursor: pointer; 
+            font-size: 16px;
+            transition: all 0.3s;
         }
+        .save-btn:hover { background: #3E445B; transform: translateY(-3px); }
         .save-btn.dirty { animation: pulse 2s infinite; }
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(76, 83, 114, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(76, 83, 114, 0); } 100% { box-shadow: 0 0 0 0 rgba(76, 83, 114, 0); } }
         
-        .empty-state { text-align: center; color: #7C7E9D; padding: 20px; font-style: italic; width: 100%; }
+        .empty-state { text-align: center; color: var(--icon-label); padding: 40px; font-style: italic; width: 100%; font-size: 16px; }
         
-        .skills-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        .skills-table th, .skills-table td { padding: 12px 15px; border-bottom: 1px solid #949AB1; text-align: left; }
-        .skills-table th { background-color: #FFFDF6; color: #7C7E9D; font-size: 12px; text-transform: uppercase; }
+        .skills-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        .skills-table th, .skills-table td { padding: 16px 20px; border-bottom: 1px solid var(--border-color); text-align: left; }
+        .skills-table th { background-color: var(--bg-color); color: var(--icon-label); font-size: 13px; text-transform: uppercase; font-weight: 700; }
+        .skills-table td { font-size: 15px; }
         
-        .add-skill-form { margin-top: 20px; padding: 20px; background: #FFFDF6; border-radius: 12px; border: 1px solid #949AB1; }
-        .form-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; }
-        .form-input { padding: 10px; border: 1px solid #949AB1; border-radius: 8px; flex: 1; background: #E2D4E0; color: #4C5372; }
-        .add-btn { padding: 10px 20px; background: #4C5372; color: #FFFDF6; border: none; border-radius: 8px; cursor: pointer; }
+        .add-skill-form { margin-top: 25px; padding: 25px; background: var(--bg-color); border-radius: 16px; border: 1px solid var(--border-color); display: none }
+        .form-row { display: flex; gap: 15px; flex-wrap: wrap; align-items: flex-end; }
+        .form-input { padding: 12px 15px; border: 1px solid var(--border-color); border-radius: 10px; flex: 1; background: var(--card-bg); color: var(--primary-text); outline: none; }
+        .add-btn { padding: 12px 25px; background: var(--primary-text); color: var(--bg-color); border: none; border-radius: 10px; cursor: pointer; font-weight: 600; }
         
-        .action-cell { display: flex; gap: 15px; align-items: center; }
-        .action-label { display: flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 500; cursor: pointer; color: #7C7E9D; }
-        .action-label input { cursor: pointer; width: 16px; height: 16px; accent-color: #4C5372; }
-        .action-label:hover { color: #4C5372; }
-        .loading-text { font-size: 11px; color: #7C7E9D; margin-left: 5px; display: none; }
+        .action-cell { display: flex; gap: 20px; align-items: center; }
+        .action-label { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; cursor: pointer; color: var(--icon-label); transition: color 0.2s; }
+        .action-label input { cursor: pointer; width: 18px; height: 18px; accent-color: var(--primary-text); }
+        .action-label:hover { color: var(--primary-text); }
+        .loading-text { font-size: 12px; color: var(--icon-label); margin-left: 5px; display: none; }
     </style>
 </head>
 <body>
     <header class="header">
-        <h1 class="logo" onclick="window.location.href='/dashboard'">Career Advisor</h1>
+        <h1 class="logo" onclick="window.location.href='/dashboard'">Skill Gap Analysis</h1>
         <button class="back-btn" onclick="handleBack()">← Dashboard</button>
     </header>
 
@@ -136,7 +163,7 @@
             <div id="missingSkillsContent"></div>
             
             <div class="add-skill-form">
-                <h4>+ Add Custom Missing Skill</h4>
+                <h4 style="margin-bottom: 15px; color: var(--primary-text);">+ Add Custom Missing Skill</h4>
                 <div class="form-row">
                     <input type="text" class="form-input" id="newSkillName" placeholder="Skill Name">
                     <select class="form-input" id="newSkillGoal"><option>Select Goal...</option></select>
@@ -151,7 +178,6 @@
     </div>
 
     <script>
-        // (JS Logic is identical to previous versions, just preserving functionality)
         let analysisData = {};
         let skillRatings = {};
         let customMissingSkills = [];
@@ -221,7 +247,7 @@
                             <strong>${skill}</strong>
                             <div style="display:flex; align-items:center; gap:10px;">
                                 <div class="star-container-10">${stars}</div>
-                                <span style="font-size:12px; color:#7C7E9D; width:20px; text-align:center;">${rating}</span>
+                                <span style="font-size:14px; color:var(--icon-label); width:20px; text-align:center; font-weight:600;">${rating}</span>
                             </div>
                         </div>`;
             }).join('');
@@ -279,7 +305,7 @@
                         card = document.createElement('div');
                         card.id = `card-${index}`;
                         card.className = 'chart-card';
-                        card.innerHTML = `<h3 style="color:#4C5372;">${goalData.goal}</h3><div class="chart-container"><canvas id="${canvasId}"></canvas></div>`;
+                        card.innerHTML = `<h3 style="color:#4C5372; margin-bottom:20px;">${goalData.goal}</h3><div class="chart-container"><canvas id="${canvasId}"></canvas></div>`;
                         container.appendChild(card);
                     }
 
@@ -299,13 +325,21 @@
                                 label: 'Required',
                                 data: goalData.target_data,
                                 backgroundColor: 'transparent',
-                                borderColor: 'rgba(148, 154, 177, 0.5)', /* #949AB1 with opacity */
-                                borderDash: [5, 5],
+                                borderColor: '#949AB1', /* #949AB1 with opacity  rgba(148, 154, 177, 0.5)'*/ 
+                                borderDash: [5, 3],
                                 pointRadius: 0
                             }]
                         },
                         options: {
-                            scales: { r: { suggestedMin: 0, suggestedMax: 10, pointLabels: { font: { size: 11, weight: 'bold' }, color: '#4C5372' } } },
+                            scales: { 
+                                r: { 
+                                    suggestedMin: 0, 
+                                    suggestedMax: 10, 
+                                    pointLabels: { font: { size: 12, weight: 'bold' }, color: '#4C5372' },
+                                    grid: { color: '#949AB1' },
+                                    ticks: { backdropColor: 'transparent', display: false }
+                                } 
+                            },
                             maintainAspectRatio: false
                         }
                     });
@@ -320,8 +354,8 @@
             const grouped = skills.reduce((acc, s) => { (acc[s.for_goal] = acc[s.for_goal] || []).push(s); return acc; }, {});
             
             container.innerHTML = Object.entries(grouped).map(([goal, items]) => `
-                <div class="missing-group" style="margin-bottom:20px;">
-                    <div style="font-weight:bold; margin-bottom:5px; border-bottom:1px solid #949AB1; color:#4C5372;">${goal}</div>
+                <div class="missing-group" style="margin-bottom:30px;">
+                    <div style="font-weight:800; font-size:16px; margin-bottom:10px; border-bottom:2px solid var(--border-color); color:var(--primary-text); padding-bottom:5px;">${goal}</div>
                     <table class="skills-table">
                         <thead><tr><th>Skill</th><th>Priority</th><th>Time</th><th>Actions</th></tr></thead>
                         <tbody>
@@ -331,9 +365,9 @@
                                 
                                 return `
                                 <tr>
-                                    <td style="color:#4C5372;"><strong>${i.name}</strong></td>
-                                    <td><span style="padding:4px 8px; border-radius:4px; font-size:11px; background:${i.priority==='High'?'#ffebee':'#e8f5e9'}; color:${i.priority==='High'?'#c62828':'#2e7d32'};">${i.priority}</span></td>
-                                    <td style="color:#7C7E9D;">${i.time_estimate}</td>
+                                    <td style="color:var(--primary-text); font-weight:600;">${i.name}</td>
+                                    <td><span style="padding:4px 8px; border-radius:4px; font-size:11px; background:${i.priority==='High'?'#ffebee':'#e8f5e9'}; color:${i.priority==='High'?'#c62828':'#2e7d32'}; font-weight:bold;">${i.priority}</span></td>
+                                    <td style="color:var(--icon-label);">${i.time_estimate}</td>
                                     <td class="action-cell">
                                         <label class="action-label" title="Mark as Currently Learning">
                                             <input type="checkbox" 
