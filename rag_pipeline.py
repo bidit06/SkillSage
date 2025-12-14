@@ -27,7 +27,7 @@ class CareerAdvisorRAG:
     def _init_gemini(self):
         genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
         # Initialize standard model first
-        self.model = genai.GenerativeModel('gemini-2.0-flash')
+        self.model = genai.GenerativeModel('gemini-2.5-flash')
 
     def _init_embedder(self):
         self.embedder = SentenceTransformer('all-MiniLM-L6-v2')
@@ -133,9 +133,9 @@ class CareerAdvisorRAG:
             # --- 4. Build Chart Data (Sliced to Top 12) ---
             goals_data.append({
                 "goal": goal,
-                "required_skills": temp_chart_labels[:12], 
-                "user_ratings": temp_user_data[:12],       
-                "target_data": temp_target_data[:12]       
+                "required_skills": temp_chart_labels[:], 
+                "user_ratings": temp_user_data[:],       
+                "target_data": temp_target_data[:]       
             })
 
         return {
@@ -209,7 +209,7 @@ class CareerAdvisorRAG:
         """
 
         try:
-            model_with_tools = genai.GenerativeModel('gemini-2.0-flash', tools='google_search_retrieval')
+            model_with_tools = genai.GenerativeModel('gemini-2.5-flash', tools='google_search_retrieval')
             response = model_with_tools.generate_content(final_prompt)
             return response.text
         except Exception:
