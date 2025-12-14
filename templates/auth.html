@@ -7,13 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
         /* --- BRAND COLORS & VARIABLES --- */
         :root {
             --bg-cream: #FFFDF6;      
             --bg-gradient-end: #E2D4E0; 
-            --white: rgba(255, 255, 255, 0.9); /* Slight transparency for glass effect */
+            --white: rgba(255, 255, 255, 0.9);
             --text-primary: #4C5372;  
             --text-secondary: #7C7E9D;
             --ui-border: #949AB1;     
@@ -38,14 +39,12 @@
             position: relative;
         }
 
-        /* --- BACKGROUND ANIMATIONS --- */
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        /* Floating Orbs for Premium Depth */
         body::before, body::after {
             content: '';
             position: absolute;
@@ -74,7 +73,6 @@
             50% { transform: translateY(20px); }
         }
 
-        /* --- AUTH CARD --- */
         .auth-container { 
             background-color: var(--white); 
             padding: 48px 40px; 
@@ -85,18 +83,49 @@
             border: 1px solid rgba(255, 255, 255, 0.5);
             text-align: center; 
             position: relative;
-            backdrop-filter: blur(10px); /* Glassmorphism */
+            backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            transform: translateY(30px);
             opacity: 0;
-            animation: cardEntrance 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            animation: cardEntrance 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards, floatCard 6s ease-in-out infinite 0.8s; 
         }
 
         @keyframes cardEntrance {
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* --- TYPOGRAPHY --- */
+        @keyframes floatCard {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 14px;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255,255,255,0.8);
+            z-index: 10;
+        }
+
+        .back-btn:hover {
+            transform: translateX(-3px);
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+
         h1 { 
             font-weight: 700; 
             margin-bottom: 12px; 
@@ -113,8 +142,6 @@
             line-height: 1.5;
         }
 
-        /* --- FORM ELEMENTS STAGGER --- */
-        /* This animates inputs one by one */
         .form-group { 
             margin-bottom: 24px; 
             text-align: left; 
@@ -155,19 +182,15 @@
         
         input::placeholder { color: #bdc0ce; }
 
-        /* Input Focus Effects */
         input:focus { 
             border-color: var(--text-primary); 
             background-color: #fff;
-            transform: scale(1.02); /* Slight pop */
+            transform: scale(1.02);
             box-shadow: 0 8px 20px rgba(76, 83, 114, 0.1);
         }
 
-        input:focus + label {
-            color: var(--text-primary);
-        }
+        input:focus + label { color: var(--text-primary); }
 
-        /* --- BUTTON --- */
         .btn { 
             width: 100%; 
             padding: 16px; 
@@ -181,12 +204,11 @@
             transition: var(--transition); 
             margin-top: 10px; 
             position: relative;
-            overflow: hidden; /* For shine effect */
+            overflow: hidden;
             opacity: 0;
             animation: slideIn 0.5s ease forwards 0.6s;
         }
         
-        /* Button Shine Effect */
         .btn::after {
             content: '';
             position: absolute;
@@ -203,11 +225,8 @@
             box-shadow: 0 15px 30px rgba(76, 83, 114, 0.25);
         }
 
-        .btn:hover::after {
-            left: 100%;
-        }
+        .btn:hover::after { left: 100%; }
 
-        /* --- FOOTER LINKS --- */
         .toggle-text { 
             margin-top: 24px; 
             font-size: 14px; 
@@ -232,7 +251,6 @@
             text-decoration: underline;
         }
 
-        /* --- ERROR MESSAGE & SHAKE ANIMATION --- */
         #error-msg { 
             color: #d32f2f; 
             font-size: 14px; 
@@ -258,6 +276,11 @@
     </style>
 </head>
 <body>
+
+    <a href="/" class="back-btn">
+        <i data-lucide="arrow-left" style="width: 18px; height: 18px;"></i>
+        Back to Home
+    </a>
 
     <div class="auth-container">
         <div style="font-size: 40px; margin-bottom: 10px; animation: float 6s ease-in-out infinite;">🧠</div>
@@ -306,6 +329,8 @@
     </div>
 
     <script>
+        lucide.createIcons();
+
         function toggleMode(mode) {
             const loginForm = document.getElementById('login-form');
             const signupForm = document.getElementById('signup-form');
@@ -315,11 +340,10 @@
 
             errorMsg.style.display = 'none';
 
-            // Reset animations by cloning (simple trick to re-trigger css animations on toggle)
             const container = document.querySelector('.auth-container');
             container.style.animation = 'none';
-            container.offsetHeight; /* trigger reflow */
-            container.style.animation = 'cardEntrance 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards';
+            container.offsetHeight; 
+            container.style.animation = 'cardEntrance 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards, floatCard 6s ease-in-out infinite 0.5s';
 
             if (mode === 'signup') {
                 loginForm.classList.add('hidden');
@@ -334,6 +358,7 @@
             }
         }
 
+        // --- REAL LOGIN LOGIC ---
         async function handleLogin(e) {
             e.preventDefault();
             const email = document.getElementById('login-email').value;
@@ -341,7 +366,6 @@
 
             if (!email || !password) return showError("Please fill in all fields");
 
-            // Add loading state to button
             const btn = e.target.querySelector('button');
             const originalText = btn.innerText;
             btn.innerText = "Signing in...";
@@ -360,7 +384,6 @@
                 if (response.ok) {
                     const data = await response.json();
                     localStorage.setItem('token', data.access_token);
-                    // REDIRECT TO DASHBOARD
                     window.location.href = "/dashboard";
                 } else {
                     showError("Invalid email or password");
@@ -368,19 +391,19 @@
                     btn.style.opacity = "1";
                 }
             } catch (error) {
-                showError("Network error. Please try again.");
+                showError("Network error. Please check your connection.");
                 btn.innerText = originalText;
                 btn.style.opacity = "1";
             }
         }
 
+        // --- REAL SIGNUP LOGIC ---
         async function handleSignup(e) {
             e.preventDefault();
             const name = document.getElementById('signup-name').value;
             const email = document.getElementById('signup-email').value;
             const password = document.getElementById('signup-password').value;
 
-            // Add loading state to button
             const btn = e.target.querySelector('button');
             const originalText = btn.innerText;
             btn.innerText = "Creating Account...";
@@ -394,8 +417,10 @@
                 });
 
                 if (response.ok) {
-                    alert("Account created! Please log in.");
+                    alert("Account created successfully! Please log in.");
                     toggleMode('login');
+                    btn.innerText = originalText;
+                    btn.style.opacity = "1";
                 } else {
                     const data = await response.json();
                     showError(data.detail || "Registration failed");
@@ -403,7 +428,7 @@
                     btn.style.opacity = "1";
                 }
             } catch (error) {
-                showError("Network error");
+                showError("Network error. Please try again.");
                 btn.innerText = originalText;
                 btn.style.opacity = "1";
             }
@@ -413,9 +438,8 @@
             const el = document.getElementById('error-msg');
             el.innerText = msg;
             el.style.display = 'block';
-            // Re-trigger shake animation
             el.style.animation = 'none';
-            el.offsetHeight; /* trigger reflow */
+            el.offsetHeight; 
             el.style.animation = 'shake 0.5s cubic-bezier(.36,.07,.19,.97) both';
         }
     </script>

@@ -16,6 +16,7 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from pydantic import BaseModel
 from PIL import Image
 import google.generativeai as genai
+from bson import ObjectId
 
 load_dotenv()
 app = FastAPI()
@@ -25,7 +26,8 @@ TEMPLATE_DIR = BASE_DIR / "templates"
 templates = Jinja2Templates(directory=str(TEMPLATE_DIR))
 
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-direct_model = genai.GenerativeModel('gemini-2.0-flash')
+# Initialize standard model first to prevent startup crashes
+model = genai.GenerativeModel('gemini-2.0-flash')
 
 rag_advisor = None
 try:
@@ -42,6 +44,7 @@ db = client.skillsage_db
 users_collection = db.users
 chats_collection = db.chats
 world_chats_collection = db.world_chats
+saved_messages_collection = db.saved_messages
 
 pwd_context = CryptContext(schemes=["argon2"], deprecated="auto")
 
@@ -87,6 +90,15 @@ async def home_page(request: Request): return templates.TemplateResponse("home.h
 @app.get("/auth", response_class=HTMLResponse)
 async def auth_page(request: Request): return templates.TemplateResponse("auth.html", {"request": request})
 
+# --- FIXED LOGOUT ROUTE ---
+@app.get("/logout")
+async def logout():
+    # Use 302 or 303 for standard redirection
+    response = RedirectResponse(url="/auth", status_code=302)
+    # Explicitly clear cookie with path="/"
+    response.delete_cookie("access_token", path="/")
+    return response
+
 @app.get("/dashboard", response_class=HTMLResponse)
 async def dashboard_page(request: Request):
     if not await get_current_user(request): return RedirectResponse("/auth")
@@ -107,6 +119,11 @@ async def world_chat_page(request: Request):
     if not await get_current_user(request): return RedirectResponse("/auth")
     return templates.TemplateResponse("world-chat.html", {"request": request})
 
+@app.get("/saved-chats", response_class=HTMLResponse)
+async def saved_chats_page(request: Request):
+    if not await get_current_user(request): return RedirectResponse("/auth")
+    return templates.TemplateResponse("saved-chats.html", {"request": request})
+
 @app.post("/register")
 async def register(user: UserCreate):
     if await users_collection.find_one({"email": user.email}):
@@ -119,12 +136,22 @@ async def register(user: UserCreate):
     })
     return {"message": "User created"}
 
+# --- FIXED LOGIN ROUTE ---
 @app.post("/token")
 async def login(response: Response, form_data: OAuth2PasswordRequestForm = Depends()):
     user = await users_collection.find_one({"email": form_data.username})
     if not user or not verify_password(form_data.password, user["hashed_password"]):
         raise HTTPException(400, "Invalid credentials")
-    response.set_cookie(key="access_token", value=user["email"], httponly=False)
+    
+    # Explicitly set cookie attributes to ensure persistence
+    response.set_cookie(
+        key="access_token", 
+        value=user["email"], 
+        httponly=False,  # Allows JS to read if needed (e.g. for localStorage sync)
+        path="/",        # Essential: cookie valid for whole site
+        samesite="lax",  # Standard security
+        secure=False     # Set False for localhost (HTTP), True for HTTPS production
+    )
     return {"access_token": user["email"], "token_type": "bearer"}
 
 @app.get("/api/dashboard-data")
@@ -179,7 +206,6 @@ async def update_profile(data: UserProfileUpdate, request: Request):
         update_data["skill_ratings"] = clean_ratings
     
     await users_collection.update_one({"email": user["email"]}, {"$set": update_data})
-    
     return {"message": "Updated"}
 
 @app.post("/api/skills/action")
@@ -189,46 +215,16 @@ async def skill_action(data: SkillAction, request: Request):
     
     if data.action == "learned":
         if data.active:
-            # Tick 'Learned': Add to skills, REMOVE from currently_learning
-            await users_collection.update_one(
-                {"email": user["email"]},
-                {
-                    "$addToSet": {"skills": data.skill},
-                    "$pull": {"currently_learning": data.skill}
-                }
-            )
-            # Add default rating
-            await users_collection.update_one(
-                {"email": user["email"], f"skill_ratings.{data.skill}": {"$exists": False}},
-                {"$set": {f"skill_ratings.{data.skill}": 1}}
-            )
+            await users_collection.update_one({"email": user["email"]}, {"$addToSet": {"skills": data.skill}, "$pull": {"currently_learning": data.skill}})
+            await users_collection.update_one({"email": user["email"], f"skill_ratings.{data.skill}": {"$exists": False}}, {"$set": {f"skill_ratings.{data.skill}": 1}})
         else:
-            # Untick 'Learned': Remove from skills/ratings
-            await users_collection.update_one(
-                {"email": user["email"]},
-                {
-                    "$pull": {"skills": data.skill},
-                    "$unset": {f"skill_ratings.{data.skill}": ""}
-                }
-            )
+            await users_collection.update_one({"email": user["email"]}, {"$pull": {"skills": data.skill}, "$unset": {f"skill_ratings.{data.skill}": ""}})
         
     elif data.action == "learning":
         if data.active:
-            # Tick 'Learning': Add to learning, REMOVE from skills and ratings
-            await users_collection.update_one(
-                {"email": user["email"]},
-                {
-                    "$addToSet": {"currently_learning": data.skill},
-                    "$pull": {"skills": data.skill},
-                    "$unset": {f"skill_ratings.{data.skill}": ""}
-                }
-            )
+            await users_collection.update_one({"email": user["email"]}, {"$addToSet": {"currently_learning": data.skill}, "$pull": {"skills": data.skill}, "$unset": {f"skill_ratings.{data.skill}": ""}})
         else:
-            # Untick 'Learning': Remove from learning
-            await users_collection.update_one(
-                {"email": user["email"]},
-                {"$pull": {"currently_learning": data.skill}}
-            )
+            await users_collection.update_one({"email": user["email"]}, {"$pull": {"currently_learning": data.skill}})
     
     return {"message": "Updated"}
 
@@ -242,7 +238,6 @@ async def get_detailed_analysis(request: Request):
     if user.get("custom_missing_skills"):
         analysis["missing_skills"].extend(user["custom_missing_skills"])
     analysis["currently_learning"] = user.get("currently_learning", [])
-    
     return analysis
 
 @app.post("/api/save-analysis")
@@ -250,13 +245,7 @@ async def save_analysis(data: AnalysisSaveRequest, request: Request):
     user = await get_current_user(request)
     if not user: raise HTTPException(401)
     
-    await users_collection.update_one(
-        {"email": user["email"]},
-        {"$set": {
-            "skill_ratings": data.skill_ratings,
-            "custom_missing_skills": data.custom_missing_skills
-        }}
-    )
+    await users_collection.update_one({"email": user["email"]}, {"$set": {"skill_ratings": data.skill_ratings, "custom_missing_skills": data.custom_missing_skills}})
     return {"message": "Saved"}
 
 # --- WORLD CHAT API ---
@@ -266,11 +255,7 @@ async def get_world_chat_messages(request: Request):
     cursor = world_chats_collection.find().sort("timestamp", -1).limit(100)
     messages = []
     async for doc in cursor:
-        messages.append({
-            "user": doc.get("user", "Anonymous"),
-            "text": doc.get("text", ""),
-            "timestamp": doc.get("timestamp")
-        })
+        messages.append({"user": doc.get("user", "Anonymous"), "email": doc.get("email"), "text": doc.get("text", ""), "timestamp": doc.get("timestamp")})
     return messages[::-1]
 
 @app.post("/api/world-chat")
@@ -278,15 +263,50 @@ async def post_world_chat_message(request: Request, data: dict = Body(...)):
     user = await get_current_user(request)
     if not user: raise HTTPException(401)
     
-    msg = {
-        "user": user.get("name", "Unknown"),
-        "email": user["email"],
-        "text": data.get("message"),
-        "timestamp": datetime.utcnow().isoformat()
-    }
+    msg = {"user": user.get("name", "Unknown"), "email": user["email"], "text": data.get("message"), "timestamp": datetime.utcnow().isoformat()}
     await world_chats_collection.insert_one(msg)
     return {"status": "ok"}
 
+# --- TOGGLE SAVED MESSAGE API ---
+@app.post("/api/toggle-saved-message")
+async def toggle_saved_message(request: Request, data: dict = Body(...)):
+    user = await get_current_user(request)
+    if not user: raise HTTPException(401)
+    
+    existing = await saved_messages_collection.find_one({"user_email": user["email"], "text": data.get("text")})
+    
+    if existing:
+        await saved_messages_collection.delete_one({"_id": existing["_id"]})
+        return {"status": "removed"}
+    else:
+        await saved_messages_collection.insert_one({
+            "user_email": user["email"],
+            "text": data.get("text"),
+            "saved_at": datetime.utcnow()
+        })
+        return {"status": "saved"}
+
+@app.get("/api/saved-messages")
+async def get_saved_messages(request: Request):
+    user = await get_current_user(request)
+    if not user: raise HTTPException(401)
+    
+    cursor = saved_messages_collection.find({"user_email": user["email"]}).sort("saved_at", -1)
+    messages = []
+    async for doc in cursor:
+        messages.append({"id": str(doc["_id"]), "text": doc["text"], "saved_at": doc["saved_at"]})
+    return messages
+
+@app.delete("/api/saved-messages/{msg_id}")
+async def delete_saved_message(msg_id: str, request: Request):
+    user = await get_current_user(request)
+    if not user: raise HTTPException(401)
+    
+    result = await saved_messages_collection.delete_one({"_id": ObjectId(msg_id), "user_email": user["email"]})
+    if result.deleted_count == 0: raise HTTPException(404, "Message not found")
+    return {"status": "deleted"}
+
+# --- CHAT APIS ---
 @app.get("/chat", response_class=HTMLResponse)
 async def chat_page(request: Request):
     if not await get_current_user(request): return RedirectResponse("/auth")
