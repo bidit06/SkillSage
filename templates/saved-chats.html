@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Responses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FFFDF6;
+            --card-bg: #E2D4E0;
+            --border-color: #949AB1;
+            --icon-label: #7C7E9D;
+            --primary-text: #4C5372;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background: var(--bg-color); 
+            min-height: 100vh; 
+            color: var(--primary-text);
+        }
+        
+        .header { 
+            background: var(--card-bg); 
+            padding: 20px 40px; 
+            display: flex; justify-content: space-between; align-items: center; 
+            border-bottom: 1px solid var(--border-color);
+            position: sticky; top: 0; z-index: 100;
+        }
+        .logo { font-size: 24px; font-weight: 800; color: var(--primary-text); cursor: pointer; }
+        .back-btn { 
+            padding: 8px 20px; 
+            border: 2px solid var(--primary-text); 
+            color: var(--primary-text); 
+            border-radius: 20px; 
+            cursor: pointer; background: transparent; font-weight: 700; 
+            transition: all 0.3s;
+        }
+        .back-btn:hover { background: var(--primary-text); color: var(--bg-color); }
+
+        .container { 
+            max-width: 1000px; margin: 40px auto; padding: 0 20px; 
+        }
+
+        .saved-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            transition: transform 0.2s;
+        }
+        .saved-item:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        
+        .msg-text { 
+            white-space: pre-wrap; 
+            font-size: 15px; 
+            line-height: 1.6;
+            color: var(--primary-text);
+        }
+        
+        .msg-meta {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--icon-label);
+        }
+
+        .delete-btn {
+            color: #ff6b6b;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-weight: 600;
+            display: flex; align-items: center; gap: 5px;
+        }
+        .delete-btn:hover { text-decoration: underline; }
+
+        .empty-state { text-align: center; color: var(--icon-label); margin-top: 50px; font-style: italic; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo" onclick="window.location.href='/dashboard'">Career Advisor</h1>
+        <button class="back-btn" onclick="window.location.href='/dashboard'">← Dashboard</button>
+    </header>
+
+    <div class="container" id="saved-container">
+        <div style="text-align:center; padding: 20px;">Loading...</div>
+    </div>
+
+    <script>
+        async function loadSavedMessages() {
+            const container = document.getElementById('saved-container');
+            try {
+                const res = await fetch('/api/saved-messages');
+                if (res.ok) {
+                    const messages = await res.json();
+                    if (messages.length === 0) {
+                        container.innerHTML = `<div class="empty-state">No saved responses yet. Star a message in the chat to see it here!</div>`;
+                        return;
+                    }
+                    
+                    container.innerHTML = messages.map(msg => `
+                        <div class="saved-item" id="msg-${msg.id}">
+                            <div class="msg-text">${msg.text}</div>
+                            <div class="msg-meta">
+                                <span>Saved on: ${new Date(msg.saved_at).toLocaleDateString()}</span>
+                                <button class="delete-btn" onclick="deleteMessage('${msg.id}')">
+                                    <i class="ri-delete-bin-line"></i> Remove
+                                </button>
+                            </div>
+                        </div>
+                    `).join('');
+                }
+            } catch (e) {
+                container.innerHTML = `<div class="empty-state">Error loading saved messages.</div>`;
+            }
+        }
+
+        async function deleteMessage(id) {
+            if(!confirm("Remove this saved response?")) return;
+            try {
+                const res = await fetch(`/api/saved-messages/${id}`, { method: 'DELETE' });
+                if (res.ok) {
+                    document.getElementById(`msg-${id}`).remove();
+                    // Check if empty
+                    if (document.querySelectorAll('.saved-item').length === 0) {
+                        document.getElementById('saved-container').innerHTML = `<div class="empty-state">No saved responses yet.</div>`;
+                    }
+                }
+            } catch(e) { alert("Failed to delete"); }
+        }
+
+        loadSavedMessages();
+    </script>
+</body>
+</html>

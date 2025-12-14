@@ -6,7 +6,7 @@
     <title>Career Advisor Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* --- CSS VARIABLES --- */
+        /* ... (CSS Variables & Body Styles Same as Before) ... */
         :root {
             --bg-color: #FFFDF6;
             --card-bg: #E2D4E0;
@@ -137,7 +137,7 @@
             min-height: 350px; 
             border: 1px solid var(--primary-text);
         }
-        .talk-to-orion:hover { background: #3E445B; } /* Slightly darker shade */
+        .talk-to-orion:hover { background: #3E445B; }
         .talk-to-orion .widget-title { color: var(--bg-color); }
         .talk-to-orion .widget-title::after { background: var(--border-color); }
         .orion-icon { font-size: 70px; margin-bottom: 15px; animation: float 3s ease-in-out infinite; }
@@ -168,9 +168,12 @@
         }
         .btn-primary:hover { background: #3E445B; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(76, 83, 114, 0.3); }
 
-        /* World Chat */
+        /* --- UPDATED: SPLIT BOTTOM ROW --- */
+        /* World Chat (Left Half) */
         .world-chat-widget { 
-            grid-column: 1 / 13; min-height: 180px; cursor: pointer; 
+            grid-column: 1 / 7; 
+            min-height: 180px; 
+            cursor: pointer; 
             display: flex; align-items: center; justify-content: space-between; gap: 30px; 
             background: var(--card-bg);
             border: 2px solid var(--primary-text); 
@@ -182,8 +185,20 @@
         .wc-arrow { font-size: 30px; color: var(--primary-text); font-weight: 800; transition: transform 0.3s; }
         .world-chat-widget:hover .wc-arrow { transform: translateX(10px); }
 
+        /* Saved Chats (Right Half) */
+        .saved-chats-widget { 
+            grid-column: 7 / 13; 
+            min-height: 180px; 
+            cursor: pointer; 
+            display: flex; align-items: center; justify-content: space-between; gap: 30px; 
+            background: #FFFDF6; /* Light contrast */
+            border: 2px solid var(--primary-text); 
+        }
+        .saved-chats-widget:hover { background: #F0F0F0; }
+        .sc-icon { font-size: 60px; color: var(--primary-text); }
+
         @media (max-width: 1024px) {
-            .activity-feed, .talk-to-orion, .skills-gap, .world-chat-widget { grid-column: 1 / 13; }
+            .activity-feed, .talk-to-orion, .skills-gap, .world-chat-widget, .saved-chats-widget { grid-column: 1 / 13; }
             .skills-content { grid-template-columns: 1fr; }
             .dashboard-container { padding: 20px; }
         }
@@ -234,7 +249,16 @@
             <div class="wc-icon">🌍</div>
             <div class="wc-content">
                 <h2 class="widget-title" style="margin-bottom: 8px;">World Chat</h2>
-                <p style="color: var(--primary-text); font-weight: 500; font-size: 16px;">Connect with the global community of learners and professionals.</p>
+                <p style="color: var(--primary-text); font-weight: 500; font-size: 16px;">Connect with the global community.</p>
+            </div>
+            <div class="wc-arrow">→</div>
+        </div>
+
+        <div class="widget saved-chats-widget" onclick="window.location.href='/saved-chats'">
+            <div class="sc-icon">⭐</div>
+            <div class="wc-content">
+                <h2 class="widget-title" style="margin-bottom: 8px;">Saved Responses</h2>
+                <p style="color: var(--primary-text); font-weight: 500; font-size: 16px;">Access your starred advice.</p>
             </div>
             <div class="wc-arrow">→</div>
         </div>

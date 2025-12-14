@@ -1117,6 +1117,7 @@
         <div
           class="bg-white rounded-[2rem] p-10 shadow-xl border border-steel/10 reveal delay-200"
         >
+          <!-- Existing FAQ 1 -->
           <div class="faq-item border-b border-steel/20 last:border-0">
             <button
               class="w-full py-8 flex justify-between items-center text-left focus:outline-none group"
@@ -1141,6 +1142,8 @@
               </p>
             </div>
           </div>
+
+          <!-- Existing FAQ 2 -->
           <div class="faq-item border-b border-steel/20 last:border-0">
             <button
               class="w-full py-8 flex justify-between items-center text-left focus:outline-none group"
@@ -1166,6 +1169,8 @@
               </p>
             </div>
           </div>
+
+          <!-- Existing FAQ 3 -->
           <div class="faq-item border-b border-steel/20 last:border-0">
             <button
               class="w-full py-8 flex justify-between items-center text-left focus:outline-none group"
@@ -1187,6 +1192,86 @@
               <p class="pb-8 text-slate leading-relaxed text-lg">
                 Absolutely. We have specific roadmaps for career changers and
                 beginners to take you from zero to job-ready.
+              </p>
+            </div>
+          </div>
+
+          <!-- New FAQ 4 -->
+          <div class="faq-item border-b border-steel/20 last:border-0">
+            <button
+              class="w-full py-8 flex justify-between items-center text-left focus:outline-none group"
+              onclick="toggleFaq(this)"
+            >
+              <span
+                class="text-xl font-bold text-cocoa group-hover:text-slate transition-colors"
+                >Can I switch career paths later?</span
+              >
+              <div
+                class="icon-container text-cocoa bg-lavender/30 p-2 rounded-full transition-transform duration-300"
+              >
+                <i data-lucide="chevron-down" class="w-5 h-5"></i>
+              </div>
+            </button>
+            <div
+              class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out"
+            >
+              <p class="pb-8 text-slate leading-relaxed text-lg">
+                Yes, you can update your profile and goals at any time. Orion
+                will instantly generate a new roadmap and gap analysis for your
+                new target career.
+              </p>
+            </div>
+          </div>
+
+          <!-- New FAQ 5 -->
+          <div class="faq-item border-b border-steel/20 last:border-0">
+            <button
+              class="w-full py-8 flex justify-between items-center text-left focus:outline-none group"
+              onclick="toggleFaq(this)"
+            >
+              <span
+                class="text-xl font-bold text-cocoa group-hover:text-slate transition-colors"
+                >Is this suitable for non-tech roles?</span
+              >
+              <div
+                class="icon-container text-cocoa bg-lavender/30 p-2 rounded-full transition-transform duration-300"
+              >
+                <i data-lucide="chevron-down" class="w-5 h-5"></i>
+              </div>
+            </button>
+            <div
+              class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out"
+            >
+              <p class="pb-8 text-slate leading-relaxed text-lg">
+                While we specialize in tech, we are expanding into Design,
+                Product, and Digital Marketing roles. Our career database
+                already covers many adjacent fields.
+              </p>
+            </div>
+          </div>
+
+          <!-- New FAQ 6 -->
+          <div class="faq-item border-b border-steel/20 last:border-0">
+            <button
+              class="w-full py-8 flex justify-between items-center text-left focus:outline-none group"
+              onclick="toggleFaq(this)"
+            >
+              <span
+                class="text-xl font-bold text-cocoa group-hover:text-slate transition-colors"
+                >How often is the data updated?</span
+              >
+              <div
+                class="icon-container text-cocoa bg-lavender/30 p-2 rounded-full transition-transform duration-300"
+              >
+                <i data-lucide="chevron-down" class="w-5 h-5"></i>
+              </div>
+            </button>
+            <div
+              class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out"
+            >
+              <p class="pb-8 text-slate leading-relaxed text-lg">
+                Our career database and skills requirements are updated weekly
+                to reflect real-time market trends and job descriptions.
               </p>
             </div>
           </div>
@@ -1215,11 +1300,12 @@
           <p class="text-xl opacity-80 mb-12 max-w-2xl mx-auto leading-relaxed">
             Stop guessing. Start planning. Join the community today.
           </p>
-          <button
-            class="bg-beige text-cocoa px-12 py-5 rounded-full font-bold text-xl transition-all shadow-xl hover:scale-105 active:scale-95"
+          <a
+            href="/auth"
+            class="inline-block bg-beige text-cocoa px-7 py-3 rounded-full font-bold transition-all shadow-lg hover:shadow-cocoa/20 hover:scale-105 active:scale-95"
           >
             Get Started Free
-          </button>
+          </a>
         </div>
       </div>
     </section>

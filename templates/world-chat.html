@@ -77,6 +77,7 @@
             overflow-y: auto; 
             display: flex; flex-direction: column; gap: 15px; 
             background: var(--bg-color); 
+            scroll-behavior: smooth;
         }
         
         .message { 
@@ -90,10 +91,11 @@
         }
         @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         
+        /* SELF MESSAGE: Dark background, light text */
         .message.self { 
             align-self: flex-end; 
-            background: var(--primary-text); 
-            color: var(--bg-color); 
+            background: var(--primary-text); /* #4C5372 */
+            color: var(--bg-color); /* #FFFDF6 */
             border-bottom-right-radius: 4px; 
         }
         .message.other { 
@@ -170,9 +172,10 @@
         const messagesArea = document.getElementById('messagesArea');
         const chatForm = document.getElementById('chatForm');
         const messageInput = document.getElementById('messageInput');
-        let lastTimestamp = null;
+        let lastRenderedTimestamp = ""; // To prevent re-rendering/flickering
         let currentUserEmail = null;
 
+        // Get current user email for 'self' identification
         async function getUserInfo() {
             try {
                 const res = await fetch('/api/profile');
@@ -194,24 +197,42 @@
         }
 
         function renderMessages(messages) {
-            const isAtBottom = messagesArea.scrollHeight - messagesArea.scrollTop === messagesArea.clientHeight;
+            if (!messages || messages.length === 0) return;
+
+            // 1. Check if user is near bottom before adding (to auto-scroll)
+            const isNearBottom = messagesArea.scrollHeight - messagesArea.scrollTop - messagesArea.clientHeight < 100;
+            const isFirstLoad = lastRenderedTimestamp === "";
             
-            messagesArea.innerHTML = messages.map(msg => {
-                const isSelf = false; 
-                
-                return `
-                    <div class="message ${isSelf ? 'self' : 'other'}">
+            // Remove loading text if it exists
+            const loadingText = messagesArea.querySelector('div[style*="text-align: center"]');
+            if (loadingText) loadingText.remove();
+
+            messages.forEach(msg => {
+                // Only append NEW messages based on timestamp string comparison
+                if (msg.timestamp > lastRenderedTimestamp) {
+                    const isSelf = msg.email === currentUserEmail;
+                    
+                    const msgDiv = document.createElement('div');
+                    msgDiv.className = `message ${isSelf ? 'self' : 'other'}`;
+                    msgDiv.innerHTML = `
                         <div class="message-user">${msg.user}</div>
                         <div class="message-text">${msg.text}</div>
                         <div class="message-time">${new Date(msg.timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</div>
-                    </div>
-                `;
-            }).join('');
+                    `;
+                    
+                    messagesArea.appendChild(msgDiv);
+                    lastRenderedTimestamp = msg.timestamp;
+                }
+            });
 
-            if (!lastTimestamp) {
-                messagesArea.scrollTop = messagesArea.scrollHeight;
-                if(messages.length > 0) lastTimestamp = messages[messages.length-1].timestamp;
+            // 2. Scroll Logic: Scroll if first load OR user was already at bottom
+            if (isFirstLoad || isNearBottom) {
+                scrollToBottom();
             }
+        }
+
+        function scrollToBottom() {
+            messagesArea.scrollTop = messagesArea.scrollHeight;
         }
 
         chatForm.addEventListener('submit', async (e) => {
@@ -227,7 +248,11 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ message: text })
                 });
-                fetchMessages(); 
+                
+                // Immediately fetch to show own message and force scroll
+                await fetchMessages();
+                scrollToBottom(); // Force scroll on manual send
+                
             } catch (e) { alert("Failed to send"); }
         });
 

@@ -7,7 +7,6 @@
     <title>Gemini Clone</title>
     
     <script>
-        // Check for saved theme preference or system default
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
             document.documentElement.classList.add('dark-mode');
@@ -24,9 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
-        /* --- CSS STYLES --- */
         :root {
-            /* DEFAULT: Premium Light Theme */
             --bg-color: #FFFDF6;
             --sidebar-bg: #E2D4E0;
             --text-color: #4C5372;
@@ -39,7 +36,6 @@
             --icon-color: #4C5372;
         }
 
-        /* DARK MODE OVERRIDES */
         body.dark-mode {
             --bg-color: #131314;
             --sidebar-bg: #1e1f20;
@@ -56,75 +52,36 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; transition: background 0.3s, color 0.3s, border-color 0.3s; }
         body { background-color: var(--bg-color); color: var(--text-color); display: flex; height: 100vh; overflow: hidden; }
 
-        /* Sidebar */
         #sidebar { width: 280px; background-color: var(--sidebar-bg); display: flex; flex-direction: column; padding: 20px 15px; flex-shrink: 0; border-right: 1px solid var(--border-color); }
-        
-        .new-chat-btn { 
-            background-color: var(--hover-bg); 
-            color: var(--text-color); 
-            border: 1px solid var(--border-color); 
-            padding: 12px 15px; 
-            border-radius: 50px; 
-            cursor: pointer; 
-            display: flex; align-items: center; gap: 10px; 
-            font-size: 14px; font-weight: 600; 
-            margin-bottom: 25px; 
-            transition: all 0.2s; 
-        }
+        .new-chat-btn { background-color: var(--hover-bg); color: var(--text-color); border: 1px solid var(--border-color); padding: 12px 15px; border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; margin-bottom: 25px; transition: all 0.2s; }
         .new-chat-btn:hover { background-color: var(--input-bg); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        
         .chat-list-label { font-size: 12px; color: var(--secondary-text); padding: 0 10px; margin-bottom: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
         #chat-history { flex-grow: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 4px; }
-        
         .chat-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 15px; border-radius: 8px; cursor: pointer; color: var(--text-color); font-size: 14px; position: relative; text-decoration: none; }
         .chat-item:hover, .chat-item.active { background-color: var(--hover-bg); }
         .chat-item.active { font-weight: 600; background-color: var(--input-bg); }
         .chat-title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px; pointer-events: none; }
-        
         .chat-options-btn { background: none; border: none; color: var(--secondary-text); cursor: pointer; padding: 4px; border-radius: 50%; display: none; align-items: center; justify-content: center; }
         .chat-item:hover .chat-options-btn { display: flex; }
         .chat-options-btn:hover { background-color: var(--border-color); color: var(--text-color); }
 
-        /* Dropdown */
         .dropdown-menu { position: absolute; right: 10px; top: 35px; background-color: var(--input-bg); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); z-index: 100; display: none; flex-direction: column; min-width: 120px; overflow: hidden; }
         .dropdown-menu.show { display: flex; }
         .dropdown-item { padding: 10px 15px; cursor: pointer; font-size: 13px; display: flex; align-items: center; gap: 8px; color: var(--text-color); }
         .dropdown-item:hover { background-color: var(--hover-bg); }
         .dropdown-item.delete { color: #ff6b6b; }
 
-        /* Main Content */
         #main-content { flex-grow: 1; display: flex; flex-direction: column; background-color: var(--bg-color); position: relative; }
-        
-        header { 
-            padding: 20px 30px; 
-            display: flex; justify-content: space-between; align-items: center; 
-            color: var(--text-color); 
-            border-bottom: 1px solid var(--border-color); 
-            background: var(--bg-color); 
-        }
-        
+        header { padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; color: var(--text-color); border-bottom: 1px solid var(--border-color); background: var(--bg-color); }
         .header-actions { display: flex; align-items: center; gap: 15px; }
-
-        /* Dark Mode Button */
-        .theme-toggle-btn { 
-            background: var(--hover-bg); 
-            border: 1px solid var(--border-color); 
-            color: var(--icon-color); 
-            cursor: pointer; 
-            width: 40px; height: 40px; 
-            border-radius: 50%; 
-            display: flex; align-items: center; justify-content: center;
-            transition: all 0.3s ease;
-        }
+        .theme-toggle-btn { background: var(--hover-bg); border: 1px solid var(--border-color); color: var(--icon-color); cursor: pointer; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
         .theme-toggle-btn:hover { background-color: var(--border-color); transform: scale(1.05); }
-        
         .back-dashboard-btn { display: flex; align-items: center; gap: 8px; padding: 10px 20px; background-color: var(--sidebar-bg); color: var(--text-color); text-decoration: none; border-radius: 20px; font-size: 14px; font-weight: 600; transition: background 0.2s; margin-left: 15px; border: 1px solid var(--border-color); }
         .back-dashboard-btn:hover { background-color: var(--input-bg); }
 
         #chat-container { flex-grow: 1; overflow-y: auto; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 30px; }
         .welcome-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; text-align: center; animation: fadeIn 0.8s ease; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        
         .welcome-text { font-size: 42px; color: var(--text-color); font-weight: 700; margin-bottom: 15px; }
         .welcome-subtext { color: var(--secondary-text); font-size: 18px; }
         
@@ -134,10 +91,32 @@
         .ai-icon { background: var(--accent-color); }
         .user-icon { background-color: var(--secondary-text); }
         
+        /* NEW: Relative positioning for Star Button */
         .message-content { line-height: 1.6; font-size: 16px; color: var(--text-color); display: flex; flex-direction: column; gap: 8px; max-width: 80%; }
         .user .message-content { background-color: var(--user-msg-bg); padding: 15px 20px; border-radius: 20px 20px 5px 20px; border: 1px solid var(--border-color); }
         
-        /* Attachments */
+        /* AI BUBBLE STYLE FOR STAR */
+        .message-wrapper.ai .message-content { 
+            position: relative; 
+            padding-bottom: 30px !important; /* Space for star */
+        }
+        
+        /* STAR BUTTON STYLE */
+        .star-toggle {
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            cursor: pointer;
+            color: var(--secondary-text);
+            background: none; border: none; padding: 0;
+            transition: color 0.2s, transform 0.2s;
+        }
+        .star-toggle:hover { color: var(--text-color); transform: scale(1.1); }
+        .star-toggle.saved { 
+            color: #f1c40f; /* Gold for saved */
+            fill: #f1c40f;
+        }
+        
         .attachment-preview { display: flex; align-items: center; gap: 10px; background: var(--input-bg); padding: 10px 15px; border-radius: 8px; font-size: 13px; border: 1px solid var(--border-color); }
         .attachment-preview img { width: 40px; height: 40px; object-fit: cover; border-radius: 4px; }
         
@@ -145,26 +124,23 @@
         #input-wrapper { width: 100%; max-width: 800px; display: flex; flex-direction: column; gap: 10px; }
         #file-preview-area { display: none; flex-wrap: wrap; gap: 10px; padding: 0 10px; }
         .preview-chip { background-color: var(--input-bg); border: 1px solid var(--border-color); padding: 8px 12px; border-radius: 8px; display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-color); }
-        
         .input-box { width: 100%; background-color: var(--input-bg); border-radius: 50px; padding: 12px 25px; display: flex; align-items: center; gap: 15px; border: 1px solid var(--border-color); box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: box-shadow 0.3s; }
         .input-box:focus-within { box-shadow: 0 6px 20px rgba(76, 83, 114, 0.15); border-color: var(--text-color); }
         #message-input { flex-grow: 1; background: transparent; border: none; color: var(--text-color); font-size: 16px; outline: none; padding: 5px 0; }
         .icon-btn { background: none; border: none; cursor: pointer; color: var(--secondary-text); padding: 8px; border-radius: 50%; display: flex; transition: color 0.2s; }
         .icon-btn:hover { color: var(--text-color); background-color: var(--hover-bg); }
 
-        /* Rename Modal */
         #rename-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: none; align-items: center; justify-content: center; z-index: 2000; backdrop-filter: blur(2px); }
         .modal-content { background: var(--bg-color); padding: 30px; border-radius: 16px; width: 350px; display: flex; flex-direction: column; gap: 20px; color: var(--text-color); border: 1px solid var(--border-color); box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
         .modal-input { padding: 12px; background: var(--input-bg); border: 1px solid var(--border-color); color: var(--text-color); border-radius: 8px; outline: none; font-size: 15px; }
         .modal-actions { display: flex; justify-content: flex-end; gap: 12px; }
         .btn { padding: 10px 20px; border-radius: 8px; cursor: pointer; border: none; font-size: 14px; font-weight: 600; }
         .btn-cancel { background: transparent; color: var(--secondary-text); border: 1px solid var(--border-color); }
-        .btn-confirm { background: var(--text-color); color: var(--bg-color); }
+        .btn-confirm { background: var(--text-color); color: white; }
     </style>
 </head>
 
 <body class="">
-
     <aside id="sidebar">
         <button class="new-chat-btn" onclick="startNewChat()">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5V19M5 12H19"/></svg>
@@ -183,14 +159,10 @@
                     Back to Dashboard
                 </a>
             </div>
-
             <div class="header-actions">
                 <button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle Dark Mode">
-                    <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
+                    <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </button>
-
                 <div class="user-icon" onclick="window.location.href='/profile'" style="width: 36px; height: 36px; border-radius: 50%; overflow: hidden; cursor: pointer;" title="Go to Profile">
                     <svg viewBox="0 0 24 24" fill="var(--secondary-text)" width="36" height="36"><circle cx="12" cy="12" r="12"/></svg>
                 </div>
@@ -234,7 +206,12 @@
     </div>
 
     <script>
-        // --- THEME TOGGLE LOGIC ---
+        let chats = []; 
+        let currentChatId = null; 
+        let currentFile = null;
+        let chatToRenameId = null;
+        let savedMessagesSet = new Set(); // Stores text of saved messages
+
         function toggleTheme() {
             document.body.classList.toggle('dark-mode');
             const isDark = document.body.classList.contains('dark-mode');
@@ -245,29 +222,20 @@
         function updateThemeIcon(isDark) {
             const icon = document.getElementById('theme-icon');
             if (isDark) {
-                // Sun Icon
                 icon.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
             } else {
-                // Moon Icon
                 icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
             }
         }
 
-        // Initialize Theme Icon on Load
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', async () => {
             const isDark = localStorage.getItem('theme') === 'dark';
             if(isDark) document.body.classList.add('dark-mode');
             updateThemeIcon(isDark);
-        });
-
-        // ... (Rest of JS Logic remains exactly the same) ...
-        let chats = []; 
-        let currentChatId = null; 
-        let currentFile = null;
-        let chatToRenameId = null;
-
-        document.addEventListener('DOMContentLoaded', () => {
+            
+            await fetchSavedMessages(); // Populate Set on load
             loadSidebar(); 
+            
             const inputField = document.getElementById('message-input');
             inputField.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') {
@@ -276,45 +244,49 @@
                 }
             });
             document.addEventListener('click', (e) => {
-                if (!e.target.closest('.chat-item')) {
-                    closeAllDropdowns();
-                }
+                if (!e.target.closest('.chat-item')) closeAllDropdowns();
             });
         });
 
+        // --- NEW: Fetch Saved Messages IDs to Color Stars Correctly ---
+        async function fetchSavedMessages() {
+            const token = localStorage.getItem('token');
+            try {
+                const res = await fetch('/api/saved-messages', {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                if (res.ok) {
+                    const data = await res.json();
+                    data.forEach(msg => savedMessagesSet.add(msg.text));
+                }
+            } catch (e) { console.error("Error fetching saved messages", e); }
+        }
+
         async function loadSidebar() {
             const token = localStorage.getItem('token');
-            if (!token) return;
-
             try {
                 const response = await fetch('/api/chats', {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
-
                 if (response.ok) {
                     chats = await response.json(); 
                     renderSidebar(); 
                 }
-            } catch (error) {
-                console.error("Failed to load sidebar:", error);
-            }
+            } catch (error) { console.error("Failed to load sidebar:", error); }
         }
 
         function renderSidebar() {
             const container = document.getElementById('chat-history');
             container.innerHTML = '';
-
             chats.forEach(chat => {
                 const isActive = chat.id === currentChatId ? 'active' : '';
                 const div = document.createElement('div');
                 div.className = `chat-item ${isActive}`;
-                
                 div.onclick = (e) => {
                     if (!e.target.closest('.chat-options-btn') && !e.target.closest('.dropdown-menu')) {
                         loadChat(chat.id);
                     }
                 };
-                
                 div.innerHTML = `
                     <div style="display:flex; align-items:center; overflow:hidden;">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 10px; flex-shrink:0;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
@@ -345,20 +317,16 @@
 
         async function deleteChat(id) {
             if(!confirm("Are you sure you want to delete this chat?")) return;
-            
             try {
                 const token = localStorage.getItem('token');
                 const response = await fetch(`/api/chats/${id}`, {
                     method: 'DELETE',
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
-
                 if(response.ok) {
                     chats = chats.filter(c => c.id !== id);
                     if(currentChatId === id) startNewChat();
                     renderSidebar();
-                } else {
-                    console.error("Delete failed");
                 }
             } catch(e) { console.error(e); }
         }
@@ -391,7 +359,6 @@
                         },
                         body: JSON.stringify({ title: newName })
                     });
-
                     if(response.ok) {
                         const chat = chats.find(c => c.id === chatToRenameId);
                         chat.title = newName;
@@ -420,29 +387,24 @@
                 const response = await fetch(`/api/chats/${id}`, {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
-
                 if (response.ok) {
                     const chatData = await response.json();
                     if (chatData.messages) {
                         chatData.messages.forEach(msg => renderMessage(msg));
                     }
                 }
-            } catch (e) {
-                console.error("Error loading chat", e);
-            }
+            } catch (e) { console.error("Error loading chat", e); }
         }
 
         async function handleSendMessage() {
             const input = document.getElementById('message-input');
             const text = input.value.trim();
-
             if (!text && !currentFile) return;
 
             const newMessage = { text: text, sender: 'user', attachment: currentFile };
             renderMessage(newMessage);
 
             document.getElementById('welcome-message').style.display = 'none';
-
             const fileToSend = currentFile ? currentFile.fileObject : null;
             input.value = ''; 
             clearFile();      
@@ -459,7 +421,6 @@
                     headers: { 'Authorization': `Bearer ${token}` },
                     body: formData
                 });
-
                 if (response.ok) {
                     const data = await response.json();
                     if (!currentChatId || currentChatId !== data.chat_id) {
@@ -470,18 +431,15 @@
                     if (currentChatId === data.chat_id) {
                         renderMessage(aiMsg);
                     }
-                } else {
-                    console.error("Server Error");
                 }
-            } catch (error) {
-                console.error("Network Error", error);
-            }
+            } catch (error) { console.error("Network Error", error); }
         }
 
+        // --- UPDATED RENDER MESSAGE with STAR ---
         function renderMessage(msg) {
             const container = document.getElementById('messages-list');
             const wrapper = document.createElement('div');
-            wrapper.className = `message-wrapper ${msg.sender}`;
+            wrapper.className = `message-wrapper ${msg.sender} ${msg.sender === 'ai' ? 'ai' : ''}`;
 
             const icon = document.createElement('div');
             icon.className = `message-icon ${msg.sender === 'user' ? 'user-icon' : 'ai-icon'}`;
@@ -512,6 +470,18 @@
             if (msg.sender === 'ai') {
                 wrapper.appendChild(icon);
                 wrapper.appendChild(content);
+                
+                // STAR BUTTON LOGIC
+                const isSaved = savedMessagesSet.has(msg.text);
+                const starBtn = document.createElement('button');
+                starBtn.className = `star-toggle ${isSaved ? 'saved' : ''}`;
+                starBtn.innerHTML = isSaved 
+                    ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>'
+                    : '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>';
+                
+                starBtn.onclick = () => toggleStar(starBtn, msg.text);
+                content.appendChild(starBtn); // Append to message content to position relative
+
             } else {
                 wrapper.appendChild(content);
                 wrapper.appendChild(icon);
@@ -521,15 +491,37 @@
             document.getElementById('chat-container').scrollTop = document.getElementById('chat-container').scrollHeight;
         }
 
+        async function toggleStar(btn, text) {
+            const token = localStorage.getItem('token');
+            try {
+                const res = await fetch('/api/toggle-saved-message', {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}` 
+                    },
+                    body: JSON.stringify({ text: text })
+                });
+
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data.status === 'saved') {
+                        savedMessagesSet.add(text);
+                        btn.classList.add('saved');
+                        btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>';
+                    } else {
+                        savedMessagesSet.delete(text);
+                        btn.classList.remove('saved');
+                        btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>';
+                    }
+                }
+            } catch(e) { console.error(e); }
+        }
+
         function handleFileUpload(event) {
             const file = event.target.files[0];
             if (!file) return;
-            currentFile = {
-                fileObject: file, 
-                name: file.name,
-                type: file.type,
-                url: URL.createObjectURL(file)
-            };
+            currentFile = { fileObject: file, name: file.name, type: file.type, url: URL.createObjectURL(file) };
             const area = document.getElementById('file-preview-area');
             area.style.display = 'flex';
             area.innerHTML = `<div class="preview-chip"><span>${file.name}</span><span style="cursor:pointer;margin-left:5px;" onclick="clearFile()">×</span></div>`;
