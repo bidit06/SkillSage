@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -163,7 +163,9 @@
 
       /* Mobile Menu Transition */
       #mobile-menu {
-        transition: height 0.3s ease-out, opacity 0.3s ease-out;
+        transition:
+          height 0.3s ease-out,
+          opacity 0.3s ease-out;
       }
     </style>
   </head>
@@ -1137,8 +1139,8 @@
               class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out"
             >
               <p class="pb-8 text-slate leading-relaxed text-lg">
-                Yes! 100% Free . No hidden charges, no premium tiers, no
-                credit card required.
+                Yes! 100% Free . No hidden charges, no premium tiers, no credit
+                card required.
               </p>
             </div>
           </div>
@@ -1379,7 +1381,7 @@
             "backdrop-blur-lg",
             "shadow-sm",
             "border-b",
-            "border-steel/10"
+            "border-steel/10",
           );
           navbar.classList.remove("border-transparent");
         } else {
@@ -1388,7 +1390,7 @@
             "backdrop-blur-lg",
             "shadow-sm",
             "border-b",
-            "border-steel/10"
+            "border-steel/10",
           );
           navbar.classList.add("border-transparent");
         }
@@ -1475,7 +1477,7 @@
             }
           });
         },
-        { threshold: 0.1 }
+        { threshold: 0.1 },
       );
 
       document

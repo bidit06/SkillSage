@@ -2,7 +2,7 @@
 
 > **Your AI-powered career companion.** Get personalized career guidance, identify skill gaps, and follow structured learning roadmaps — all for free, powered by RAG.
 
-![SkillSage Home Page](./images/Home_page.png)
+<img src="./images/Home_page.png" alt="SkillSage Home Page" width="650">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://www.python.org/)
@@ -26,7 +26,7 @@ The platform goes beyond generic advice. By analyzing your actual skill profile,
 
 Orion is a 24/7 conversational AI mentor built on a Retrieval-Augmented Generation (RAG) architecture. It draws from a curated database of career paths, skill definitions, and FAQs to provide context-aware, accurate responses — not generic chatbot filler.
 
-![Chat with Orion](./images/Chat_with_Orion.png)
+<img src="./images/Chat_with_Orion.png" alt="Chat_with_Orion" width="650">
 
 Orion supports multi-turn conversations with full history, file uploads (resumes, documents, images), and profile-aware responses. You can ask it anything from *"How do I become a Data Scientist?"* to *"Rate my profile for each of my career goals"* and receive a structured, honest assessment.
 
@@ -34,9 +34,10 @@ Orion supports multi-turn conversations with full history, file uploads (resumes
 
 The Skills Gap Analysis page gives you a side-by-side view of where you stand versus where you need to be. Each skill in your profile is rated using a 1–10 proficiency system, and radar charts map your current level against what industry roles actually require.
 
-![Skill Gap Analysis](./images/Skill_gap_analysis_page.png)
+<img src="./images/Skill_gap_analysis_page.png" alt="Skill_gap_analysis_page" width="650">
+<br><br>
+<img src="./images/Skill_gap_analysis_by_Radar_chart.png" alt="Skill_gap_analysis_by_Radar_chart" width="650">
 
-![Skill Gap Radar Chart](./images/Skill_gap_analysis_by_Radar_chart.png)
 
 Missing skills are broken down by priority (High / Medium / Low) with estimated learning timelines (2–8 weeks per skill), so you always know what to tackle next.
 
@@ -48,17 +49,22 @@ For three major tracks — **Data Science** (6 months), **Full Stack Development
 
 The dashboard is your mission control. It surfaces your top career matches with match scores, a real-time skills gap summary, recent chat activity, and a quick-access button to Orion — all in one place.
 
-![Dashboard](./images/Dashboard.png)
+<img src="./images/Dashboard.png" alt="Dashboard" width="650">
+
 
 ### 💬 Saved Chats & World Chat
 
 Every conversation with Orion is automatically saved and can be revisited, renamed, or deleted at any time.
 
-![Saved Chats](./images/Saved_chats.png)
+
+<img src="./images/Saved_chats.png" alt="Saved_chats" width="650">
+
 
 The **World Chat** feature is a real-time global community room where users can connect, share experiences, and support each other's career journeys.
 
-![World Chat](./images/World_chat.png)
+
+<img src="./images/World _chat.png" alt="World _chat" width="650">
+
 
 ### 💼 Career & Skills Database
 
@@ -249,7 +255,7 @@ SkillSage is built for anyone standing at a career crossroads — whether just s
 
 ## 🤝 Contributing
 
-Contributions are welcome and encouraged. If you have an idea for a new feature, find a bug, or want to improve the documentation, please open an issue or submit a pull request. When contributing, follow the existing project structure, write clear commit messages, and add comments for any non-obvious logic — especially within the RAG pipeline in `rag_pipeline.py`.
+Contributions are welcome and encouraged. If you have an idea for a new feature, find a bug, or want to improve the documentation, please open an issue or submit a pull request. When contributing, follow the existing project structure, write clear commit messages, and add comments for any non-obvious logic — especially within the RAG pipeline in `rag_pipeline.py` and Main app in `main.py`.
 
 ---
 
